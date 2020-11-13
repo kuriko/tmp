@@ -8,38 +8,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
   <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
-  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/book.css">
-  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/website.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
   <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
   <meta name="HandheldFriendly" content="true">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-</head>
-
-<body>
-  <div class="book">
-    <div class="book-summary">
-      <nav role="navigation"></nav>
-    </div>
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i>
-            <a href=".."></a>
-          </h1>
-        </div>
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-            <section class="normal markdown-section">
-              <h1><a name="header-1-977230820aa59688a3c119b163515538"></a> &#x672A;&#x57F7;&#x7B46;</h1>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <script>
     function selectTab(name) {
       Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
@@ -48,16 +23,20 @@
     };
 
     function toggleAnswer() {
-      if (!document.querySelector('.answer').attributes.active) {
-        document.getElementById('show-answer-button').innerHTML = "答えを隠す";
-        document.querySelector('.answer').setAttribute("active", "");
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
       } else {
-        document.getElementById('show-answer-button').innerHTML = "解いてみたので、答えを表示する";
-        document.querySelector('.answer').removeAttribute("active");
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
       }
     };
 
   </script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script>
     window.onload = function() {
       Gifffer({
@@ -86,7 +65,22 @@
     }
 
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a></a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-977230820aa59688a3c119b163515538"></a> &#x672A;&#x57F7;&#x7B46;</h1>
+      </section>
+    </div>
+  </div>
 </body>
 
 </html>
