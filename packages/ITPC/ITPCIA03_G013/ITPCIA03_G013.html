@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Wi-Fi に接続しよう</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>Wi-Fi に接続しよう</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-44297bc080bcc7153a7adf442b331df7"></a> Wi-Fi に接続しよう</h1>
+        <p>パソコンを <strong>Wi-Fi</strong>（ワイファイ）に接続し、インターネットにアクセスできるようにしましょう。</p>
+        <ul id="toc">
+          <li><a href="#header-2-3d1e32fbee8a044ee73d0ffa98db617c" target="_blank">Wi-Fi の仕組み</a></li>
+          <li><a href="#header-2-410b2aae705b60aa190c5ce4ba2375f6" target="_blank">Wi-Fi の準備と確認</a></li>
+          <li><a href="#header-2-87d3c641f9e09f4f2c65bf1146013d02" target="_blank">Wi-Fi に接続する</a></li>
+        </ul>
+        <h2><a name="header-2-3d1e32fbee8a044ee73d0ffa98db617c"></a> Wi-Fi の仕組み</h2>
+        <img src="image/03_G010-01-01.png">
+        <h2><a name="header-2-410b2aae705b60aa190c5ce4ba2375f6"></a> Wi-Fi の準備と確認</h2>
+        <p>パソコンを接続する前に、Wi-Fi の準備と確認をしましょう。<br> ご自宅や学校、会社などに設置してある Wi-Fi ルーター、あるいはお手持ちのポケット Wi-Fi などの <strong>SSID</strong>（アクセスポイント名）・<strong>パスワード</strong>（Key）をご確認ください。</p>
+        <p>家庭用 Wi-Fi ルーターの場合、側面や底面などに記載されている事が多いようです。</p>
+        <p>なお、学校や会社などの Wi-Fi は特別な認証システムが利用されていることがあるので、不明な点があれば管理者の方に問い合わせてください。</p>
+        <div class="tip"><a name="tethering"></a>
+          <span class="tip-title">テザリングでもいいの？</span>
+          <p>スマホの回線を利用して Wi-Fi 環境を用意するテザリング（tethering）も利用できます。<br> ただし、パソコンはスマホに比べて膨大な量の通信を行うため、スマホの契約状況次第ではすぐにデータ通信量の上限に達してしまう（いわゆる「ギガが足りない」状態になる）おそれがあります。<br> テザリングを使う場合は自分が契約しているプランをしっかりご確認ください。</p>
+        </div>
+        <h3><a name="header-3-3557a47e4902ab79e3c314bcf69cce7b"></a> 複数の SSID がある場合</h3>
+        <img src="image/03_G010-02-01.png">
+        <p>1 つの Wi-Fi ルーターに複数の SSID（アクセスポイント名） が用意されていることもあります。たとえば<br></p>
+        <ul>
+          <li>Progedu-A-2525</li>
+          <li>Progedu-G-2525</li>
+        </ul>
+        <p>のように <code>A</code> と <code>G</code> が付いていたり、</p>
+        <ul>
+          <li>Progedu-2g-2525</li>
+          <li>Progedu-5g-2525</li>
+        </ul>
+        <p>のように <code>2g</code>(<code>2.4g</code>) や <code>5g</code> などが付いていたりします。これらは周波数の違いを意味しています。<br> これらの周波数によって電波の特性に違いがあり、それぞれ得意とする状況が異なります。</p>
+        <p>もし複数の SSID を選べるときは、あなたの環境に合ったものを選ぶとよいでしょう。</p>
+        <h4><a name="header-4-88f0414e4eb330cc6869b9f9bd5bef64"></a> 2.4GHz (G)</h4>
+        <img src="image/03_G010-03-01.png">
+        <p>周波数 2.4GHz を使う Wi-Fi は <strong>壁や床などの障害物に強い</strong> という性質があります。Wi-Fi ルーターから離れた隣の部屋などでも通信できます。また、古くからある規格なので、多くの機器が対応しているというメリットもあります。</p>
+        <p>一方で、Bluetooth が発する電波や電子レンジから漏れ出す電磁波と同じ周波数であるため、<strong>電波が混雑して不安定になりやすい</strong> というデメリットがあります。</p>
+        <p>SSID では <code>G</code>(<code>g</code>)や <code>2g</code>、 <code>2.4g</code> などと表記されます。</p>
+        <h4><a name="header-4-a4e7db8f9bedbc7d4f07ce48767efab9"></a> 5GHz (A)</h4>
+        <img src="image/03_G010-04-01.png">
+        <p>周波数 5GHz を使う Wi-Fi は<strong>高速な通信が可能</strong>です。基本的にはWi-Fi以外で使われていない周波数のため、電波が混雑することも少ないです。</p>
+        <p>ただし、障害物や距離に弱く、<strong>Wi-Fi ルーターから離れた場所では使えない</strong> というデメリットがあります。</p>
+        <p>SSID では <code>A</code>(<code>a</code>)や <code>5g</code> と表記されます。</p>
+        <h2><a name="header-2-87d3c641f9e09f4f2c65bf1146013d02"></a> Wi-Fi に接続する</h2>
+        <p>画面の上部にある Wi-Fi のアイコンをクリックします（Wi-Fi が ON になっていない場合はここで ON にできます）。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/bigsur-wifi-off.png">
+                <span class="imagecaption figure">Wi-Fi が OFF のとき</span>
+              </div>
+              <div class="image-with-caption">
+                <img src="image/bigsur-wifi-on.png">
+                <span class="imagecaption figure">Wi-Fi が ON のとき</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/wifi-off.png">
+                <span class="imagecaption figure">Wi-Fi が OFF のとき</span>
+              </div>
+              <div class="image-with-caption">
+                <img src="image/wifi-on.png">
+                <span class="imagecaption figure">Wi-Fi が ON のとき</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>接続したい SSID をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/bigsur-select-ssid.png">
+                <span class="imagecaption figure">接続したい SSID を選択</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/select-ssid.png">
+                <span class="imagecaption figure">接続したい SSID を選択</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>パスワードを入力し、<strong>接続</strong> をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/bigsur-confirm-connect.png">
+                <span class="imagecaption figure">パスワードを入力して接続をクリック</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/confirm-connect.png">
+                <span class="imagecaption figure">パスワードを入力して接続をクリック</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

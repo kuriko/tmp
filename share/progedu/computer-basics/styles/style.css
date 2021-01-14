@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
 
 hr {
   height: 3px;
-  background-color: #4c9ed4;
+  background-color: #669966;
   margin: 40px 0;
 }
 
@@ -54,7 +54,7 @@ pre {
   left: 0px;
   top: 0px;
   text-align: center;
-  background: #0075c2;
+  background: #009c79;
   padding: 20px 0;
   line-height: 1.4;
   width: 100%;
@@ -71,27 +71,27 @@ pre {
 h2 {
   font-size: 36px;
   line-height: 1.4;
-  border-left: 6px solid #0075c2;
-  border-bottom: 2px solid #0075c2;
-  color: #0075c2;
+  border-left: 6px solid #009c79;
+  border-bottom: 2px solid #009c79;
+  color: #009c79;
   padding-left: 2%;
 }
 h3 {
   font-size: 24px;
   line-height: 1.4;
-  border-left: 5px solid #4c9ed4;
+  border-left: 5px solid #009c79;
   padding-left: 2%;
 }
 h4 {
   font-size: 20px;
   line-height: 1.4;
-  border-left: 4px solid #b2d5ed;
+  border-left: 4px solid #00cc99;
   padding-left: 2%;
 }
 
 /* リンク */
 a {
-  color: #4183c4;
+  color: #01765d;
   text-decoration: none;
   background: 0 0;
 }
@@ -103,11 +103,13 @@ a:hover {
 img {
   border: 0;
   max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
   display: block;
   margin: auto;
 }
 .image-with-caption {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding: 0px;
   margin-bottom: 50px;
   margin-left: auto;
@@ -162,7 +164,7 @@ td {
   padding: 0.5rem;
 }
 table th {
-  background: #e5f1f9;
+  background: #e7f8f5;
 }
 table tr {
   background-color: #fff;
@@ -185,7 +187,7 @@ table tr:nth-child(2n) {
   margin-left: 2%;
   font-weight: bolder;
   font-size: 200%;
-  background-image: linear-gradient(transparent 50%, #b2d5ed 50%);
+  background-image: linear-gradient(transparent 50%, #d3f7f0 50%);
 }
 
 .return-game-book-button {
@@ -210,7 +212,7 @@ table tr:nth-child(2n) {
   font-weight: bolder;
   border-radius: 7px;
   color: #ffffff;
-  background: #0075c2;
+  background: #009c79;
   cursor: pointer;
 }
 .answer:not([active]),
@@ -224,7 +226,7 @@ table tr:nth-child(2n) {
   overflow: hidden;
 }
 .tablinks div {
-  color: #0075c2;
+  color: #009c79;
   background-color: #fff;
   float: left;
   margin-right: 0.25em;
@@ -236,7 +238,7 @@ table tr:nth-child(2n) {
 }
 .tablinks div.active {
   color: #fff;
-  background-color: #0075c2;
+  background-color: #009c79;
 }
 .tabcontents {
   display: flex;
@@ -245,7 +247,7 @@ table tr:nth-child(2n) {
 .tabcontent {
   width: 50%;
   padding: 0.5rem 2rem;
-  border: 2px solid #0075c2;
+  border: 2px solid #009c79;
   border-radius: 0 6px 6px 6px;
 }
 .tabcontents[data-active='win'] {
@@ -412,7 +414,7 @@ kbd {
 
 /* Tip */
 .tip {
-  background: #e5f1f9;
+  background: #e7f8f5;
   padding: 4px;
 }
 .tip p {
@@ -531,11 +533,11 @@ kbd {
 
 .popup-button {
   background-color: transparent;
-  border: 3px solid #0075c2;
+  border: 3px solid #009c79;
   border-radius: 5px;
   color: white;
   font-weight: bold;
-  background: #0075c2;
+  background: #009c79;
   cursor: pointer;
   outline: none;
   padding: 0.3em 0.7em;
@@ -558,19 +560,20 @@ kbd {
 
 /* 用語の重要度 */
 
-span.important-word {
+span.important-word {  
+  font-size: 0.95em;
   font-weight: bold;
   color: #dc143c;
-  border: 1px solid #dc143c;
+  border: 2px solid #dc143c;
   padding: 2px 3px;
 }
 
 span.highlighted-yellow {
-  background-color: #ffff80;
+  background-color: #ffed92;
 }
 
 span.highlighted-blue {
-  background-color: #ccf1ff;
+  background-color: #aef2e4;
 }
 
 span.highlighted-orange {
@@ -585,7 +588,7 @@ div.guide {
   border-radius: 6px;
 }
 
-div.red {
+div.guide.red {
   background-color: #fff4e6;
   border: 3px solid #dc143c;
   /* カラー UD 対応*/
@@ -604,40 +607,67 @@ div.red {
   color: #cc0000;
 }
 
-div.red > * {
+div.guide.red > * {
   color: #b31031;
 }
 
-div.blue {
+div.guide.blue {
   background-color: #f8f8ff;
   border: 3px solid #4169e1;
   color: #253c80;
 }
 
-div.blue > * {
+div.guide.blue > * {
   color: #253c80;
 }
 
-div.green {
+div.guide.green {
   background-color: #e6ffe6;
   border: 3px solid #006400;
   color: #004d00;
 }
 
-div.green > * {
+div.guide.green > * {
   color: #004d00;
 }
 
-div.gray {
+div.guide.gray {
   background-color: #f5f5f5;
   border: 3px solid #696969;
+}
+
+.underline {
+  display: inline-block;
+  margin: 0 0 0.3em;
+}
+
+.underline.gray {
+  background: linear-gradient(transparent 75%, #ccc 25%);
+}
+
+.underline.red {
+  background: linear-gradient(transparent 75%, #ffb3b3 25%);
+}
+
+.back-styled {
+  padding: 1px 1.2% 1em;
+  margin: 1em 0;
+  border-radius: 10px;
+}
+
+.back-styled.gray {
+  background-color: #f8f8f8;
+}
+
+.back-styled.red {
+  border: 4.5px solid #fcc2c2;
 }
 
 /* 目次 */
 ul#toc {
   margin: 1em 0 2em 0;
-  border-top: solid #4c9ed4 1px;
-  border-bottom: solid #4c9ed4 1px;
+  border-top: solid #669966 1px;
+  border-bottom: solid #669966 1px;
   padding: 0.5em 0 0.5em 2em;
 }
 ul#toc li {
@@ -646,7 +676,7 @@ ul#toc li {
 }
 ul#toc li::before {
   content: '';
-  border-color: transparent #4c9ed4;
+  border-color: transparent #669966;
   border-style: solid;
   border-width: 0.35em 0 0.35em 0.6em;
   display: block;

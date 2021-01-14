@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>ファイル・フォルダ操作に慣れよう（実践編）</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>ファイル・フォルダ操作に慣れよう（実践編）</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-a431733cc0ac5c0e0607b1e2b361b97f"></a> ファイル・フォルダ操作に慣れよう（実践編）</h1>
+        <ul id="toc">
+          <li><a href="#header-2-473a9464d939cc0fcead03a1d0b73b66" target="_blank">エクスプローラーの機能</a></li>
+          <li><a href="#header-2-3be1dcf47776720ceb7d8992a474f9d3" target="_blank">ファイルとアプリの関連付け</a></li>
+          <li><a href="#header-2-2ee79fc83304add6b0fee4e09f700f42" target="_blank">複数のファイルをまとめて操作する</a></li>
+          <li><a href="#header-2-85d17c2341685e568ceb6f5ddd68cc85" target="_blank">ファイルやフォルダの容量（サイズ）の確認</a></li>
+          <li><a href="#header-2-1b7fb9952f19d0ad353e5cf8067881ff" target="_blank">ストレージ容量の確認</a></li>
+          <li><a href="#header-2-d8938d1f94aa80248d01be1d7294dafa" target="_blank">拡張子</a></li>
+          <li><a href="#header-2-e4f8a5d8a05db899e2c44c1d5ebfb99a" target="_blank">ファイルパス・フォルダパス</a></li>
+        </ul>
+        <h2><a name="header-2-473a9464d939cc0fcead03a1d0b73b66"></a> エクスプローラーの機能</h2>
+        <p>エクスプローラーでは、表示するサイズの変更やファイル・フォルダの並べ替えができます。</p>
+        <h3><a name="header-3-442711764aa49c6caa4013a3c7dfd848"></a> レイアウト（表示サイズ）</h3>
+        <p>エクスプローラーの上部にある <strong>表示</strong> から、<strong>レイアウト</strong> の欄にある項目をダブルクリックすると、そのフォルダにおける表示サイズを変更する事ができます。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer01.png">
+          <span class="imagecaption screenshot">「表示」から「レイアウト」を選択</span>
+        </div>
+        <ul>
+          <li>特大アイコン - 非常に大きなサイズで表示できます。画像などを一気に見たい時に適しています。</li>
+          <li>大アイコン</li>
+          <li>中アイコン</li>
+          <li>小アイコン</li>
+          <li>一覧</li>
+          <li>詳細 - ファイル更新日時やファイルの種類、サイズなどが表示されます。</li>
+          <li>並べて表示</li>
+          <li>コンテンツ - 音楽や動画などのコンテンツを表示させるときに向いています</li>
+        </ul>
+        <h3><a name="header-3-904e8027c83cf497b2c4af46625dbf62"></a> 並べ替え</h3>
+        <p>同じくエクスプローラーの上部にある <strong>表示</strong> から、<strong>並べ替え</strong> をクリックしましょう。<br> 名前や更新日時によってファイルを並べ替えられます。<br> この機能は、たくさんのファイルから目的のファイルを見つけたいときにとても便利です。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer02.png">
+          <span class="imagecaption screenshot">並び替えメニューを開いた様子</span>
+        </div>
+        <p>並び替えには <strong>昇順</strong> （しょうじゅん）と <strong>降順</strong> （こうじゅん）があります。<br> 昇順では小さい数字や順番が先にある文字から（1,2,3... , A,B,C..., あ,い,う...） 、降順では大きい数字や順番が後にある文字から（9,8,7... , Z,Y,X... , ん,を,わ...）並びます。状況に応じて使い分けるとよいでしょう。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer03.gif">
+          <span class="imagecaption screenshot">昇順と降順のデモ</span>
+        </div>
+        <h2><a name="header-2-3be1dcf47776720ceb7d8992a474f9d3"></a> ファイルとアプリの関連付け</h2>
+        <p>実は、メモ帳で作成したファイル（テキストファイル）はメモ帳専用のファイルというわけではありません。<br> メモ帳よりも高機能なテキストファイル編集用のアプリはたくさんあり、それらで開くこともできます。</p>
+        <p>また、画像ファイルなどでも同様のことが言えます。<br> 画像ファイルは画像を見るためのアプリでも、画像を編集するためのアプリでも開けます。</p>
+        <img src="image/03_G007-01-01.png">
+        <p>このように、パソコンにおいてファイルは「特定のアプリ専用」ではなく、他のアプリで開くことができるものがあります。</p>
+        <p>しかし、開くたびにアプリを指定しているとちょっと面倒です。<br> そのため、「エクスプローラーからファイルをダブルクリックした時には、このファイルの種類は基本的にこのアプリで開く」という <strong>関連付け</strong> が設定されています。ある種類のファイルを開くときに関連付けられているアプリを <strong>既定（きてい）のアプリ</strong> と呼びます。</p>
+        <p>既定のアプリ以外でファイルを開きたい場合、エクスプローラーでファイルを右クリックし、「プログラムから開く」というメニューをクリックすると別のアプリを選択できます。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer04.png">
+          <span class="imagecaption screenshot">「プログラムから開く」を選択</span>
+        </div>
+        <h2><a name="header-2-2ee79fc83304add6b0fee4e09f700f42"></a> 複数のファイルをまとめて操作する</h2>
+        <p>エクスプローラーでは、キーボードの <kbd>Ctrl</kbd> キーを押しながら、マウスでファイルやフォルダをクリックすることで複数のファイルを選択できます。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer05.gif">
+          <span class="imagecaption screenshot">複数のファイルを選択</span>
+        </div>
+        <p>選択を解除する場合は何もない部分をクリックしましょう。</p>
+        <p>また、連続して並んでいるファイルを選択するときは、まず始まりのファイルをクリックします。続いて、<kbd>Shift</kbd> キーを押しながら終わりのファイルをクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer06.gif">
+          <span class="imagecaption screenshot">複数のファイルをまとめて選択</span>
+        </div>
+        <p>このように、複数のファイルやフォルダが選ばれた状態で右クリックすると、一気に移動や削除の操作を行うことができます。</p>
+        <h2><a name="header-2-85d17c2341685e568ceb6f5ddd68cc85"></a> ファイルやフォルダの容量（サイズ）の確認</h2>
+        <p>ファイルやフォルダを右クリックし、<strong>プロパティ</strong>をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer07.png">
+          <span class="imagecaption screenshot">「プロパティ」を選択</span>
+        </div>
+        <p>プロパティウィンドウの「サイズ」の欄で確認できます。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer08.png">
+          <span class="imagecaption screenshot">ファイルのサイズを確認</span>
+        </div>
+        <p>なお、容量が大きいフォルダを開いた場合はファイルサイズを集計する時間が掛かるため、徐々に増加していくような表示になる場合があります。</p>
+        <div class="image-with-caption">
+          <img src="image/property.gif">
+          <span class="imagecaption screenshot">容量が大きいフォルダを開いた様子</span>
+        </div>
+        <p>//TODO Tipsで「ディスク上のサイズ」について軽く説明</p>
+        <h2><a name="header-2-1b7fb9952f19d0ad353e5cf8067881ff"></a> ストレージ容量の確認</h2>
+        <p>スマホなどと同様に、パソコンもストレージの容量には限度があります。いまどれくらい使っているのかを定期的にチェックしましょう。</p>
+        <p>スタートメニューから歯車アイコンを選択し、「設定」を開きます。</p>
+        <div class="image-with-caption">
+          <img src="image/prototype-storage-win-1.png">
+          <span class="imagecaption screenshot">歯車アイコンを選択</span>
+        </div>
+        <p>「システム」をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/prototype-storage-win-2.png">
+          <span class="imagecaption screenshot">「システム」を選択</span>
+        </div>
+        <p>「ストレージ」（または「記憶域」）からディスク容量を確認できます。<br>それぞれの項目を選択して、不要なアプリケーションをアンインストールすることもできます。</p>
+        <div class="image-with-caption">
+          <img src="image/prototype-storage-win-3.png">
+          <span class="imagecaption screenshot">「システム」を選択</span>
+        </div>
+        <h2><a name="header-2-d8938d1f94aa80248d01be1d7294dafa"></a> 拡張子</h2>
+        <p>余裕がある人はやってみましょう。これは高度な内容なので、難しいと思ったら読み飛ばしてかまいません。<br> また、今後プログラミングをやってみたいという人は知っておいて損はない内容です。</p>
+        <p><strong>拡張子</strong>（かくちょうし）とは、ファイルの種類を区別するためにファイルの末尾に加えられる文字のことです。</p>
+        <p>Windows の標準設定では、ファイルの拡張子を非表示にするようになっています。これは誤って拡張子を編集してファイルが認識されなくなるトラブルを防ぐためです。<br> 拡張子を表示したい場合、エクスプローラーの上部にある <strong>表示</strong> をクリックし、「ファイル名拡張子」にチェックを入れてください。</p>
+        <div class="image-with-caption">
+          <img src="image/settings.png">
+          <span class="imagecaption screenshot">環境設定</span>
+        </div>
+        <p>すると、例えば ZIP ファイルの末尾には <code>.zip</code> という文字が付くようになりました。これが拡張子です。</p>
+        <div class="image-with-caption">
+          <img src="image/settings2.png">
+          <span class="imagecaption screenshot">拡張子が表示されるようになった</span>
+        </div>
+        <p>なお、拡張子はあくまで「区別するため」の文字です。拡張子を変えただけでファイルの形式は変わりません。<br> たとえば Word というアプリのファイル（拡張子 <code>.docx</code>）を PDF という形式を表す <code>.pdf</code> に変えたからといって、PDF ファイルに変換されるわけではありません。</p>
+        <h2><a name="header-2-e4f8a5d8a05db899e2c44c1d5ebfb99a"></a> ファイルパス・フォルダパス</h2>
+        <p>余裕がある人はやってみましょう。これは高度な内容なので、難しいと思ったら読み飛ばしてかまいません。<br> また、今後プログラミングをやってみたいという人は知っておいて損はない内容です。</p>
+        <p>//TODO バックスラッシュについても触れる必要あり</p>
+        <p>エクスプローラーの上部では現在見ているフォルダの位置が示されています。<br> こういったファイルやフォルダの位置を文字列で示したものを <strong>ファイルパス</strong> や <strong>フォルダパス</strong> といいます。パス（path）は「小道」という意味で、そのフォルダやファイルにたどり着くための道をイメージするとよいでしょう。</p>
+        <p>フォルダのパスは <code>C:\Users\your_name\Documents\勉強</code> のように表されます。ファイルのパスは <code>C:\Users\your_name\Documents\勉強\練習.txt</code> のように、フォルダのパスの後にファイル名が加えられたものです。</p>
+        <p>エクスプローラーのフォルダの位置が示された部分の右端にある、何もない部分をクリックするとフォルダのパスが表示されます。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer17.png">
+          <span class="imagecaption screenshot">フォルダのパスが表示された</span>
+        </div>
+        <p>この欄にパスを直接入力すると、そのフォルダを開くこともできます。<br>
+          <code>C:\</code> と入力して <kbd>Enter</kbd> キーを押してみましょう。
+        </p>
+        <div class="image-with-caption">
+          <img src="image/explorer18.png">
+          <span class="imagecaption screenshot">C:\ と入力する</span>
+        </div>
+        <p>すると、C ドライブが表示されます。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer19.png">
+          <span class="imagecaption screenshot">C ドライブが表示された</span>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

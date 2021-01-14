@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Google ドライブを使ってデータを保存・共有しよう</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>Google ドライブを使ってデータを保存・共有しよう</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-3d3e707d5cfca913ae9f08ca4cd666ac"></a> Google ドライブを使ってデータを保存・共有しよう</h1>
+        <p>Google ドライブを使うと、Google のサーバ上にデータを気軽に保管できます。また、Google ドライブにあるデータはスマホや他の人にも簡単に共有できます。</p>
+        <ul id="toc">
+          <li><a href="#header-2-8717aa5316482c345f656e833e55e4df" target="_blank">Google ドライブを開こう</a></li>
+          <li><a href="#header-2-aa9a7e26985b4d8cb75c41c53a8c1715" target="_blank">オンラインストレージについて知ろう</a></li>
+          <li><a href="#header-2-1f679ae0deb6baed3f669188dca5879d" target="_blank">Google ドライブにフォルダを作成しよう</a></li>
+          <li><a href="#header-2-b85fc076d96e39ba10f0ba27d8ed08d5" target="_blank">パソコンから Google ドライブにファイルをアップロード（転送）しよう</a></li>
+          <li><a href="#header-2-47bf1442d4a309952489bc6550ef4122" target="_blank">Google ドライブからパソコンにファイルをダウンロードしよう</a></li>
+          <li><a href="#header-2-ffd16230df566318108610a164172d87" target="_blank">表示をカスタマイズしよう</a></li>
+          <li><a href="#header-2-4ae6b7064d1515102d5d9acd6ba1c210" target="_blank">フォルダ単位で操作しよう</a></li>
+          <li><a href="#header-2-e7957c3680a1a9da11e3b69ae5740f19" target="_blank">Google ドライブ内でフォルダ・ファイルを移動しよう</a></li>
+          <li><a href="#header-2-d6ae3da358ea266adcf0d8f5d91d084e" target="_blank">ファイル・フォルダを他の人に共有しよう</a></li>
+          <li><a href="#header-2-e2d5ef393c69820442325a785d30b0cc" target="_blank">ファイル・フォルダを削除しよう</a></li>
+        </ul>
+        <h2><a name="header-2-8717aa5316482c345f656e833e55e4df"></a> Google ドライブを開こう</h2>
+        <p>Google のトップページにアクセスし、画面右上にある四角が 9 個並んだボタンをクリックします。<br> その中にある <strong>ドライブ</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/open-gdrive-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>以下のような画面が表示されます（画面は異なる場合があります）。<br> 「共有ファイルや重要なイベントの通知をパソコンで受け取りましょう」といった通知メッセージは閉じて大丈夫です。</p>
+        <div class="image-with-caption">
+          <img src="image/open-gdrive-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-aa9a7e26985b4d8cb75c41c53a8c1715"></a> オンラインストレージについて知ろう</h2>
+        <p>実際に使ってみる前に、Google ドライブの仕組みについてちょっと学んでみましょう。</p>
+        <p>Google ドライブは「オンラインストレージ」と呼ばれるサービスです。ストレージは以前学んだように、ハードディスクやSSDなどの「保存装置」を意味します。<br> オンラインストレージは、自分のパソコンの内部ではなくオンライン（ネット上）に存在するストレージのことです。</p>
+        <h3><a name="header-3-d01b08eb9b9d08aa20e869aaf01b91f5"></a> オンラインストレージのメリット</h3>
+        <h4><a name="header-4-d61f5804e1d1e76a295b11c16c2b3e7c"></a> どこからでもアクセスできる</h4>
+        <p>ネットに繋がっていれば、世界中のどこからでもファイルにアクセスできます。<br> 自分のパソコンやスマホからでも、学校や会社のパソコンからでも同じファイルにアクセスできるのは非常に便利です。</p>
+        <h4><a name="header-4-c4f4e1a02e9429aeb4f56e8a0072dcdc"></a> 共有も容易</h4>
+        <p>オンラインストレージ上にあるファイルは他の人にも簡単に共有できます（もちろん、初期状態では自分だけしか見られないようになっています）。<br> また、共有範囲も「特定の人だけ」「不特定多数」など自由に設定できます。</p>
+        <h4><a name="header-4-abba0497a84860b19d9e81755424ac0f"></a> ほぼ壊れない</h4>
+        <p>パソコンやスマホに内蔵されているストレージは、落下・水没による破損や経年劣化などによって読み込めなくなることがあります。<br> 一方、Google ドライブのデータは Google によって厳密に管理されているサーバー上に保存されているため、故障によってファイルがアクセスできなくなるリスクはかなり低いといえます。</p>
+        <p>もちろん、システムの不具合が起きる可能性はゼロではありませんが、個人で管理するストレージよりは安全性が高いと言えるでしょう。</p>
+        <h3><a name="header-3-e30d945c4d460ff90b75be40bf1538b8"></a> オンラインストレージのデメリット</h3>
+        <h4><a name="header-4-d62ed9fbf7f750e008592f99040c5acc"></a> 誤設定に気をつける必要がある</h4>
+        <p>簡単に共有できる機能がある反面、誤ってファイルを一般公開にしてしまうリスクがあるとも言えます。<br> ただし、この講座では設定の気をつけ方も学んでいきますので、それほど怖がる必要はありません。</p>
+        <h4><a name="header-4-7841eac1814495753255bcedbd65efc1"></a> 基本的には通信が発生する</h4>
+        <p>オンライン上にファイルがあるので当然ではありますが、ファイルを保存・取得するときにデータ通信が発生します。<br> 自宅や学校、会社などの Wi-Fi 環境がある場合は問題ありませんが、スマホのテザリングなどを使用する場合はデータ通信量が増加する事を考慮しましょう（特に動画など、ファイルサイズが大きい場合は要注意です）。</p>
+        <p>また、ネット環境が整備されていない場所からは基本的にアクセスできません（必要な場合は事前に設定を行う必要があります）。</p>
+        <h4><a name="header-4-8badc714929a8ab8c9e3ab910fb5d0e1"></a> 大容量が必要なら有料になるケースも</h4>
+        <p>Google ドライブは無料プランの場合、使える容量は 1 アカウントあたり 15GB です。<br> 普通のドキュメント（書類など）を共有するならこれでも十分な容量ですが、大量の動画や画像を保存する場合は課金する必要が出てくるかもしれません。</p>
+        <p>この講座では、無料プランの範囲で説明していきます。講座を進める上で課金する必要はないのでご安心ください。<br> また、学校や会社が発行している Google Workspace アカウントの場合、容量制限が緩和されています。</p>
+        <h2><a name="header-2-1f679ae0deb6baed3f669188dca5879d"></a> Google ドライブにフォルダを作成しよう</h2>
+        <p>それでは、実際に Google ドライブを活用していきましょう。</p>
+        <p>まずは整理するためにフォルダを作成しましょう。<br> フォルダを作らずに直接ファイルを保存することもできますが、ファイルが増えてくることで整理が大変になるので、最初から用途に応じたフォルダを作ることをおすすめします。</p>
+        <p>Google ドライブの左上にある <strong>新規</strong> ボタンをクリックし、<strong>フォルダ</strong> をクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/create-new-folder-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <div class="image-with-caption">
+          <img src="image/create-new-folder-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>初期状態では「無題のフォルダ」と書かれているので、この文字を削除して「練習」と入力し、作成をクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/create-new-folder-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>「練習」フォルダが作成されたら、ダブルクリックしてフォルダを開きましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/create-new-folder-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>「練習」フォルダを開くことができました。<br> （なお、Windows や Mac のフォルダと同様に、フォルダの中にフォルダを作ってさらに細かく整理することもできます。）</p>
+        <div class="image-with-caption">
+          <img src="image/create-new-folder-05.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>一旦、最初の画面（マイドライブ）に戻ってみましょう。<br> 画面上部にあるフォルダ名は現在開いているフォルダを示しています。また、「マイドライブ &gt; 練習」はマイドライブの中に「練習」というフォルダがあることを示しています。<br> ここで <strong>マイドライブ</strong> をクリックしてみましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/create-new-folder-06.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すると、最初の画面に戻ります。</p>
+        <h2><a name="header-2-b85fc076d96e39ba10f0ba27d8ed08d5"></a> パソコンから Google ドライブにファイルをアップロード（転送）しよう</h2>
+        <p>続いて、パソコンの中にあるファイルを Google ドライブにアップロード（転送）しましょう。</p>
+        <p>まずは、先ほど作成した「練習」フォルダを開きましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/create-new-folder-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>「練習」フォルダを開いた状態で、左上の <strong>新規</strong> ボタンをクリックし <strong>ファイルのアップロード</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/upload-file-01.png">
+          <span class="imagecaption screenshot">新規ボタンをクリックした状態</span>
+        </div>
+        <p>すると、アップロードするファイルを選択する画面が現れます。<br> ここでは　第3章・第4章の「ファイルやフォルダ操作の基本を学ぼう」で作成したファイルをアップロードしてみます。もし他のファイルがある場合はそれを使っても大丈夫です。<br> また、第3章・第4章で作ったファイルを消してしまった場合は、「メモ帳」や「テキストエディット」で新しく練習用のファイルを作りましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/upload-file-win.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <div class="image-with-caption">
+          <img src="image/upload-file-mac.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>アップロードが完了すると、以下のようにファイルが「練習」フォルダ内に出現します。<br> 右下の「アップロード完了」の通知は閉じても大丈夫です。</p>
+        <div class="image-with-caption">
+          <img src="image/upload-file-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>Google ドライブ上でファイルをダブルクリックすると、プレビューができます。<br> プレビューを終わりたい場合は、画面左上にあるファイル名横の矢印をクリックします（ブラウザの「戻る」ボタンではないことに気をつけてください）。</p>
+        <div class="image-with-caption">
+          <img src="image/upload-file-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-47bf1442d4a309952489bc6550ef4122"></a> Google ドライブからパソコンにファイルをダウンロードしよう</h2>
+        <p>Google ドライブ上のファイルを<strong>右クリック</strong>し、<strong>ダウンロード</strong>をクリックすると自動的にダウンロードが開始されます。</p>
+        <div class="image-with-caption">
+          <img src="image/download-file-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>ブラウザの設定を変更していない場合、ファイルは「ダウンロード」フォルダに保存されます。</p>
+        <h2><a name="header-2-ffd16230df566318108610a164172d87"></a> 表示をカスタマイズしよう</h2>
+        <p>画面右上にあるボタンをクリックすることで、<strong>リスト表示</strong>と<strong>ギャラリー表示</strong>を切り替えできます。<br> 初期状態はギャラリー表示で、ファイルのプレビューが表示されています。</p>
+        <div class="image-with-caption">
+          <img src="image/switch-view-style-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>リスト表示ではファイルのプレビューをしない代わりに、1 画面で多くのファイルを表示できます。</p>
+        <div class="image-with-caption">
+          <img src="image/switch-view-style-02.png">
+          <span class="imagecaption screenshot">リスト表示</span>
+        </div>
+        <p>同じ場所にあるボタンをもう一度クリックすると、ギャラリー表示に戻ります。</p>
+        <div class="image-with-caption">
+          <img src="image/switch-view-style-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>画像が多いフォルダならギャラリー表示、書類が多いフォルダならリスト表示など、自分が見やすいように上手く使い分けるとよいでしょう。</p>
+        <h2><a name="header-2-4ae6b7064d1515102d5d9acd6ba1c210"></a> フォルダ単位で操作しよう</h2>
+        <h3><a name="header-3-1ffd45fcc2f889a3df8c9c18778bf83f"></a> フォルダごとアップロードしよう</h3>
+        <p>Google ドライブでは、パソコンにあるフォルダをまるごとアップロードすることもできます。<br> ファイルと操作は似ています。左上の <strong>新規</strong> ボタンをクリックし <strong>フォルダのアップロード</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/upload-folder-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>フォルダを選択します。</p>
+        <div class="image-with-caption">
+          <img src="image/upload-folder-win.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <div class="image-with-caption">
+          <img src="image/upload-folder-mac.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>//TODO フォルダ選択のUIは初めてだと思うので解説を入れたい</p>
+        <p>以下のようなメッセージが表示されたら <strong>アップロード</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/upload-folder-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すると、選択したフォルダが Google ドライブにアップロードされます。</p>
+        <h3><a name="header-3-b6c01b2a5c5864e42a98fc9adcb649bd"></a> フォルダごとダウンロードしよう</h3>
+        <p>Google ドライブ上にあるフォルダを丸ごとダウンロードすることもできます。 ファイルと操作は似ているのですが、注意点は <strong>ZIP 形式で圧縮された状態でダウンロードされる</strong> ということです。</p>
+        <p>実際にやってみましょう。</p>
+        <p>Google ドライブ上のフォルダを<strong>右クリック</strong>し、<strong>ダウンロード</strong>をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/download-folder-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>ファイルの場合はすぐにダウンロードが始まりましたが、フォルダの場合は圧縮作業が行われます。</p>
+        <div class="image-with-caption">
+          <img src="image/download-folder-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>以下のようなメッセージが現れたら <strong>このページを離れる</strong> をクリックしてください。</p>
+        <div class="image-with-caption">
+          <img src="image/download-folder-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すると、自動的に ZIP ファイルのダウンロードが開始されます。<br> ダウンロードが完了したら開いてみましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/download-folder-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>繰り返しになりますが、フォルダをダウンロードする時は <strong>ZIP ファイル</strong> としてダウンロードされるので、展開を忘れないようにしましょう。<br> もし、ZIP ファイルの操作手順を忘れてしまった場合は 「<strong>基本操作をしてみよう</strong>」 の 「<strong>ファイルやフォルダ操作の応用を学ぼう</strong>」で復習しましょう。</p>
+        <h2><a name="header-2-e7957c3680a1a9da11e3b69ae5740f19"></a> Google ドライブ内でフォルダ・ファイルを移動しよう</h2>
+        <p>Google ドライブ上で、移動させたいファイルやフォルダを<strong>右クリック</strong>し、<strong>指定の場所へ移動</strong>をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/move-to-folder-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>移動先のフォルダを選ぶ吹き出しが表示されます。今回は「練習」フォルダにあるファイルを <strong>マイドライブ</strong> に移動してみましょう。<br> 上の階層にあるフォルダを選ぶ場合は、この吹き出しの左上にある矢印をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/move-to-folder-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>吹き出しの中にマイドライブが現れたら <strong>ここに移動</strong> をクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/move-to-folder-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>以下のようなメッセージが現れたら移動完了です。</p>
+        <div class="image-with-caption">
+          <img src="image/move-to-folder-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>実際にマイドライブに移動できているか確認してみましょう。</p>
+        <h2><a name="header-2-d6ae3da358ea266adcf0d8f5d91d084e"></a> ファイル・フォルダを他の人に共有しよう</h2>
+        <p>Google ドライブ上で、他の人に共有したいファイルやフォルダを<strong>右クリック</strong>し、<strong>共有</strong>をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/share-file-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>以下のような画面が現れます。<br> 新機能の紹介は「OK」をクリックして閉じて大丈夫です。</p>
+        <div class="image-with-caption">
+          <img src="image/share-file-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-b707055faaa845e6bfe49f615262bc17"></a> 特定の人に共有する場合</h3>
+        <p><strong>ユーザーやグループと共有</strong> という枠にある入力欄に、共有したい相手のメールアドレスを入力して <kbd>Enter</kbd> キーを押します。<br> 複数名と共有したいときは、複数人のメールアドレスをこの欄に入力します。</p>
+        <div class="image-with-caption">
+          <img src="image/share-file-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <div class="image-with-caption">
+          <img src="image/share-file-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p><strong>共有した相手には以下のようなメールが届きます</strong>（あなたへは届きません）。</p>
+        <div class="image-with-caption">
+          <img src="image/share-file-05.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>共有を解除したい場合、再びこの共有メニューを開き、共有した人の名前の右側に表示されている <strong>編集者</strong>（あるいは閲覧者） をクリックし、<strong>削除</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/share-file-05-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-70a1e3693207aa3ed6f82881c553dc4e"></a> 一般公開したい場合</h3>
+        <p>SNS などで大勢の人にファイルを共有する場合、リンクでの共有が便利です。</p>
+        <p><strong>リンクを取得</strong>の枠をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/share-file-06.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p><strong>制限付き</strong> をクリックし、現れた選択肢から <strong>リンクを知っている全員</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/share-file-07.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>これで公開されました。<br>
+          <strong>リンクをコピー</strong> をクリックすると、共有用のリンクがコピーされます。これをSNSやメールなどにペーストすることで、他の人に共有リンクを教えられます。<br>
+          <strong>完了</strong> をクリックするとこの画面が閉じられます。
+        </p>
+        <div class="image-with-caption">
+          <img src="image/share-file-08.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>共有を解除したい場合、再びこの共有メニューを開き、「制限付き」に戻しましょう。</p>
+        <h3><a name="header-3-a61d148a834955531d4fbabeae0f24ec"></a> Google Workspace の場合</h3>
+        <p>学校や会社から割り当てられた Google Workspace のアカウントを使っている場合、一般公開ではなく「同じ学校や会社の全員」という条件で共有することもできます。<br> また、情報流出を防止するために「一般公開」ができないように、管理者によって制限されている学校や会社もあります。</p>
+        <div class="image-with-caption">
+          <img src="image/share-file-09.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-2e6009c48d699af3dcc803882fe3591f"></a> 共有中のファイルについて</h3>
+        <p>この共有設定をオンにしたファイルは、ファイル名の横に人のアイコンが表示されます。<br> 誤ったファイルを共有しないように気をつけるときは、このアイコンを参考にするとよいでしょう。</p>
+        <div class="image-with-caption">
+          <img src="image/share-file-10.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-e2d5ef393c69820442325a785d30b0cc"></a> ファイル・フォルダを削除しよう</h2>
+        <p>Google ドライブ上にあるファイルやフォルダを削除する場合、<strong>右クリック</strong>して<strong>削除</strong>をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/delete-file-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すると、Google ドライブの <strong>ゴミ箱</strong> に移動されます。<br> 画面の左側からゴミ箱をクリックして開いてみましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/delete-file-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>完全に削除する場合、ゴミ箱の中でファイルを <strong>右クリック</strong> して <strong>完全に削除</strong> をクリックします。<br> なお、ここで <strong>復元</strong> をクリックすると元の場所にファイルを戻すことができます。</p>
+        <div class="image-with-caption">
+          <img src="image/delete-file-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>なお、大量のファイルがある場合は画面上部にある <strong>ゴミ箱</strong> をクリックして <strong>ゴミ箱を空にする</strong> をクリックすると、ゴミ箱に入っているファイルを一気に「完全に削除」できます。</p>
+        <div class="image-with-caption">
+          <img src="image/delete-file-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

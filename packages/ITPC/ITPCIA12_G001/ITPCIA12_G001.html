@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>パソコンの選び方</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>パソコンの選び方</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-972c8f2eec5fa86fa0f4e31e3fef6385"></a> パソコンの選び方</h1>
+        <p>この付録では、まだパソコンをお持ちでない方や買い換えようとしている方に向けて、パソコンの選び方の参考となる指針を解説します。<br> ただし、パソコンは安い買い物ではありません。この講座の情報以外にも店頭のスタッフさんに相談するなどして、じっくりと自分に合ったパソコンを選びましょう。</p>
+        <ul id="toc">
+          <li><a href="#header-2-35e5fa72d008d7d1283a33d8df78f40d" target="_blank">パソコンを買う場所</a></li>
+          <li><a href="#header-2-ae84fac6ffa758fff71ddb96235d2a2e" target="_blank">単位の知識</a></li>
+          <li><a href="#header-2-566bf83a5dc750404d15c020a9fd177a" target="_blank">パソコンの性能（スペック）の読み方と選び方</a></li>
+          <li><a href="#header-2-6797308f7318bb3b0422578cd360d294" target="_blank">用途にあったパソコンの選び方（新品）</a></li>
+          <li><a href="#header-2-05c3e4897f4506012a2aa0ac9a55931a" target="_blank">中古パソコンを選ぶ場合</a></li>
+          <li><a href="#header-2-c7887a92414f854a9067849a51b9bb02" target="_blank">まとめ</a></li>
+        </ul>
+        <h2><a name="header-2-35e5fa72d008d7d1283a33d8df78f40d"></a> パソコンを買う場所</h2>
+        <p>//TODO 抽象イラスト: 家電量販店で店員さんのアドバイスを受けながらパソコンを選ぶ様子</p>
+        <p>実際の家電量販店でもネット通販でも購入できますが、初期設定やサポートを行ってくれる店舗も多いので、パソコンに不慣れな場合は家電量販店で購入する方が安心です。</p>
+        <p>ネット通販は店頭で購入するより低価格なことも多いですが、店頭と異なり、初期設定などは自分で行う必要があります。<br> もし、周りに初期設定を手助けしてくれる人がいる場合はネット通販の利用を検討してよいかもしれません。</p>
+        <p>//TODO 抽象イラスト: 新品パソコンはサポートが充実しているが、中古パソコンはサポートが受けられない</p>
+        <p>また、中古のパソコンは性能を見極めるのが難しかったり、必要なソフトが入っていなかったりする場合があります。また、故障したときのサポートも得にくいため、故障したときには新品より高くつくこともあります。<br> 初めてパソコンを買う場合はなるべく新品を買う方が安心だと言えるでしょう。</p>
+        <h2><a name="header-2-ae84fac6ffa758fff71ddb96235d2a2e"></a> 単位の知識</h2>
+        <p>長さの単位は<strong>m（メートル）</strong>、重さの単位は <strong>g（グラム）</strong> であるように、パソコンに関連する事柄にも単位があります。</p>
+        <p>その中でもよく使うのが情報量（データの大きさ）の単位 <strong>B（バイト）</strong> です。バイト自体はかなり小さい単位なので、KB（キロバイト）や GB（ギガバイト）のような単位として使います。<br> このK（キロ）やG（ギガ）などについて覚えておきましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/si-prefix.png">
+          <span class="imagecaption figure">パソコンでよく使う単位</span>
+        </div>
+        <ul>
+          <li>1000 B（バイト） = 1KB（キロバイト）</li>
+          <li>1000 KB = 1MB（メガバイト）</li>
+          <li>1000 MB = 1GB（ギガバイト）</li>
+          <li>1000 GB = 1TB（テラバイト）</li>
+        </ul>
+        <p>となります。</p>
+        <p>他には CPU に関して、周波数を示す Hz（ヘルツ）という単位が登場します。<br> これも同様で、 1 GHz = 1000 MHz です。</p>
+        <div class="tip"><a name="1024"></a>
+          <span class="tip-title">コラム: 1000倍？1024倍？</span>
+          <p>今回のコラムは特に難しいので、興味がある人以外は読み飛ばして大丈夫です。<br><br></p>
+          <p>上で示した図のように、1 M は 1000 k、1 G は 1000 M ……のように、それぞれが <strong>1000 倍</strong> となるように単位は定められています。<br> これは SI 接頭辞とよばれる、単位の国際的な決まりで、パソコン以外でも使われているものです。 たとえば電気の単位「W（ワット）」にも、kW（キロワット）、MW（メガワット）などがあります。もちろん 1kW = 1000W です。 <br><br></p>
+          <p>しかし、パソコンのデータ量に関しては厳密には「1000倍」ではなく「<strong>1024倍</strong>」なのです。<br><br></p>
+          <p>なぜなら、パソコンの内部のデータはすべて 2進数 であるため、2, 4, 8, 16, 32, 64.... と 2 を倍々に掛けていった数（「2の <strong>べき乗</strong> の数」といいます）でしか数えられません。 そのため、1000倍 ではなく 2 の 10乗（2 を 10 回掛けた数）である 1024倍 となっており、正確には 1MB = 1024KB となっています。<br><br></p>
+          <p>ただし、パソコンを普段使う上では 1000倍 と 1024倍 の違いを意識する必要はあまりないので、「<strong>だいたい 1000倍</strong>」と考えていて大丈夫です。</p>
+        </div>
+        <h2><a name="header-2-566bf83a5dc750404d15c020a9fd177a"></a> パソコンの性能（スペック）の読み方と選び方</h2>
+        <p>ここまででパソコンの部品がどういう役割を持っているかを学びました。今回は、パソコンを買う場合、それらの部品の性能をどう読み解けばよいかを学びます。</p>
+        <p>パソコンの性能のことを<strong>スペック</strong>といいます。よく使う言葉なので覚えて起きましょう。</p>
+        <p>なお、今回の内容を学ぶ前に、第 4 章の 「<strong><a href="../ITPCIA04_G003/ITPCIA04_G003.html" target="_blank">パソコンの中身を見てみよう</a></strong>」を復習することを強くおすすめします。</p>
+        <h4><a name="header-4-17bc10091293fdc562a6db69940ee924"></a> OS</h4>
+        <p>一番大事なのが OS です。Windows か Mac かによって、パソコンの操作方法などは大きく異なります。</p>
+        <p>学生の場合は学校によって指定の OS があることも多いので、それに合わせるとよいでしょう。</p>
+        <p>特に大学や専門学校であれば、学部や学科による違いも要注意です。<br>学部や専攻、研究室によっては Windows でしか動かないアプリを使うこともあります（逆に Mac でしか動かないアプリを使うところもあります）。購入前に学校の学事窓口や教員、先輩などに確認することをおすすめします。</p>
+        <p>指定がない場合は好みで選んで構いませんが、以下のような特徴を踏まえて選ぶと良いでしょう。</p>
+        <ul>
+          <li>Windows <ul>
+              <li>企業で多く使われているため、一度習得すると就職時にも役に立つ。</li>
+              <li>アプリの種類が豊富。特にパソコン用ゲームや業務用アプリは Windows 専用のものが多い。</li>
+            </ul>
+          </li>
+          <li>Mac <ul>
+              <li>プログラミングをする場合に便利。</li>
+              <li>デザイン系でも便利。デザイン用ソフトは Mac 専用のものもある。</li>
+            </ul>
+          </li>
+        </ul>
+        <p>また、Windows には Windows 10 Home や Windows 10 Pro など、いくつかの種類があります。<br> 通常であれば Home を選んでおけば十分です。</p>
+        <p>なお、最近は <strong>Chrome OS</strong>（クローム・オーエス） を搭載した Chromebook（クローム・ブック） も登場しています。しかし、Chrome OS は Windows や Mac とは使い勝手が大きく異なり、対応アプリも少ない状況です。<br> 2021 年現在、入門者のパソコンとして Chromebook を購入するのはあまりおすすめできません。</p>
+        <h4><a name="header-4-2dd9e3b5063ac13a9658018b4fc47f5e"></a> 重量やサイズ</h4>
+        <p>//TODO 抽象イラスト: 持ち運びやすい パソコン を選ぶことは重要</p>
+        <p>ノートパソコンは持ち運ぶことになるため、重さもよく考える必要があります。</p>
+        <p>ノートパソコンの大きさは、画面の大きさを基準にすることが多くなっています。画面の対角線の長さを基に「○○インチ」というように表されます（1 インチは約 2.54 cm です。）。<br> ただし、同じインチ数でも、画面以外の部分の大きさは製品によって少し異なるので要注意です。</p>
+        <p>//TODO 説明イラスト: ノートPCの画面の対角線</p>
+        <p>どのくらいの大きさが適切かは、あなたの体格やカバンの大きさなどにもよりますが、基本的には 13 インチ以下で、1.5 kg 以下のものを探すと持ち運びしやすいと言えるでしょう。</p>
+        <p>可能であれば、実際の店舗（家電量販店など）で実物を見るのがよいでしょう。<br> 実物を見れない場合でも、メジャーなどを使って実際の大きさを想像することをおすすめします。</p>
+        <h4><a name="header-4-2b55387dd066c5bac646ac61543d152d"></a> CPU</h4>
+        <p>続いて、パソコンの頭脳である CPU を見ていきましょう。</p>
+        <h5><a name="header-5-7877efbabeb6b5d0fe99a1ddce94584f"></a> CPUのメーカーと製品</h5>
+        <p>一般的なパソコンは Intel（インテル）社 か AMD（エーエムディ）社 の CPU を搭載しています。<br> はじめてのパソコンであれば、メーカーによる大きな違いはないと考えて大丈夫です。</p>
+        <p>Intel は <strong>Core</strong>（コア）、<strong>Pentium</strong>（ペンティアム）、<strong>Celeron</strong>（セレロン）というCPUを販売しています。<br> AMD は <strong>Ryzen</strong>（ライゼン）、<strong>Athlon</strong>（アスロン）というCPUを販売しています。<br> それぞれがどういった位置づけなのかを簡易的な図にまとめました。</p>
+        <div class="image-with-caption">
+          <img src="image/intel_amd_cpu.png">
+          <span class="imagecaption figure">Intel と AMD の主要製品の比較</span>
+        </div>
+        <p>一般的な使い方であれば Core i3 や Ryzen 3 を搭載したパソコンがあれば十分です。<br> 予算が少ない場合は Pentium や Celeron、Athlon を選択肢にしてもよいと思います。ただし、安くなる分だけ性能は下がってしまうため、快適に動作しない場面が出てくる可能性があります。</p>
+        <p>逆に、ゲームや動画制作・CG制作などをやってみたい場合は、高い性能の CPU が必要です。Core i7 や Ryzen 7 以上の CPU を選んでおきましょう。</p>
+        <h5><a name="header-5-0b7da4efba31de3d0075dfcaba8cebc9"></a> <ruby>動作<rt>どうさ</rt></ruby><ruby>周波数<rt>しゅうはすう</rt></ruby>（クロック周波数）</h5>
+        <img src="image/02_G003-04-01.png">
+        <p>かんたんに言ってしまうと、CPU が仕事をする速度です。単位は <strong>Hz</strong>（ヘルツ）です。<br> 周波数が低いほど遅く、高いほど速く動作します。 たとえば、周波数が 1.1GHz（ギガヘルツ） より、2.6 GHz（ギガヘルツ） の方が高性能だと言えます。</p>
+        <p>周波数が高いと、より多くの電力を消費したり、熱を発したりします。<br> そのため、バッテリで動作する事が多く、省エネを求められる ノートパソコン用の CPU は周波数が低めに抑えられています。</p>
+        <p>また、仕事量が少ない（処理が軽い）ときは低い周波数で動作し、仕事量が多い（処理が重い）ときは周波数を高める CPU があります。<br> そういった CPU の場合、動作周波数は「2.1～4.1GHz」や「最大 4.1 GHz」のように表記されています。</p>
+        <h5><a name="header-5-1a40751d9d6ebe9226e59ceca4975d1e"></a> コア数</h5>
+        <img src="image/02_G003-05-01.png">
+        <p>CPU の中には複数の CPU が詰まっています。<br> この詰まっている CPU の数が「コア数」です。</p>
+        <p>昔は 1 コア が基本で、クロック周波数を上げることによって高性能化が図られてきました。しかし、周波数を上げるだけでは技術的に限界があるため、CPU を増やすという手法がとられるようになりました。<br> コアが多くなればなるほど、同時に処理できる仕事が増えます。</p>
+        <p>2 つ以上のコアがある CPU のことを「マルチコア CPU」といいます。<br> 以下のような名称も知っておくとよいでしょう。</p>
+        <ul>
+          <li>1 つのコアしかない CPU: シングルコア CPU</li>
+          <li>2 つのコアがある CPU: デュアルコア CPU</li>
+          <li>4 つのコアがある CPU: クアッドコア CPU</li>
+          <li>6 つのコアがある CPU: ヘキサコア CPU</li>
+          <li>8 つのコアがある CPU: オクタコア CPU</li>
+        </ul>
+        <h5><a name="header-5-10c84ca1491140a2dce3a47e4296e58f"></a> スレッド数</h5>
+        <p>1 つのコアを擬似的に 2 つのコアとして動作させる技術があります。<br> この技術に対応した CPU の場合、例えば 4 コア であれば擬似的に 8 コアを搭載しているように動作します。</p>
+        <p>この擬似的なコア数を <strong>スレッド数</strong> といいます。</p>
+        <div class="tip"><a name="frequency"></a>
+          <span class="tip-title">コラム: 周波数以外でも性能は決まる</span>
+          <p>動作周波数を上げる以外にも、CPU を高速化する技術はいくつか存在します。周波数を上げると電力消費が大きくなってしまうため、最近は他の技術も同時に利用するようになっています。その 1 つが複数のコアを搭載する技術で、こういった技術も年々進化しています。<br> そのため、10 年前の 4GHz の CPU より、最近発売された 2GHz の CPU の方が高性能な場合があります。<br> 同じ時期に発売されたパソコンは CPU の周波数だけで比較しても、大体の性能の差がわかります。しかし、古いパソコンと新しいパソコンを比較する場合はそうでないので要注意です。</p>
+        </div>
+        <h4><a name="header-4-5ccd0f5f9b7e38b546e30d016ee842a4"></a> メモリ</h4>
+        <p>2021 年現在、メモリ容量が <strong>8GB</strong> 以上あれば、ビデオ会議やオンライン授業、レポート作成などといった勉強や仕事を快適に行えます。ゲームや画像・映像編集、プログラミングなどをしたい場合は <strong>16GB</strong> 以上のパソコンを検討してもよいでしょう。<br> メモリが 4GB のパソコンは動作が重くなる場面が多いので、なるべく避ける方が良いでしょう。また、2GB など、4GB 未満のものは「重い」以前に動作に支障があるため、絶対に避けてください。<br></p>
+        <p>なお、メモリの容量は2倍になっていきます。つまり、4GB, 8GB, 16GB, 32GB, 64GB... などの製品が用意されています。<br> そのため、「10GB」や「17GB」などのメモリを搭載したパソコンは基本的に存在しません。</p>
+        <h5><a name="header-5-ba5c51d171a9cd14818dfc22ef3b9a69"></a> メモリの詳細情報</h5>
+        <p>パソコンの性能を見ると、メモリの欄に「8GB DDR4 2400MHz」「4GB DDR4 SDRAM PC4-19200」のように容量以外の情報が書いてあることもあります。<br> これはメモリの種類と動作速度です。</p>
+        <p><strong>DDR4</strong>（ディーディーアール・フォー） は現在よく使われているメモリ規格のバージョンです。<br> 2400 MHz などはメモリの動作速度を表すものです。なお、2400 MHz のものを「PC4-19200」と表現することもあります。</p>
+        <p>メモリの詳細情報はかなり難しいので、初心者のうちは容量以外を細かく気にする必要はありません。</p>
+        <div class="tip"><a name="extend-ram"></a>
+          <span class="tip-title">コラム: パソコンのメモリは増設できる？</span>
+          <p>パソコンによっては、あとからメモリを買い足すことで容量を増やせるものもあります。ただし、メモリを増設できないパソコンも最近は多いです。<br> 「いまは少なめで買っておいて、後で必要になったら増設しよう」と考えている場合は、そのパソコンが増設に対応しているかきちんと確認しておきましょう。<br><br></p>
+          <p>また、増設する際にはパソコンを少しだけ分解する必要があります。ストレージに比べて増設が手軽ではないため、できる限り最初から容量が大きいものを買っておく方がよいでしょう。</p>
+        </div>
+        <h4><a name="header-4-c83178674355c10b53fc7d05a755c865"></a> ストレージ</h4>
+        <p>基本的には <strong>128GB</strong> 以上を目安にしましょう。たくさんアプリを入れたり、画像や動画を多く保存したりといった使い方をする場合は <strong>256GB</strong> 以上ある方が良いかもしれません。<br> 特に動画はファイルの容量が大きいので、YouTuber のように頻繁に動画を制作するような場合は 1TB 以上のストレージが必要になることもあるでしょう。</p>
+        <p>ストレージは主にSSD・HDDがありますが、最近のノートパソコンの多くは SSD を搭載しています。<br> SSD は高速ですが、容量を大きくすると高価になってしまいます。そのため、安価に大容量のストレージが欲しい場合は、速度は下がってしまいますが HDD を選ぶとよいでしょう。<br> 逆に、そこまで大容量を必要としない場合は SSD を選ぶと高速になり、快適でしょう。</p>
+        <p>また、<strong>eMMC</strong>（イー・エムエムシー）と呼ばれるストレージもあります。仕組みは SSD に似ているのですが、SSD ほど高速ではありません。<br> また、eMMC は SSD や HDD ほど容量が大きくありません。</p>
+        <div class="tip"><a name="1024"></a>
+          <span class="tip-title">コラム: 「1024倍」問題、再び</span>
+          <p>今回のコラムも難しいので、興味がある人以外は読み飛ばしてかまいません。<br><br></p>
+          <p>先ほど、単位についてのコラムで「厳密には 1024 倍」であると解説しました。<br> しかし、ストレージのメーカーは「1000 倍」で計算して SSD や HDD を作っています。<br><br></p>
+          <p>そのため、容量が 1TB のストレージを搭載したパソコンを購入しても、使える容量は 1TB より少なくなってしまいます。これはトラブルが発生しているのではなく、ストレージのメーカーと OS での計算が違うことによるものです。</p>
+          <p class="image-with-caption">
+            <img src="image/1tb-ssd-in-windows.png">
+            <span class="imagecaption screenshot">1 TB の SSD はパソコンで約 931 GBと認識される。</span>
+          </p>
+          <p>この複雑な状況を解決するために、KiB（キビバイト）、MiB（メビバイト）、GiB（ギビバイト）という、「1024 倍である」ことを明確にした単位も用意されているのですが、さほど普及していません。</p>
+        </div>
+        <h4><a name="header-4-c980dc6acda7b5eff93a693b3e6cae4f"></a> 付属アプリ（プリインストールアプリ）</h4>
+        <p>パソコンを買ったときに最初から入っているアプリを <strong>プリインストールアプリ</strong> といいます。</p>
+        <h5><a name="header-5-df814135652a5a308fea15bff37ea284"></a> Office</h5>
+        <p>Word（ワード） や Excel（エクセル） 、PowerPoint（パワーポイント）といった <strong>Office</strong>（オフィス）アプリは全てのパソコンに標準で入っているものではありません。 これらのアプリが学校や仕事で必要な場合、別途購入してインストールする必要があります。</p>
+        <p>パソコンやメーカーによってはオフィスが付属するものもあります。オフィスが必要な場合は最初から入っているパソコンを探すとよいでしょう。<br> 「Office プリインストール済み」などと書かれているパソコンには、Officeが最初から入っています。</p>
+        <p>また、Office には毎月利用料金を払うものと、1 度購入すると使い続けられるもの（永続版）があります。どちらがインストールされているかを確認しましょう。</p>
+        <p>一部の大学などではオフィスのアプリを無料で利用できるところもあります。<br> 大学生などの方は自分の学校で利用できるかどうか調べてみましょう。アプリの費用を節約できるかもしれません。</p>
+        <div class="tip"><a name="office-compatible"></a>
+          <span class="tip-title">コラム: Office <ruby>互換<rt>ごかん</rt></ruby> アプリ</span>
+          <p>マイクロソフト社が販売する Office と、ほぼ同じ機能を持つ「<ruby>互換<rt>ごかん</rt></ruby> Office」「Office 互換アプリ」と呼ばれるアプリがあります。代表的なものが中国のキングソフト社が販売している「WPS Office」や、The Document Foundationという団体によって無償で配布されている「LibreOffice（リブレオフィス）」です。</p>
+          <p>こういった互換オフィスアプリはマイクロソフト社の純正品に比べて安く販売されていたり、中古パソコンなどに付属していたりします。普通に使う分には十分なことも多いのですが、マイクロソフトの Office と完全に同じ動きをするわけではないことには留意しましょう。</p>
+        </div>
+        <h2><a name="header-2-6797308f7318bb3b0422578cd360d294"></a> 用途にあったパソコンの選び方（新品）</h2>
+        <p>ここでは、用途にあった新品パソコンの選び方を紹介します。あくまで目安なので、購入する店舗などでよく相談しましょう。<br> なお、ここでは Windows を中心とした選び方をアドバイスします。</p>
+        <h3><a name="header-3-ccdf2fa5dcafe0308bd0a77cfdda5c7f"></a> 初めてパソコンを買う中高生・大学生・専門学生の場合</h3>
+        <p>//TODO 抽象イラスト: 学校が特定のモデルのパソコンを生徒に向けておすすめしている様子</p>
+        <p>レポートの作成やオンライン授業などでパソコンを使う場合、まずは学校で「学校指定のパソコン」がないか確認してみてください。<br> 例えば、N 高等学校は<a href="https://nnn.ed.jp/commute_course/commodity/" target="_blank" rel="noopener noreferrer">「推奨パソコン」としてMacBook Airを紹介しています</a>。<br> 大学では<strong>生協</strong>にて推奨パソコンが用意されていることもあるので、それを買うのも良いでしょう。</p>
+        <p>指定のパソコンがない学校に通っている方は、以下の基準を参考に選ぶとよいでしょう。</p>
+        <ul>
+          <li>パソコンのタイプ: ノートパソコン</li>
+          <li>OS: Windows 10</li>
+          <li>サイズ: 13インチ程度</li>
+          <li>CPU: Core i3 / Ryzen 3 以上</li>
+          <li>メモリ: 8GB 以上</li>
+          <li>ストレージ: 128GB 以上</li>
+          <li>GPU: 特にこだわらなくてよい</li>
+        </ul>
+        <p>上記の性能があれば、在学している間はある程度快適に使い続けられるはずです。</p>
+        <p>また、学生の場合は <strong>学割</strong> が適用できるメーカーもあります。メーカーによって対象や割引額は異なりますが、1 割程度安く買える場合もあります。</p>
+        <h3><a name="header-3-4fc7f3cbff2de7d96a32eae1f0429d07"></a> 初めてパソコンを買う新社会人の場合</h3>
+        <p>社会人の場合も、大学生と同様のパソコンをおすすめします。<br> ただし、会社で使っているパソコンのOS（Windows・macOS）に合わせておいたほうがスキルアップにも役立つでしょう。</p>
+        <ul>
+          <li>パソコンのタイプ: ノートパソコン</li>
+          <li>サイズ: 13インチ程度</li>
+          <li>CPU: Core i3 / Ryzen 3 以上。できれば Core i5/ Ryzen 5 以上。</li>
+          <li>メモリ: 8GB 以上</li>
+          <li>ストレージ: 128GB 以上。できれば 256GB 以上。</li>
+          <li>GPU: 特にこだわらなくてよい</li>
+        </ul>
+        <p>テレワークの際、自分で所有しているパソコンを使う会社もあります。そういった場合でも上記の性能があれば快適に利用できるはずです。</p>
+        <h3><a name="header-3-3f42d305f19354eab57c6d2fc974bc58"></a> パソコンでゲーム・eスポーツをする場合</h3>
+        <p>ゲームによって必要なスペックはかなり異なります。</p>
+        <p>プレイしたいゲームが決まっている場合、そのゲームの公式サイトなどに記載されている <strong>推奨スペック</strong> を参考にすると良いでしょう。<br> たとえば「リーグ・オブ・レジェンド（LoL）」をプレイする場合、「LoL　スペック」などで検索してみましょう。</p>
+        <p>ここでは、<a href="https://support-leagueoflegends.riotgames.com/hc/ja/articles/201752654-%E5%BF%85%E8%A6%81%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83%E3%81%A8%E6%8E%A8%E5%A5%A8%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83#wq1" target="_blank" rel="noopener noreferrer">LoL公式サイト</a>に書かれている内容を例として示します。</p>
+        <p>&gt; CPU：3 GHzデュアルコアプロセッサ<br> &gt; メモリ：4 GB RAM<br> &gt; HDD空き容量：16 GB<br> &gt; グラフィックボード：NVIDIA GeForce 8800 または ATI Radeon HD 5670 と同等、あるいはそれ以上<br> &gt; DirectX： DirectX version 9.0 以上<br> &gt; OS：最新の Service Pack をインストール済み の Windows 7 / Windows 8.1 / Windows 10</p>
+        <p>CPU は 3 GHz の動作周波数のデュアルコア（2 コア）プロセッサとなっています。ただしこれは「推奨条件」なので、これを超えるものであれば問題ありません。<br> コア数が 2 コア以上で、動作周波数が 3GHz を超えていればよいでしょう。</p>
+        <p>メモリは 4GB となっています。最近のパソコンであればほとんど大丈夫そうです。<br> ただし、先程書いたとおり、4GB だとパソコン全体の処理が重くなってしまうので、8GB ある方が安心です。</p>
+        <p>HDD（ストレージ）は「空き容量」が 16 GB 以上となっています。つまり、このゲームだけで 16 GBのストレージを消費します。パソコンに写真や動画などのファイルや、他のアプリなども入れる事を考えると、最低でも 128GB 以上は必要でしょう。なお、HDD と書いてありますが、SSD でも問題ありません。</p>
+        <p>グラフィックボードとは GPU のことです。GeForce 8800 と同等かそれ以上と書かれているので、まず「GeForce 8800」を検索してみましょう。<br> すると、2007 年に発売されたものであると分かります。かなり前の製品なので、最近のゲーミングパソコンに搭載されている GPU であれば、どれでも大丈夫そうです。<br> また、最近の GPU なら DirectX は 9.0 以上に対応しているので、こちらも心配はいりません。</p>
+        <p>OS は最新の Windows 10 を選べば大丈夫です。</p>
+        <p>このように、推奨スペックを実際の製品と対応付けていく必要があるので、少し難しいかもしれません。<br> その場合、店頭で販売スタッフの方に「このゲームをプレイしたいのですが、どのパソコンが良いでしょうか」と尋ねてみるのがよいでしょう。</p>
+        <h3><a name="header-3-1298bde5edd3d93dd8d79a0053c9f8c2"></a> プログラミングをする場合</h3>
+        <p>プログラミングをする場合、そこまで高性能なパソコンは必要ありません。<br> N 予備校の「プログラミング入門コース」など、Web プログラミングをする場合は以下のような性能があれば快適です。</p>
+        <ul>
+          <li>CPU: Core i5 / Ryzen 5 以上</li>
+          <li>メモリ: 8GB 以上。できれば 16GB 以上。</li>
+          <li>ストレージ: 256GB 以上。</li>
+          <li>GPU: 特にこだわらなくてよい</li>
+        </ul>
+        <p>OS は Windows でも Mac でも、どちらでも大丈夫です。<br> ただし、iPhone・iPad 向けのアプリの開発は Mac しか対応していないので要注意です。</p>
+        <p>また、ゲームプログラミングに取り組む場合は GPU の性能が必要になる場合があります。その場合は「ゲーミングパソコン」と呼ばれるパソコンを探すとよいでしょう。</p>
+        <h3><a name="header-3-edc585f520beef19840a271713419428"></a> 人工知能の開発に取り組む場合</h3>
+        <p>人工知能（AI）を活用したプログラミングをする場合、GPU の性能が重要になります。<br> GPU は元々、ゲーム用の CG を計算するための部品でした。しかし、GPU の特徴が AI の開発に使われる計算方法に適していたため、近年の AI 開発では GPU のパワーが必要になっています。<br> また、大きなサイズのデータをよく扱うことになるため、GPU 以外の性能も高めにするのが望ましいです。</p>
+        <p>いわゆる「ゲーミングパソコン」と呼ばれる、ゲーム向け PC を選ぶと良いでしょう。</p>
+        <ul>
+          <li>OS: Windows 10</li>
+          <li>CPU: Core i5 / Ryzen 5 以上。できれば Core i7 / Ryzen 7 以上。</li>
+          <li>メモリ: 16GB 以上。できれば 32GB 以上。</li>
+          <li>ストレージ: 128GB 以上。できれば 256GB 以上。</li>
+          <li>GPU: NVIDIA GeForce シリーズ</li>
+        </ul>
+        <h3><a name="header-3-18579ebfbd9a8a8206e110ed5b5012fe"></a> 動画編集をする場合</h3>
+        <p>YouTuber など、動画編集をする場合は様々な部品の性能が求められます。<br> 特に CPU、メモリ、ストレージが重要です。</p>
+        <p>GPU はアプリによっては有効な場合もありますが、基本的にはあまり使われません。CPU の方が重視されます。</p>
+        <ul>
+          <li>OS: Windows 10</li>
+          <li>CPU: Core i7 / Ryzen 7 以上</li>
+          <li>メモリ: 16GB 以上</li>
+          <li>ストレージ: 1TB 以上。できれば SSD。</li>
+        </ul>
+        <h2><a name="header-2-05c3e4897f4506012a2aa0ac9a55931a"></a> 中古パソコンを選ぶ場合</h2>
+        <p>これまでは新品パソコンを前提とした説明をしてきましたが、予算の都合で中古のパソコンを買いたい人もいるでしょう。<br> 中古パソコンは独特の難しさがあり、注意すべきポイントが多いので、ここである程度ご紹介します。</p>
+        <h3><a name="header-3-671553cde6d3c3c34cdcd1ec522ad55f"></a> 購入する場所</h3>
+        <p><strong>有名な中古パソコン専門ショップ</strong>が安心です。評判が良いところを探してから買いましょう。</p>
+        <p>個人間の売買（フリマアプリ、ネットオークションなど）では、商品の状態を初心者が見分けることが難しく、トラブルを抱えた商品を購入してしまうリスクがあります。<br> また、出品者もプロではないため、商品の説明や状態が正しいものであるとは言い切れません。</p>
+        <p>フリマアプリやネットオークションでパソコンを買うのは上級者向けである、と考えておきましょう。</p>
+        <h3><a name="header-3-bdd3628e013f8438e093322057396207"></a> 購入してはいけない商品</h3>
+        <p><strong>ジャンク品</strong>と記載されている商品は購入してはいけません。ジャンク（junk）とは、がらくたを意味する英単語です。<br> 基本的にどこか壊れている商品で、上級者が自分で分解して修理したり、部品を取ったりするために販売されている特殊な中古品です。</p>
+        <p>また、ジャンクでなくとも、「訳あり」と書かれている商品を初心者のうちに購入するのをやめておきましょう。<br> パソコンの「訳あり品」は何らかの修理が必要なものが多く、上級者向けであるからです。</p>
+        <p>なお、<strong>バルク品</strong>というものもあります。こちらは故障しているわけではありませんが、付属品が無い商品を指します。<br> 正しい付属品を自分で探して購入する必要があるため、こちらも初心者の間はなるべく避けておくとよいでしょう。</p>
+        <h3><a name="header-3-da05b245043c910331005a802ce2774c"></a> 中古パソコンの性能の見方</h3>
+        <p>基本的に最新版ばかりが並んでいる新品パソコンと違い、中古パソコンは発売された時期がバラバラです。そのため、性能を比較するのがちょっと大変です。</p>
+        <h4><a name="header-4-17bc10091293fdc562a6db69940ee924"></a> OS</h4>
+        <p>中古パソコンで一番気をつけないといけないのは OS です。<br> いまからパソコンを買う場合、基本的に最新の OS である Windows 10 や、macOS 11 BigSur を搭載しているものを選ぶべきです。</p>
+        <p>ただし、世の中には「業務用の特殊なアプリが古い OS にしか対応していない」といった理由で、古い OS を必要としている人もいます。<br> 中古パソコンの場合、そういった方向けに Windows 7 などを搭載したパソコンが販売されていることがあります。</p>
+        <p>ただし、それらの古い OS を搭載したパソコンはセキュリティ上に問題があります。<br> どうしても古い OS のパソコンを使わないといけない事情がある人でない限り、古い OS のパソコンを買うのはやめましょう。</p>
+        <h4><a name="header-4-2b55387dd066c5bac646ac61543d152d"></a> CPU</h4>
+        <p>中古パソコンの場合、CPU の比較が最新パソコンに比べて少し難しくなります。</p>
+        <p>最新パソコン同士の場合、CPU の製品名を見るだけで、だいたいの性能の差が分かります。<br> たとえば Core i7, Core i5, Core i3 があった場合、Core i7 が最も高性能だと分かります。</p>
+        <p>しかし、中古パソコンの場合は同じ「Core i7」でも、古いものと新しいものが同じ売り場に並んでいます。<br> いくら Core i7 であったとしても、例えば 5 年前のものでは最新型の Core i5 に負けている場合もあります。店によっては「高性能な Core i7 搭載」などと称して古い Core i7 を搭載したものを販売していることもあるため、よく知らずに選んでしまうと損をします。</p>
+        <p>判断するためには <strong>CPU の型番</strong> を見てみましょう。型番とは「Core i7-10510U」や「Core i7 7700HQ」のように表記されているものです。<br> しかし、この型番だけで検索すると専門的な情報が出てくるため、判断が難しいと思います。</p>
+        <p>そこで便利なのが<strong>ベンチマーク</strong>です。ベンチマークとは、CPU などのパソコン部品の性能を評価するテストのことです。<br> この <strong>ベンチマークの結果</strong> をまとめたサイトがあり、CPUを選ぶ際の参考になります。</p>
+        <p><strong>Passmark</strong>（パスマーク）と呼ばれるベンチマークは、かなり多くの CPU の性能を分析しています。この結果を参考にするとよいでしょう。</p>
+        <p>例えば <strong>Core i7-2700K</strong> という CPU と、<strong>Core i3-9100</strong> という CPU を比較してみましょう。<br> 「Core i7 2700K Passmark」「Core i3 9100 Passmark」で Google 検索してみます。<br> すると、それぞれ Passmark のサイトを見つけられるはずです。</p>
+        <p>英語でいろいろな情報が書かれたサイトが見つかりますが、今回は <strong>Average CPU Mark</strong> という部分だけを見れば大丈夫です。</p>
+        <div class="image-with-caption">
+          <img src="image/i7-2700k.png">
+          <span class="imagecaption screenshot">i7-2700K の Passmark 結果</span>
+        </div>
+        <div class="image-with-caption">
+          <img src="image/i3-9100.png">
+          <span class="imagecaption screenshot">i3-9100 の Passmark 結果</span>
+        </div>
+        <p>この Passmark のサイトによれば、Core i7-2700K のスコアは <strong>5591</strong>、 Core i3-9100 のスコアは <strong>6732</strong> であることが分かります。Passmark のスコアは大きい方が高性能を意味するので、i3-9100 の方が高性能だと分かります。</p>
+        <p>一見すると「i7 だから高性能、i3 だから低性能」と思ってしまいそうですが、この 2 つの CPU は発売時期が大きく異なります。古い i7 より 新しい i3 の方が高性能というわけです。</p>
+        <p>このように、ベンチマークの結果を調べると、製品名だけではわからない実際の性能差を確認できます。中古パソコン選びでは必須のテクニックといえるでしょう。</p>
+        <h4><a name="header-4-5ccd0f5f9b7e38b546e30d016ee842a4"></a> メモリ</h4>
+        <p>メモリは CPU ほど気にする必要はありません。<br> 数年前の 8GB の製品も、現在の 8GB の製品も、ほとんど同じ性能であると考えて大丈夫です。</p>
+        <p>なお、中古パソコンの場合は古い製品が多く、メモリ搭載量が少ないものも多いので要注意です。<br> なるべく最新モデルと同じような 8GB 以上の製品を探しましょう。</p>
+        <h4><a name="header-4-c83178674355c10b53fc7d05a755c865"></a> ストレージ</h4>
+        <p>ストレージの選び方も新品と同じ選び方で大丈夫です。</p>
+        <p>ただし、ストレージはパソコンの中では劣化が進みやすい部品であるため、中古パソコンのストレージは新品に比べて故障する可能性が高いことは留意しておく必要があります。</p>
+        <h4><a name="header-4-c8bc2d8f7e25aff8d09ce2bdbe2e888d"></a> GPU</h4>
+        <p>GPU も CPU と同様に、ベンチマークの結果を調べることで比較できます。<br> GPU の型番は「グラフィックボード」や「グラフィックコントローラ」などの欄に書かれている「NVIDIA GeForce 960」のようなものです。</p>
+        <p>CPU と同じく、「GeForce 960 Passmark」などで検索するとベンチマークの結果を知ることができ、比較に使えます。</p>
+        <h2><a name="header-2-c7887a92414f854a9067849a51b9bb02"></a> まとめ</h2>
+        <ul>
+          <li>初心者の場合、パソコンは家電量販店で新品を買うと安心</li>
+          <li>性能（スペック）の読み方を学んでおく</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

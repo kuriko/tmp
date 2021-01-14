@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang>
+<html lang="">
 
 <head>
   <meta charset="UTF-8">
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title></title>
+  <title>OS ってなんだろう？</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
   <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
@@ -36,7 +36,7 @@
     };
 
   </script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script>
     window.onload = function() {
       Gifffer({
@@ -45,7 +45,7 @@
           'height': '60px',
           'border': '3px solid #FFFFFF',
           'border-radius': '30px',
-          'background': '#0075c2',
+          'background': '#009c79',
           'position': 'absolute',
           'top': '50%',
           'left': '50%',
@@ -72,148 +72,165 @@
     <div class="book-header" role="navigation">
       <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a></a>
+        <a>OS ってなんだろう？</a>
       </h1>
     </div>
     <div class="page-wrapper" tabindex="-1" role="main">
       <section class="main-content markdown-section">
-        <h1><a name="header-1-1113cc346b2433b34f7dedd0ba46d538"></a> Mac &#x306E;&#x753B;&#x9762;&#x306B;&#x3064;&#x3044;&#x3066;&#x77E5;&#x308D;&#x3046;</h1>
-        <p>Mac &#x306E;&#x753B;&#x9762;&#x306B;&#x3064;&#x3044;&#x3066;&#x77E5;&#x308D;&#x3046;</p>
+        <h1><a name="header-1-fdd921be0c140af2a7c408719443cbdb"></a> OS ってなんだろう？</h1>
+        <p>前回はパソコンの部品について学びました。今回は <strong>OS</strong> について学びます。</p>
         <ul id="toc">
-          <li><a href="#header-3-042cd2a58d52b61374f71ea7d2c97801">&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;</a></li>
-          <li><a href="#header-3-035213f319f5790129d55b4ee3561543">Dock</a></li>
-          <li><a href="#header-3-7427cda061804e31644ba3f5cef93117">LaunchPad</a></li>
-          <li><a href="#header-3-b116872cef71a770f57c649c039c6ad0">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;</a></li>
-          <li><a href="#header-3-6e3c5f7213828a305cf8907393b7f955">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x64CD;&#x4F5C;</a></li>
+          <li><a href="#header-2-7c2de27941822fb4342c061846af1d70" target="_blank">ハードウェアとソフトウェア</a></li>
+          <li><a href="#header-2-5a95c586525bc03f08696c671af698f8" target="_blank">OS とは</a></li>
+          <li><a href="#header-2-d2133954dc9d6eed8312361013bbb3dc" target="_blank">主なスマホ・タブレット向け OS</a></li>
+          <li><a href="#header-2-bfde3129d6900c8250fbbafad9a984bb" target="_blank">主な パソコン向け OS</a></li>
+          <li><a href="#header-2-c7887a92414f854a9067849a51b9bb02" target="_blank">まとめ</a></li>
         </ul>
-        <h3><a name="header-3-042cd2a58d52b61374f71ea7d2c97801"></a> &#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;</h3>
-        <p>&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x3092;&#x8D77;&#x52D5;&#x3057;&#x305F;&#x76F4;&#x5F8C;&#x306B;&#x51FA;&#x3066;&#x304F;&#x308B;&#x753B;&#x9762;&#x3092; <strong>&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;</strong> &#x3068;&#x3044;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+        <h2><a name="header-2-7c2de27941822fb4342c061846af1d70"></a> ハードウェアとソフトウェア</h2>
+        <p>パソコンやスマホに関連して、<strong>ハードウェア</strong> と <strong>ソフトウェア</strong> という言葉がよく出てくるので、OS について学ぶ前に意味を覚えておきましょう。</p>
+        <p><strong>ハードウェア</strong>（hardware）は、物理的に存在している部品のことです。<br>たとえば、前回学んだ <strong>CPU</strong> や <strong>メモリ</strong> などがハードウェアの一種です。CPUやメモリはパソコンやスマホを分解してしまえば取り出すこともできるでしょう。</p>
+        <p><strong>ソフトウェア</strong>（software）は、物理的には存在していないものです。<br>たとえば、スマホの「アプリ」がソフトウェアの一種です。アプリはスマホ上にデータとして存在していますが、スマホを分解したとしても物体として取り出すことはできません。</p>
+        <div class="tip"><a name="ID"></a>
+          <span class="tip-title">「ソフトウェア」と「アプリ」</span>
+          <p>スマホやパソコンで動く「アプリ」はしばしば「アプリケーション」と呼ばれたり、「ソフトウェア」と呼ばれたりします。<br> では、これらは一緒のものなのでしょうか。それとも違うものなのでしょうか。どう呼ぶのが正しいのでしょうか。 <br>
+            <br>
+          </p>
+          <p>「ソフトウェア」には以下の2種類があります。</p>
+          <ul>
+            <li>アプリケーションソフトウェア</li>
+            <li>システムソフトウェア <br>
+              <br>
+            </li>
+          </ul>
+          <p>実は「アプリ」は「アプリケーションソフトウェア」の略です。<br> 「ソフトウェア」の種類のうち半分がとくに「アプリ」と呼ばれるというわけです。<br>
+            <br>
+          </p>
+          <p>ちなみに「アプリケーション」の意味は「応用する」です。人間が技術を応用するために作られたソフトウェアが「アプリ」だといえます。</p>
+        </div>
+        <h2><a name="header-2-5a95c586525bc03f08696c671af698f8"></a> OS とは</h2>
+        <p>パソコンやスマホには <strong>OS</strong>（オーエス）とよばれるアプリケーションが存在します。<br> パソコンの OS として代表的なものが <strong>Windows</strong> や <strong>macOS</strong> です。スマホでは <strong>Android</strong>、<strong>iOS</strong> が有名です。 これらの OS の名前を聞いたことがある人もいるのではないでしょうか。</p>
+        <p>しかし、OS とは一体何なのでしょうか？</p>
+        <p>パソコンやスマホには様々な部品が搭載されたり、接続されたりしています。また、私たちはパソコンやスマホで様々なアプリを利用します。<br> これらの間をつなぐのが <strong>OS</strong> です。OS は <span class="important-word">オペレーティング・システム</span>（Operating System）の略で、日本語では「<strong>基本ソフトウェア</strong>」と呼ぶこともあります。</p>
+        <p>ではまず、<strong>OS の役割</strong> を見ていきましょう。</p>
+        <img src="image/02_G004-01-01.png">
         <div class="image-with-caption">
-          <img src="image/desktop.png">
-          <span class="imagecaption screenshot">&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x753B;&#x9762;</span>
+          <img src="image/os-figure.png">
+          <span class="imagecaption figure">OS の役割</span>
         </div>
-        <p>&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#xFF08;desktop&#xFF09;&#x306F;&#x300C;&#x673A;&#x306E;&#x4E0A;&#x300D;&#x3092;&#x610F;&#x5473;&#x3059;&#x308B;&#x5358;&#x8A9E;&#x3067;&#x3059;&#x3002;<br> &#x3053;&#x306E;&#x673A;&#x306E;&#x4E0A;&#x306B;&#x69D8;&#x3005;&#x306A;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x8868;&#x793A;&#x3057;&#x3066;&#x4F7F;&#x3046;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x3067;&#x3059;&#x3002;</p>
-        <p>//TODO &#x62BD;&#x8C61;&#x30A4;&#x30E9;&#x30B9;&#x30C8;: &#x673A;&#x306E;&#x4E0A;&#x306B;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x8868;&#x793A;&#x3057;&#x3066;&#x4F7F;&#x3046;&#x69D8;&#x5B50;</p>
-        <div class="tip"><a name="desktop-laptop"></a>
-          <span class="tip-title">&#x30B3;&#x30E9;&#x30E0;&#x3000;&#x30CE;&#x30FC;&#x30C8;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x306B;&#x3082;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#xFF1F;</span>
-          <p>&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x306F;&#x300C;&#x30CE;&#x30FC;&#x30C8;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x300D;&#x300C;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x300D;&#x300C;&#x30BF;&#x30D6;&#x30EC;&#x30C3;&#x30C8;&#x300D;&#x306E;3&#x7A2E;&#x985E;&#x306B;&#x5206;&#x3051;&#x3089;&#x308C;&#x308B;&#x3068;&#x5B66;&#x3073;&#x307E;&#x3057;&#x305F;&#x3002;<br> &#x7A2E;&#x985E;&#x3068;&#x3057;&#x3066;&#x306E;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x306F;&#x3001;&#x5B9F;&#x969B;&#x306E;&#x673A;&#x306E;&#x4E0A;&#x306B;&#x7F6E;&#x3044;&#x3066;&#x4F7F;&#x3046;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x3067;&#x3059;&#x3002;&#x753B;&#x9762;&#x3068;&#x3057;&#x3066;&#x306E;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x306F;&#x300C;&#x673A;&#x306E;&#x4E0A;&#x3092;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x3057;&#x305F;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x4E0A;&#x306E;&#x6982;&#x5FF5;&#x300D;&#x3067;&#x3059;&#x3002;<br><br></p>
-          <p>&#x7D1B;&#x3089;&#x308F;&#x3057;&#x3044;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x30CE;&#x30FC;&#x30C8;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x306B;&#x3082;&#x753B;&#x9762;&#x3068;&#x3057;&#x3066;&#x306E;&#x300C;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x300D;&#x306F;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;<br> &#x4E21;&#x8005;&#x3092;&#x533A;&#x5225;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x300C;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#xFF08;&#x578B;&#xFF09;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x300D;&#x300C;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x753B;&#x9762;&#x300D;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+        <h3><a name="header-3-b3e74866e91e9e2b52867d856e54f25b"></a> 複数のアプリを同時に使えるようにする</h3>
+        <img src="image/02_G004-05-01.png">
+        <p>一般的に、私たちはパソコンやスマホに複数のアプリを入れて使います。また、「音楽を聞きながら SNS を見る」など、それらのアプリを同時に動かすこともよくあるでしょう。</p>
+        <p>しかし、パソコンやスマホの <strong>処理性能</strong>（リソース） には限りがあります。そのため、音楽アプリが処理性能を全部使ってしまうと、SNSなど他のアプリが使えなくなってしまいます。<br> そのため、処理性能（リソース）を複数のアプリにバランス良く分配する必要があります。この機能も OS の役割です。</p>
+        <p>アプリは OS に対して、「処理性能を使わせてほしい」と依頼します。その間に別のアプリも同じようなことを依頼しているかもしれません。<br> このとき、依頼を受けた OS は各アプリに対してバランス良く処理性能を割り当てます。時には全体の効率や安定性を見て処理の順番を変えたり、アプリ側に待ってもらったりします。</p>
+        <div class="back-styled gray">
+          <h3><a name="header-3-f50e9bb71370920fb62198f9df65f545"></a> 部品（ハードウェア）のコントロールを簡単にする</h3>
+          <div class="underline gray"> ここは<b>やや重要</b>な内容です。余裕があれば理解しましょう。 </div>
+          <p>OSがあることによって、<strong>アプリの開発者が楽になります</strong>。<br> アプリの開発が楽になることによって、パソコンを使う私たちが便利なアプリをたくさん利用できるようになるのです。</p>
+          <p>具体的に、どのように楽になるのかを見てみましょう。</p>
+          <p>パソコンに内蔵・接続されている部品（ハードウェア）は電気信号を使って情報を処理します。例えばマウスを動かしたり、画面を表示したりする際にも電気信号がやり取りされています。<br> これらの処理をコントロールするのは非常に難しいものです。また、パソコンの機種によって搭載されているハードウェアが異なるため、それぞれのハードウェアごとに違った処理も必要になる場合があります。</p>
+          <p>一方で、この難しい処理はどのようなアプリでも必要とされている機能でもあります。</p>
+          <img src="image/02_G004-02-01.png">
+          <p>例えば、マウスやキーボードからの入力を反映する機能はどんなアプリでも必要ですし、データを記録装置に保存したり読み込んだりといった機能も多くのアプリが必要としています。他にも画面にデータを表示する処理など、様々なものがあるでしょう。<br> これらの処理を行うプログラムをそれぞれのアプリ開発者が作成していると、とても非効率になってしまいます。</p>
+          <img src="image/02_G004-03-01.png">
+          <p>OS にはこういった「ハードウェアに関する難しい処理」「どのアプリでも必要とされる処理」を引き受ける役割があります。<br> これにより、それぞれのアプリ開発者が独自の機能の開発に集中できるようになるため、様々なアプリの開発が容易になります。その結果として、便利なアプリがたくさん開発されるようになり、私たち利用者にとっても利便性が高まります。</p>
+          <img src="image/02_G004-04-01.png">
         </div>
-        <h3><a name="header-3-035213f319f5790129d55b4ee3561543"></a> Dock</h3>
-        <p><strong>Dock</strong>&#xFF08;&#x30C9;&#x30C3;&#x30AF;&#xFF09; &#x306F; Mac &#x306E;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x306E;&#x7AEF;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br> Dock &#x306B;&#x306F;&#x3001;&#x3088;&#x304F;&#x4F7F;&#x3046;&#x30A2;&#x30D7;&#x30EA;&#x3084;&#x73FE;&#x5728;&#x8D77;&#x52D5;&#x3057;&#x3066;&#x3044;&#x308B;&#x30A2;&#x30D7;&#x30EA;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+        <hr>
+        <p>ここまでで OS の仕組みや存在意義について学びました。<br> 続いて、実際の OS について学びましょう。</p>
+        <h2><a name="header-2-d2133954dc9d6eed8312361013bbb3dc"></a> 主なスマホ・タブレット向け OS</h2>
+        <p>スマホやタブレットもコンピューターの一種であり、OS が搭載されています。<br> スマホやタブレット向けの OS も見てみましょう。</p>
+        <h3><a name="header-3-e84e30b9390cdb64db6db2c9ab87846d"></a> Android</h3>
+        <p><strong>Android</strong>（アンドロイド）は Google 社が提供している OS です。<br> スマホ・タブレット両方に対応しています。</p>
+        <p>Google 社は Android を自由に利用できるように公開しているため、様々なスマホメーカーが Android を搭載したスマホを販売しています。</p>
+        <p>//TODO エミュレータのスクショはかなり寂しいので、もう少し実用性の高そうなホーム画面を示したい</p>
         <div class="image-with-caption">
-          <img src="image/mac-screen-5.png">
-          <span class="imagecaption screenshot">Mac &#x306E; Dock</span>
+          <img src="image/android-ss.png">
+          <span class="imagecaption screenshot">Android の画面（例）</span>
         </div>
-        <p>&#x521D;&#x671F;&#x8A2D;&#x5B9A;&#x3067;&#x306F;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x753B;&#x9762;&#x306E;&#x4E0B;&#x5074;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x304C;&#x3001;&#x5DE6;&#x3084;&#x53F3;&#x306B;&#x8868;&#x793A;&#x3055;&#x305B;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <p>Dock &#x306F;<strong>&#x3088;&#x304F;&#x4F7F;&#x3046;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x3059;&#x3050;&#x306B;&#x958B;&#x304F;&#x306E;&#x306B;&#x4FBF;&#x5229;&#x306A;&#x5834;&#x6240;</strong>&#x3067;&#x3059;&#x3002;&#x3088;&#x304F;&#x4F7F;&#x3046;&#x30A2;&#x30D7;&#x30EA;&#x306E;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x306B;&#x7F6E;&#x304F;&#x7FD2;&#x6163;&#x3092;&#x8EAB;&#x306B;&#x3064;&#x3051;&#x3066;&#x3044;&#x308B;&#x65B9;&#x3082;&#x591A;&#x3044;&#x304B;&#x3082;&#x3057;&#x308C;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x305D;&#x3046;&#x3044;&#x3046;&#x65B9;&#x3082; Dock &#x3092;&#x4F7F;&#x3063;&#x3066;&#x3044;&#x304F;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x3068;&#x3001;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x304C;&#x3059;&#x3063;&#x304D;&#x308A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <h3><a name="header-3-7427cda061804e31644ba3f5cef93117"></a> LaunchPad</h3>
-        <p>Mac &#x3067;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x958B;&#x304F;&#x305F;&#x3081;&#x306E;&#x753B;&#x9762;&#x304C; <strong>Launchpad</strong>&#xFF08;&#x30ED;&#x30FC;&#x30F3;&#x30C1;&#x30D1;&#x30C3;&#x30C9;&#xFF09;&#x3067;&#x3059;&#x3002;&#x30B9;&#x30DE;&#x30DB;&#x306E;&#x30DB;&#x30FC;&#x30E0;&#x753B;&#x9762;&#x3084;&#x30A2;&#x30D7;&#x30EA;&#x4E00;&#x89A7;&#x3068;&#x96F0;&#x56F2;&#x6C17;&#x306F;&#x4F3C;&#x3066;&#x3044;&#x307E;&#x3059;&#x306D;&#x3002;</p>
-        <p>Launchpad &#x306F; Dock &#x4E0A;&#x306B;&#x3042;&#x308B;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3068;&#x8868;&#x793A;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x307E;&#x305F;&#x3001;&#x30C8;&#x30E9;&#x30C3;&#x30AF;&#x30D1;&#x30C3;&#x30C9;&#x3067;<strong>&#x89AA;&#x6307;&#x3068; 3 &#x672C;&#x306E;&#x6307;&#x3092;&#x3064;&#x307E;&#x3080;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x9589;&#x3058;&#x308B;</strong>&#x3053;&#x3068;&#x3067;&#x958B;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+        <h3><a name="header-3-0adca274d4dcc85e37a840d1fe88dbe2"></a> iOS / iPad OS</h3>
+        <p><strong>iOS</strong>（アイオーエス）はアップル社が開発している OS です。 iPhone や iPod Touch は iOS で動作しています。</p>
+        <p>また、<strong>iPad OS</strong>（アイパッド・オーエス）は iPad 用の OSです。</p>
         <div class="image-with-caption">
-          <img src="image/dock_launchpad.png">
-          <span class="imagecaption screenshot">Dock&#x4E0A;&#x306E;Launchpad</span>
+          <img src="image/iphone-ss.png">
+          <span class="imagecaption screenshot">iPhone の画面（例）</span>
         </div>
-        <div class="image-with-caption">
-          <img src="image/mac-screen-6.png">
-          <span class="imagecaption screenshot">Mac &#x306E; Launchpad</span>
+        <div class="back-styled red">
+          <h2><a name="header-2-bfde3129d6900c8250fbbafad9a984bb"></a> 主な パソコン向け OS</h2>
+          <div class="underline red"> ここは<b>非常に重要</b>な内容です。きちんと理解し、用語も覚えましょう！ </div>
+          <p>一般的なパソコン向けに使われている OS として有名なものは <strong>Windows</strong> と <strong>macOS</strong> です。<br> また、最近は <strong>Chrome OS</strong> という新しい OS も登場しました。</p>
+          <p>それぞれの特徴を見ていきましょう。</p>
+          <h3><a name="header-3-aea23489ce3aa9b6406ebb28e0cda430"></a> Windows</h3>
+          <p><strong>Windows</strong>（ウィンドウズ）はマイクロソフト社によって開発・販売されている OS です。<br> アメリカの調査会社によれば、2020 年 5 月時点で世界のパソコンの <strong>86.69%</strong> に Windowsが搭載されています。世界で最も普及している OS といえるでしょう。</p>
+          <p>最も普及していることもあり、<span class="highlighted-yellow">利用できるアプリの数が豊富</span>なのがメリットです。特に業務用アプリや PC ゲームなどは Windows にしか対応していないものが多くあります。<br> また、<span class="highlighted-yellow">企業や学校などでは Windows の利用率が高い</span>ため、Windows の操作を覚えておくと仕事で困ることは少ないでしょう。</p>
+          <p>マイクロソフト社は Windows を一般に販売しているおり、様々なメーカーのパソコンに Windows が搭載されています。</p>
+          <div class="image-with-caption">
+            <img src="image/windows-ss.png">
+            <span class="imagecaption screenshot">Windows の画面（例）</span>
+          </div>
+          <p>//TODO 説明イラスト: Windows はさまざまなメーカーの PC に搭載されている</p>
+          <div class="image-with-caption">
+            <img src="image/windows-in-various-pc.png">
+            <span class="imagecaption figure">Windows はさまざまなメーカーの PC に搭載されている</span>
+          </div>
+          <h3><a name="header-3-8b06df0295926efcdcc1f9e13c49848e"></a> macOS</h3>
+          <p><strong>macOS</strong>（マックオーエス）はアップル社のパソコン「Mac」に搭載されている OS です。</p>
+          <p>2020 年 5 月時点で世界のパソコンの <strong>9.68%</strong> が macOS を搭載しています。</p>
+          <p>プログラミングやデザインなどに適しており、IT エンジニアやデザイナーは macOS を使用している人が多いといわれます。<br> IT 企業やデザイン系の企業・学校では macOS を利用していることも多く、そういった企業や学校を進路として考えている人は macOS を選ぶのもよいでしょう。</p>
+          <p>アップル社は macOS を他の会社に販売していないため、<span class="highlighted-yellow">macOS を使うにはアップル社のパソコン（Mac）を買う必要</span>があります。</p>
+          <div class="image-with-caption">
+            <img src="image/mac-ss.png">
+            <span class="imagecaption screenshot">macOS の画面（例）</span>
+          </div>
+          <p>//TODO 説明イラスト: macOS は Apple 社のパソコン（Mac）にしか搭載されていない</p>
+          <div class="image-with-caption">
+            <img src="image/macOS-in-various-pc.png">
+            <span class="imagecaption figure">macOS は Apple 社のパソコン（Mac）にしか搭載されていない</span>
+          </div>
+          <div class="tip"><a name="is-mac-pc"></a>
+            <span class="tip-title">コラム：「Mac」と「パソコン」は別物なの？</span>
+            <p>時々、「パソコン（PC）」と「Mac」が別物として扱われることがあります。そうなると「Macはパソコンじゃないの？」と疑問に感じる人もいるかもしれません。<br> この疑問への答えは「<strong>Mac もパソコンの一種</strong>」です。「Apple 社によって製造されたパソコンのブランド名が Mac」ということになります。<br><br></p>
+            <p>実は 2006 年頃まで、Mac は一般的な Windows パソコンとは異なるハードウェアでした。ちょっと難しい話になるのですが、Windows を搭載した一般的なパソコンのハードウェアは歴史的な経緯から「PC/AT互換機（ピーシーエーティーごかんき）」と呼ばれます。<br> 2006 年頃までの Mac は PC/AT 互換機ではなかったので、「PC」とは別物という分類をされていました。この時も「PC」という言葉を「パソコン」の略として見た場合は「Mac は PC」と言えましたが、「PC/AT 互換機」の略として見ると「Mac は PC ではない」という状況でした。<br><br></p>
+            <p>現在の Mac はすべて PC/AT 互換機です。つまり、ハードウェアは Windows パソコンと同じ仕組みのものが使われています。そのため、現在はどんな意味であっても「<strong>Mac は PC の一種</strong>」であると言えます。<br></p>
+          </div>
+          <h3><a name="header-3-3c1dad9e82aadc3697b3ea1291e6b9c5"></a> Chrome OS</h3>
+          <p><strong>Chrome OS</strong>（クローム・オーエス）は Google（グーグル） 社が開発した OS です。<br> Chrome OS を搭載したノートパソコンは <strong>Chromebook</strong>（クロームブック）と呼ばれます。</p>
+          <p>2020 年 5 月時点で世界のパソコンの <strong>0.4%</strong> が ChromeOS を搭載しています。Windows や macOS に比べると、まだマイナーな OS です。</p>
+          <p>Google 社が提供するサービス（Gmail や Google ドキュメントなど）を高速かつ安全に利用できるのが特徴です。ちょっと難しい話ですが、<a href="https://support.google.com/chromebook/answer/3438631?hl=ja" target="_blank" rel="noopener noreferrer">他の OS にはない独自の安全設計</a>が行われています。<br> ただし、現時点では Chrome OS に対応したアプリは非常に少なく、出来ることが限られているので一般的な「パソコン」として利用することは難しい状況です。</p>
+          <p>「出来ることが限られている」というのはデメリットである反面、不正なアプリが侵入しづらいというセキュリティ（安全）面におけるメリットだと考えることもできます。そのため、学校や企業などでは安全のために学生や従業員用のパソコンとして Chrome OS を導入しているところもあります。</p>
+          <p>2020 年時点では ChromeOS を搭載したパソコンは「特殊なパソコン」でしかありませんが、将来的には Windows や macOS と競争できるような存在になるかもしれません。</p>
+          <div class="image-with-caption">
+            <img src="image/chromeos-ss.png">
+            <span class="imagecaption screenshot">ChromeOS の画面（例）</span>
+          </div>
+          <div class="tip"><a name="other-os"></a>
+            <span class="tip-title">様々な OS</span>
+            <p>この他にも Linux（リナックス）や FreeBSD（フリー・ビーエスディー） など、様々な OS があります。<br> 興味を持った人はネットで検索して、それぞれの OS の特徴を学んでみるのも良いでしょう。</p>
+          </div>
         </div>
-        <div class="tip"><a name="about-application-dir"></a>
-          <span class="tip-title">&#x30B3;&#x30E9;&#x30E0;&#xFF1A;Launchpad &#x306E;&#x5B9F;&#x4F53;</span>
-          <p>Mac &#x3067;&#x4F55;&#x304B;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x3068;&#x3001;&#x901A;&#x5E38;&#x306F;&#x300C;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#xFF08;Applications&#xFF09;&#x300D;&#x3068;&#x3044;&#x3046;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306B;&#x53CE;&#x7D0D;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br> Launchpad &#x306F;&#x3053;&#x306E;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x5206;&#x304B;&#x308A;&#x3084;&#x3059;&#x304F;&#x6574;&#x7406;&#x3057;&#x3066;&#x8868;&#x793A;&#x3059;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;</p>
-        </div>
-        <h3><a name="header-3-b116872cef71a770f57c649c039c6ad0"></a> &#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;</h3>
-        <p>&#x30B9;&#x30DE;&#x30DB;&#x3067;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x8D77;&#x52D5;&#x3059;&#x308B;&#x3068;&#x3001;&#x753B;&#x9762;&#x3044;&#x3063;&#x3071;&#x3044;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br> &#x4E00;&#x65B9;&#x3001;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x3067;&#x306F;&#x30A2;&#x30D7;&#x30EA;&#x306F;&#x300C;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x300D;&#x3068;&#x3044;&#x3046;&#x67A0;&#x3068;&#x3057;&#x3066;&#x8D77;&#x52D5;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x5404;&#x90E8;&#x306E;&#x540D;&#x79F0;&#x3092;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/mac-window-parts.png">
-          <span class="imagecaption screenshot">Mac &#x306E; &#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x5404;&#x90E8;</span>
-        </div>
-        <h4><a name="header-4-f92f410c90e9b8dbaa50847280b61170"></a> &#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x30D0;&#x30FC;</h4>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x540D;&#x306A;&#x3069;&#x3082;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-        <h4><a name="header-4-82611498611832ab9c501e8f951d0af4"></a> &#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;</h4>
-        <p>&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;&#x306F; Mac &#x306E;&#x753B;&#x9762;&#x306E;&#x4E00;&#x756A;&#x4E0A;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;&#x306E;&#x8868;&#x793A;&#x5185;&#x5BB9;&#x306F;&#x305D;&#x306E;&#x6642;&#x64CD;&#x4F5C;&#x3057;&#x3066;&#x3044;&#x308B;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x304C;&#x4F55;&#x304B;&#x306B;&#x3088;&#x3063;&#x3066;&#x5909;&#x308F;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/mac-screen-1.png">
-          <span class="imagecaption screenshot">Mac &#x306E;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;</span>
-        </div>
-        <div class="image-with-caption">
-          <img src="image/mac-screen-2.png">
-          <span class="imagecaption screenshot">&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;&#x306E;&#x62E1;&#x5927;&#x753B;&#x9762; 1</span>
-        </div>
-        <p>&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;&#x306B;&#x3064;&#x3044;&#x3066;&#x3082;&#x3046;&#x5C11;&#x3057;&#x8A73;&#x3057;&#x304F;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x307E;&#x305A;&#x3001;&#x4E00;&#x756A;&#x5DE6;&#x306E;&#x30EA;&#x30F3;&#x30B4;&#x30DE;&#x30FC;&#x30AF;&#x306E;&#x30D1;&#x30CD;&#x30EB;&#x306F; Mac &#x5168;&#x4F53;&#x306B;&#x95A2;&#x308F;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;&#x3053;&#x3053;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3068;&#x3001;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x74B0;&#x5883;&#x8A2D;&#x5B9A;&#xFF08;&#x5F8C;&#x8FF0;&#xFF09;&#x3084; App Store&#xFF08;&#x5F8C;&#x8FF0;&#xFF09;&#x3092;&#x958B;&#x3044;&#x305F;&#x308A;&#x3001;PC &#x306E;&#x7D42;&#x4E86;&#x3084;&#x518D;&#x8D77;&#x52D5;&#x3092;&#x884C;&#x3046;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br></p>
-        <p>&#x305D;&#x306E;&#x53F3;&#x96A3;&#x306B;&#x306F;&#x300C;Chrome&#x300D;&#x3084;&#x300C;Finder&#x300D;&#x306A;&#x3069;&#x306E;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x540D;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x3053;&#x3053;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3068;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;&#x753B;&#x9762;&#x306A;&#x3069;&#x3092;&#x958B;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/mac-screen-3.png">
-          <span class="imagecaption screenshot">&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;&#x306E;&#x62E1;&#x5927;&#x753B;&#x9762; 2</span>
-        </div>
-        <p>&#x3055;&#x3089;&#x306B;&#x53F3;&#x306E;&#x65B9;&#x3092;&#x898B;&#x308B;&#x3068;&#x3001;&#x300C;&#x30D8;&#x30EB;&#x30D7;&#x300D;&#x306E;&#x30D1;&#x30CD;&#x30EB;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x4F7F;&#x3044;&#x65B9;&#x3067;&#x4E0D;&#x660E;&#x306A;&#x70B9;&#x304C;&#x3042;&#x308B;&#x5834;&#x5408;&#x306F;&#x3001;&#x3053;&#x306E;&#x300C;&#x30D8;&#x30EB;&#x30D7;&#x300D;&#x304B;&#x3089;&#x691C;&#x7D22;&#x3057;&#x3066;&#x307F;&#x308B;&#x3068;&#x3088;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/mac-screen-4.png">
-          <span class="imagecaption screenshot">&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;&#x306E;&#x62E1;&#x5927;&#x753B;&#x9762; 3</span>
-        </div>
-        <p>Windows &#x3067;&#x306F;&#x30A2;&#x30D7;&#x30EA;&#x306E;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x4E0A;&#x7AEF;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;Mac&#x306F;&#x3069;&#x3093;&#x306A;&#x30A2;&#x30D7;&#x30EA;&#x3067;&#x3082;&#x753B;&#x9762;&#x306E;&#x4E00;&#x756A;&#x4E0A;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x306B;&#x6CE8;&#x610F;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <h4><a name="header-4-290686020964323d8b401be2e4fc21df"></a> &#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;&#x30D0;&#x30FC;</h4>
-        <p>&#x30A2;&#x30D7;&#x30EA;&#x306E;&#x72B6;&#x614B;&#x306A;&#x3069;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;&#xFF08;status&#xFF09;&#x306F;&#x300C;&#x72B6;&#x614B;&#x300D;&#x3068;&#x3044;&#x3046;&#x610F;&#x5473;&#x3067;&#x3059;&#x3002;<br> &#x30A2;&#x30D7;&#x30EA;&#x306B;&#x3088;&#x3063;&#x3066;&#x306F;&#x7121;&#x3044;&#x3082;&#x306E;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <h3><a name="header-3-6e3c5f7213828a305cf8907393b7f955"></a> &#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x64CD;&#x4F5C;</h3>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306F;&#x4F7F;&#x3044;&#x3084;&#x3059;&#x3044;&#x3088;&#x3046;&#x306B;&#x8ABF;&#x6574;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x3069;&#x3046;&#x3044;&#x3063;&#x305F;&#x30A2;&#x30D7;&#x30EA;&#x3067;&#x3082;&#x69CB;&#x3044;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x3053;&#x3053;&#x3067;&#x306F;&#x300C;&#x682A;&#x4FA1;&#x300D;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x8D77;&#x52D5;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/awakeStock.png">
-          <span class="imagecaption screenshot">&#x300C;&#x682A;&#x4FA1;&#x300D;&#x30A2;&#x30D7;&#x30EA;&#x306E;&#x8D77;&#x52D5;</span>
-        </div>
-        <h4><a name="header-4-2cd3598e1ef70cf34ac313a9117d60f8"></a> &#x79FB;&#x52D5;</h4>
-        <p>&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x30D0;&#x30FC;&#x3092;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x79FB;&#x52D5;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption data-gifffer">
-          <img src="image/titlebar_drag.gif"><br>
-          <span class="imagecaption animation">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x52D5;&#x304B;&#x3057;&#x3066;&#x3044;&#x308B;&#x69D8;&#x5B50;</span>
-        </div>
-        <h4><a name="header-4-ca200465d0875d4fefbf362168faba29"></a> &#x30B5;&#x30A4;&#x30BA;&#x5909;&#x66F4;</h4>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x53F3;&#x7AEF;&#x307E;&#x305F;&#x306F;&#x5DE6;&#x7AEF;&#x306B;&#x30DE;&#x30A6;&#x30B9;&#x3092;&#x79FB;&#x52D5;&#x3055;&#x305B;&#x308B;&#x3068;&#x30DD;&#x30A4;&#x30F3;&#x30BF;&#x306E;&#x5F62;&#x304C;&#x5909;&#x308F;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x72B6;&#x614B;&#x3067;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&#x3059;&#x308B;&#x3068;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x3092;&#x5DE6;&#x53F3;&#x306B;&#x62E1;&#x5927;&#x30FB;&#x7E2E;&#x5C0F;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption data-gifffer">
-          <img src="image/resize_horizontal.gif"><br>
-          <span class="imagecaption animation">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x3067;&#x53F3;&#x7AEF;&#x3084;&#x5DE6;&#x7AEF;&#x3067;&#x5927;&#x304D;&#x3055;&#x3092;&#x5909;&#x3048;&#x3066;&#x3044;&#x308B;&#x69D8;&#x5B50;</span>
-        </div>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x4E0A;&#x7AEF;&#x307E;&#x305F;&#x306F;&#x4E0B;&#x7AEF;&#x306B;&#x30DE;&#x30A6;&#x30B9;&#x3092;&#x79FB;&#x52D5;&#x3055;&#x305B;&#x308B;&#x3068;&#x30DD;&#x30A4;&#x30F3;&#x30BF;&#x306E;&#x5F62;&#x304C;&#x5909;&#x308F;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x72B6;&#x614B;&#x3067;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&#x3059;&#x308B;&#x3068;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x3092;&#x4E0A;&#x4E0B;&#x306B;&#x62E1;&#x5927;&#x30FB;&#x7E2E;&#x5C0F;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption data-gifffer">
-          <img src="image/resize_vertical.gif"><br>
-          <span class="imagecaption animation">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x3067;&#x4E0A;&#x7AEF;&#x3084;&#x4E0B;&#x7AEF;&#x3067;&#x5927;&#x304D;&#x3055;&#x3092;&#x5909;&#x3048;&#x3066;&#x3044;&#x308B;&#x69D8;&#x5B50;</span>
-        </div>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x56DB;&#x9685;&#x306B;&#x30DE;&#x30A6;&#x30B9;&#x3092;&#x79FB;&#x52D5;&#x3055;&#x305B;&#x308B;&#x3068;&#x30DD;&#x30A4;&#x30F3;&#x30BF;&#x306E;&#x5F62;&#x304C;&#x5909;&#x308F;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x72B6;&#x614B;&#x3067;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&#x3059;&#x308B;&#x3068;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x3092;&#x4E0A;&#x4E0B;&#x5DE6;&#x53F3;&#x306B;&#x62E1;&#x5927;&#x30FB;&#x7E2E;&#x5C0F;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption data-gifffer">
-          <img src="image/resize_corner.gif"><br>
-          <span class="imagecaption animation">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x3067;&#x56DB;&#x9685;&#x3067;&#x5927;&#x304D;&#x3055;&#x3092;&#x5909;&#x3048;&#x3066;&#x3044;&#x308B;&#x69D8;&#x5B50;</span>
-        </div>
-        <h4><a name="header-4-35cea71694d96595e0f03eca73970e10"></a> &#x6700;&#x5927;&#x5316;&#x30FB;&#x5143;&#x306B;&#x623B;&#x3059;</h4>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x5DE6;&#x4E0A;&#x306B;&#x4E26;&#x3093;&#x3067;&#x3044;&#x308B; 3 &#x3064;&#x306E;&#x30DC;&#x30BF;&#x30F3;&#x306E;&#x3046;&#x3061;&#x3001;&#x4E00;&#x756A;&#x53F3;&#x5074;&#x306B;&#x3042;&#x308B;&#x7DD1;&#x8272;&#x306E;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x753B;&#x9762;&#x3044;&#x3063;&#x3071;&#x3044;&#x306B;&#x5E83;&#x3052;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x3053;&#x308C;&#x3092; <strong>&#x6700;&#x5927;&#x5316;</strong> &#x3068;&#x3044;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption data-gifffer">
-          <img src="image/maximize.gif"><br>
-          <span class="imagecaption animation">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x6700;&#x5927;&#x5316;&#x3059;&#x308B;&#x69D8;&#x5B50;</span>
-        </div>
-        <p>&#x6700;&#x5927;&#x5316;&#x3057;&#x305F;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x5143;&#x306B;&#x623B;&#x3059;&#x3068;&#x304D;&#x306F;&#x3001;&#x753B;&#x9762;&#x306E;&#x4E0A;&#x7AEF;&#x307E;&#x3067;&#x30DE;&#x30A6;&#x30B9;&#x30DD;&#x30A4;&#x30F3;&#x30BF;&#x3092;&#x79FB;&#x52D5;&#x3055;&#x305B;&#x307E;&#x3059;&#x3002; &#x3059;&#x308B;&#x3068;&#x3001;&#x753B;&#x9762;&#x306E;&#x4E0A;&#x90E8;&#x306E;&#x304B;&#x3089;&#x30D0;&#x30FC;&#x304C;&#x73FE;&#x308C;&#x308B;&#x306E;&#x3067;&#x3001;&#x6700;&#x5927;&#x5316;&#x3057;&#x305F;&#x3068;&#x304D;&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306B;&#x53F3;&#x7AEF;&#x306E;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption data-gifffer">
-          <img src="image/unmaximize.gif"><br>
-          <span class="imagecaption animation">&#x6700;&#x5927;&#x5316;&#x3057;&#x305F;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x5143;&#x306B;&#x623B;&#x3059;&#x69D8;&#x5B50;</span>
-        </div>
-        <p>&#x6700;&#x5927;&#x5316;&#x3057;&#x305F;&#x72B6;&#x614B;&#x3067;&#x4ED6;&#x306E;&#x30A2;&#x30D7;&#x30EA;&#x306B;&#x5207;&#x308A;&#x66FF;&#x3048;&#x308B;&#x3068;&#x304D;&#x306F;&#x3001;&#x3053;&#x306E;&#x5F8C;&#x8AAC;&#x660E;&#x3059;&#x308B; Mission Control &#x3068;&#x3044;&#x3046;&#x6A5F;&#x80FD;&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <h4><a name="header-4-a7d84685ef63079d4f628b36e9446dc7"></a> &#x6700;&#x5C0F;&#x5316;</h4>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x6700;&#x5927;&#x5316;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x72B6;&#x614B;&#x3067;&#x3001;3 &#x3064;&#x4E26;&#x3093;&#x3067;&#x3044;&#x308B;&#x30DC;&#x30BF;&#x30F3;&#x306E;&#x771F;&#x3093;&#x4E2D;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092; Dock &#x306B;&#x53CE;&#x7D0D;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x3053;&#x308C;&#x3092; <strong>&#x6700;&#x5C0F;&#x5316;</strong> &#x3068;&#x3044;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption data-gifffer">
-          <img src="image/minimize.gif"><br>
-          <span class="imagecaption animation">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x6700;&#x5C0F;&#x5316;&#x3059;&#x308B;&#x69D8;&#x5B50;</span>
-        </div>
-        <p>&#x6700;&#x5C0F;&#x5316;&#x3057;&#x305F;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x5143;&#x306B;&#x623B;&#x3059;&#x3068;&#x304D;&#x306F;&#x3001;Dock &#x306B;&#x53CE;&#x7D0D;&#x3055;&#x308C;&#x305F;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption data-gifffer">
-          <img src="image/unminimize.gif"><br>
-          <span class="imagecaption animation">&#x6700;&#x5C0F;&#x5316;&#x3057;&#x305F;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x5143;&#x306B;&#x623B;&#x3059;&#x69D8;&#x5B50;</span>
-        </div>
-        <h4><a name="header-4-25da2195a3c996b0ee542b6e9d6c36e4"></a> &#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x5207;&#x308A;&#x66FF;&#x3048;&#xFF08;Mission Control&#xFF09;</h4>
-        <p>&#x8907;&#x6570;&#x306E;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x958B;&#x3044;&#x3066;&#x3044;&#x308B;&#x3068;&#x3001;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x5207;&#x308A;&#x66FF;&#x3048;&#x304C;&#x5927;&#x5909;&#x306B;&#x306A;&#x308B;&#x5834;&#x5408;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;<br> &#x3082;&#x3061;&#x308D;&#x3093; Dock &#x306A;&#x3069;&#x304B;&#x3089;&#x5207;&#x308A;&#x66FF;&#x3048;&#x3066;&#x3082;&#x3088;&#x3044;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;<strong>Mission Control</strong> &#xFF08;&#x30DF;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x30B3;&#x30F3;&#x30C8;&#x30ED;&#x30FC;&#x30EB;&#xFF09;&#x3092;&#x6D3B;&#x7528;&#x3057;&#x3066;&#x307F;&#x308B;&#x306E;&#x3082;&#x4E00;&#x3064;&#x306E;&#x624B;&#x3067;&#x3059;&#x3002;</p>
-        <p>Mission Control &#x306F;&#x30AD;&#x30FC;&#x30DC;&#x30FC;&#x30C9;&#x306E; F3 &#x30AD;&#x30FC;&#x3092;&#x62BC;&#x3059;&#x3068;&#x958B;&#x3051;&#x307E;&#x3059;&#x3002;<br> &#x307E;&#x305F;&#x3001;&#x30C8;&#x30E9;&#x30C3;&#x30AF;&#x30D1;&#x30C3;&#x30C9;&#x3067; <strong>3 &#x672C;&#x6307;&#x307E;&#x305F;&#x306F; 4 &#x672C;&#x6307;&#x3067;&#x4E0A;&#x306B;&#x30B9;&#x30EF;&#x30A4;&#x30D7;&#x3059;&#x308B;</strong>&#x3053;&#x3068;&#x3067;&#x3082;&#x958B;&#x3051;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/mac-screen-7.png">
-          <span class="imagecaption screenshot">Mac &#x306E; Mission Control</span>
-        </div>
-        <p>Mission Control &#x3092;&#x4F7F;&#x3048;&#x3070;&#x3001;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&#x30A2;&#x30F3;&#x30C9;&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x3067;&#x5225;&#x306E;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x306B;&#x79FB;&#x52D5;&#x3055;&#x305B;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+        <h2><a name="header-2-c7887a92414f854a9067849a51b9bb02"></a> まとめ</h2>
+        <ul>
+          <li>パソコンやスマホはハードウェアとソフトウェアによって構成されている。 <ul>
+              <li>ハードウェア：物理的に存在する部品。CPUやメモリなど。</li>
+              <li>ソフトウェア：物理的には存在していないもの。アプリなど。</li>
+            </ul>
+          </li>
+          <li>OS はソフトウェアの一種。</li>
+          <li>OS はハードウェアとソフトウェアを繋ぐ役割。 <ul>
+              <li>OS のおかげで、アプリ開発者は楽になる。</li>
+            </ul>
+          </li>
+          <li>スマホ・タブレット向けの代表的なOS <ul>
+              <li>Android</li>
+              <li>iOS/iPad OS</li>
+            </ul>
+          </li>
+          <li>パソコン向けの代表的なOS <ul>
+              <li>Windows</li>
+              <li>macOS</li>
+              <li>Chrome OS</li>
+            </ul>
+          </li>
+        </ul>
       </section>
     </div>
   </div>

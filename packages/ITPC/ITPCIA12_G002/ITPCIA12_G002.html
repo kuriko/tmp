@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>ネット環境・Wi-Fiの選び方</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>ネット環境・Wi-Fiの選び方</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-ec4e1b8f5df30e0a0dbc17b3c13cdcfd"></a> ネット環境・Wi-Fiの選び方</h1>
+        <p>この付録では、自宅にネット環境・<ruby>Wi-Fi<rt>ワイファイ</rt></ruby>がなく、これから導入しようとしている方への指針を解説します。</p>
+        <p>なお、ここでは「Wi-Fi」と「無線 LAN」を同じ意味として扱います。厳密な違いについては、この付録の最後にあるコラムをご確認ください。</p>
+        <ul id="toc">
+          <li><a href="#header-2-598349d10b1beb7618a336bafc645fe8" target="_blank">Wi-Fi ルーターの種類</a></li>
+          <li><a href="#header-2-239ca2a7eb399c81547aa329cb2ebe97" target="_blank">家庭用 Wi-Fi ルーター（有線ネット回線に接続するタイプ）</a></li>
+          <li><a href="#header-2-f5c8a069391947240a0c8e90a69f00ae" target="_blank">モバイルルーター（ポケット Wi-Fi ルーター）</a></li>
+          <li><a href="#header-2-30adf7c7139ac0f813148071405f991a" target="_blank">家庭用 Wi-Fi ルーター（ホームルーター、工事不要タイプ）</a></li>
+          <li><a href="#header-2-35981059a9546c7edbe29339d4bba877" target="_blank">（参考）テザリング</a></li>
+          <li><a href="#header-2-fb93737cb1d046570a12f6d75266bfb4" target="_blank">自分に合った Wi-Fi を選ぼう</a></li>
+        </ul>
+        <h2><a name="header-2-598349d10b1beb7618a336bafc645fe8"></a> Wi-Fi ルーターの種類</h2>
+        <p>「Wi-Fi ルーター」「無線 LAN ルーター」と呼ばれるものには、いくつか種類があります。<br> 種類別の特徴を学び、自分の場合はどれを使うと良いのかを考えてみましょう。</p>
+        <ul>
+          <li>家庭用 Wi-Fi ルーター（有線ネット回線に接続するタイプ）</li>
+          <li>ポケット Wi-Fi ルーター</li>
+          <li>家庭用 Wi-Fi ルーター（工事不要タイプ）</li>
+        </ul>
+        <p>また、スマホを使った「テザリング」についても解説します。</p>
+        <h2><a name="header-2-239ca2a7eb399c81547aa329cb2ebe97"></a> 家庭用 Wi-Fi ルーター（有線ネット回線に接続するタイプ）</h2>
+        <p>「ルーター」の最も基本的な形です。<br> Wi-Fi が普及する前は「有線LAN」といって、パソコンをケーブルで接続する方式が主流でした。</p>
+        <p>//TODO 有線LANルーターのイラスト</p>
+        <p>これを無線（Wi-Fi）にしたものが、家庭用の Wi-Fi ルーターです。<br> おおざっぱに言ってしまえば、「有線のネット回線を Wi-Fi に変換するもの」と考えることもできるでしょう。</p>
+        <p>//TODO Wi-Fiルーターのイラスト</p>
+        <h3><a name="header-3-ce679447df06153f5a043305e4368c02"></a> メリット</h3>
+        <p>自宅に「光回線」「ケーブルテレビ（CATV）」など有線のネット回線があるなら、1 度このタイプのルーターを買ってしまえば追加で費用を支払う必要はありません。<br> また、通信が最も安定しているほか、通信制限（いわゆる「ギガが足りない」状態）が発生しないのも大きなメリットです。</p>
+        <p>パワフルなため、家の中の広い範囲で使用できます。</p>
+        <p>Wi-Fi だけではなく有線 LAN をサポートしている機種も多いため、オンラインゲームなどで有線 LAN が必要な場合にも役立ちます。</p>
+        <h3><a name="header-3-5400b44658428dcac64d47ca98bf598d"></a> デメリット</h3>
+        <p>有線のネット回線が必要になります。家に有線の回線がない場合、工事が必要になります。</p>
+        <p>ただし、マンションやアパートなどであれば、有線のネット回線がすでに設置されているところも多いです。コンセントの近くにネット用の端子がある場合も多いので、一度確認してみましょう。<br> 自分の家で有線のネット回線が使えるかわからない場合、管理会社などに問い合わせてみるのもよいでしょう。</p>
+        <h2><a name="header-2-f5c8a069391947240a0c8e90a69f00ae"></a> モバイルルーター（ポケット Wi-Fi ルーター）</h2>
+        <p>先ほどの家庭用 Wi-Fi ルーターから、有線のネット回線を携帯電話回線に置き換えたものです。<br> また、「ポケット」といわれる名前の通り、コンパクトかつ充電式で、持ち運びできるのがメリットです。<br> 略して「ポケファイ」などと呼ばれることもあります。</p>
+        <p>//TODO ポケットWi-Fiルーターのイラスト</p>
+        <h3><a name="header-3-ce679447df06153f5a043305e4368c02"></a> メリット</h3>
+        <p>持ち運びできるため、家でも外出先でも同じ Wi-Fi を利用できます。<br> また、有線のネット回線がない場所でも使用できます。</p>
+        <h3><a name="header-3-5400b44658428dcac64d47ca98bf598d"></a> デメリット</h3>
+        <p>スマホのように月額料金が掛かります。また、携帯電話の回線を利用しているため、スマホと同様に通信制限が発生するものもあります。<br> 特にパソコンは通信するデータのサイズがスマホより大きいため、通信制限の量はスマホよりも大きく見積もっておく必要があります。</p>
+        <p>また、小型で持ち運びを前提としているため、電波の到達範囲が狭いです。電波が届くのはポケットWi-Fiルーターの周囲だけです。<br> 家中の機器に電波を届けることは難しいといえるでしょう。</p>
+        <p>通信が安定しない場合も多く、オンラインゲームの対戦などは難しい場合もあります。</p>
+        <h2><a name="header-2-30adf7c7139ac0f813148071405f991a"></a> 家庭用 Wi-Fi ルーター（ホームルーター、工事不要タイプ）</h2>
+        <p>ポケット Wi-Fi ルーターと同様に、携帯電話回線を使うものです。<br> ただし、コンセントに繋ぎ、自宅に固定するものです。</p>
+        <p>//TODO ポケットWi-Fiルーターのイラスト</p>
+        <h3><a name="header-3-ce679447df06153f5a043305e4368c02"></a> メリット</h3>
+        <p>有線でネットに接続するWi-Fiルーターのように、家の中の広い範囲で使用できます。</p>
+        <p>また、有線のネット回線を必要としないため、工事をせずに使用できます。</p>
+        <h3><a name="header-3-5400b44658428dcac64d47ca98bf598d"></a> デメリット</h3>
+        <p>持ち運びはできません（契約した住所以外で接続すると、制限が掛かる製品もあります）。<br> また、携帯電話の回線を利用しているため、スマホと同様に通信制限が発生するものもあります。プランをよく確認する必要があります。</p>
+        <p>なお、通信の安定性は有線のネット回線を使うルーターほどは高くありません。オンラインゲームをプレイする場合にはあまり適さないこともあります。</p>
+        <h2><a name="header-2-35981059a9546c7edbe29339d4bba877"></a> （参考）テザリング</h2>
+        <p>お使いのスマホをモバイルルーターのように動作させる方法もあります。これをテザリング（tethering）といいます。<br> （スマホの機種や契約しているプランによっては利用できないこともあります。）</p>
+        <p>//TODO テザリングのイラスト</p>
+        <h3><a name="header-3-ce679447df06153f5a043305e4368c02"></a> メリット</h3>
+        <p>いま持っているスマホをそのまま使えるため、新しく何かを購入する必要がありません。<br> もちろん工事なども不要です。</p>
+        <h3><a name="header-3-5400b44658428dcac64d47ca98bf598d"></a> デメリット</h3>
+        <p>パソコンの通信量は大きいため、スマホの通信制限にすぐ引っかかってしまう恐れがあります。<br> また、スマホのバッテリーを多く消費します。</p>
+        <p>通信は安定しないため、オンラインゲームをプレイする場合には適しません。</p>
+        <div class="tip"><a name="tethering-misunderstanging"></a>
+          <span class="tip-title">テザリング？デザリング？</span>
+          <p><strong>デザリング</strong> と書かれることがありますが、これは <strong>間違い</strong> です。最初のテには濁点（゛）が付かない「<strong>テザリング</strong>」が正解です。</p>
+        </div>
+        <h2><a name="header-2-fb93737cb1d046570a12f6d75266bfb4"></a> 自分に合った Wi-Fi を選ぼう</h2>
+        <p>以上のように、 3 種類のルーターを学びました。<br> 使い方や家の状況などによって異なるため、どれがベストであると一概には言えませんが、それぞれの特徴を見て自分に合った Wi-Fi ルーターを選びましょう。</p>
+        <h3><a name="header-3-104404fa958c83df1ba1db2c6205e922"></a> 自宅でしかネットを利用しない場合</h3>
+        <p>「会社や学校にはネット回線があり、家でネット回線が必要になるのはオンライン授業やテレワークの時だけ」などがこれに当てはまります。</p>
+        <p>こういった場合、まずは <strong>有線のネット回線に接続するタイプのルーター</strong> を考えてみると良いでしょう。<br> テレビ会議やオンライン授業で通信量が増えても安定して通信できるためです。</p>
+        <p>自宅にすでに有線のネット回線が通っている場合、一度ルーターを買ってしまえば良いので、追加の出費も少ないです。</p>
+        <p>もし、自宅に有線の回線がない場合、有線の回線工事（光回線）をするか <strong>工事不要のホームルーター</strong> タイプを検討するとよいでしょう。<br> オンラインゲームなどで回線の速度や安定性を重視するのであれば有線が必要ですが、パソコンをあまり使わない場合はホームルータータイプでも十分でしょう。</p>
+        <h3><a name="header-3-bb4c11c991bf5c5025cb5977679b7817"></a> 自宅に加えて、外出先でもネットを利用する場合</h3>
+        <p>「家だけでなく、移動中や外出先のカフェなどでもパソコンでネットを利用したい」場合などがこれに当てはまります。</p>
+        <p>この場合、<strong>モバイルルーター</strong> を考えてみるのもよいでしょう。<br> ただし、最近のカフェなどは無料で利用できる Wi-Fi が設置されているところも多いため、モバイルルーターを買わなくても外出先でネットができる可能性もあります。</p>
+        <div class="tip"><a name="wireless-lan-and-wifi"></a>
+          <span class="tip-title">コラム: Wi-Fi と無線 LAN の違い</span>
+          <p>パソコンやスマホを無線でネットワークに接続するものを <strong>無線 <ruby>LAN<rt>ラン</rt></ruby></strong> と言ったり、<strong>Wi-Fi</strong> と言ったりします。両者に違いはあるのでしょうか？<br><br> 実は、厳密には違いがあります。<br> 無線 LAN が登場したのは1990年代後半です。当時の無線 LAN はメーカーによって仕組みが微妙に異なり、異なるメーカー同士の製品は接続できないという問題がありました。<br> その問題を解決するためにメーカーによって作られた団体が「Wi-Fi アライアンス」です。Wi-Fi アライアンスは、メーカーが異なっても相互に接続できるかを確認するテストを定め、そのテストに合格した商品に「認証済み」（Wi-Fi CERTIFIED）のロゴを与えるようになりました。<br><br> つまり、他のメーカーの製品と接続できると確認済みの無線 LAN が「Wi-Fi」ということになります。<br> 最近はそのテストに合格していない製品が販売されることは少ないため、「無線 LAN」と「Wi-Fi」がほとんど同じ意味として使われていると言えます。</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

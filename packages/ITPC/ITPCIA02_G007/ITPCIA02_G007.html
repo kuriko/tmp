@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>キーボードを操作して文字や記号を入力しよう（実践編）</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>キーボードを操作して文字や記号を入力しよう（実践編）</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-f87d26e420c2340bf0d29fe1c85c06ef"></a> キーボードを操作して文字や記号を入力しよう（実践編）</h1>
+        <p>今回もキーボードについて学んでいきます。前回使わなかったキーを中心に、ちょっと応用的な操作を試してみましょう。</p>
+        <ul id="toc">
+          <li><a href="#header-2-a906a647dd72e7fe88f435b8ac746acc" target="_blank">今回の目標</a></li>
+          <li><a href="#header-2-4737adf961e9f62f624eee4c478d941a" target="_blank">注意が必要なキー</a></li>
+          <li><a href="#header-2-02967796569192c95c785602ff198ab1" target="_blank">ショートカットキー</a></li>
+          <li><a href="#header-2-f52ccf19ce36713371f4681fbee483ac" target="_blank">いろいろな機能をもつキー</a></li>
+          <li><a href="#header-2-c7887a92414f854a9067849a51b9bb02" target="_blank">まとめ</a></li>
+        </ul>
+        <div class="image-with-caption">
+          <img src="image/windows-qwerty.png">
+          <span class="imagecaption figure">Windows のキーボード（例）</span>
+        </div>
+        <h2><a name="header-2-a906a647dd72e7fe88f435b8ac746acc"></a> 今回の目標</h2>
+        <ul>
+          <li>間違って操作しやすいキーについて知る</li>
+          <li>ショートカットキーについて知る</li>
+        </ul>
+        <h2><a name="header-2-4737adf961e9f62f624eee4c478d941a"></a> 注意が必要なキー</h2>
+        <p>いくつかのキーは間違って押してしまうことで、意図しない動作をすることがあります。<br> ただし、これらはもう1回押せばすぐに戻せるため、あわてたり怖がったりする必要はありません。</p>
+        <h3><a name="header-3-43492319343575a3ca052accaa3406da"></a> <kbd>CapsLock</kbd>（キャップス・ロック）</h3>
+        <p>パソコンによっては <strong>CapsLk</strong> と略されていることがあります。</p>
+        <p>CapsLock キーをオンにすると、入力するアルファベットがすべて大文字になります。<br>
+          <kbd>Shift</kbd> キーと <kbd>CapsLock</kbd> キーを同時に押すことでオン・オフが切り替えられます。<br> アルファベット文字が全て大文字になってしまう……というときは、誤って CapsLock がオンになっているかもしれません。もう 1 回 <kbd>Shift</kbd> キーと <kbd>CapsLock</kbd> キーを同時に押してオフにしてください。
+        </p>
+        <p>また、パソコンによっては CapsLock キーをオンにすると、CapsLock キーのランプが光るものもあります。</p>
+        <h3><a name="header-3-d0d6407bf298eaef4072050a47fc0040"></a> <kbd>Insert</kbd>（インサート）</h3>
+        <p>Insert は「挿入」を意味する英単語で、文字の「挿入モード」と「上書きモード」を切り替えるキーです。パソコンによっては <strong>Ins</strong> と略されていることがあります。<br> パソコンの入力は通常、「挿入モード」になっているのですが、これを押すと「上書きモード」になります。上書きモードになると、既に入力されている文字が消されながら（上書きされながら）入力されます。<br> 既に入力した文字が消えてしまう……というときは、誤って上書きモードがオンになっているかもしれません。もう 1 回 <kbd>Insert</kbd> キーを押して挿入モードに切り替えましょう。</p>
+        <div class="image-with-caption data-gifffer">
+          <img src="image/inskey-insert-mode.gif"><br>
+          <span class="imagecaption animation">挿入モードの状態</span>
+        </div>
+        <div class="image-with-caption data-gifffer">
+          <img src="image/inskey-overwrite-mode.gif"><br>
+          <span class="imagecaption animation">上書きモードの状態</span>
+        </div>
+        <h3><a name="header-3-24ccde7c68582ed364cd90512c3a5c5b"></a> <kbd>NumLock</kbd>（ナムロック）</h3>
+        <p>NumLock は「テンキー」と呼ばれる、数字専用のキーをオンにするための機能です。<br> デスクトップパソコン用のキーボードでは、右側にテンキーが存在しているものがあります。NumLock キーを押すと、これが有効になり、効率的に数字を入力できるようになります。</p>
+        <div class="image-with-caption">
+          <img src="image/tenkey.jpg">
+          <span class="imagecaption photo">デスクトップパソコンのテンキー</span>
+        </div>
+        <p>しかし多くのノートパソコンでは、キーボードの場所を節約するため通常の文字キーにテンキー機能を持たせています。ノートパソコンで NumLock をオンにするとこれを使えるようになるのですが、代わりに通常の文字が入力できなくなってしまいます。<br> 普通の文字を入力しているはずなのに数字になってしまった……というときは、誤って NumLock をオンにしてしまっているかもしれません。もう 1 回 <kbd>NumLock</kbd> キーを押してオフにしてください。</p>
+        <p>//TODO デスクトップ、ノートそれぞれのテンキーの画像</p>
+        <h2><a name="header-2-02967796569192c95c785602ff198ab1"></a> ショートカットキー</h2>
+        <p>パソコンやキーボードを使えるようになるメリットとして、<strong>ショートカットキー</strong> があります。</p>
+        <p><strong>ショートカット</strong> は英語で「近道」という意味で、普通はマウスでする操作を代わりにキーボードで行うことを <strong>ショートカットキー</strong> といいます。<br> 「ショートカットキー」という名前のキーが存在しているわけではありません。</p>
+        <p>普通であればマウスを移動させ、メニューをクリックして開き、さらにその中にあるボタンをクリックする……といった操作が、ショートカットキーを使うと一瞬で終わります。</p>
+        <p>この教材では、どの操作をするときにどういったショートカットキーを使えばよいかも示します。<br> なお、基本的には「ショートカットキーを覚えないと出来ない操作」はありません。ほとんどのアプリでは、必ずマウスで同じ操作ができます。そのため、覚えられない場合はショートカットキーの説明を読み飛ばしてもよいです。</p>
+        <h2><a name="header-2-f52ccf19ce36713371f4681fbee483ac"></a> いろいろな機能をもつキー</h2>
+        <p>今回は使わなかったキーについても少しだけ知っておきましょう。<br> 機能まで覚えられない場合は、名前と場所だけ覚えておけば十分です。</p>
+        <h3><a name="header-3-956152bf5bf7043f73cb1d6aa2e8c556"></a> <kbd>Tab</kbd>（タブ）</h3>
+        <p>キーボードの一番左側にあります。</p>
+        <p>複数の入力欄があるときに、次の入力欄に移動します。<br> また、字下げの機能もあります。</p>
+        <p>プログラミングをする時によく使うキーです。プログラミングをやってみたい人は覚えておきましょう。</p>
+        <h3><a name="header-3-f0e19fd0a3e15ccbf6f64a315c1f15f4"></a> <kbd>Ctrl</kbd>（コントロール）</h3>
+        <p>キーボードの一番左下・右下にあります。</p>
+        <p>ショートカットキーの操作などで使います。<br>パソコンによっては左右両方に存在する場合がありますが、基本的にはどちらも同じ役割です。</p>
+        <h3><a name="header-3-29c32e15bcbbbf9d2ebdb422a05f8c95"></a> <kbd>Alt</kbd>（オルト）</h3>
+        <p>キーボードの左下にあります。</p>
+        <p>ショートカットキーの操作などで使います。パソコンによっては左右両方に存在する場合がありますが、基本的にはどちらも同じ役割です。<br> 英単語の Alternate（オルタネート）の略です。読み方は「アルト」ではないので注意しましょう。</p>
+        <h3><a name="header-3-41a2d6c7a46dd37dc5f165680927ad18"></a> <kbd>F1</kbd> ～ <kbd>F12</kbd>（ファンクションキー）</h3>
+        <p>キーボードの一番上の段にあります。</p>
+        <p>様々な機能が割り当てられたキーです。<br> パソコンによっては<kbd>fn</kbd>キーと同時に押すことで機能することもあります。</p>
+        <p>通常の数字キーとは違うので気をつけてください。</p>
+        <h3><a name="header-3-fe06590819e32132079f5b69abfa9bca"></a> <kbd>fn</kbd>（エフエヌ）</h3>
+        <p>キーボードの一番下の段にあります。 他のキーと同時に押してショートカットキーとして使います。<br>このキーで使える機能はパソコンによって異なります。</p>
+        <p>また、パソコンによってはこのキーがない場合もあります。</p>
+        <h3><a name="header-3-647836ce18df781ee269f6bce6db076b"></a> <kbd>Windows</kbd>（ウィンドウズ）</h3>
+        <p>キーボードの左下にあります。四角が4つ描かれたロゴ（Windowsのロゴマーク）が記載されているキーです。</p>
+        <p>これを押すと、スタートメニューが開きます。他のキーと同時に押してショートカットキーとして使うこともあります。</p>
+        <div class="tip"><a name="why-qwerty"></a>
+          <span class="tip-title">コラム:　なぜアルファベット順に並んでいないの？</span>
+          <p>キーボード上のアルファベットは A,B,C,D,E,F... ではなく、 Q,W,E,R,T,Y... のように並んでいます。これを <strong>QWERTY配列</strong>（クワーティはいれつ）と呼びます。<br> 元々、英語圏を中心に使われており、皆さんが使っている日本語キーボードの JIS 配列もこれを日本語用に発展させたものです。</p>
+          <p>QWERTY 配列は一見すると不便に見えます。アルファベット順に並んでいる方が分かりやすいように思いますよね。<br><br></p>
+          <p>この配列の起源は 1800 年代までさかのぼります。<br> 当時、キーを押すと文字が印字される「<strong>タイプライター</strong>」とよばれる機械がありました。PC のようにアプリが動いたり計算ができたりする物ではなく、ただ単に文字を打ち込むだけの機械です。<br></p>
+          <p class="image-with-caption">
+            <img src="image/typewriter.jpg">
+            <span class="imagecaption photo">タイプライター</span>
+          </p>
+          <p>当時、仕事でタイプライターを使っていた人として代表的なのが電報のオペレーターたちでした。モールス信号を聞いて、それを文字（英語）にする仕事をするオペレーターたちにとって、素早く文字を打ち込める配列が重要視されていました。<br> 現場のオペレーターたちから「このキーの位置が不便なので変更してほしい」「英語の単語では <code>re</code> や <code>er</code> がよく出てくるので、入力しやすいように並べてほしい」といった声が次々に届き、タイプライターのメーカーはそれを基にキー配列を変更していきました。<br>その結果として生まれたキーの配列に特許が申請され、他のメーカーは特許を侵害しないように新たなキー配列を生み出す、といったことが次々と行われた結果、QWERTY 配列が出来上がったと言われています。<br></p>
+          <ul>
+            <li>参考資料: <a href="https://kotobaken.jp/qa/yokuaru/qa-35/" target="_blank" rel="noopener noreferrer">パソコンのキーボードは，なぜABC順・五十音順ではないのですか</a> （ことば研究館）</li>
+          </ul>
+        </div>
+        <h2><a name="header-2-c7887a92414f854a9067849a51b9bb02"></a> まとめ</h2>
+        <ul>
+          <li><kbd>CapsLock</kbd>、<kbd>NumLock</kbd>は誤って操作しやすいキーだが、もう一度押せば元に戻る</li>
+          <li><kbd>Ctrl</kbd> や <kbd>Alt</kbd> などのキーはショートカットキーとして使う</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

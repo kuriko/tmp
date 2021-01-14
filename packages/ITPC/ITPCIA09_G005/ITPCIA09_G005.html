@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Google スプレッドシートで表計算をしよう</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>Google スプレッドシートで表計算をしよう</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-077bf383099aa77512e6fdc1dd129184"></a> Google スプレッドシートで表計算をしよう</h1>
+        <p>Google スプレッドシートは、ブラウザから無料で利用できる表計算アプリです。<br> マイクロソフト社の「Office」における Excel に相当する機能が使えます。</p>
+        <p>今回は簡易的な表計算シート作成手順を学び、共有したりダウンロードしたりといった手順を確認しましょう。</p>
+        <ul id="toc">
+          <li><a href="#header-2-95ab1474eb20f9e4e08d00a6a4133258" target="_blank">Google ドライブとの関係</a></li>
+          <li><a href="#header-2-b3edcefa731840909d57bfa927668271" target="_blank">新しいスプレッドシートを作成する</a></li>
+          <li><a href="#header-2-26104d7a1bac61a4e90ebd9cdabf5cd9" target="_blank">テストの点数を計算してみよう</a></li>
+          <li><a href="#header-2-fc3e5bb87384f542ba99ebf3f34bcb66" target="_blank">色を付けよう</a></li>
+          <li><a href="#header-2-aad4e44a7f9c650ddede8500722f0a5e" target="_blank">他の人に共有しよう</a></li>
+          <li><a href="#header-2-c4e58d92bb45f5ece765d95c90d11c70" target="_blank">ダウンロードしよう</a></li>
+        </ul>
+        <h2><a name="header-2-95ab1474eb20f9e4e08d00a6a4133258"></a> Google ドライブとの関係</h2>
+        <p>Google スプレッドシートで作成された文章は基本的にすべて Google ドライブ上に保存されます。<br> 必要に応じてパソコンにダウンロードすることもできます。</p>
+        <h2><a name="header-2-b3edcefa731840909d57bfa927668271"></a> 新しいスプレッドシートを作成する</h2>
+        <p>まずは <strong>Google ドライブ</strong>を開きます。<br> Google ドライブ上の好きなフォルダを開き、左上の <strong>新規</strong> ボタンから <strong>Google スプレッドシート</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/create-new-sheet-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>新しいタブで Google スプレッドシート が起動します。</p>
+        <div class="image-with-caption">
+          <img src="image/create-new-sheet-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>最初はタイトルが「無題のスプレッドシート」という名前になっていますが、これでは分かりづらいので名前を変更しましょう。<br> 「無題のスプレッドシート」と書かれた部分をクリックすると、タイトルを編集できます。<br> ここでは「<strong>スプレッドシートの練習</strong>」としましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/create-new-sheet-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>新機能の案内が表示されることもありますが、OK を押して閉じれば大丈夫です。<br> 画面が以下のようになればタイトルが変更できています。</p>
+        <div class="image-with-caption">
+          <img src="image/create-new-sheet-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>ファイル名を変更すると、Google ドライブでも以下のような表示になります。</p>
+        <div class="image-with-caption">
+          <img src="image/create-new-sheet-05.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-26104d7a1bac61a4e90ebd9cdabf5cd9"></a> テストの点数を計算してみよう</h2>
+        <h3><a name="header-3-0828d640bbd3f848d15c972416659df9"></a> 数値を入力しよう</h3>
+        <p>スプレッドシートにおける「表」の1つの枠を <strong>セル</strong> といいます。</p>
+        <p>セルには文字や数字を入力できます。また、文字色や色を変えられます。</p>
+        <p>今回は表計算の練習として、「クラスにおけるテストの点数」を計算してみましょう。<br> まずは、スプレッドシートに以下のように入力してみてください。練習なので、人名と点数は好きなものに変えても大丈夫です。<br> ただし、数字はすべて<strong>半角</strong>で入力するように気をつけてください。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>セルはクリックすると選択できます。いま選択しているセルは青い枠で強調されます。<br> この状態でキーボードを打つと、選択しているセルに数値や文字を入力できます。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>入力を終えて <kbd>Enter</kbd> キーを押すと、1 つ下のセルを選択します。<br> ほかのセルを選択したいときはマウスで他のセルをクリックします。</p>
+        <h3><a name="header-3-30fed3592a50e5de7ebd93734fc57e59"></a> セルの番号を知ろう</h3>
+        <p>それぞれセルには「セル番号」が付いています。<br> セルの番号は <strong>A1</strong> や <strong>B12</strong> のように、アルファベットと数字で構成されます。</p>
+        <p>すでにお気づきの人も居るかもしれませんが、一番左側（縦方向）と一番上（横方向）にアルファベットと数字が並んでいるのではないでしょうか。これがセル番号を決めるものになります。<br> 例えば横方向の <strong>B</strong> と 縦方向の <strong>3</strong> が 交わるセルは <strong>B3</strong> となります。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-afbf391e6bce3496cf75da18356a138c"></a> 足し算をしよう</h3>
+        <p>各生徒のテストの合計点を出してみましょう。</p>
+        <p>手書きの表なら、電卓を使って足し算をした結果を記入することになると思います。<br> しかし、スプレッドシートなら「表のここからここの数値を足す」といった命令を書くことができます。</p>
+        <p>まずは A さんの合計得点を算出してみましょう。セル <strong>F2</strong> を選択してください。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>ここに半角で <strong><code>=B2+C2+D2+E2</code></strong> と入力してください（最初のイコール <strong>=</strong> を忘れないように気をつけましょう）。<br> 一般的な日本語キーボードでローマ字入力モードの場合、記号は以下のキーを入力します。</p>
+        <ul>
+          <li><code>=</code> : <kbd>Shift</kbd> キーを押しながら <kbd>ほ</kbd>（-）</li>
+          <li><code>+</code> : <kbd>Shift</kbd> キーを押しながら <kbd>れ</kbd>（；）</li>
+        </ul>
+        <p>すると、入力したもの対応するセル番号に色がついて表示されます。<br> この状態で <kbd>Enter</kbd> キーを押してください。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-05.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>足し算が認識され、計算結果がセルに表示されます。<br> 計算結果が表示されたセルをダブルクリックすると、足し算の式が表示され、再び式を編集できます。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-06.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-28aff3916b36be3fd623c2ffa85eed95"></a> もっと便利な足し算機能を使おう</h3>
+        <p>今回は「国語、数学、理科、社会」の4科目だったので <strong><code>=B2+C2+D2+E2</code></strong> という比較的シンプルな式でした。これなら頑張れば入力できますね。<br> しかし、例えば「現代文、古文、漢文、数学I、数学A、数学II、数学B、数学III、物理、化学……」など、科目が多い場合はどうでしょうか。<br> もちろん、<strong><code>=B2+C2+D2+E2+F2+G2+H3+I3</code></strong> ……と足し算の式が長くなります。これだと入力するのも大変ですし、入力ミスも増えてしまいそうです。</p>
+        <p>こんな時に便利な機能があります。それが <strong>関数</strong>（かんすう） です。<br> 関数といっても、数学の知識は不要です。スプレッドシートにおける「関数」は「複雑な計算を代わりにやってくれる便利機能」くらいの認識で大丈夫です。</p>
+        <p>合計値を計算するもの、平均値を計算するものなど、色々な関数があります。ここでは合計値を計算する <strong>SUM</strong>（サム）関数を使いましょう。<br> SUM は「合計」を意味する summation（サメーション）の略に由来しています。</p>
+        <p>いったん、F2 セルに記入した足し算を削除してみましょう。F2 セルをクリックして <kbd>Delete</kbd> (Del) キーを押しましょう。<br> F2 セルが空白になればOKです。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>では、F2 セルに半角で <strong><code>=SUM(B2:E2)</code></strong> と入力してください（最初のイコール <strong>=</strong> を忘れないように気をつけましょう）。<br> 一般的な日本語キーボードでローマ字入力モードの場合、記号は以下のキーを入力します。</p>
+        <ul>
+          <li><code>(</code> : <kbd>Shift</kbd> キーを押しながら <kbd>8</kbd></li>
+          <li><code>:</code>（コロン） : <kbd>け</kbd></li>
+          <li><code>)</code> : <kbd>Shift</kbd> キーを押しながら <kbd>9</kbd></li>
+        </ul>
+        <p><code>=SUM(B2:E2)</code> は <strong>B2 セルから E2 セルまでの数値を SUM 関数で計算する</strong> という意味の式です。</p>
+        <p>入力したもの対応するセル番号に色がついて表示されます。<br> この状態で <kbd>Enter</kbd> キーを押してください。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-07.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すると、先ほどの足し算と同じ結果が表示されます。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-06.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-8b5309be699208e1f1e97f2663cc05c4"></a> 平均点を出してみよう</h3>
+        <p>全科目の平均を出すには 合計点 ÷ 科目数 です。<code>=(B2+C2+D2+E2)/4</code> のように、自分で式を作って計算することもできますが、素早く計算するために関数を使いましょう。</p>
+        <p>今回使うのは <strong>AVERAGE</strong>（アベレージ）関数です。average とは「平均」という意味です。</p>
+        <p>G2 セルをクリックして選択し、<strong><code>=AVERAGE(B2:E2)</code></strong> と入力して <kbd>Enter</kbd> キーを押しましょう。<br>
+          <code>=AVERAGE(B2:E2)</code> は <strong>B2 セルから E2 セルまでの数値を AVERAGE 関数で計算する</strong> という意味の式です。
+        </p>
+        <div class="image-with-caption">
+          <img src="image/calc-08.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すると、結果が表示されます。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-09.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-079b0abee81c207030aef3bcfc8555e5"></a> 計算を繰り返そう</h3>
+        <p>ここまでで、A さんの合計点と平均点を出しました。残りの B さん、C さん、D さん、E さんにも同じ関数を使っていきましょう。<br> ただ、同じ計算を繰り返す度に同じ関数や式を入力するのは大変です。</p>
+        <p>そこで、スプレッドシートにある <strong>オートフィル</strong> 機能を使いましょう。オートフィルとは「自動で埋める」という意味です。<br> まずはF2セルをクリックしてください。既にお気づきかもしれませんが、選択したセルの青枠の右下には小さい四角が表示されます。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-10.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>この四角にマウスを合わせると、矢印が十字になります。その状態で<strong>下</strong>にマウスをドラッグ・アンド・ドロップしましょう。<br> すると、自動的に数式がコピーされます。</p>
+        <div class="image-with-caption data-gifffer">
+          <img src="image/autofill.gif"><br>
+          <span class="imagecaption animation"></span>
+        </div>
+        <p>ただのコピー・アンド・ペーストと違うのは、それぞれの行に応じた内容が反映される点です。<br> A さんの行では <code>=SUM(B2:E2)</code> でしたが、 D さんの行では <code>=SUM(B5:E5)</code> のようにセル番号が変わっています。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-11.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>平均点についても同じ操作をしてみましょう。<br> 以下のようになっていれば完成です。</p>
+        <div class="image-with-caption">
+          <img src="image/calc-12.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-fc3e5bb87384f542ba99ebf3f34bcb66"></a> 色を付けよう</h2>
+        <p>数値を見やすくしたり、強調したりするためにセルや文字に色を付けられます。</p>
+        <h3><a name="header-3-797567d74cce33d711ff5414e72de142"></a> 太字にしよう</h3>
+        <p>まずは科目名を太字にしましょう。<br> 太字にするセルを選択します。1 つずつ選択してもよいですが、今回は一気に選択してしまいましょう。</p>
+        <p>まずは「国語」をクリックし、「社会」までドラッグ・アンド・ドロップしてください。<br> 今回はオートフィルと異なり、右下ではなく<strong>セルの真ん中</strong>でドラッグ・アンド・ドロップします。</p>
+        <div class="image-with-caption data-gifffer">
+          <img src="image/select_cells.gif"><br>
+          <span class="imagecaption animation"></span>
+        </div>
+        <p>この状態で、画面の上のほうにある <strong>B</strong> をクリックします。B は「太字」を意味する bold（ボールド）の頭文字です。</p>
+        <div class="image-with-caption">
+          <img src="image/bold-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すると、選択したセルが太字になります。</p>
+        <div class="image-with-caption">
+          <img src="image/bold-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-e793918f49f649a875ad5691d9e6e4d8"></a> 教科ごとに色を変えよう</h3>
+        <p>国語、数学、理科、社会の4科目の列に色を付けましょう。</p>
+        <p>太字にしたときと同じように、今度は「国語」の行を縦方向に選択します。</p>
+        <div class="image-with-caption">
+          <img src="image/cell-color-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>画面の上の方にあるバケツアイコンをクリックし、設定したい色をクリックします。今回は好きな色を選んで大丈夫です。<br> あまり色が濃いと黒い文字が見づらくなるので、薄めの色にするとよいでしょう。</p>
+        <div class="image-with-caption">
+          <img src="image/cell-color-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>ここでは、薄めの赤を選んでみました。</p>
+        <div class="image-with-caption">
+          <img src="image/cell-color-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>同様に、数学、理科、社会にも色を設定しましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/cell-color-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>興味があれば、他の装飾機能を試してもいいでしょう。</p>
+        <h2><a name="header-2-aad4e44a7f9c650ddede8500722f0a5e"></a> 他の人に共有しよう</h2>
+        <p>ここまでの変更点は自動で保存されています。<br> では早速、今作ったスプレッドシートを他の人に共有してみましょう。</p>
+        <p>画面右上にある <strong>共有</strong> ボタンをクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/share-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>Google ドライブで表示されるものと同じ共有画面が現れます。</p>
+        <div class="image-with-caption">
+          <img src="image/share-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>共有した状態で他者と同時にスプレッドシートを開くと、同時に共同編集できます。<br> 他の人が現在選択しているセルも表示されます。</p>
+        <div class="image-with-caption">
+          <img src="image/share-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-c4e58d92bb45f5ece765d95c90d11c70"></a> ダウンロードしよう</h2>
+        <p>スプレッドシートのファイルは基本的に Google ドライブに保存されますが、必要に応じてパソコンにダウンロードすることもできます。</p>
+        <p>スプレッドシートの<strong>ファイル</strong>メニューをクリックし、<strong>ダウンロード</strong> から <strong>PDFドキュメント</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/download-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>画面右上の<strong>エクスポート</strong>をクリックします。「エクスポート」とは出力するという意味です。</p>
+        <div class="image-with-caption">
+          <img src="image/download-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>少し待つと、ファイルがパソコンのダウンロードフォルダにダウンロードされます。</p>
+        <div class="image-with-caption">
+          <img src="image/download-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

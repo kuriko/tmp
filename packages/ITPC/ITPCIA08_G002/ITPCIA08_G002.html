@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang>
+<html lang="">
 
 <head>
   <meta charset="UTF-8">
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title></title>
+  <title>不審な URL を見分けよう</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
   <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
@@ -36,7 +36,7 @@
     };
 
   </script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script>
     window.onload = function() {
       Gifffer({
@@ -45,7 +45,7 @@
           'height': '60px',
           'border': '3px solid #FFFFFF',
           'border-radius': '30px',
-          'background': '#0075c2',
+          'background': '#009c79',
           'position': 'absolute',
           'top': '50%',
           'left': '50%',
@@ -72,249 +72,129 @@
     <div class="book-header" role="navigation">
       <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a></a>
+        <a>不審な URL を見分けよう</a>
       </h1>
     </div>
     <div class="page-wrapper" tabindex="-1" role="main">
       <section class="main-content markdown-section">
-        <h1><a name="header-1-239ee882881c42ffa3154842db3a7f92"></a> Gmail &#x3092;&#x4F7F;&#x3063;&#x3066;&#x307F;&#x3088;&#x3046;</h1>
-        <p>Gmail&#xFF08;&#x30B8;&#x30FC;&#x30E1;&#x30FC;&#x30EB;&#xFF09;&#x306F;&#x3001;Google &#x304C;&#x63D0;&#x4F9B;&#x3059;&#x308B;&#x7121;&#x6599;&#x306E; E &#x30E1;&#x30FC;&#x30EB;&#xFF08;&#x96FB;&#x5B50;&#x30E1;&#x30FC;&#x30EB;&#xFF09;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3067;&#x3059;&#x3002;<br> &#x4ECA;&#x56DE;&#x306F; Gmail &#x3092;&#x4F7F;&#x3063;&#x305F;&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x9001;&#x53D7;&#x4FE1;&#x306E;&#x57FA;&#x672C;&#x3092;&#x5B66;&#x3073;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+        <h1><a name="header-1-291d8348935b616d57cb945056c83c08"></a> 不審な URL を見分けよう</h1>
+        <p>詐欺サイトなど、不正なサイトを見分ける手段として URL をよく見てみるというものがあります。<br> 7 章の復習ですが、URL は以下のような構造になっています。</p>
+        <div class="image-with-caption">
+          <img src="image/url-structure.png">
+          <span class="imagecaption figure">URL の構造</span>
+        </div>
+        <ol>
+          <li>プロトコル名</li>
+          <li>ホスト名（省略される場合あり）</li>
+          <li>ドメイン名</li>
+          <li>フォルダとファイル名など</li>
+        </ol>
+        <p>この際、一番参考になるのが<strong>ドメイン</strong>です。今回は特にドメインについて詳しく見ていきましょう。</p>
         <ul id="toc">
-          <li><a href="#header-3-90e8b81f4ea1fd718edca31c2c5fcdb0">Gmail &#x3092;&#x958B;&#x3053;&#x3046;</a></li>
-          <li><a href="#header-3-c16b9aad213d7534a5c7205670080ad2">&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x4F5C;&#x6210;</a></li>
-          <li><a href="#header-3-70977b46db8776cecb8f99f26ea680ac">&#x53D7;&#x4FE1;&#x30C8;&#x30EC;&#x30A4;</a></li>
-          <li><a href="#header-3-ccf02d5b7d5521e8d8e7613cdc1b989f">&#x30E1;&#x30FC;&#x30EB;&#x306B;&#x8FD4;&#x4FE1;&#x3059;&#x308B;</a></li>
-          <li><a href="#header-3-2fa48c970490a86d2b3d997cad5c5db9">&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x5FDC;&#x7528;&#x7684;&#x306A;&#x6A5F;&#x80FD;</a></li>
-          <li><a href="#header-3-4521d07a043810d3d7e2c7916a327d8e">&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x30DE;&#x30CA;&#x30FC;&#x30FB;&#x6163;&#x7FD2;</a></li>
-          <li><a href="#header-3-85abaf05425fec4cf46bc69ec80d66b9">&#x7F72;&#x540D;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x3088;&#x3046;</a></li>
+          <li><a href="#header-2-87f77d4649985203089f102115d35adc" target="_blank">フィッシングサイトとは？</a></li>
+          <li><a href="#header-2-03c5570a0630b3f58f4ee59e3a7df92a" target="_blank">ドメインとは</a></li>
+          <li><a href="#header-2-99371bc5e787d4b151e00c24997c718a" target="_blank">不正なサイトのドメインを見抜く</a></li>
+          <li><a href="#header-2-97b4ba74c63a7f19281644b88638f807" target="_blank">ブラウザの警告を参考にしよう</a></li>
         </ul>
-        <h3><a name="header-3-90e8b81f4ea1fd718edca31c2c5fcdb0"></a> Gmail &#x3092;&#x958B;&#x3053;&#x3046;</h3>
-        <p>Google &#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306B;&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x3057;&#x305F;&#x72B6;&#x614B;&#x3067;&#x3001;Google &#x306E;&#x30C8;&#x30C3;&#x30D7;&#x30DA;&#x30FC;&#x30B8;&#x304B;&#x3089;&#x3001;&#x53F3;&#x4E0A;&#x306B;&#x3042;&#x308B; <strong>Gmail</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/open-gmail-01.png">
-          <span class="imagecaption screenshot"></span>
+        <h2><a name="header-2-87f77d4649985203089f102115d35adc"></a> フィッシングサイトとは？</h2>
+        <p>本物のサイトに偽装した、詐欺サイトのことです。<br> 騙された人が本物のサイト用のIDやパスワードなどをフィッシングサイトに入力することにより、ID・パスワードが流出してしまいます。</p>
+        <p>中には見分けるのが困難なものもありますが、その多くは URL に関する知識があれば見抜くことができます。</p>
+        <img src="image/07_G005-08-01.png">
+        <h2><a name="header-2-03c5570a0630b3f58f4ee59e3a7df92a"></a> ドメインとは</h2>
+        <p>ドメイン名は「これは誰の Web サイトなのか」を表すものです。</p>
+        <p>たとえば、<a href="https://www.nicovideo.jp/" target="_blank" rel="noopener noreferrer">niconico</a>のドメインは <strong>nicovideo.jp</strong> で、<a href="https://nnn.ed.jp/" target="_blank" rel="noopener noreferrer">N 高等学校</a>のドメインは <strong>nnn.ed.jp</strong> です。</p>
+        <p>ドメインは個人や企業などが料金を支払えば、自由に取得できます（ただし、既に他者によって登録されているドメインは取得できません）。</p>
+        <h3><a name="header-3-6bd4df360a03c5bc65e1eac13e0d984f"></a> ドメインの種類</h3>
+        <p><strong>nicovideo.jp</strong> の <strong><code>jp</code></strong> や <strong>nnn.ed.jp</strong> の <strong><code>ed.jp</code></strong> はドメインの種類を示します。</p>
+        <p>このドメインの種類を見ると、そのサイトがどんな特徴を持っているのかを見分けられることがあります。<br> ドメインの種類を少し眺めてみましょう。</p>
+        <h4><a name="header-4-7b139094f96d254257fb828e3aded67b"></a> 世界中の誰でも取得できるもの</h4>
+        <p>以下に示すドメインは元々用途が決まっていたものですが、現在は制限なく誰でも取得し、どんな用途にでも使うことができるようになっています。</p>
+        <ul>
+          <li><strong>.com</strong>（ドット・コム）：company（カンパニー、会社）の略で、元々は<strong>会社</strong>のサイト用だった</li>
+          <li><strong>.org</strong>（ドット・オルグ）：organization（オーガニゼーション、組織）の略で、元々は<strong>非営利団体</strong>のサイト用だった</li>
+          <li><strong>.net</strong>（ドット・ネット）：network（ネットワーク）の略で、<strong>ネットワークに関連する会社・組織</strong>用だった</li>
+          <li><strong>.info</strong>（ドット・インフォ）：information（インフォメーション、情報）の略で、<strong>情報</strong>に関連するサイト用だった</li>
+        </ul>
+        <h4><a name="header-4-724187ceba9d5151b7dbf62628353671"></a> 取得できる人や団体が限定されているドメイン</h4>
+        <p>ちょっと変わったドメインや、取得できる対象がかなり限定されているドメインもあります。以下に示すものは一例であり、覚える必要は全くありません。</p>
+        <ul>
+          <li><strong>.gov</strong>（ドット・ガブ）：government（ガバメント、政府）の略で、アメリカ合衆国の政府関連サイトのみが利用できる</li>
+          <li><strong>.mil</strong>（ドット・ミル）：military（ミリタリー、軍事）の略で、アメリカ軍だけが利用できる</li>
+          <li><strong>.travel</strong>（ドット・トラベル）：旅行に関連する会社（旅行代理店など）だけが利用できる</li>
+        </ul>
+        <p>覚える必要はありませんが、ドメインの <code>.○○</code> 部分を正式には「トップレベルドメイン」と呼び、TLD と略します。 もし、どんな種類のドメインがあるか気になったら「TLD　一覧」などで Google 検索してみましょう。</p>
+        <h4><a name="header-4-976e811b6a57e54a39a98e3bfcff756c"></a> 国・地域別のドメイン</h4>
+        <img src="image/07_G005-06-01.png">
+        <p>国・地域別のドメインもあります。ここでは一部を紹介します。<br> なお、これらの地域別ドメインは .jp なら　ドット・ジェイピー のように、アルファベットでそのまま読みます。</p>
+        <ul>
+          <li><strong>.jp</strong>：日本（Japan）</li>
+          <li><strong>.us</strong>：アメリカ合衆国（USA）</li>
+          <li><strong>.cn</strong>：中華人民共和国（China）</li>
+          <li><strong>.kr</strong>：大韓民国（South Korea）</li>
+          <li><strong>.tw</strong>：台湾（Taiwan）</li>
+          <li><strong>.hk</strong>：香港（Hong Kong）</li>
+          <li><strong>.uk</strong>：イギリス（United Kingdom）</li>
+          <li><strong>.fr</strong>：フランス（France）</li>
+          <li><strong>.de</strong>：ドイツ（Deutschland）</li>
+          <li><strong>.tv</strong>：ツバル（Tuvalu）</li>
+          <li><strong>.co</strong>：コロンビア（Columbia)</li>
+        </ul>
+        <p>これらの国・地域別ドメインは、原則としてその国に住んでいる人や、そこに拠点がある会社しか利用できないようになっています。しかし、利益のために外国人や外国企業も利用できるように開放しているところもあります。</p>
+        <div class="tip"><a name="tuvalu"></a>
+          <span class="tip-title">コラム: ドメインを売って国連に加盟</span>
+          <p>太平洋の島国<strong>ツバル</strong>に割り当てられたドメインは <strong>.tv</strong> です。国名の Tuvalu を略しただけなのですが、偶然にも「テレビ」の略である <strong>TV</strong> と一致しており、テレビ業界などでの需要がありそうなドメインだと言われていました。</p>
+          <p>ツバルは 2000 年に .tv ドメインの権利をアメリカの企業に売却し、世界中の人々や企業が使えるようにしました。この利益でツバルは国連の年会費を支払うことができるようになり、185 番目の国連加盟国になりました。</p>
+          <p>日本では <a href="https://abema.tv/" target="_blank" rel="noopener noreferrer">AbemaTV</a> などが .tv ドメインを使用しています。</p>
         </div>
-        <p>&#x6642;&#x3005;&#x3001;&#x65B0;&#x6A5F;&#x80FD;&#x306E;&#x6848;&#x5185;&#x304C;&#x51FA;&#x308B;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;OK &#x306A;&#x3069;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x9589;&#x3058;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/open-gmail-02.png">
-          <span class="imagecaption screenshot"></span>
+        <br>
+        <div class="tip"><a name="domainhack"></a>
+          <span class="tip-title">コラム: ドメインハック</span>
+          <p>YouTube はベルギーのドメイン <code>.be</code> を使い、<strong>youtu.be</strong> というドメインを取得しています。このように、ドメインを工夫して1つの単語のように見せかけることを「ドメインハック」といいます。</p>
+          <p>ユニークかつおしゃれで、さらにドメインも短くなるというメリットがありますが、どこの国のサイトか分かりにくくなるといった批判もあるようです。</p>
+          <p>なお、ここでの「ハック」は「工夫」といった意味で使われており、悪意ある「ハッキング」を示すものではありません。</p>
         </div>
-        <p>&#x3053;&#x308C;&#x304C; Gmail &#x306E;&#x30E1;&#x30A4;&#x30F3;&#x753B;&#x9762;&#x3067;&#x3059;&#x3002;&#x81EA;&#x5206;&#x5B9B;&#x3066;&#x306E;&#x30E1;&#x30FC;&#x30EB;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<br> &#x65E9;&#x901F;&#x3001;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306E;&#x4F5C;&#x6210;&#x304C;&#x5B8C;&#x4E86;&#x3057;&#x305F;&#x3053;&#x3068;&#x3092;&#x77E5;&#x3089;&#x305B;&#x308B; 1 &#x4EF6;&#x306E;&#x30E1;&#x30FC;&#x30EB;&#x304C;&#x6765;&#x3066;&#x3044;&#x308B;&#x306F;&#x305A;&#x306A;&#x306E;&#x3067;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x958B;&#x3044;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;<br> &#xFF08;&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x3084;&#x6587;&#x9762;&#x306A;&#x3069;&#x306F;&#x3001;&#x6642;&#x671F;&#x306B;&#x3088;&#x3063;&#x3066;&#x7570;&#x306A;&#x308B;&#x53EF;&#x80FD;&#x6027;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#xFF09;</p>
+        <h3><a name="header-3-71540674f0811e25936e934240bbdbbd"></a> jpドメインの分類</h3>
+        <img src="image/07_G005-07-01.png">
+        <p>日本を示す .jp ドメインにも更に分類があります。<br> 取得できる団体などを制限しているドメインは、信頼できるサイトかどうかを判断する根拠になります。</p>
+        <p>たとえば、災害時に政府や自治体の公式サイトから信頼できる情報を得たい場合は <code>.go.jp</code> や <code>lg.jp</code> のドメインになっているかどうかを確認するとよいでしょう。逆に、<code>.com</code> などで「政府の公式サイト」と名乗っている場合は本物ではない可能性が高いため、十分気をつけましょう。</p>
+        <p>以下は必ず覚えておく必要はありませんが、ある程度知っておくと便利でしょう。</p>
+        <ul>
+          <li><strong>.jp</strong>：汎用（はんよう）JPドメインと呼ばれる。日本に住所があれば誰でも（どんな会社でも）取得できる。<br>例：<a href="https://www.nicovideo.jp/" target="_blank" rel="noopener noreferrer">nicovideo.jp</a>（ニコニコ）<br><br></li>
+          <li><strong>.co.jp</strong>：企業のみ取得できる。「企業」を意味するcorporation（コーポレーション） の略。<br>例：<a href="https://dwango.co.jp/" target="_blank" rel="noopener noreferrer">dwango.co.jp</a>（株式会社ドワンゴ）<br><br></li>
+          <li><strong>.ac.jp</strong>：主に大学などの教育機関のみ取得できる。「学問」などを意味するacademic（アカデミック） の略。<br>例：<a href="https://www.u-tokyo.ac.jp/ja/index.html" target="_blank" rel="noopener noreferrer">u-tokyo.ac.jp</a>（東京大学）<br><br></li>
+          <li><strong>.ed.jp</strong>：主に保育所、幼稚園、小学校、中学校、高等学校のみ取得できる。「教育」を意味するeducation（エデュケーション） の略。<br>例：<a href="https://nnn.ed.jp/" target="_blank" rel="noopener noreferrer">nnn.ed.jp</a>（N 高等学校）<br><br></li>
+          <li><strong>.go.jp</strong>：日本の政府機関や、政府に関連する法人のみ取得できる。「政府」を意味するgovernment（ガバメント） の略。<br>例：<a href="https://www.mlit.go.jp/" target="_blank" rel="noopener noreferrer">mlit.go.jp</a>（国土交通省）<br><br></li>
+          <li><strong>.lg.jp</strong>：日本の地方自治体（都道府県や市区町村）および、その関連団体のみ取得できる。「地方自治体」を意味するlocal government（ローカル・ガバメント） の略。<br>例：<a href="https://www.metro.tokyo.lg.jp/" target="_blank" rel="noopener noreferrer">metro.tokyo.lg.jp</a>（東京都）<br><br></li>
+          <li><strong>.or.jp</strong>：企業以外の組織のみ取得できる。「組織」を意味するorganization（オーガニゼーション） の略。<br>例：<a href="https://www.unic.or.jp/info/" target="_blank" rel="noopener noreferrer">unic.or.jp</a>（国際連合広報センター）</li>
+        </ul>
+        <p>なお、<code>.co.jp</code> は 1 つの企業につき 1 ドメインしか取得できないため、1つの会社が複数のサイトを運営する場合は <code>.net</code> や <code>.jp</code> など他のドメインを使うこともあります。<br> また、大学や企業が一般の <code>.jp</code> ドメインを使う事もあります（<a href="https://www.waseda.jp/top/" target="_blank" rel="noopener noreferrer">早稲田大学の waseda.jp</a>、<a href="https://corp.virtualcast.jp/" target="_blank" rel="noopener noreferrer">バーチャルキャスト株式会社の virtualcast.jp</a>、<a href="https://www.nikkei.com/" target="_blank" rel="noopener noreferrer">日本経済新聞社の nikkei.com</a> など）。</p>
+        <h4><a name="header-4-6f021c92a742d1086d46861e8676f894"></a> 企業専用のドメイン</h4>
+        <p>ここまでで紹介した .jp や .com などのドメインは、条件を満たしていれば、ほとんどが年間数百円～数千円程度で取得できます。<br> しかし、2012年に自社専用のドメイン（ブランドTLD）を登録することが認められるようになりました。通常のドメインと比べると莫大なお金が掛かりますが、一部の企業はブランド戦略としてこれらのドメインを取得しています。</p>
+        <ul>
+          <li><a href="https://jp.sharp/" target="_blank" rel="noopener noreferrer">.sharp</a>（シャープ）</li>
+          <li><a href="https://global.toyota/" target="_blank" rel="noopener noreferrer">.toyota</a>（トヨタ）</li>
+          <li><a href="https://global.honda/" target="_blank" rel="noopener noreferrer">.honda</a>（ホンダ）</li>
+          <li>.google（グーグル）</li>
+          <li>.nico（ドワンゴ）</li>
+        </ul>
+        <h2><a name="header-2-99371bc5e787d4b151e00c24997c718a"></a> 不正なサイトのドメインを見抜く</h2>
+        <p>ここまでで学んだ事を生かせば、URL やドメインから不正なサイトを見抜けるようになります。</p>
+        <p>なお、本物（公式）のサイトがハッキングされて乗っ取られてしまった場合などは URL だけで見分けることはできません。<br> そのため、 URL のチェックだけで 100% 身を守れるわけではありませんが、<strong>最低限必要な自衛策</strong>として覚えておきましょう。</p>
+        <h3><a name="header-3-8bc65d5d7c0ab1d501cb6441e8bfc94a"></a> ドメインの種類から判断する</h3>
+        <p>日本企業のサイトと称しているにも関わらず、<code>.cn</code>（中国）や <code>.us</code>（アメリカ合衆国）などのドメインになっている場合はちょっと疑ってみる必要があるでしょう。</p>
+        <p>また、日本政府のサイトだと称しているにも関わらず、誰でも取得できる <code>.com</code> などになっている場合も疑ったほうがよいでしょう。</p>
+        <h3><a name="header-3-b2730cff631bf37c7ae824aad32661db"></a> 他のドメインに似せようとしているものは疑う</h3>
+        <p><code>×××××-cojp.com</code> のように、一見して <code>.co.jp</code> のように見せかけているが実際は <code>.com</code> であったり、コロンビアの <code>.co</code> を使って <code>.co.jp</code> に似せようとしていたり、紛らわしいドメインを使っている場合はかなり怪しいサイトだと判断できます。</p>
+        <p>他にも、サイト名のスペルがちょっと違うといった偽サイトもあります。例えば、<strong>google</strong>（グーグル）の <strong>l</strong>（エル） を数字の<strong>1</strong> に置き換えて、 <strong>goog1e</strong> としているような偽物も考えられます。<br> 特に個人情報などを入力するときは念入りにチェックしましょう。</p>
+        <h3><a name="header-3-7a9b384e5bb2d04fcd0540a13adea545"></a> 何も関係ない文字列になっている場合は疑う</h3>
+        <p>仮に、皆さんが Web サイトを作ってビジネスをするなら、どういったドメインを取得したいでしょうか。<br> 普通は「わかりやすいドメイン」にしたいと思うはずです。</p>
+        <p>実際の例を見てみましょう。<br> 例えば、アマゾンは <strong>amazon.co.jp</strong>、楽天は <strong>rakuten.co.jp</strong>、クロネコヤマト（ヤマト運輸）は <strong>kuronekoyamato.co.jp</strong> というドメインを取得しています。<br> 皆さんがよく使うサービスのドメインも、ほとんどはそうなっているのではないでしょうか。</p>
+        <p>しかし、詐欺サイトはこういった「分かりやすい」ドメインを使っていない場合があります。<br> 例えば「アマゾンからのお知らせです。こちらをクリックしてください。 wkjadsnkjs4.xxxxxxxdns.org」といったメールや SMS などが届いた場合、ここに載っている URL はあまりにも「アマゾン」からかけ離れているため、詐欺サイトの可能性が高いと判断できます。こういったリンクを受け取った場合は絶対に開かないようにしましょう。</p>
+        <h2><a name="header-2-97b4ba74c63a7f19281644b88638f807"></a> ブラウザの警告を参考にしよう</h2>
+        <p>不正なサイトを開こうとしてしまった場合、Chrome などのブラウザが以下のような <strong>警告画面</strong> を表示する場合があります。<br> もし、Web サイトを開こうとしたときにこういった表示に遭遇した場合、そのサイトは危険な可能性が極めて高いものです。「戻る」ボタンを押してページを開かないようにしましょう。</p>
         <div class="image-with-caption">
-          <img src="image/open-gmail-03.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x672C;&#x6587;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/open-gmail-04.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x5DE6;&#x5074;&#x306E; <strong>&#x53D7;&#x4FE1;&#x30C8;&#x30EC;&#x30A4;</strong> &#x3068;&#x3044;&#x3046;&#x6587;&#x5B57;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x3001;&#x53D7;&#x4FE1;&#x30C8;&#x30EC;&#x30A4;&#x306B;&#x623B;&#x308A;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/open-gmail-05.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x7121;&#x4E8B;&#x306B;&#x623B;&#x308C;&#x305F;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;<br> &#x306A;&#x304A;&#x3001;&#x300C;Gmail &#x3092;&#x4F7F;&#x3063;&#x3066;&#x307F;&#x308B;&#x300D;&#x3068;&#x3044;&#x3046;&#x67A0;&#x306F;&#x53F3;&#x4E0A;&#x306B;&#x3042;&#x308B; &#xD7; &#x5370;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x9589;&#x3058;&#x3066;&#x69CB;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/open-gmail-06.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <h3><a name="header-3-c16b9aad213d7534a5c7205670080ad2"></a> &#x30E1;&#x30FC;&#x30EB;&#x306E;&#x4F5C;&#x6210;</h3>
-        <p>Gmail &#x306E;&#x753B;&#x9762;&#x5DE6;&#x4E0A;&#x306B;&#x3042;&#x308B; <strong>&#x4F5C;&#x6210;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/send-mail-01.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x753B;&#x9762;&#x53F3;&#x4E0B;&#x306B;&#x30E1;&#x30FC;&#x30EB;&#x4F5C;&#x6210;&#x753B;&#x9762;&#x304C;&#x51FA;&#x3066;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x5439;&#x304D;&#x51FA;&#x3057;&#x3067;&#x6A5F;&#x80FD;&#x306E;&#x6848;&#x5185;&#x304C;&#x51FA;&#x3066;&#x304D;&#x305F;&#x5834;&#x5408;&#x306F;&#x300C;&#x9589;&#x3058;&#x308B;&#x300D;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/send-mail-02.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x30E1;&#x30FC;&#x30EB;&#x4F5C;&#x6210;&#x753B;&#x9762;&#x306B;&#x306F; 3 &#x3064;&#x306E;&#x6B04;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <h4><a name="header-4-706574498628ffbe43cb0486bf7cc3aa"></a> &#x5B9B;&#x5148;</h4>
-        <p>&#x9001;&#x4FE1;&#x3059;&#x308B;&#x76F8;&#x624B;&#x306E;&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3092;&#x3053;&#x3053;&#x306B;&#x8A18;&#x5165;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <h4><a name="header-4-371af9713ce1b559f872334166b810c5"></a> &#x4EF6;&#x540D;</h4>
-        <p>&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x3067;&#x3059;&#x3002;&#x76F8;&#x624B;&#x306E;&#x53D7;&#x4FE1;&#x30C8;&#x30EC;&#x30A4;&#x3067;&#x306F;&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x3060;&#x3051;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x305F;&#x3081;&#x3001;&#x30D1;&#x30C3;&#x3068;&#x307F;&#x3066;&#x5185;&#x5BB9;&#x304C;&#x308F;&#x304B;&#x308B;&#x3082;&#x306E;&#x306B;&#x3059;&#x308B;&#x3068;&#x89AA;&#x5207;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <h4><a name="header-4-38db5e4551f7923e81df3fd99ba5bf11"></a> &#x672C;&#x6587;</h4>
-        <p>&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x672C;&#x6587;&#x3067;&#x3059;&#x3002;</p>
-        <hr>
-        <p>&#x3053;&#x3053;&#x3067;&#x306F;&#x7DF4;&#x7FD2;&#x3068;&#x3057;&#x3066;&#x3001;&#x81EA;&#x5206;&#x306E;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x5B9B;&#x3066;&#x306B;&#x30E1;&#x30FC;&#x30EB;&#x3092;&#x9001;&#x3063;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <p><strong>&#x5B9B;&#x5148;</strong> &#x6B04;&#x306B;&#x81EA;&#x5206;&#x306E; Gmail &#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x81EA;&#x5206;&#x306E;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x304C;&#x308F;&#x304B;&#x3089;&#x306A;&#x3044;&#x5834;&#x5408;&#x3001;&#x753B;&#x9762;&#x53F3;&#x4E0A;&#x306E;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3068;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br> &#x7D9A;&#x3044;&#x3066;&#x3001;<strong>&#x4EF6;&#x540D;</strong>&#x306B;&#x300C;&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x7DF4;&#x7FD2;&#x300D;&#x3068;&#x5165;&#x529B;&#x3057;&#x307E;&#x3059;&#x3002;<br> &#x6700;&#x5F8C;&#x306B;&#x3001;<strong>&#x672C;&#x6587;</strong>&#x3092;&#x66F8;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x4F55;&#x3092;&#x66F8;&#x3044;&#x3066;&#x3082;&#x3088;&#x3044;&#x3067;&#x3059;&#x304C;&#x3001;&#x7279;&#x306B;&#x601D;&#x3044;&#x3064;&#x304B;&#x306A;&#x3051;&#x308C;&#x3070;&#x300C;&#x30E1;&#x30FC;&#x30EB;&#x9001;&#x53D7;&#x4FE1;&#x306E;&#x7DF4;&#x7FD2;&#x3067;&#x3059;&#x3002;&#x300D;&#x3068;&#x5165;&#x529B;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/send-mail-03.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x66F8;&#x304D;&#x7D42;&#x3048;&#x305F;&#x3089; <strong>&#x9001;&#x4FE1;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <p>&#x3053;&#x308C;&#x304C;&#x30E1;&#x30FC;&#x30EB;&#x9001;&#x4FE1;&#x306E;&#x57FA;&#x672C;&#x7684;&#x306A;&#x6D41;&#x308C;&#x3067;&#x3059;&#x3002;</p>
-        <h3><a name="header-3-70977b46db8776cecb8f99f26ea680ac"></a> &#x53D7;&#x4FE1;&#x30C8;&#x30EC;&#x30A4;</h3>
-        <p><strong>&#x53D7;&#x4FE1;&#x30C8;&#x30EC;&#x30A4;</strong> &#x306F;&#x3001;&#x53D7;&#x4FE1;&#x3057;&#x305F;&#x30E1;&#x30FC;&#x30EB;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x753B;&#x9762;&#x3067;&#x3059;&#x3002;</p>
-        <p>&#x5148;&#x7A0B;&#x306E;&#x7DF4;&#x7FD2;&#x30E1;&#x30FC;&#x30EB;&#x3092;&#x81EA;&#x5206;&#x5B9B;&#x3066;&#x306B;&#x9001;&#x4FE1;&#x3057;&#x305F;&#x306E;&#x3067;&#x3001;&#x53D7;&#x4FE1;&#x30C8;&#x30EC;&#x30A4;&#x306B;&#x30E1;&#x30FC;&#x30EB;&#x304C;&#x6765;&#x3066;&#x3044;&#x308B;&#x306F;&#x305A;&#x3067;&#x3059;&#x3002;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;<br> &#x300C;&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x7DF4;&#x7FD2;&#x300D;&#x3068;&#x3044;&#x3046;&#x30E1;&#x30FC;&#x30EB;&#x304C;&#x3042;&#x308B;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/inbox-01.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x3082;&#x3057;&#x6765;&#x3066;&#x3044;&#x306A;&#x3044;&#x5834;&#x5408;&#x3001;&#x5C11;&#x3057;&#x5F85;&#x3063;&#x3066;&#x304B;&#x3089; Chrome &#x306E;&#x518D;&#x8AAD;&#x307F;&#x8FBC;&#x307F;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <p>&#x306A;&#x304A;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x306B;<strong>&#x65E2;&#x8AAD;&#x6A5F;&#x80FD;</strong>&#x306F;&#x57FA;&#x672C;&#x7684;&#x306B;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;&#x958B;&#x3044;&#x305F;&#x3060;&#x3051;&#x3067;&#x901A;&#x77E5;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;<br> &#x3082;&#x3057;&#x3001;&#x76F8;&#x624B;&#x304C;&#x30E1;&#x30FC;&#x30EB;&#x3092;&#x958B;&#x3044;&#x305F;&#x304B;&#x3069;&#x3046;&#x304B;&#x77E5;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;&#x5834;&#x5408;&#x306F;&#x300C;&#x958B;&#x5C01;&#x78BA;&#x8A8D;&#x300D;&#x3068;&#x3044;&#x3046;&#x6A5F;&#x80FD;&#x3092;&#x5225;&#x9014;&#x4F7F;&#x3046;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <h4><a name="header-4-1aa412270c22cb9fa7c75f92468a2205"></a> &#x30BD;&#x30FC;&#x30B7;&#x30E3;&#x30EB;&#x30BF;&#x30D6;&#x30FB;&#x30D7;&#x30ED;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30BF;&#x30D6;</h4>
-        <p>&#x53D7;&#x4FE1;&#x30C8;&#x30EC;&#x30A4;&#x3067;&#x306F;&#x300C;&#x30E1;&#x30A4;&#x30F3;&#x300D;&#x3068;&#x3044;&#x3046;&#x30BF;&#x30D6;&#x4EE5;&#x5916;&#x306B;&#x3082;&#x3001;&#x300C;&#x30BD;&#x30FC;&#x30B7;&#x30E3;&#x30EB;&#x300D;&#x3084;&#x300C;&#x30D7;&#x30ED;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x300D;&#x3068;&#x3044;&#x3046;&#x30BF;&#x30D6;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <p>Gmail &#x306F; AI&#xFF08;&#x4EBA;&#x5DE5;&#x77E5;&#x80FD;&#xFF09;&#x3092;&#x7528;&#x3044;&#x3066;&#x30E1;&#x30FC;&#x30EB;&#x3092;&#x5206;&#x985E;&#x3057;&#x3066;&#x304A;&#x308A;&#x3001;SNS &#x304B;&#x3089;&#x306E;&#x901A;&#x77E5;&#x3084;&#x3001;&#x901A;&#x8CA9;&#x30B5;&#x30A4;&#x30C8;&#x306A;&#x3069;&#x304B;&#x3089;&#x306E;&#x30BB;&#x30FC;&#x30EB;&#x30B9;&#xFF08;&#x30D7;&#x30ED;&#x30E2;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#xFF09;&#x3092;&#x300C;&#x30E1;&#x30A4;&#x30F3;&#x300D;&#x304B;&#x3089;&#x5206;&#x985E;&#x3057;&#x3066;&#x304F;&#x308C;&#x307E;&#x3059;&#x3002;<br> &#x91CD;&#x8981;&#x5EA6;&#x306E;&#x4F4E;&#x3044;&#x30E1;&#x30FC;&#x30EB;&#x3092;&#x30E1;&#x30A4;&#x30F3;&#x304B;&#x3089;&#x9664;&#x5916;&#x3057;&#x3066;&#x304F;&#x308C;&#x308B;&#x4FBF;&#x5229;&#x306A;&#x6A5F;&#x80FD;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;AI &#x306B;&#x3088;&#x308B;&#x5206;&#x985E;&#x306F;&#x5B8C;&#x74A7;&#x3067;&#x306F;&#x306A;&#x3044;&#x306E;&#x3067;&#x3001;&#x5FC5;&#x8981;&#x306A;&#x30E1;&#x30FC;&#x30EB;&#x304C;&#x8AA4;&#x3063;&#x3066;&#x5206;&#x985E;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x6765;&#x308B;&#x306F;&#x305A;&#x306E;&#x30E1;&#x30FC;&#x30EB;&#x304C;&#x6765;&#x3066;&#x3044;&#x306A;&#x3044;&#x3068;&#x3044;&#x3046;&#x5834;&#x5408;&#x306F;&#x3001;&#x3053;&#x308C;&#x3089;&#x306E;&#x30BF;&#x30D6;&#x3082;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x307F;&#x308B;&#x3068;&#x3088;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <h3><a name="header-3-ccf02d5b7d5521e8d8e7613cdc1b989f"></a> &#x30E1;&#x30FC;&#x30EB;&#x306B;&#x8FD4;&#x4FE1;&#x3059;&#x308B;</h3>
-        <p>&#x6B21;&#x306F;&#x30E1;&#x30FC;&#x30EB;&#x306B;&#x8FD4;&#x4FE1;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <p>&#x53D7;&#x4FE1;&#x30C8;&#x30EC;&#x30A4;&#x304B;&#x3089;&#x5148;&#x7A0B;&#x306E;&#x300C;&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x7DF4;&#x7FD2;&#x300D;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x958B;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;<br> &#x7D9A;&#x3044;&#x3066;&#x3001;&#x53F3;&#x4E0A;&#x306B;&#x3042;&#x308B;&#x77E2;&#x5370;&#xFF08;&#x8FD4;&#x4FE1;&#xFF09;&#x30DE;&#x30FC;&#x30AF;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/reply-01.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x3059;&#x308B;&#x3068;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x4E0B;&#x90E8;&#x306B;&#x8FD4;&#x4FE1;&#x7528;&#x306E;&#x6B04;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x3053;&#x3053;&#x306B;&#x8FD4;&#x4FE1;&#x3059;&#x308B;&#x6587;&#x7AE0;&#x3092;&#x5165;&#x529B;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;<br> &#x4ECA;&#x56DE;&#x306F;&#x300C;&#x8FD4;&#x4FE1;&#x306E;&#x7DF4;&#x7FD2;&#x3067;&#x3059;&#x3002;&#x300D;&#x3068;&#x5165;&#x529B;&#x3057;&#x3066;&#x3001;<strong>&#x9001;&#x4FE1;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/reply-02.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x9001;&#x4FE1;&#x306B;&#x6210;&#x529F;&#x3059;&#x308B;&#x3068;&#x3001;&#x8FD4;&#x4FE1;&#x3057;&#x305F;&#x30E1;&#x30FC;&#x30EB;&#x304C;&#x5143;&#x306E;&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x4E0B;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/reply-03.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <h3><a name="header-3-2fa48c970490a86d2b3d997cad5c5db9"></a> &#x30E1;&#x30FC;&#x30EB;&#x306E;&#x5FDC;&#x7528;&#x7684;&#x306A;&#x6A5F;&#x80FD;</h3>
-        <h4><a name="header-4-2aedac8edca57b2a0af942c92bd1c282"></a> &#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x6DFB;&#x4ED8;&#x3059;&#x308B;</h4>
-        <p>&#x30E1;&#x30FC;&#x30EB;&#x3092;&#x9001;&#x4FE1;&#x3059;&#x308B;&#x3068;&#x304D;&#x3001;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x6DFB;&#x4ED8;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <p>Gmail &#x3067;&#x306F;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x4F5C;&#x6210;&#x753B;&#x9762;&#x3067;&#x30AF;&#x30EA;&#x30C3;&#x30D7;&#x306E;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3068;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x3001;&#x6DFB;&#x4ED8;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/attach-file.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <h4><a name="header-4-ed94117e540a8351049a2e9771e5d395"></a> &#x8907;&#x6570;&#x4EBA;&#x306B;&#x540C;&#x6642;&#x306B;&#x9001;&#x4FE1;&#x3059;&#x308B;</h4>
-        <p>SNS &#x3084; LINE &#x3067;&#x8907;&#x6570;&#x4EBA;&#x5B9B;&#x306E;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x304C;&#x9001;&#x4FE1;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x3082;&#x8907;&#x6570;&#x4EBA;&#x3078;&#x540C;&#x6642;&#x9001;&#x4FE1;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x7279;&#x306B;&#x4ED5;&#x4E8B;&#x3067;&#x3088;&#x304F;&#x4F7F;&#x3046;&#x6A5F;&#x80FD;&#x306A;&#x306E;&#x3067;&#x3001;&#x899A;&#x3048;&#x3066;&#x304A;&#x3044;&#x3066;&#x640D;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</p>
-        <h5><a name="header-5-e12167aa0a7698e6ebc92b4ce3909b53"></a> To</h5>
-        <p>&#x57FA;&#x672C;&#x7684;&#x306A; <strong>&#x5B9B;&#x5148;</strong> &#x3067;&#x3059;&#x3002;&#x5148;&#x307B;&#x3069;&#x306E;&#x7DF4;&#x7FD2;&#x3067;&#x3082;&#x4F7F;&#x3044;&#x307E;&#x3057;&#x305F;&#x3002;<br> &#x30C8;&#x30A5;&#x30FC;&#x3068;&#x8AAD;&#x307F;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x3053;&#x3053;&#x306B;&#x8907;&#x6570;&#x4EBA;&#x306E;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3092;&#x5165;&#x529B;&#x3059;&#x308B;&#x3068;&#x3001;&#x540C;&#x3058;&#x5185;&#x5BB9;&#x306E;&#x30E1;&#x30FC;&#x30EB;&#x304C;&#x305D;&#x308C;&#x305E;&#x308C;&#x306E;&#x4EBA;&#x306B;&#x5C4A;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <h5><a name="header-5-83b37a4133738947c60afcf80df6bfa3"></a> Cc&#xFF08;&#x30B7;&#x30FC;&#x30B7;&#x30FC;&#xFF09;</h5>
-        <p><strong>&#x30AB;&#x30FC;&#x30DC;&#x30F3;&#x30FB;&#x30B3;&#x30D4;&#x30FC;</strong> &#x306E;&#x7565;&#x3067;&#x3001;&#x8AB0;&#x304B;&#x306B;&#x9001;&#x4FE1;&#x3057;&#x305F;&#x30E1;&#x30FC;&#x30EB;&#x3092;&#x300C;&#x30B3;&#x30D4;&#x30FC;&#x300D;&#xFF08;&#x63A7;&#x3048;&#xFF09;&#x3068;&#x3057;&#x3066;&#x4ED6;&#x306E;&#x4EBA;&#x306B;&#x3082;&#x9001;&#x4FE1;&#x3059;&#x308B;&#x6A5F;&#x80FD;&#x3067;&#x3059;&#x3002;<br> Gmail &#x306E;&#x5834;&#x5408;&#x3001;&#x5B9B;&#x5148;&#x6B04;&#x3067;&#x53F3;&#x5074;&#x306E; <strong>Cc</strong> &#x3068;&#x3044;&#x3046;&#x6587;&#x5B57;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3068; Cc &#x306E;&#x5165;&#x529B;&#x6B04;&#x304C;&#x73FE;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/add-cc.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>To &#x306B;&#x8907;&#x6570;&#x4EBA;&#x3092;&#x5165;&#x308C;&#x308B;&#x5834;&#x5408;&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x50CD;&#x304D;&#x3092;&#x3057;&#x307E;&#x3059;&#x304C;&#x3001;&#x610F;&#x5473;&#x304C;&#x7570;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x305F;&#x3068;&#x3048;&#x3070;&#x4ED5;&#x4E8B;&#x3067;&#x300C;&#x53D6;&#x5F15;&#x5148;&#x306E;&#x4F1A;&#x793E;&#x306E;&#x4EBA;&#xFF08;A &#x90E8;&#x9577;&#x3001;B &#x8AB2;&#x9577;&#xFF09;&#x3068;&#x4F1A;&#x8B70;&#x306E;&#x65E5;&#x7A0B;&#x3092;&#x6C7A;&#x3081;&#x305F;&#x3044;&#x300D;&#x3068;&#x3044;&#x3046;&#x30E1;&#x30FC;&#x30EB;&#x3092;&#x9001;&#x308B;&#x5834;&#x5408;&#x3092;&#x8003;&#x3048;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;<br> &#x3082;&#x3061;&#x308D;&#x3093;&#x3001;&#x53D6;&#x5F15;&#x5148;&#x306E; A &#x90E8;&#x9577;&#x3068; B &#x90E8;&#x9577;&#x306E;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x306F; <strong>To</strong> &#x306B;&#x5165;&#x529B;&#x3057;&#x307E;&#x3059;&#x3002;<br> &#x3053;&#x306E;&#x72B6;&#x6CC1;&#x3067;&#x3042;&#x306A;&#x305F;&#x306E;&#x4F1A;&#x793E;&#x306E;&#x4E0A;&#x53F8;&#xFF08;N &#x90E8;&#x9577;&#xFF09;&#x304B;&#x3089;&#x300C;&#x5FF5;&#x306E;&#x70BA;&#x3001;&#x79C1;&#x306B;&#x3082;&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x63A7;&#x3048;&#x3092;&#x9001;&#x3063;&#x3066;&#x304A;&#x3044;&#x3066;&#x307B;&#x3057;&#x3044;&#x300D;&#x3068;&#x8A00;&#x308F;&#x308C;&#x305F;&#x5834;&#x5408;&#x3001;N &#x90E8;&#x9577;&#x306E;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x306F; <strong>Cc</strong> &#x306B;&#x5165;&#x529B;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x5185;&#x5BB9;&#x306B;&#x53CD;&#x5FDC;&#x3057;&#x3066;&#x6B32;&#x3057;&#x3044;&#x4EBA;&#x306F; To &#x306B;&#x5165;&#x529B;&#x3057;&#x3001;&#x5FF5;&#x306E;&#x70BA;&#x898B;&#x3066;&#x304A;&#x3044;&#x3066;&#x6B32;&#x3057;&#x3044;&#x4EBA;&#x306F; Cc &#x306B;&#x5165;&#x529B;&#x3059;&#x308B;&#x3068;&#x899A;&#x3048;&#x3066;&#x304A;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <h5><a name="header-5-1558b081306772c6c07495e526514e80"></a> Bcc&#xFF08;&#x30D3;&#x30FC;&#x30FB;&#x30B7;&#x30FC;&#x30FB;&#x30B7;&#x30FC;&#xFF09;</h5>
-        <p><strong>&#x30D6;&#x30E9;&#x30A4;&#x30F3;&#x30C9;&#x30FB;&#x30AB;&#x30FC;&#x30DC;&#x30F3;&#x30FB;&#x30B3;&#x30D4;&#x30FC;</strong> &#x306E;&#x7565;&#x3067;&#x3059;&#x3002;Gmail &#x306E;&#x5834;&#x5408;&#x3001;&#x5B9B;&#x5148;&#x6B04;&#x3067;&#x53F3;&#x5074;&#x306E; <strong>Bcc</strong> &#x3068;&#x3044;&#x3046;&#x6587;&#x5B57;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3068; Bcc &#x306E;&#x5165;&#x529B;&#x6B04;&#x304C;&#x73FE;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-        <p>Cc &#x306E;&#x5834;&#x5408;&#x306F;&#x300C;&#x8AB0;&#x306B;&#x9001;&#x3063;&#x305F;&#x306E;&#x304B;&#x300D;&#x304C;&#x5168;&#x54E1;&#x306B;&#x898B;&#x3048;&#x3066;&#x3057;&#x307E;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;Bcc &#x306B;&#x5165;&#x529B;&#x3057;&#x305F;&#x5B9B;&#x5148;&#x306F;&#x4ED6;&#x306E;&#x4EBA;&#x306B;&#x898B;&#x3048;&#x307E;&#x305B;&#x3093;&#x3002;<br> &#x5148;&#x307B;&#x3069;&#x306E;&#x30B1;&#x30FC;&#x30B9;&#x3067;&#x306F;&#x3001;&#x3082;&#x3057;&#x4F55;&#x3089;&#x304B;&#x306E;&#x4E8B;&#x60C5;&#x304C;&#x3042;&#x3063;&#x3066;&#x300C;&#x81EA;&#x5206;&#x306E;&#x4F1A;&#x793E;&#x306E;&#x4E0A;&#x53F8;&#x306B;&#x540C;&#x6642;&#x9001;&#x4FE1;&#x3057;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x306F;&#x76F8;&#x624B;&#x306B;&#x306F;&#x77E5;&#x3089;&#x308C;&#x305F;&#x304F;&#x306A;&#x3044;&#x300D;&#x3068;&#x3044;&#x3063;&#x305F;&#x5834;&#x5408;&#x306B;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002;<br> &#x307E;&#x305F;&#x3001;&#x8907;&#x6570;&#x540D;&#x306B;&#x540C;&#x6642;&#x306B;&#x9001;&#x4FE1;&#x3059;&#x308B;&#x3082;&#x306E;&#x306E;&#x3001;&#x53D7;&#x4FE1;&#x3057;&#x305F;&#x4EBA;&#x540C;&#x58EB;&#x3067;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x304C;&#x6D41;&#x51FA;&#x3057;&#x3066;&#x306F;&#x56F0;&#x308B;&#x5834;&#x5408;&#xFF08;&#x304A;&#x5BA2;&#x3055;&#x3093;&#x5B9B;&#x306B;&#x4E00;&#x6589;&#x9001;&#x4FE1;&#x3059;&#x308B;&#x5834;&#x5408;&#x306A;&#x3069;&#xFF09;&#x306B;&#x3082;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <h3><a name="header-3-4521d07a043810d3d7e2c7916a327d8e"></a> &#x30E1;&#x30FC;&#x30EB;&#x306E;&#x30DE;&#x30CA;&#x30FC;&#x30FB;&#x6163;&#x7FD2;</h3>
-        <p>&#x76F8;&#x624B;&#x306B;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x3084;&#x30B9;&#x30DE;&#x30DB;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x3092;&#x4F1D;&#x3048;&#x308B;&#x3068;&#x3044;&#x3046;&#x70B9;&#x3067;&#x306F; SNS &#x3084; LINE &#x3068;&#x540C;&#x3058;&#x3067;&#x3059;&#x3002;<br> &#x3057;&#x304B;&#x3057;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x306F;&#x516C;&#x7684;&#x306A;&#x5834;&#x9762;&#x3067;&#x3082;&#x3088;&#x304F;&#x4F7F;&#x308F;&#x308C;&#x308B;&#x305F;&#x3081;&#x3001;&#x3044;&#x304F;&#x3064;&#x304B;&#x6CE8;&#x610F;&#x3059;&#x3079;&#x304D;&#x30DE;&#x30CA;&#x30FC;&#x3084;&#x6163;&#x7FD2;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x3053;&#x3053;&#x3067;&#x306F;&#x3001;&#x57FA;&#x672C;&#x7684;&#x306A;&#x3082;&#x306E;&#x3092;&#x7D39;&#x4ECB;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <h4><a name="header-4-9c41f9643b3873c4b72f860bea4e6b11"></a> &#x5206;&#x304B;&#x308A;&#x3084;&#x3059;&#x3044;&#x4EF6;&#x540D;&#x3092;&#x66F8;&#x304F;</h4>
-        <p>&#x4F1A;&#x793E;&#x3084;&#x5B66;&#x6821;&#x3067;&#x306F;&#x6570;&#x591A;&#x304F;&#x306E;&#x30E1;&#x30FC;&#x30EB;&#x304C;&#x3084;&#x308A;&#x53D6;&#x308A;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x53D7;&#x4FE1;&#x3059;&#x308B;&#x76F8;&#x624B;&#x306E;&#x305F;&#x3081;&#x306B;&#x5206;&#x304B;&#x308A;&#x3084;&#x3059;&#x3044;&#x4EF6;&#x540D;&#x3092;&#x66F8;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <p>&#x305F;&#x3068;&#x3048;&#x3070;&#x300C;&#x8CEA;&#x554F;&#x3067;&#x3059;&#x300D;&#x3068;&#x3044;&#x3046;&#x4EF6;&#x540D;&#x3088;&#x308A;&#x3001;&#x300C;&#x25CB; &#x6708; &#x25B3; &#x65E5;&#x306E;&#x6388;&#x696D;&#x306B;&#x95A2;&#x3059;&#x308B;&#x306E;&#x8CEA;&#x554F;&#x300D;&#x306E;&#x3088;&#x3046;&#x306B;&#x5177;&#x4F53;&#x7684;&#x306A;&#x4EF6;&#x540D;&#x304C;&#x671B;&#x307E;&#x3057;&#x3044;&#x3068;&#x3044;&#x3048;&#x308B;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <h4><a name="header-4-85093c4b15ef8d951847dc28489dcae3"></a> &#x672C;&#x6587;&#x306E;&#x5192;&#x982D;&#x306B;&#x5B9B;&#x540D;&#x3092;&#x66F8;&#x304F;</h4>
-        <p>To &#x3084; Cc &#x306A;&#x3069;&#x304C;&#x8907;&#x96D1;&#x306A;&#x305F;&#x3081;&#x3001;&#x4E00;&#x898B;&#x3059;&#x308B;&#x3068;&#x8AB0;&#x306B;&#x5B9B;&#x3066;&#x305F;&#x30E1;&#x30FC;&#x30EB;&#x306A;&#x306E;&#x304B;&#x5206;&#x304B;&#x308A;&#x3065;&#x3089;&#x304F;&#x306A;&#x3063;&#x3066;&#x3057;&#x307E;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x305D;&#x306E;&#x305F;&#x3081;&#x3001;&#x4E00;&#x76EE;&#x3067;&#x8AB0;&#x306B;&#x5411;&#x3051;&#x305F;&#x3082;&#x306E;&#x304B;&#x5206;&#x304B;&#x308A;&#x3084;&#x3059;&#x304F;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x300C;&#x5B9B;&#x540D;&#x300D;&#x3092;&#x66F8;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <pre><code>&#x682A;&#x5F0F;&#x4F1A;&#x793E;&#x30C9;&#x30EF;&#x30F3;&#x30B4;&#x3000;&#x6559;&#x80B2;&#x4E8B;&#x696D;&#x672C;&#x90E8;
-&#x6559;&#x80B2;&#x3000;&#x82B1;&#x5B50;&#x69D8;
-</code></pre>
-        <p>&#x306A;&#x304A;&#x3001;&#x9AD8;&#x6821;&#x3084;&#x5927;&#x5B66;&#x306A;&#x3069;&#x3067;&#x5148;&#x751F;&#x5B9B;&#x306E;&#x5834;&#x5408;&#x306F;&#x300C;&#x69D8;&#x300D;&#x3067;&#x306F;&#x306A;&#x304F;&#x300C;&#x5148;&#x751F;&#x300D;&#x3068;&#x66F8;&#x304F;&#x307B;&#x3046;&#x304C;&#x671B;&#x307E;&#x3057;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;<br> &#x307E;&#x305F;&#x3001;&#x4F1A;&#x793E;&#x5B9B;&#x306A;&#x3069;&#x3067;&#x5177;&#x4F53;&#x7684;&#x306A;&#x540D;&#x524D;&#x304C;&#x4E0D;&#x660E;&#x306A;&#x5834;&#x5408;&#x306A;&#x3069;&#x306F;&#x300C;&#x3054;&#x62C5;&#x5F53;&#x8005;&#x69D8;&#x300D;&#x3068;&#x66F8;&#x304F;&#x3068;&#x3088;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <pre><code>&#x682A;&#x5F0F;&#x4F1A;&#x793E;KADOKAWA&#x3000;&#x3054;&#x62C5;&#x5F53;&#x8005;&#x69D8;
-</code></pre>
-        <h4><a name="header-4-869f6c82e6e4273e43ba7ab129b8cc94"></a> &#x672C;&#x984C;&#x306B;&#x5165;&#x308B;&#x524D;&#x306B;&#x540D;&#x4E57;&#x308B;</h4>
-        <p>&#x672C;&#x984C;&#x306B;&#x5165;&#x308B;&#x524D;&#x306B;&#x4E00;&#x8A00;&#x3001;&#x540D;&#x4E57;&#x308A;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;<br> &#x300C;&#x304A;&#x4E16;&#x8A71;&#x306B;&#x306A;&#x3063;&#x3066;&#x304A;&#x308A;&#x307E;&#x3059;&#x3002;&#x682A;&#x5F0F;&#x4F1A;&#x793E;&#x30C9;&#x30EF;&#x30F3;&#x30B4;&#x306E; &#x25CB;&#x25CB; &#x3067;&#x3059;&#x3002;&#x300D;&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3067;&#x5341;&#x5206;&#x3067;&#x3059;&#x3002;</p>
-        <h4><a name="header-4-75d6315549248e5ee6ea6530abebf50f"></a> &#x9069;&#x5EA6;&#x306B;&#x6539;&#x884C;&#x3059;&#x308B;</h4>
-        <p>&#x30B9;&#x30DE;&#x30DB;&#x3067;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x524D;&#x63D0;&#x306E; SNS &#x306A;&#x3069;&#x3068;&#x7570;&#x306A;&#x308A;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x306F;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x306E;&#x5E83;&#x3044;&#x753B;&#x9762;&#x3067;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3068;&#x3044;&#x3048;&#x307E;&#x3059;&#x3002;<br> &#x305D;&#x306E;&#x305F;&#x3081;&#x3001;&#x6539;&#x884C;&#x3057;&#x306A;&#x3044;&#x3068; 1 &#x884C;&#x304C;&#x9577;&#x304F;&#x306A;&#x3063;&#x3066;&#x3057;&#x307E;&#x3044;&#x3001;&#x8AAD;&#x307F;&#x3065;&#x3089;&#x304F;&#x306A;&#x3063;&#x3066;&#x3057;&#x307E;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x8A71;&#x984C;&#x3054;&#x3068;&#x306B;&#x6BB5;&#x843D;&#x3092;&#x5206;&#x3051;&#x308B;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x3067;&#x6539;&#x884C;&#x3059;&#x308B;&#x3068;&#x3088;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="tip"><a name="email-example"></a>
-          <span class="tip-title">&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x4F8B;&#x6587;</span>
-          <p>//TODO</p>
-        </div>
-        <h4><a name="header-4-ab1b9d60b8d8a5f25d7aad312bfbbd5b"></a> &#x672B;&#x5C3E;&#x306B;&#x300C;&#x7F72;&#x540D;&#x300D;&#x3092;&#x66F8;&#x304F;</h4>
-        <p>&#x300C;&#x30D5;&#x30A9;&#x30ED;&#x30FC;&#x300D;&#x3084;&#x300C;&#x53CB;&#x9054;&#x767B;&#x9332;&#x300D;&#x304C;&#x5FC5;&#x8981;&#x306A; SNS &#x306A;&#x3069;&#x3068;&#x7570;&#x306A;&#x308A;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x306F;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3055;&#x3048;&#x5206;&#x304B;&#x308C;&#x3070;&#x8AB0;&#x306B;&#x3067;&#x3082;&#x9001;&#x4FE1;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x4FBF;&#x5229;&#x306A;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x9006;&#x306B;&#x53D7;&#x4FE1;&#x3059;&#x308B;&#x5074;&#x306B;&#x3068;&#x3063;&#x3066;&#x306F;&#x3069;&#x3053;&#x306E;&#x8AB0;&#x304C;&#x9001;&#x3063;&#x3066;&#x6765;&#x305F;&#x306E;&#x304B;&#x308F;&#x304B;&#x3089;&#x306A;&#x304F;&#x306A;&#x3063;&#x3066;&#x3057;&#x307E;&#x3046;&#x53EF;&#x80FD;&#x6027;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x305D;&#x306E;&#x305F;&#x3081;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x306E;&#x672B;&#x5C3E;&#x306B;&#x306F;&#x9001;&#x4FE1;&#x3057;&#x305F;&#x4EBA;&#x3001;&#x3064;&#x307E;&#x308A;&#x3042;&#x306A;&#x305F;&#x306E;&#x6240;&#x5C5E;&#x3084;&#x6C0F;&#x540D;&#xFF08;&#x30D5;&#x30EB;&#x30CD;&#x30FC;&#x30E0;&#xFF09;&#x3092;&#x66F8;&#x304F;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;<br> &#x5FC5;&#x8981;&#x306B;&#x5FDC;&#x3058;&#x3066;&#x96FB;&#x8A71;&#x756A;&#x53F7;&#x3084;&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3001;&#x4F4F;&#x6240;&#x3092;&#x4F75;&#x8A18;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x30D3;&#x30B8;&#x30CD;&#x30B9;&#x30E1;&#x30FC;&#x30EB;&#x306B;&#x304A;&#x3051;&#x308B;&#x7F72;&#x540D;&#x306E;&#x4F8B;&#x3092;&#x793A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <pre><code>----------------------------------------------
-&#x682A;&#x5F0F;&#x4F1A;&#x793E;&#x30C9;&#x30EF;&#x30F3;&#x30B4;&#x3000;&#x6559;&#x80B2;&#x4E8B;&#x696D;&#x672C;&#x90E8;
-&#x6559;&#x80B2; &#x592A;&#x90CE;
-
-&#x3012;104-0061
-&#x6771;&#x4EAC;&#x90FD;&#x4E2D;&#x592E;&#x533A;&#x9280;&#x5EA7;4-12-15 &#x6B4C;&#x821E;&#x4F0E;&#x5EA7;&#x30BF;&#x30EF;&#x30FC;
-TEL: 090-XXXX-XXXX
-xxxxxxxxx@dwango.co.jp
-----------------------------------------------
-</code></pre>
-        <p>&#x307E;&#x305F;&#x3001;&#x5B66;&#x751F;&#x306E;&#x5834;&#x5408;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x5B66;&#x6821;&#x540D;&#x3084;&#x5B66;&#x90E8;&#x306A;&#x3069;&#x3092;&#x6240;&#x5C5E;&#x3068;&#x3057;&#x3066;&#x8A18;&#x5165;&#x3059;&#x308B;&#x3068;&#x3088;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <pre><code>----------------------------------------------
-&#x25CB;&#x25CB;&#x5927;&#x5B66; &#x6587;&#x5B66;&#x90E8; &#x793E;&#x4F1A;&#x5B66;&#x79D1; 1&#x5E74;
-&#x6559;&#x80B2;&#x3000;&#x592A;&#x90CE;
-
-TEL: 090-XXXX-XXXX
-xxxxxxxxx@oooo.ac.jp
-----------------------------------------------
-</code></pre>
-        <p>&#x306A;&#x304A;&#x3001;&#x3053;&#x3053;&#x3067; <code>-------------</code> &#x306F;&#x672C;&#x6587;&#x3068;&#x7F72;&#x540D;&#x306E;&#x5883;&#x76EE;&#x3092;&#x308F;&#x304B;&#x308A;&#x3084;&#x3059;&#x304F;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x5165;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <h3><a name="header-3-85abaf05425fec4cf46bc69ec80d66b9"></a> &#x7F72;&#x540D;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x3088;&#x3046;</h3>
-        <p>Gmail &#x306B;&#x306F;&#x3001;&#x4E88;&#x3081;&#x7F72;&#x540D;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x304A;&#x304F;&#x3053;&#x3068;&#x3067;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x672C;&#x6587;&#x306E;&#x672B;&#x5C3E;&#x306B;&#x81EA;&#x52D5;&#x3067;&#x7F72;&#x540D;&#x3092;&#x633F;&#x5165;&#x3057;&#x3066;&#x304F;&#x308C;&#x308B;&#x6A5F;&#x80FD;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002; &#x65E9;&#x901F;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <p>&#x307E;&#x305A; Gmail &#x3092;&#x958B;&#x3044;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002; <br> &#x53F3;&#x4E0A;&#x306B;&#x3042;&#x308B; <strong>&#x2699;&#xFE0F;(&#x6B6F;&#x8ECA;)</strong> &#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x3001; Gmail &#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x958B;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/open-quick-setting.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x753B;&#x9762;&#x306E;&#x53F3;&#x5074;&#x306B;&#x30AF;&#x30A4;&#x30C3;&#x30AF;&#x8A2D;&#x5B9A;&#x30D1;&#x30CD;&#x30EB;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;<br> &#x30AF;&#x30A4;&#x30C3;&#x30AF;&#x8A2D;&#x5B9A;&#x30D1;&#x30CD;&#x30EB;&#x306E;&#x4E00;&#x756A;&#x4E0A;&#x306B;&#x3042;&#x308B; <strong>&#x3059;&#x3079;&#x3066;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x8868;&#x793A;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x3001;&#x8A73;&#x7D30;&#x306A;&#x8A2D;&#x5B9A;&#x753B;&#x9762;&#x3092;&#x958B;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/open-all-setting.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x8A2D;&#x5B9A;&#x753B;&#x9762;&#x304C;&#x958B;&#x304D;&#x307E;&#x3057;&#x305F;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/all-setting.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x753B;&#x9762;&#x3092;&#x4E0B;&#x306B;&#x30B9;&#x30AF;&#x30ED;&#x30FC;&#x30EB;&#x3057;&#x3066;&#x3001;&#x7F72;&#x540D;&#x306E;&#x9805;&#x76EE;&#x307E;&#x3067;&#x79FB;&#x52D5;&#x3057;&#x307E;&#x3059;&#x3002;<br> &#x7F72;&#x540D;&#x306E;&#x9805;&#x76EE;&#x306E; <strong>&#x65B0;&#x898F;&#x4F5C;&#x6210;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x7F72;&#x540D;&#x3092;&#x767B;&#x9332;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/initial-signature-item.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p><strong>&#x65B0;&#x3057;&#x3044;&#x7F72;&#x540D;&#x306B;&#x540D;&#x524D;&#x3092;&#x4ED8;&#x3051;&#x308B;</strong> &#x3068;&#x3044;&#x3046;&#x30DD;&#x30C3;&#x30D7;&#x30A2;&#x30C3;&#x30D7;&#x304C;&#x51FA;&#x3066;&#x304D;&#x307E;&#x3059;&#x306E;&#x3067;&#x3001;&#x3053;&#x3053;&#x3067;&#x7F72;&#x540D;&#x306E;&#x540D;&#x524D;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;<br> &#x3053;&#x3053;&#x3067;&#x306F;&#x597D;&#x304D;&#x306A;&#x540D;&#x524D;&#x3092;&#x3064;&#x3051;&#x3066;&#x69CB;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30F3;&#x30B7;&#x30E7;&#x30C3;&#x30C8;&#x306E;&#x4F8B;&#x3067;&#x306F; <strong>&#x30D7;&#x30E9;&#x30A4;&#x30D9;&#x30FC;&#x30C8;</strong> &#x306B;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x540D;&#x524D;&#x3092;&#x5165;&#x529B;&#x3057;&#x305F;&#x3089;&#x3001;&#x53F3;&#x4E0B;&#x306E; <strong>&#x4F5C;&#x6210;</strong> &#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/signature-name.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x8A2D;&#x5B9A;&#x753B;&#x9762;&#x306B;&#x623B;&#x308A;&#x3001;&#x7F72;&#x540D;&#x306E;&#x9805;&#x76EE;&#x306B;&#x5148;&#x7A0B;&#x8A2D;&#x5B9A;&#x3057;&#x305F;&#x540D;&#x524D;&#x304C;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/added-signature-item.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x8A2D;&#x5B9A;&#x3057;&#x305F;&#x540D;&#x524D;&#x306E;&#x53F3;&#x5074;&#x306B;&#x3001;&#x7F72;&#x540D;&#x3068;&#x3057;&#x3066;&#x767B;&#x9332;&#x3059;&#x308B;&#x6587;&#x5B57;&#x5217;&#x3092;&#x5165;&#x529B;&#x3059;&#x308B;&#x6B04;&#x304C;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001;&#x3053;&#x3053;&#x306B;&#x633F;&#x5165;&#x3057;&#x305F;&#x3044;&#x7F72;&#x540D;&#x3092;&#x66F8;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x5148;&#x7A0B;&#x306E;&#x7F72;&#x540D;&#x3092;&#x81EA;&#x5206;&#x306E;&#x3082;&#x306E;&#x306B;&#x66F8;&#x304D;&#x63DB;&#x3048;&#x3066;&#x5165;&#x529B;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <pre><code>----------------------------------------------
-&#x25CB;&#x25CB;&#x5927;&#x5B66; &#x6587;&#x5B66;&#x90E8; &#x793E;&#x4F1A;&#x5B66;&#x79D1; 1&#x5E74;
-&#x6559;&#x80B2;&#x3000;&#x592A;&#x90CE;
-
-TEL: 090-XXXX-XXXX
-xxxxxxxxx@oooo.ac.jp
-----------------------------------------------
-</code></pre>
-        <p>&#x5165;&#x529B;&#x3057;&#x305F;&#x3089;&#x3001;&#x7F72;&#x540D;&#x306E;&#x9805;&#x76EE;&#x306E;&#x4E00;&#x756A;&#x4E0B;&#x306B;&#x3042;&#x308B; <strong>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x306E;&#x7F72;&#x540D;</strong> &#x3067;&#x3001;&#x8A2D;&#x5B9A;&#x3057;&#x305F;&#x540D;&#x524D;&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;<br> &#x307E;&#x305F;&#x3001; <strong>&#x8FD4;&#x4FE1;&#x3067;&#x5143;&#x306E;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x306E;&#x524D;&#x306B;&#x7F72;&#x540D;&#x3092;&#x633F;&#x5165;&#x3057;&#x3001;&#x305D;&#x306E;&#x524D;&#x306E;&#x300C;--&#x300D;&#x884C;&#x3092;&#x524A;&#x9664;&#x3059;&#x308B;&#x3002;</strong> &#x306B;&#x3082;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x3092;&#x5165;&#x308C;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x3053;&#x308C;&#x306F; Gmail &#x306A;&#x3069;&#x304C;&#x81EA;&#x52D5;&#x3067;&#x633F;&#x5165;&#x3057;&#x305F; <code>---</code> &#x3092;&#x524A;&#x9664;&#x3059;&#x308B;&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/set-default-signature.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x3053;&#x3053;&#x307E;&#x3067;&#x3067;&#x304D;&#x305F;&#x3089;&#x8A2D;&#x5B9A;&#x753B;&#x9762;&#x3092;&#x4E00;&#x756A;&#x4E0B;&#x307E;&#x3067;&#x30B9;&#x30AF;&#x30ED;&#x30FC;&#x30EB;&#x3057;&#x3066;&#x3001; <strong>&#x5909;&#x66F4;&#x3092;&#x4FDD;&#x5B58;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x4FDD;&#x5B58;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/save-setting.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x3053;&#x308C;&#x3067;&#x7F72;&#x540D;&#x3092;&#x767B;&#x9332;&#x3067;&#x304D;&#x307E;&#x3057;&#x305F;&#xFF01;<br> &#x8A66;&#x3057;&#x306B;&#x30E1;&#x30FC;&#x30EB;&#x3092;&#x65B0;&#x898F;&#x4F5C;&#x6210;&#x3057;&#x3066;&#x3001;&#x7F72;&#x540D;&#x304C;&#x81EA;&#x52D5;&#x3067;&#x633F;&#x5165;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <p>Gmail &#x306E;&#x753B;&#x9762;&#x5DE6;&#x4E0A;&#x306B;&#x3042;&#x308B; <strong>&#x4F5C;&#x6210;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x753B;&#x9762;&#x3067;&#x7F72;&#x540D;&#x304C;&#x672C;&#x6587;&#x672B;&#x5C3E;&#x306B;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x3066;&#x3044;&#x308C;&#x3070;&#x6210;&#x529F;&#x3067;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/added-signature.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x30E1;&#x30FC;&#x30EB;&#x4F5C;&#x6210;&#x753B;&#x9762;&#x306E;&#x4E0B;&#x306B;&#x4E26;&#x3093;&#x3067;&#x308B;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x306E;&#x3046;&#x3061;&#x3001; <strong>&#x1F58A;&#xFE0F;&#xFF08;&#x30DA;&#x30F3;&#xFF09;</strong> &#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x7F72;&#x540D;&#x3092;&#x5207;&#x308A;&#x66FF;&#x3048;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/switch-signature.png">
-          <span class="imagecaption screenshot"></span>
-        </div>
-        <p>&#x7F72;&#x540D;&#x306A;&#x3057;&#x3092;&#x9078;&#x629E;&#x3059;&#x308B;&#x3068;&#x3001;&#x672C;&#x6587;&#x306B;&#x633F;&#x5165;&#x3055;&#x308C;&#x3066;&#x3044;&#x305F;&#x7F72;&#x540D;&#x3092;&#x524A;&#x9664;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/delete-signature.png">
-          <span class="imagecaption screenshot"></span>
+          <img src="image/danger-url.png">
+          <span class="imagecaption screenshot">Chrome が警告を出した例</span>
         </div>
       </section>
     </div>

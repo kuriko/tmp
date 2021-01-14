@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>コマンドラインの基本（Mac 編）</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>コマンドラインの基本（Mac 編）</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-822d0479ad80ee8be320f38ebdf0f517"></a> コマンドラインの基本（Mac 編）</h1>
+        <div class="guide gray">
+          <b>注意</b>: この付録は <b>発展的な内容</b> です。 通常のパソコンの使用に必須ではありません。<br>コンピューターの高度な設定やプログラミングなど、コマンドライン（ターミナル、iTerm2）の使用が必要になった場合にこの付録を読んでみてください。
+        </div>
+        <p>この付録では、Mac での <strong>コマンドライン</strong>（<strong>ターミナル、iTerm2</strong>）の基本を学びます。<br> Windows の方は <a href="../ITPCIA10_G003/ITPCIA10_G003.html" target="_blank">コマンドラインの基本（Windows 編）</a>をお読みください。</p>
+        <p>コマンドラインの使い方を学ぶことで、より高度なコンピューターの操作や設定ができるようになります。<br>また、プログラミングをする場合にも役立ちます。</p>
+        <ul id="toc">
+          <li><a href="#header-2-6b2815853b501d9889e99f0117cdfedd" target="_blank">コマンドラインとは？</a></li>
+          <li><a href="#header-2-cba9627437cb8d3e5039225c2e900758" target="_blank">コマンドラインを使ってみよう</a></li>
+          <li><a href="#header-2-8b70810ce824e9fd5fa4543b3721fefa" target="_blank">コマンドラインでのファイル操作</a></li>
+          <li><a href="#header-2-c7887a92414f854a9067849a51b9bb02" target="_blank">まとめ</a></li>
+        </ul>
+        <h2><a name="header-2-6b2815853b501d9889e99f0117cdfedd"></a> コマンドラインとは？</h2>
+        <p><strong>コマンドライン</strong> は、コンピューターに対して <strong>コマンド</strong> と呼ばれる命令をキーボードから入力することで、コンピューターを操作する画面です。</p>
+        <p>// TODO: コマンドラインの画像</p>
+        <p>コマンドラインは、<strong>コンソール</strong> や <strong>ターミナル</strong> と呼ばれることもあります。</p>
+        <p>コマンドラインを使うために、</p>
+        <ul>
+          <li>Windows では「<strong>PowerShell</strong>」や「<strong>コマンドプロンプト</strong>」や「<strong>Windows Terminal</strong>」</li>
+          <li>Mac では「<strong>ターミナル</strong>」や「<strong>iTerm2</strong>」</li>
+        </ul>
+        <p>というソフトウェアを使います。</p>
+        <div class="tip"><a name="folder-directory"></a>
+          <span class="tip-title">GUI と CLI</span>
+          <p>現在のパソコンの一般的な操作は、マウスやトラックパッドを使った視覚的な操作です。これを <strong>GUI</strong>（Graphical User Interface グラフィカル・ユーザー・インターフェース）といいます。</p>
+          <p>一方、コマンドラインを使用して文字の入力だけで操作することを、<strong>CLI</strong>（Command Line Interface コマンドライン・インターフェース）または <strong>CUI</strong>（Character User Interface キャラクター・ユーザー・インターフェース）といいます。</p>
+          <p>// TODO: 画像</p>
+        </div>
+        <div class="tip"><a name="folder-directory"></a>
+          <span class="tip-title">豆知識 : &nbsp; 用語の由来</span>
+          <p>先ほど述べたとおり、コマンドラインはコンソールやターミナルと呼ばれることもあります。<br> 参考までに、用語の由来を紹介しますが、覚えなくて構いません。</p>
+          <br>
+          <ul>
+            <li><strong>コマンドライン</strong> ... コマンド（命令）を入力する「行」という意味が由来です。コマンドの行をいくつも重ねていくことで、様々な操作を行います。</li>
+            <li><strong>コンソール</strong> ... 「制御装置」や「制御卓」、「操作盤」という意味です。かつての大型コンピューターでは、コンピューターを操作するための卓上の装置が別に用意されていました。これの名残りで、今でもコンピューターの操作画面のことをコンソールと読んでいるのです。</li>
+            <li><strong>ターミナル</strong> ... ターミナル（terminal）という英単語は「終端・端末」という意味です。昔の大型コンピューターはコンピューター本体と制御装置が分かれていて、ケーブルの終端に制御装置があったことから「ターミナル」（日本語では「端末」）と呼ばれています。</li>
+          </ul>
+          <br>
+          <p>現在では、<strong>どれも同じ意味だと考えて実用上問題ありません</strong>。</p>
+        </div>
+        <h2><a name="header-2-cba9627437cb8d3e5039225c2e900758"></a> コマンドラインを使ってみよう</h2>
+        <p>Mac でのコマンドラインのソフトウェアとして、「<strong>ターミナル</strong>」を使ってみましょう。<br> なお、他のソフトウェアでコマンドラインを使う場合も、基本的な操作は同じです。</p>
+        <h3><a name="header-3-36f37f10553a146da0cb309d8860ca6b"></a> ターミナルを起動する</h3>
+        <p>// TODO: computer-basics でのアプリ起動方法に合わせる</p>
+        <hr>
+        <h3><a name="header-3-20aff53ba20dd37b382a28cc23252499"></a> ターミナルの画面の見方</h3>
+        <h4><a name="header-4-330cadb185cb8ec5f9243508e5a01d17"></a> ログイン情報</h4>
+        <p>ターミナル画面の最初の行を見てください。</p>
+        <div class="input-code">
+          <pre><code>
+Last login: 日付 時刻 on ttys001
+    </code></pre>
+        </div>
+        <p>などのように表示されているのではないでしょうか（細かい部分が違っていても気にしなくて構いません）。<br> これは、Mac のログイン情報です。</p>
+        <h4><a name="header-4-227d8fdae49f31650bf8b56e3a67825f"></a> プロンプト</h4>
+        <p>ターミナル画面の最後の行を見てください。</p>
+        <div class="input-code">
+          <pre><code>
+あなたの@コンピューター名 ~ %
+    </code></pre>
+        </div>
+        <p>または</p>
+        <div class="input-code">
+          <pre><code>
+コンピューター名:~ あなたのユーザー名 $
+    </code></pre>
+        </div>
+        <p>のように表示されているのではないでしょうか？<br> なお、<code>%</code> の左や <code>$</code> の左の内容が異なっていた場合も気にしなくて構いません。</p>
+        <p><code>%</code> や <code>$</code> で終わっている部分を <strong>プロンプト</strong> といいます。</p>
+        <p>プロンプト（prompt）は「<strong>促す</strong>」という意味の英単語です。<br> ここでは、「ユーザーのコマンド（命令）の入力を促す」という意味で、プロンプトと呼ばれます。</p>
+        <p>つまり、<strong>プロンプトが表示されているときはコマンド（命令）を入力できる状態にある</strong>ということを意味します。</p>
+        <p>// TODO: 画像</p>
+        <hr>
+        <h3><a name="header-3-6bb013c964e3ed9acff59b0ab51a7fec"></a> コマンドを入力してみよう</h3>
+        <p>それでは、コマンド（命令）を入力していきましょう。 コマンドを入力する際は、<strong>必ず半角で入力する必要があるので注意しましょう</strong>。</p>
+        <h4><a name="header-4-fe15f41007b15c32c07d2156f1d41cb3"></a> コマンド入力のエラーメッセージ</h4>
+        <p><code>%</code> や <code>$</code> で終わっているプロンプトが最後の行に表示されていることを確認してください。<br> まずは、<code>aaaaa</code> という <strong>存在しないコマンドを入力してみます</strong>。</p>
+        <div class="code-with-caption">
+          <span class="code-caption">ターミナルに入力</span>
+          <pre class="language-bash"><code class="language-bash">aaaaa
+</code></pre>
+        </div>
+        <p>上記の「存在しないコマンド」をターミナルに入力したら <kbd>Enter</kbd> キーを押しましょう。</p>
+        <p>// TODO: 画像</p>
+        <p>すると、</p>
+        <div class="input-code">
+          <pre><code>
+zsh: command not found: aaaaa
+    </code></pre>
+        </div>
+        <p>あるいは</p>
+        <div class="input-code">
+          <pre><code>
+-bash: aaaaa: command not found
+    </code></pre>
+        </div>
+        <p>のように表示されたのではないでしょうか？</p>
+        <p>これは、「コマンドが存在しません」という意味の <strong>エラーメッセージ</strong> です。</p>
+        <p><strong>今後、この command not found というエラーメッセージが出たら、コマンドの入力が間違っている（存在しないコマンドを入力している）ことになります</strong>。</p>
+        <h4><a name="header-4-c2cb881e8ac79d4cbd82fc0c9ed09393"></a> 日付を表示するコマンド</h4>
+        <p>次は、きちんと存在するコマンドを入力してみます。</p>
+        <p><code>%</code> や <code>$</code> で終わっているプロンプトが最後の行に表示されていることを確認してください。<br></p>
+        <div class="code-with-caption">
+          <span class="code-caption">ターミナルに入力</span>
+          <pre class="language-bash"><code class="language-bash"><span class="token function">date</span>
+</code></pre>
+        </div>
+        <p>上記の <code>date</code> というコマンドをターミナルに入力したら <kbd>Enter</kbd> キーを押しましょう。</p>
+        <p>すると</p>
+        <div class="input-code">
+          <pre><code>
+2020年 8月18日 火曜日 16時35分30秒 JST
+  </code></pre>
+        </div>
+        <p>のように、現在の日付と時刻が表示されるはずです。</p>
+        <p>// TODO: 画像</p>
+        <h4><a name="header-4-535aeea89d537d045ee957ea2ca2d4df"></a> その他のコマンド</h4>
+        <p>日付を表示する <code>date</code> コマンド以外にも、たくさんの種類のコマンドがあります。<br> なお、これらを全て暗記する必要はありません。<br> 必要になったコマンドは、調べながら使っていきましょう。</p>
+        <h2><a name="header-2-8b70810ce824e9fd5fa4543b3721fefa"></a> コマンドラインでのファイル操作</h2>
+        <div class="guide gray">
+          <b>注意</b>: これより後の解説は <b><a href="../ITPCIA04_G006/ITPCIA04_G006.html" target="_blank">4 章 基本操作をしてみよう（Mac 編）- ファイルやフォルダ操作の基本を学ぼう </a></b>の内容を前提としています。
+        </div>
+        <p>これまでは、Finder というソフトウェアを使ってファイルやフォルダの操作を行ってきたと思います。<br> ここでは、コマンドライン（ターミナル）上でのファイル・フォルダ操作の方法を学びます。</p>
+        <h3><a name="header-3-f0076f32c3007cd9d9cf848d6332868a"></a> ディレクトリと階層構造</h3>
+        <p>コマンドラインでは、フォルダのことを <strong>ディレクトリ</strong> といいます。<br> フォルダとディレクトリは同じものだと考えて、実用上問題ありません。<br> 以下では、フォルダをディレクトリと呼びます。</p>
+        <p>ディレクトリの中には、ファイルや別のディレクトリを入れることができます。</p>
+        <p>したがって、ディレクトリの中にディレクトリがあって、さらにその中にディレクトリがある、というような入れ子の構造をとることができます。<br> このような構造を、ディレクトリの <strong>階層構造</strong> といいます。</p>
+        <p>// TODO: 階層構造の図</p>
+        <h3><a name="header-3-dd0b276b62d8140a2b0a4474e84cd52c"></a> ルートディレクトリ</h3>
+        <p>階層構造の一番上にあるディレクトリを <strong>ルートディレクトリ</strong> といいます。<br> ルートディレクトリは階層構造の一番上にあるので、<strong>全てのディレクトリはルートディレクトリの中（ルートディレクトリの下）にあります</strong>。</p>
+        <h3><a name="header-3-2b7ff84ad1d867f60488e62af75ddb58"></a> カレントディレクトリ</h3>
+        <p>Finder とコマンドラインの大きな違いは、「<strong>ユーザーが今どのディレクトリにいるのか</strong>」 ということを気にするかどうかです。<br></p>
+        <p>コマンドラインでは、「ユーザーが今どのディレクトリにいるのか」が非常に重要です。</p>
+        <p>ユーザーが今いるディレクトリのことを <strong>カレントディレクトリ</strong>（Current Directory 現在のディレクトリ）といいます。</p>
+        <p><strong>コマンドラインを使う上では、カレントディレクトリがどこなのかを明確に意識する必要があります</strong>。<br> カレントディレクトリがどこなのかによって、コマンドの結果は全く異なることがあるからです。</p>
+        <h3><a name="header-3-7f33bb4eb509417d1600a945c1f4df0e"></a> パス</h3>
+        <p>あるファイルやディレクトリが階層構造のどこに位置するのかを文字列で示したものを <strong>ファイルパス</strong> や <strong>ディレクトリパス</strong> あるいは単に <strong>パス</strong> といいます。<br> パス（path）は「小道」を意味する英単語で、そのファイルやディレクトリにたどり着くための道順をイメージするとよいでしょう。</p>
+        <h4><a name="header-4-15ececec2e2b0132c4538e6c01c10909"></a> Finder でファイルやディレクトリのパスを見てみよう</h4>
+        <p>「Finder」を開いたら、ツールバーの「表示」から「パスバーを表示」を押しましょう。<br> もし、「パスバーを非表示」となっていたら、何も押さなくて構いません。</p>
+        <p>適当なファイルまたはフォルダをマウス・トラックパッドで選択してください。<br> ここでは、書類フォルダ内に homework.txt というファイルを作って選択してみました。</p>
+        <div class="tip"><a name="folder-directory"></a>
+          <span class="tip-title">ファイルの拡張子</span>
+          <p>ここで、homework.txt というファイルの <code>.txt</code> の部分は、ファイルの <strong>拡張子</strong> です。<br> 拡張子はファイルの種類を区別するためにつける <code>.</code>（ドット）以下の文字列です。<br>
+            <code>.txt</code> は、そのファイルが「テキストファイル」であることを表しています。
+          </p>
+          <p>Finder のメニューから「環境設定」&gt;「詳細」&gt;「全てのファイル名拡張子を表示」にチェックを入れることで、拡張子を表示させることができます。<br> なお、コマンドラインを使うときは、デフォルトで拡張子が表示されます。</p>
+        </div>
+        <p>さて、ファイルを選択すると Finder のウィンドウの下部に</p>
+        <pre class="language-bash"><code class="language-bash">Macintosh HD <span class="token operator">&amp;</span>gt<span class="token punctuation">;</span> ユーザ <span class="token operator">&amp;</span>gt<span class="token punctuation">;</span> あなたのユーザー名 <span class="token operator">&amp;</span>gt<span class="token punctuation">;</span> 書類 <span class="token operator">&amp;</span>gt<span class="token punctuation">;</span> homework.txt
+</code></pre>
+        <p>などのように表示されるのではないでしょうか。これが homework.txt というファイルの位置を示すパスです。</p>
+        <p>// TODO: 画像</p>
+        <h4><a name="header-4-8ace50ec74c94728d1bec642495f74a2"></a> コマンドライン上でパスを表す記号</h4>
+        <p>次の表は、コマンドライン上でパスを表すための記号の一覧です。<br> 例えば、Finder のパスバーでフォルダの区切りを表す <code>&amp;gt;</code> は、コマンドライン上では <code>/</code> です。</p>
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:left">記号</th>
+              <th style="text-align:left">記号の意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:left"><code>/</code></td>
+              <td style="text-align:left"><strong>ディレクトリの区切り</strong>（パスの先頭の <code>/</code> は <strong>ルートディレクトリ</strong> ）</td>
+            </tr>
+            <tr>
+              <td style="text-align:left"><code>.</code></td>
+              <td style="text-align:left"><strong>カレントディレクトリ</strong></td>
+            </tr>
+            <tr>
+              <td style="text-align:left"><code>..</code></td>
+              <td style="text-align:left">1 つ上の階層のディレクトリ</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>// TODO: 階層構造のイラストとパス</p>
+        <h4><a name="header-4-f1a22454fb3d900878172cc8856815c4"></a> 絶対パスと相対パス</h4>
+        <p>ルートディレクトリ（ <code>/</code> ）を起点として、ファイルやディレクトリの位置を示す方法を <strong>絶対パス</strong> といいます。例えば <code>/Users/あなたのユーザー名/Documents/homework.txt</code> は絶対パスです。</p>
+        <p>一方、カレントディレクトリ（ <code>.</code> ）を起点として、ファイルやディレクトリの位置を示す方法を <strong>相対パス</strong> といいます。カレントディレクトリが <code>Documents</code> だとすると、上記のファイルは相対パスで <code>./homework.txt</code> と表されます。</p>
+        <hr>
+        <h3><a name="header-3-900d5d7053229db2dd3df7772cf4b721"></a> ファイル操作のコマンド</h3>
+        <p>Mac のターミナルでファイル操作を行うためのコマンドを紹介していきます。</p>
+        <p>多いですが、必要な時に調べながら使っていくことができれば十分です。<br> 例えば、「mac コマンド 削除」などと検索サイトで検索することで、必要な rm コマンドを見つけることができるでしょう。</p>
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:left">コマンド</th>
+              <th style="text-align:left">できる操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:left"><a href="#try-pwd" target="_blank">pwd</a></td>
+              <td style="text-align:left">カレントディレクトリの表示</td>
+            </tr>
+            <tr>
+              <td style="text-align:left"><a href="#try-ls" target="_blank">ls</a></td>
+              <td style="text-align:left">ファイル・ディレクトリの一覧の表示</td>
+            </tr>
+            <tr>
+              <td style="text-align:left"><a href="#try-cd" target="_blank">cd</a></td>
+              <td style="text-align:left">ディレクトリの移動</td>
+            </tr>
+            <tr>
+              <td style="text-align:left"><a href="#try-mkdir" target="_blank">mkdir</a></td>
+              <td style="text-align:left">ディレクトリの作成</td>
+            </tr>
+            <tr>
+              <td style="text-align:left"><a href="#try-rm" target="_blank">rm</a></td>
+              <td style="text-align:left">ファイルやディレクトリの削除</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>それでは、1 つずつ使い方を見ていきましょう。</p>
+        <hr>
+        <h3><a name="try-pwd"></a> pwd コマンド</h3>
+        <p>pwd は、Print Working Directory (プリント・ワーキング・ディレクトリ）の略で、「作業中のディレクトリを表示せよ」という意味です。<br> このコマンドが実行された時点での、カレントディレクトリを表示します。</p>
+        <div class="image-with-caption">
+          <p><span class="imagecaption figure">pwd のイメージ</span></p>
+        </div>
+        <p>ターミナルに</p>
+        <div class="input-code">
+          <pre><code>
+pwd
+  </code></pre>
+        </div>
+        <p>と入力し <kbd>Enter</kbd> キーを押します。</p>
+        <pre class="language-bash"><code class="language-bash">Users/あなたのユーザー名
+</code></pre>
+        <p>と表示されるはずです。</p>
+        <p>これが <code>pwd</code> コマンドによって表示された現在のディレクトリ（カレントディレクトリ）です。<br> これは、ルートディレクトリから見て <code>Users</code> というディレクトリ内の <code>あなたのユーザー名</code> というディレクトリがカレントディレクトリであることを示しています。<br> つまり、あなたは今、<code>Users/あなたのユーザー名</code> というディレクトリにいることを意味します。</p>
+        <p><strong>今どこにいるのか（カレントディレクトリ）を知りたいとき、pwd コマンドを使用しましょう</strong>。</p>
+        <hr>
+        <h3><a name="try-ls"></a> ls コマンド</h3>
+        <p>ls （エル・エス）は LiSt の略で、「（ファイルやディレクトリの）リストを表示せよ」という意味のコマンドです。<br> カレントディレクトリの中にあるファイルとディレクトリの一覧 (リスト) を表示します。</p>
+        <div class="image-with-caption">
+          <img src="">
+          <span class="imagecaption figure">ls のイメージ</span>
+        </div>
+        <div class="input-code">
+          <pre><code>
+ls
+  </code></pre>
+        </div>
+        <p>と入力して <kbd>Enter</kbd> キーを押します。<br>
+          <code>l</code> はアルファベット小文字の「エル」です。 <code>I</code>（アルファベット大文字のアイ）や 数字の <code>1</code> と間違えないように注意してください。<br>
+        </p>
+        <pre class="language-bash"><code class="language-bash">Applications    Downloads   Music
+Desktop         Library     Pictures
+Documents       Movies      Public
+</code></pre>
+        <p>のように表示されたのではないでしょうか（細かい部分が違っても、気にする必要はありません）。</p>
+        <p>また、ls コマンドに <code>-a</code> オプションを付けて</p>
+        <div class="input-code">
+          <pre><code>
+ls -a
+  </code></pre>
+        </div>
+        <p>を実行すると、<code>.</code> から始まるディレクトリやファイル（ドットファイルといいます）も含めて表示できます。<code>ls</code> と <code>-a</code> の間は半角スペースを開けます。</p>
+        <p><strong>カレントディレクトリの中にあるファイルやディレクトリの一覧を見たいとき、pwd コマンドを使用しましょう</strong>。</p>
+        <hr>
+        <h3><a name="try-cd"></a> cd コマンド</h3>
+        <p>cd は、Change Directory（チェンジ・ディレクトリ）の略で、「ディレクトリを変更せよ」という意味のコマンドです。<br> カレントディレクトリから別のディレクトリに移動します。cd の後ろにスペースをあけて、移動先のディレクトリを記述します。</p>
+        <div class="image-with-caption data-gifffer">
+          <img src=""><br>
+          <span class="imagecaption animation">cd のイメージ</span>
+        </div>
+        <div class="input-code">
+          <pre><code>
+cd ..
+pwd
+  </code></pre>
+        </div>
+        <p>と入力してみましょう。1 行ずつ <kbd>Enter</kbd> キーを押すことに注意してください。</p>
+        <pre class="language-bash"><code class="language-bash">/Users
+</code></pre>
+        <p>と表示されたのではないでしょうか。 <br>
+          <code>..</code> は 1 つ上の階層のディレクトリを表すので、これまでいた <code>/Users/あなたのユーザー名</code> の 1 つ上のディレクトリ <code>/Users</code> に移動したのです。
+        </p>
+        <p>また、この時点で</p>
+        <div class="input-code">
+          <pre><code>
+ls
+  </code></pre>
+        </div>
+        <p>と入力すると、</p>
+        <pre class="language-bash"><code class="language-bash">Shared  あなたのユーザ名  ユーザー名
+</code></pre>
+        <p>のように表示されます（ユーザー名の数は、そのコンピューターのユーザーの数によって異なるります）。<br></p>
+        <div class="input-code">
+          <pre><code>
+cd あなたのユーザー名
+pwd
+  </code></pre>
+        </div>
+        <p>と入力してみましょう。すると</p>
+        <pre class="language-bash"><code class="language-bash">/Users/あなたのユーザー名
+</code></pre>
+        <p>と表示され、元のディレクトリに戻ってきたことがわかります。<br> また、</p>
+        <div class="input-code">
+          <pre><code>
+cd Documents
+pwd
+  </code></pre>
+        </div>
+        <p>と入力してみましょう。すると</p>
+        <pre><code>/Users/あなたのユーザー名/Documents
+</code></pre>
+        <p>と表示されます。つまり、Documents（書類）ディレクトリに移動しました。 ここで</p>
+        <div class="input-code">
+          <pre><code>
+ls
+  </code></pre>
+        </div>
+        <p>と入力すると、Documents ディレクトリの中のファイルやディレクトリを見ることができます。<br> ファイルやディレクトリが存在しない場合は、何も表示されません。</p>
+        <p>今度は、次のように入力してみましょう。 なお、<code>~</code>（チルダ）は <kbd>Shift</kbd> を押しながら、キーボード右上にある、ひらがなの「へ」が書いてあるキーを押すと入力できます。</p>
+        <div class="input-code">
+          <pre><code>
+cd ~
+pwd
+  </code></pre>
+        </div>
+        <p><code>pwd</code> の結果は、下記のように表示されるはずです。</p>
+        <pre class="language-bash"><code class="language-bash">/Users/あなたのユーザー名/
+</code></pre>
+        <p>元に戻ってきました。 このコマンドで使った <code>~</code> （チルダ) は、<strong>ホームディレクトリ</strong> を表します。</p>
+        <p><strong>ホームディレクトリ</strong>は、このログインしているユーザーが、自由にファイルやフォルダを利用して良い領域です。<br> Mac では「ユーザフォルダ」ともいいます。</p>
+        <p>今は あなたのユーザ名 というユーザーでログインしているので、ホームディレクトリは <code>/Users/あなたのユーザー名</code> であり、<code>cd ~</code> は、 <code>cd /Users/あなたのユーザー名</code> と同じ意味になります。</p>
+        <p>ディレクトリを移動していて、今どこにいるか分からなくなって困ったときなどは、<code>cd ~</code> と入力して、一度ホームディレクトリに戻ってきましょう。</p>
+        <p>このように、<strong>ディレクトリを移動するときに、cd コマンドを使用しましょう</strong>。</p>
+        <hr>
+        <h3><a name="try-mkdir"></a> mkdir コマンド</h3>
+        <p>mkdir は、MaKe DIRectory（メイク・ディレクトリ）の略で、「ディレクトリを作成せよ」という意味のコマンドです。<code>mkdir</code> の後にスペースをあけて、作成するディレクトリ名を記述します。</p>
+        <div class="image-with-caption">
+          <img src="">
+          <span class="imagecaption figure">mkdir のイメージ</span>
+        </div>
+        <div class="input-code">
+          <pre><code>
+mkdir directory-test
+ls
+  </code></pre>
+        </div>
+        <p>と入力すると</p>
+        <pre class="language-bash"><code class="language-bash">directory-test
+</code></pre>
+        <p>と表示されるのではないでしょうか。 <code>directory-test</code> という名前のディレクトリが作成できました。</p>
+        <p><strong>新しいディレクトリを作成したいとき、mkdir コマンドを使用しましょう</strong>。</p>
+        <hr>
+        <h3><a name="try-rm"></a> rm コマンド</h3>
+        <p>rm は、ReMove（リムーブ）の略で、「（ファイルやディレクトリを）削除せよ」という意味のコマンドです。<br> 指定したファイルやディレクトリを削除します。<code>rm</code> の後にスペースをあけて、削除するファイル名またはディレクトリ名を記述します。</p>
+        <div class="guide red">
+          <b>注意！</b> Finder における削除とは異なり、コマンドラインの削除では <b>ゴミ箱への移動は行われず完全に削除されてしまいます</b>。<b>復元はできません</b>。<br> rm コマンドを使うときは、本当に削除してよいファイルやディレクトリなのか、十分確認してください。
+        </div>
+        <div class="image-with-caption">
+          <img src="">
+          <span class="imagecaption figure">rm のイメージ</span>
+        </div>
+        <div class="input-code">
+          <pre><code>
+cd directory-test
+touch test.txt
+ls
+  </code></pre>
+        </div>
+        <p>と入力してみましょう。</p>
+        <pre class="language-bash"><code class="language-bash">test.txt
+</code></pre>
+        <p>と表示されるのではないでしょうか。</p>
+        <p>ここでは、まず test ディレクトリ内に移動し、<code>touch</code> というコマンドで <code>test.txt</code> というファイルを作成しました。<code>touch</code> はファイルを作成できるコマンドですが、ここで詳しくは触れません。<br> 以上のコマンドで <code>test.txt</code> という名前のファイルが作成されました。</p>
+        <p>続いて、</p>
+        <div class="input-code">
+          <pre><code>
+rm test.txt
+  </code></pre>
+        </div>
+        <p>と入力してから</p>
+        <div class="input-code">
+          <pre><code>
+ls
+  </code></pre>
+        </div>
+        <p>と入力します。</p>
+        <p>すると、先ほどはあった test.txt がなくなりました。<br> rm コマンドでファイルを削除できたことがわかります。</p>
+        <p>次は、ディレクトリの削除もしてみましょう。</p>
+        <div class="input-code">
+          <pre><code>
+cd ..
+ls
+  </code></pre>
+        </div>
+        <p>で 1 つ上のディレクトリに戻り、その中身を確認します。 その中に、<code>directory-test</code> というディレクトリがあるはずです。</p>
+        <p>これは先ほど作ったディレクトリなので、<code>rm</code> コマンドで削除してみましょう。</p>
+        <div class="guide red">
+          <b>注意！</b> 繰り返しになりますが<b> rm コマンドでの削除の復元はできない</b>ので、間違えないよう十分注意してください。
+        </div>
+        <p>次のように入力してください。</p>
+        <div class="input-code">
+          <pre><code>
+rm directory-test
+  </code></pre>
+        </div>
+        <pre class="language-bash"><code class="language-bash">rm: cannot remove ‘a’: Is a directory
+</code></pre>
+        <p>という英語のエラーメッセージが表示されるはずです。</p>
+        <p>これは日本語に直すと「rm: ‘a’ はディレクトリです。削除できません」という意味です。</p>
+        <p>実は、 ディレクトリを rm コマンドで消す際には <code>-r</code> というオプションを付ける必要があります。</p>
+        <div class="input-code">
+          <pre><code>
+rm -r directory-test
+  </code></pre>
+        </div>
+        <p>上記のコマンドで削除が行えました。<br> 確認してみましょう。</p>
+        <div class="input-code">
+          <pre><code>
+ls
+  </code></pre>
+        </div>
+        <p>ファイルとディレクトリの一覧から <code>directory-test</code> がなくなっているはずです。</p>
+        <p><strong>ファイルやディレクトリを削除したいとき、rm コマンドを使用しましょう。しかし、復元はできないので十分注意しましょう。</strong></p>
+        <div class="tip"><a name="folder-directory"></a>
+          <span class="tip-title">恐怖の Unix コマンド sudo rm -rf /*</span>
+          <p>先ほどから再三注意しているとおり、<code>rm</code> での削除は、一度やってしまうと取り戻すことができません。<br> macOS でのコマンドの多くは Linux という OS でも使うことができ、両方を指して Unix コマンドといいます。<br> Unix コマンドの中で、<strong>恐怖のコマンド</strong> や <strong>魔のコマンド</strong> として知られるのが <code>sudo rm -rf /*</code> です。<br></p>
+          <br>
+          <p><code>sudo</code> は管理者権限でコマンドを実行するための記述です。</p>
+          <p>すでに学んだとおり、<code>/</code> はルートディレクトリを表します。<code>-rf</code> は <code>-r</code> と <code>-f</code> を合わせて書いたオプションです。 <code>-r</code> はディレクトリを削除するためのオプション、<code>-f</code> は警告メッセージを出さないで強制的に実行するオプションです。そして、<code>*</code> はそのディレクトリの中の全てのファイルを表しています。</p>
+          <br>
+          <p>これを実行すると、何が起こるでしょうか？<br> 全てのファイルやディレクトリは、どれもルートディレクトリの中にあります。<br> その中には、コンピューターを操作するための重要なファイルもあります。<br> これらのファイルがなくなると、コンピューターはほぼ使えなくなってしまします。 それが、たった 1 行のコマンド <code>rm -rf /*</code> で消えてしまうのです。<br></p>
+          <br>
+          <p>なお実際には、このコマンドを実行しても全てのファイルは消えないように OS の保護がかかっているかもしれません。しかし、ほとんどの重要なファイルはこれで消えてしまいます。また、同様の処理がされてしまう別の形式のコマンドもあります。</p>
+          <br>
+          <p>このようにルートディレクトリを指定するような極端な例ではなかったとしても、<code>rm -r</code> でディレクトリを削除すると、取り返しのつかないことになる可能性があります。<code>rm</code> コマンドの使用には十分注意しましょう。</p>
+        </div>
+        <hr>
+        <h3><a name="header-3-216aeb4a064b691abee0b67256c6ea33"></a> ファイル操作のその他のコマンド</h3>
+        <p>この節では詳しく扱いませんでしたが、次のようなファイル操作のコマンドもあります。<br>
+          <a href="https://www.nnn.ed.nico/courses/668/chapters/9515" target="_blank"><strong>プログラミング入門コース 2章 - ファイル操作</strong></a> でこれらのコマンドを扱っているほか、検索サイトで検索することでもたくさんの情報がヒットします。
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:left">コマンド</th>
+              <th style="text-align:left">できる操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:left">cp</td>
+              <td style="text-align:left">ファイルやディレクトリのコピー</td>
+            </tr>
+            <tr>
+              <td style="text-align:left">mv</td>
+              <td style="text-align:left">ファイルやディレクトリの移動</td>
+            </tr>
+            <tr>
+              <td style="text-align:left">find</td>
+              <td style="text-align:left">ファイル・ディレクトリの検索</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2><a name="header-2-c7887a92414f854a9067849a51b9bb02"></a> まとめ</h2>
+        <ul>
+          <li>コマンドラインは、コンピューターに対してコマンドをキーボードから入力することで、コンピューターを操作する画面である。</li>
+          <li>コマンドラインは、コンピューターの高度な操作や設定をするとき、プログラミングをするときなどに使う。</li>
+          <li>Mac ではターミナルというソフトウェアを使う。</li>
+          <li>Finder でのファイル操作の代わりに、コマンドラインのコマンドを使ってファイル操作ができる。</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

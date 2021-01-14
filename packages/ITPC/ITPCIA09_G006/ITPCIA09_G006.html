@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Google スライドでプレゼンを作ろう</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>Google スライドでプレゼンを作ろう</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-020057b1d7d3b09a6ad09ac342bd5904"></a> Google スライドでプレゼンを作ろう</h1>
+        <p>Google スライドは、ブラウザから無料で利用できるプレゼンアプリです。<br> マイクロソフト社の「Office」における PowerPoint に相当する機能が使えます。</p>
+        <p>今回は簡易的なプレゼンの作成手順を学び、共有したりダウンロードしたりといった手順を確認しましょう。</p>
+        <ul id="toc">
+          <li><a href="#header-2-95ab1474eb20f9e4e08d00a6a4133258" target="_blank">Google ドライブとの関係</a></li>
+          <li><a href="#header-2-7fb89dc60a6f4dcb11114a3ce4b28f57" target="_blank">新しいプレゼンを作成する</a></li>
+          <li><a href="#header-2-e733a9013e7d1b79a978bfb44808c862" target="_blank">自己紹介プレゼンを作ろう</a></li>
+          <li><a href="#header-2-6f4a3e66b9bef796b55aecec54c24738" target="_blank">プレゼンをしよう</a></li>
+        </ul>
+        <h2><a name="header-2-95ab1474eb20f9e4e08d00a6a4133258"></a> Google ドライブとの関係</h2>
+        <p>Google スライドで作成された文章は基本的にすべて Google ドライブ上に保存されます。<br> 必要に応じてパソコンにダウンロードすることもできます。</p>
+        <h2><a name="header-2-7fb89dc60a6f4dcb11114a3ce4b28f57"></a> 新しいプレゼンを作成する</h2>
+        <p>まずは <strong>Google ドライブ</strong>を開きます。<br> Google ドライブ上の好きなフォルダを開き、左上の <strong>新規</strong> ボタンから <strong>Google プレゼン</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/create-slide-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>新しいタブで Google スライド が起動します。</p>
+        <div class="image-with-caption">
+          <img src="image/create-slide-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>最初はタイトルが「無題のプレゼンテーション」という名前になっていますが、これでは分かりづらいので名前を変更しましょう。<br> 「無題のプレゼンテーション」と書かれた部分をクリックすると、タイトルを編集できます。<br> ここでは「<strong>プレゼンの練習</strong>」としましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/create-slide-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>新機能の案内が表示されることもありますが、OK を押して閉じれば大丈夫です。<br> 画面が以下のようになればタイトルが変更できています。</p>
+        <div class="image-with-caption">
+          <img src="image/create-slide-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>ファイル名を変更すると、Google ドライブでも以下のような表示になります。</p>
+        <div class="image-with-caption">
+          <img src="image/create-slide-05.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-e733a9013e7d1b79a978bfb44808c862"></a> 自己紹介プレゼンを作ろう</h2>
+        <p>今回はプレゼンの練習として、あなたの自己紹介を作ってみましょう。</p>
+        <h3><a name="header-3-8f4b65ef2924a7f9918cc05b076992d7"></a> タイトルスライドを作ろう</h3>
+        <p>タイトルスライドとは、開始時点で表示されるスライドのことです。 なお、プレゼンの 1 ページを「スライド」といいます。</p>
+        <p>「クリックしてタイトルを追加」と書いてある部分をクリックし、「自己紹介」と入力しましょう。</p>
+        <div class="image-with-caption data-gifffer">
+          <img src="image/input-title.gif"><br>
+          <span class="imagecaption animation"></span>
+        </div>
+        <p>「クリックしてサブタイトルを追加」と書いてある部分をクリックし、自分の名前を入力しましょう。会社や学校名を書いてもよいでしょう。</p>
+        <div class="image-with-caption">
+          <img src="image/input-subtitle-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-64f986959e5427875de211f3594570cd"></a> スライドを追加しよう</h3>
+        <p>タイトルを作り終えたら、中身を作りましょう。<br> 次のページ（スライド）を作成するには、画面左上にある + （プラス）アイコンの右側にある ▼ をクリックし、<strong>タイトルと本文</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/add-slide-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>スライドが追加されます。画面の左側はスライド一覧です。追加された2番目のスライドをクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/add-slide-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>タイトルスライドと同様に、内容を入力します。</p>
+        <div class="image-with-caption">
+          <img src="image/add-slide-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-ad7470a3c07c4d2b860ffd09b02dbdd5"></a> 画像を貼ってみよう</h3>
+        <p>画像を追加してみましょう。</p>
+        <h4><a name="header-4-f40ff045ce7fe58279ccce24db027e34"></a> パソコンの中にある画像を使う場合</h4>
+        <p>自分のパソコンの中にある画像を使うときは、画面の上部にある <strong>挿入</strong> メニューから <strong>画像</strong> を選択し、<strong>パソコンからアップロード</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/add-image-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>ファイルをアップロードする画面が現れるので、アップロードしたいファイルを選択します。<br> アップロードされると、以下のようにスライドに画像が追加されます。</p>
+        <div class="image-with-caption">
+          <img src="image/add-image-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>画像の四隅にある四角にマウスを合わせてドラッグ・アンド・ドロップすると、画像のサイズを変更できます。<br> 右上・左上・右下・左下を操作すると、画像の形を保持したままでサイズのみを変えられるので便利です。<br> また、上にある丸をドラッグすると画像を回転できます。</p>
+        <div class="image-with-caption data-gifffer">
+          <img src="image/image-size.gif"><br>
+          <span class="imagecaption animation"></span>
+        </div>
+        <h4><a name="header-4-ee1db508b1a5e958a8cd99adac41ee10"></a> ネット上で画像を探す</h4>
+        <p>Google 画像検索を使うことが出来ます。<br> 画面の上部にある <strong>挿入</strong> メニューから <strong>画像</strong> を選択し、<strong>ウェブを検索</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/add-image-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>右側に画像検索欄が表示されます。好きなキーワードを入力して <kbd>Enter</kbd> キーを押してみましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/add-image-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>好きな画像をクリックして <strong>挿入</strong> をクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/add-image-05.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>以下のようにスライドに画像が追加されます。</p>
+        <div class="image-with-caption">
+          <img src="image/add-image-06.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>画像の四隅にある四角にマウスを合わせてドラッグ・アンド・ドロップすると、画像のサイズを変更できます。<br> 右上・左上・右下・左下を操作すると、画像の形を保持したままでサイズのみを変えられるので便利です。<br> また、上にある丸をドラッグすると画像を回転できます。</p>
+        <h4><a name="header-4-44acc10eb68642325cbcf277474a2581"></a> ネットから画像をコピー・アンド・ペーストする</h4>
+        <p><strong>ネットから画像を貼り付ける場合、著作権侵害に気をつけてください。無料で利用できる素材サイトなどを利用しましょう。</strong><br> （なお、先ほど紹介した Google スライド内で使える画像検索においては、改変を伴う営利目的での使用が許可されている画像だけを自動で表示してくれるようになっています）</p>
+        <br>
+        <p>Chrome で好きなサイトを開き、画像を <strong>右クリック</strong> して <strong>画像をコピー</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/add-image-07.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>この状態で Google スライドに戻り、<strong>編集</strong> メニューをクリックして <strong>貼り付け</strong> をクリックすると、スライドに画像を貼り付けられます。</p>
+        <div class="image-with-caption">
+          <img src="image/add-image-08.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-e3246ab822768e4d47422be678675e5b"></a> スライドをさらに追加しよう</h3>
+        <p>同じ要領でスライドを追加します。内容はなんでも大丈夫です。<br> タイトルを含めて 3 枚以上にしてみましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/add-slide-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-b186f53cbaa87c4ecada90c18cba375a"></a> デザインを変える</h3>
+        <p>スライドでは、ドキュメントやスプレッドシートと同じように、文字色や背景色などを変更できます。<br> 今回は用意されたデザイン（テーマ）を適用してみましょう。</p>
+        <p>画面上部にある <strong>テーマ</strong> をクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/theme-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すると、画面の右側にテーマ一覧が表示されます。</p>
+        <div class="image-with-caption">
+          <img src="image/theme-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>テーマをクリックすると、そのテーマがスライドに適用されます。<br> 好きなテーマをクリックしてみましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/theme-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>テーマを選び終えたら、テーマの右にある閉じるボタンをクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/theme-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-6f4a3e66b9bef796b55aecec54c24738"></a> プレゼンをしよう</h2>
+        <p>自己紹介プレゼンを作り終えたら、実際にプレゼンをしてみましょう。</p>
+        <p>画面右上にある「プレゼンテーションを開始」の右側にある▼をクリックし、「最初のスライドから開始」をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/presentation-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すると、全画面表示に切り替わってプレゼンが開始されます。<br>
+          <strong>クリック</strong> すると次のスライドに進みます。
+        </p>
+        <div class="image-with-caption">
+          <img src="image/presentation-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>マウスを動かすと、プレゼンを操作するツールが現れます。<br> マウスをしばらく動かさないでいると、このツールは自動的に隠れます。</p>
+        <p>このツールを操作することで前のスライドに移動したり、プレゼンを終了したりできます。</p>
+        <div class="image-with-caption data-gifffer">
+          <img src="image/presentation-control.gif"><br>
+          <span class="imagecaption animation"></span>
+        </div>
+        <p>プレゼンを終了するときは <kbd>Esc</kbd> キーを押しましょう。キーボードの左上にあります。</p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

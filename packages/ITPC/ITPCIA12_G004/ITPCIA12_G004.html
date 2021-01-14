@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>ローマ字</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>ローマ字</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-d9bda45ce883ea302819a6a114aa6ea7"></a> ローマ字</h1>
+        <p>この付録では、パソコンで日本語入力を行う際に必要な <strong>ローマ字</strong> について説明します。</p>
+        <ul id="toc">
+          <li><a href="#header-2-09fbb789df77bc9060039df1403782d0" target="_blank">ローマ字の種類</a></li>
+          <li><a href="#header-2-82173f0388dcbb1902a395c5b798ace9" target="_blank">IME とローマ字入力</a></li>
+          <li><a href="#header-2-320b28ccc86be5bcb38c8166c11d36e6" target="_blank">一般的なローマ字表</a></li>
+        </ul>
+        <h2><a name="header-2-09fbb789df77bc9060039df1403782d0"></a> ローマ字の種類</h2>
+        <p><strong>ローマ字</strong>は日本語をアルファベットで表記するためのルールです。<br> ローマ字には「日本式・訓令式」と「ヘボン式」があります。<br> 例えば、「し」は「日本式・訓令式」では <strong>si</strong> ですが、「ヘボン式」では <strong>shi</strong> と書きます。</p>
+        <ul>
+          <li><strong>日本式</strong>・<strong>訓令式</strong>
+            <ul>
+              <li>日本語の「五十音の規則性」を元に作られており、日本語の文字との対応づけが明確</li>
+              <li>発音よりも規則性を優先しているため、日本語話者以外の人が正しい発音で読むのは難しい</li>
+              <li><strong>パソコンのキーボードで日本語を入力する際によく使われる</strong></li>
+            </ul>
+          </li>
+          <li><strong>ヘボン式</strong>
+            <ul>
+              <li>日本語の「発音」を元に作られているため、日本語話者以外の人にも発音が伝わりやすい</li>
+              <li>規則性よりも発音を優先しているため、日本語の文字との対応づけが明確ではない</li>
+              <li><strong>外国語の文章の中で日本語の単語を使う場合や、外国人に日本語での発音を伝える場合（駅などの案内表示など）によく使われる</strong></li>
+            </ul>
+          </li>
+        </ul>
+        <p>具体例を見てみましょう。「しんばし」と表記するときに「日本式・訓令式」では sinbasi となりますが、「ヘボン式」を使うと shimbashi となります。<br> 英語で si は「シ」ではなく「サイ」のように読むこともあるため、sinbasi と書かれても正しく「シンバシ」と読めない可能性があります。shimbashi と書かれると、外国人にとっても「シンバシ」と読みやすくなります。<br> 一方で「ん」が m になるなど、日本語の 50 音のルールからは外れている点もあることがわかります。</p>
+        <div class="image-with-caption">
+          <img src="image/shimbashi.jpg">
+          <span class="imagecaption photo">新橋（しんばし）駅の案内に表記されているヘボン式のローマ字</span>
+        </div>
+        <h2><a name="header-2-82173f0388dcbb1902a395c5b798ace9"></a> IME とローマ字入力</h2>
+        <p>パソコンでローマ字を使った日本語入力が可能なのは、<strong>IME</strong>（インプット・メソッド・エディタ）と呼ばれるソフトウェアのおかげです。<br> Windows、macOS にはそれぞれ OS 標準の IME が備わっているので特に設定は必要ありませんが、「<a href="https://www.google.co.jp/ime/" target="_blank" rel="noopener noreferrer">Google 日本語入力</a>」や「<a href="https://atok.com/index.html" target="_blank" rel="noopener noreferrer">ATOK</a>」など OS 標準以外の IME を使うこともできます。<br> 日本語を扱う多くの IME では「日本式・訓令式」と「ヘボン式」の両方を使うことができます。</p>
+        <h2><a name="header-2-320b28ccc86be5bcb38c8166c11d36e6"></a> 一般的なローマ字表</h2>
+        <p>ここでは、パソコンで日本語を入力する際に一般的なローマ字表を紹介します。</p>
+        <p>この表では「日本式・訓令式」を基本に、一部「ヘボン式」をかっこ内に併記しています。<br> どちらを使用してもかまいませんが、IME によっては一部のヘボン式の表記が使えないこともあります。</p>
+        <h3><a name="header-3-90ddecd1a6de5af2f1316576c5aaf2d3"></a> ローマ字表</h3>
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:center">A</th>
+              <th style="text-align:center">I</th>
+              <th style="text-align:center">U</th>
+              <th style="text-align:center">E</th>
+              <th style="text-align:center">O</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center">あ<br>A</td>
+              <td style="text-align:center">い<br>I</td>
+              <td style="text-align:center">う<br>U</td>
+              <td style="text-align:center">え<br>E</td>
+              <td style="text-align:center">お<br>O</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">か<br>KA</td>
+              <td style="text-align:center">き<br>KI</td>
+              <td style="text-align:center">く<br>KU</td>
+              <td style="text-align:center">け<br>KE</td>
+              <td style="text-align:center">こ<br>KO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">さ<br>SA</td>
+              <td style="text-align:center">し<br>SI(SHI)</td>
+              <td style="text-align:center">す<br>SU</td>
+              <td style="text-align:center">せ<br>SE</td>
+              <td style="text-align:center">そ<br>SO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">た<br>TA</td>
+              <td style="text-align:center">ち<br>TI(CHI)</td>
+              <td style="text-align:center">つ<br>TU(TSU)</td>
+              <td style="text-align:center">て<br>TE</td>
+              <td style="text-align:center">と<br>TO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">な<br>NA</td>
+              <td style="text-align:center">に<br>NI</td>
+              <td style="text-align:center">ぬ<br>NU</td>
+              <td style="text-align:center">め<br>NE</td>
+              <td style="text-align:center">の<br>NO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">は<br>HA</td>
+              <td style="text-align:center">ひ<br>HI</td>
+              <td style="text-align:center">ふ<br>HU(FU)</td>
+              <td style="text-align:center">へ<br>HE</td>
+              <td style="text-align:center">ほ<br>HO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ま<br>MA</td>
+              <td style="text-align:center">み<br>MI</td>
+              <td style="text-align:center">む<br>MU</td>
+              <td style="text-align:center">め<br>ME</td>
+              <td style="text-align:center">も<br>MO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">や<br>YA</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">ゆ<br>YU</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">よ<br>YO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ら<br>RA</td>
+              <td style="text-align:center">り<br>RI</td>
+              <td style="text-align:center">る<br>RU</td>
+              <td style="text-align:center">れ<br>RE</td>
+              <td style="text-align:center">ろ<br>RO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">わ<br>WA</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">を<br>WO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ん<br>NN(N)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center"></td>
+            </tr>
+            <tr>
+              <td style="text-align:center">が<br>GA</td>
+              <td style="text-align:center">ぎ<br>GI</td>
+              <td style="text-align:center">ぐ<br>GU</td>
+              <td style="text-align:center">げ<br>GE</td>
+              <td style="text-align:center">ご<br>GO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ざ<br>ZA</td>
+              <td style="text-align:center">じ<br>ZI(JI)</td>
+              <td style="text-align:center">ず<br>ZU</td>
+              <td style="text-align:center">ぜ<br>ZE</td>
+              <td style="text-align:center">ぞ<br>ZO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">だ<br>DA</td>
+              <td style="text-align:center">ぢ<br>DI</td>
+              <td style="text-align:center">づ<br>DU</td>
+              <td style="text-align:center">で<br>DE</td>
+              <td style="text-align:center">ど<br>DO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ば<br>BA</td>
+              <td style="text-align:center">び<br>BI</td>
+              <td style="text-align:center">ぶ<br>BU</td>
+              <td style="text-align:center">べ<br>BE</td>
+              <td style="text-align:center">ぼ<br>BO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ぱ<br>PA</td>
+              <td style="text-align:center">ぴ<br>PI</td>
+              <td style="text-align:center">ぷ<br>PU</td>
+              <td style="text-align:center">ぺ<br>PE</td>
+              <td style="text-align:center">ぽ<br>PO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ぁ<br>XA/LA</td>
+              <td style="text-align:center">ぃ<br>XI/LI</td>
+              <td style="text-align:center">ぅ<br>XU/LU</td>
+              <td style="text-align:center">ぇ<br>XE/LE</td>
+              <td style="text-align:center">ぉ<br>XO/LO</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:center">YA</th>
+              <th style="text-align:center">YI</th>
+              <th style="text-align:center">YU</th>
+              <th style="text-align:center">YE</th>
+              <th style="text-align:center">YO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center">きゃ<br>KYA</td>
+              <td style="text-align:center">きぃ<br>KYI</td>
+              <td style="text-align:center">きゅ<br>KYU</td>
+              <td style="text-align:center">きぇ<br>KYE</td>
+              <td style="text-align:center">きょ<br>KYO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">しゃ<br>SYA(SHA)</td>
+              <td style="text-align:center">しぃ<br>SYI</td>
+              <td style="text-align:center">しゅ<br>SYU(SHU)</td>
+              <td style="text-align:center">しぇ<br>SYE(SHE)</td>
+              <td style="text-align:center">しょ<br>SYO(SHO)</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ちゃ<br>TYA(CHA)</td>
+              <td style="text-align:center">ちぃ<br>TYI</td>
+              <td style="text-align:center">ちゅ<br>TYU(CHU)</td>
+              <td style="text-align:center">ちぇ<br>TYE(CHE)</td>
+              <td style="text-align:center">ちょ<br>TYO(CHO)</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">にゃ<br>NYA</td>
+              <td style="text-align:center">にぃ<br>NYI</td>
+              <td style="text-align:center">にゅ<br>NYU</td>
+              <td style="text-align:center">にぇ<br>NYE</td>
+              <td style="text-align:center">にょ<br>NYO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ひゃ<br>HYA</td>
+              <td style="text-align:center">ひぃ<br>HYI</td>
+              <td style="text-align:center">ひゅ<br>HYU</td>
+              <td style="text-align:center">ひぇ<br>HYE</td>
+              <td style="text-align:center">ひょ<br>HYO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">みゃ<br>MYA</td>
+              <td style="text-align:center">みぃ<br>MYI</td>
+              <td style="text-align:center">みゅ<br>MYU</td>
+              <td style="text-align:center">みぇ<br>MYE</td>
+              <td style="text-align:center">みょ<br>MYO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">りゃ<br>RYA</td>
+              <td style="text-align:center">りぃ<br>RYI</td>
+              <td style="text-align:center">りゅ<br>RYU</td>
+              <td style="text-align:center">りぇ<br>RYE</td>
+              <td style="text-align:center">りょ<br>RYO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ぎゃ<br>GYA</td>
+              <td style="text-align:center">ぎぃ<br>GYI</td>
+              <td style="text-align:center">ぎゅ<br>GYU</td>
+              <td style="text-align:center">ぎぇ<br>GYE</td>
+              <td style="text-align:center">ぎょ<br>GYO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">じゃ<br>ZYA(JA)</td>
+              <td style="text-align:center">じぃ<br>ZYI</td>
+              <td style="text-align:center">じゅ<br>ZYU(JU)</td>
+              <td style="text-align:center">じぇ<br>ZYE(JE)</td>
+              <td style="text-align:center">じょ<br>ZYO(JO)</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ぢゃ<br>DYA</td>
+              <td style="text-align:center">ぢぃ<br>DYI</td>
+              <td style="text-align:center">ぢゅ<br>DYU</td>
+              <td style="text-align:center">ぢぇ<br>DYE</td>
+              <td style="text-align:center">ぢょ<br>DYO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">びゃ<br>BYA</td>
+              <td style="text-align:center">びぃ<br>BYI</td>
+              <td style="text-align:center">びゅ<br>BYU</td>
+              <td style="text-align:center">びぇ<br>BYE</td>
+              <td style="text-align:center">びょ<br>BYO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ぴゃ<br>PYA</td>
+              <td style="text-align:center">ぴぃ<br>PYI</td>
+              <td style="text-align:center">ぴゅ<br>PYU</td>
+              <td style="text-align:center">ぴぇ<br>PYE</td>
+              <td style="text-align:center">ぴょ<br>PYO</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:center">WA</th>
+              <th style="text-align:center">WI</th>
+              <th style="text-align:center">WU</th>
+              <th style="text-align:center">WE</th>
+              <th style="text-align:center">WO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center">くぁ<br>KWA(QA)</td>
+              <td style="text-align:center">くぃ<br>KWI(QI)</td>
+              <td style="text-align:center">くぅ<br>KWU</td>
+              <td style="text-align:center">くぇ<br>KWE(QE)</td>
+              <td style="text-align:center">くぉ<br>KWO(QO)</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">すぁ<br>SWA</td>
+              <td style="text-align:center">すぃ<br>SWI</td>
+              <td style="text-align:center">すぅ<br>SWU</td>
+              <td style="text-align:center">すぇ<br>SWE</td>
+              <td style="text-align:center">すぉ<br>SWO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">とぁ<br>TWA</td>
+              <td style="text-align:center">とぃ<br>TWI</td>
+              <td style="text-align:center">とぅ<br>TWU</td>
+              <td style="text-align:center">とぇ<br>TWE</td>
+              <td style="text-align:center">とぉ<br>TWO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ふぁ<br>HWA(FA)</td>
+              <td style="text-align:center">ふぃ<br>HWI(FI)</td>
+              <td style="text-align:center"></td>
+              <td style="text-align:center">ふぇ<br>HWE(FE)</td>
+              <td style="text-align:center">ふぉ<br>HWO(FO)</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">ぐぁ<br>GWA</td>
+              <td style="text-align:center">ぐぃ<br>GWI</td>
+              <td style="text-align:center">ぐぅ<br>GWU</td>
+              <td style="text-align:center">ぐぇ<br>GWE</td>
+              <td style="text-align:center">ぐぉ<br>GWO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">どぁ<br>DWA</td>
+              <td style="text-align:center">どぃ<br>DWI</td>
+              <td style="text-align:center">どぅ<br>DWU</td>
+              <td style="text-align:center">どぇ<br>DWE</td>
+              <td style="text-align:center">どぉ<br>DWO</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:center">HA</th>
+              <th style="text-align:center">HI</th>
+              <th style="text-align:center">HU</th>
+              <th style="text-align:center">HE</th>
+              <th style="text-align:center">HO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center">てゃ<br>THA</td>
+              <td style="text-align:center">てぃ<br>THI</td>
+              <td style="text-align:center">てゅ<br>THU</td>
+              <td style="text-align:center">てぇ<br>THE</td>
+              <td style="text-align:center">てょ<br>THO</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">でゃ<br>DHA</td>
+              <td style="text-align:center">でぃ<br>DHI</td>
+              <td style="text-align:center">でゅ<br>DHU</td>
+              <td style="text-align:center">でぇ<br>DHE</td>
+              <td style="text-align:center">でょ<br>DHO</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4><a name="header-4-b1c503a7143bc383a2c67ebd252b3ee0"></a> 小さい「っ」を入力する場合</h4>
+        <p>「っ」の次の文字のローマ字の最初のアルファベットを 2 回入力します。<br></p>
+        <ul>
+          <li>「ちょっと」 → tyo<em>tt</em>o (cho<em>tt</em>o)</li>
+          <li>「かっこ」 → ka<em>kk</em>o</li>
+        </ul>
+        <p>もし、次の文字がない場合は xtu か ltu で入力します。</p>
+        <ul>
+          <li>「あっ」 → a<em>xtu</em>(<em>ltu</em>)</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

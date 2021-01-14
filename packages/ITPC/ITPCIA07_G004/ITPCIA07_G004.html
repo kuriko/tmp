@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang>
+<html lang="">
 
 <head>
   <meta charset="UTF-8">
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title></title>
+  <title>ファイルをダウンロード・アップロードしよう（Mac）</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
   <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
@@ -36,7 +36,7 @@
     };
 
   </script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script>
     window.onload = function() {
       Gifffer({
@@ -45,7 +45,7 @@
           'height': '60px',
           'border': '3px solid #FFFFFF',
           'border-radius': '30px',
-          'background': '#0075c2',
+          'background': '#009c79',
           'position': 'absolute',
           'top': '50%',
           'left': '50%',
@@ -72,132 +72,151 @@
     <div class="book-header" role="navigation">
       <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a></a>
+        <a>ファイルをダウンロード・アップロードしよう（Mac）</a>
       </h1>
     </div>
     <div class="page-wrapper" tabindex="-1" role="main">
       <section class="main-content markdown-section">
-        <h1><a name="header-1-4019be1bae769b9e0465e59d3a29c604"></a> &#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x30FB;&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x3088;&#x3046;&#xFF08;Mac&#xFF09;</h1>
-        <p>&#x4ECA;&#x56DE;&#x306F; Mac &#x306B;&#x304A;&#x3044;&#x3066;&#x3001;&#x30CD;&#x30C3;&#x30C8;&#x304B;&#x3089;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x30FB;&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x3059;&#x308B;&#x65B9;&#x6CD5;&#x3092;&#x5B66;&#x3073;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+        <h1><a name="header-1-4019be1bae769b9e0465e59d3a29c604"></a> ファイルをダウンロード・アップロードしよう（Mac）</h1>
+        <p>今回は Mac において、ネットからファイルをダウンロード・アップロードする方法を学びましょう。</p>
         <ul id="toc">
-          <li><a href="#header-3-c82e036ed4cf77a6678d16aadcd3a335">&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3068;&#x306F;&#xFF1F;</a></li>
-          <li><a href="#header-3-efde9cae1f886684f5ddbb9fd9aa03b7">&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3068;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306E;&#x9055;&#x3044;</a></li>
-          <li><a href="#header-3-e4a2f31efd6d1780240c704d2e941bda">&#x5B9F;&#x969B;&#x306B;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x3066;&#x307F;&#x3088;&#x3046;</a></li>
-          <li><a href="#header-3-8487aedf804a9820d39f3768b2749e32">&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x6574;&#x7406;&#x3059;&#x308B;</a></li>
-          <li><a href="#header-3-b0127195ccc8e224160723fb1142c437">&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x3068;&#x306F;&#xFF1F;</a></li>
+          <li><a href="#header-2-c82e036ed4cf77a6678d16aadcd3a335" target="_blank">ダウンロードとは？</a></li>
+          <li><a href="#header-2-efde9cae1f886684f5ddbb9fd9aa03b7" target="_blank">ダウンロードとインストールの違い</a></li>
+          <li><a href="#header-2-e4a2f31efd6d1780240c704d2e941bda" target="_blank">実際にデータをダウンロードしてみよう</a></li>
+          <li><a href="#header-2-8487aedf804a9820d39f3768b2749e32" target="_blank">ダウンロードしたファイルを整理する</a></li>
+          <li><a href="#header-2-b0127195ccc8e224160723fb1142c437" target="_blank">アップロードとは？</a></li>
         </ul>
-        <h3><a name="header-3-c82e036ed4cf77a6678d16aadcd3a335"></a> &#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3068;&#x306F;&#xFF1F;</h3>
-        <p><strong>&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;</strong>&#xFF08;download&#xFF09;&#x3068;&#x306F;&#x3001;&#x30CD;&#x30C3;&#x30C8;&#x4E0A;&#x306B;&#x5B58;&#x5728;&#x3057;&#x3066;&#x3044;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x3001;&#x81EA;&#x5206;&#x306E;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x306B;&#x30B3;&#x30D4;&#x30FC;&#x30FB;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x3053;&#x3068;&#x3092;&#x6307;&#x3057;&#x307E;&#x3059;&#x3002;<br>
-          <strong>DL</strong> &#x306A;&#x3069;&#x3068;&#x7565;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x307E;&#x305F;&#x3001;&#x4FD7;&#x8A9E;&#x3068;&#x3057;&#x3066;&#x300C;&#xFF08;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#xFF09;&#x843D;&#x3068;&#x3059;&#x300D;&#x306A;&#x3069;&#x3068;&#x8868;&#x73FE;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <h3><a name="header-3-efde9cae1f886684f5ddbb9fd9aa03b7"></a> &#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3068;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306E;&#x9055;&#x3044;</h3>
-        <p>&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3068;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306F;&#x3088;&#x304F;&#x4F3C;&#x305F;&#x5834;&#x9762;&#x3067;&#x4F7F;&#x308F;&#x308C;&#x308B;&#x7528;&#x8A9E;&#x3067;&#x3059;&#x304C;&#x3001;&#x610F;&#x5473;&#x304C;&#x7570;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <p><strong>&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;</strong> &#x306F;&#x30CD;&#x30C3;&#x30C8;&#x4E0A;&#x306B;&#x5B58;&#x5728;&#x3057;&#x3066;&#x3044;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x3001;&#x81EA;&#x5206;&#x306E;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x306B;&#x30B3;&#x30D4;&#x30FC;&#x30FB;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;<br>
-          <strong>&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</strong> &#x306F;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x3067;&#x4F7F;&#x3048;&#x308B;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;</p>
-        <p>&#x5BB6;&#x96FB;&#x306E;&#x8CFC;&#x5165;&#x306B;&#x4F8B;&#x3048;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;<br> &#x3042;&#x306A;&#x305F;&#x306F;&#x6D17;&#x6FEF;&#x6A5F;&#x3092;&#x901A;&#x8CA9;&#x3067;&#x6CE8;&#x6587;&#x3057;&#x305F;&#x3068;&#x3057;&#x307E;&#x3059;&#x3002;&#x6D17;&#x6FEF;&#x6A5F;&#x304C;&#x3042;&#x306A;&#x305F;&#x306E;&#x5BB6;&#x306B;&#x914D;&#x9054;&#x3055;&#x308C;&#x308B;&#x3068;&#x3053;&#x308D;&#x307E;&#x3067;&#x304C;&#x300C;<strong>&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;</strong>&#x300D;&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;</p>
-        <p>//TODO &#x62BD;&#x8C61;&#x30A4;&#x30E9;&#x30B9;&#x30C8;: &#x901A;&#x8CA9;&#x3067;&#x8CB7;&#x3063;&#x305F;&#x6D17;&#x6FEF;&#x6A5F;&#x304C;&#xFF08;&#x7BB1;&#x306E;&#x72B6;&#x614B;&#x3067;&#xFF09;&#x5C4A;&#x304F;&#x3053;&#x3068; &#x2252; &#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;</p>
-        <p>&#x3057;&#x304B;&#x3057;&#x3001;&#x6D17;&#x6FEF;&#x6A5F;&#x306E;&#x3088;&#x3046;&#x306A;&#x5BB6;&#x96FB;&#x306F;&#x5C4A;&#x3044;&#x305F;&#x307E;&#x307E;&#x306E;&#x72B6;&#x614B;&#x3067;&#x306F;&#x4F7F;&#x3048;&#x307E;&#x305B;&#x3093;&#x3002;&#x30B3;&#x30F3;&#x30BB;&#x30F3;&#x30C8;&#x3084;&#x6C34;&#x9053;&#x3001;&#x6392;&#x6C34;&#x7BA1;&#x306B;&#x63A5;&#x7D9A;&#x3059;&#x308B;&#x3068;&#x3044;&#x3063;&#x305F;&#x8A2D;&#x7F6E;&#x5DE5;&#x4E8B;&#x3092;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x304C;&#x300C;<strong>&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</strong>&#x300D;&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;<br> &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#xFF08;&#x8A2D;&#x7F6E;&#x5DE5;&#x4E8B;&#xFF09;&#x3092;&#x3057;&#x3066;&#x304F;&#x308C;&#x308B;&#x3001;&#x5C02;&#x9580;&#x77E5;&#x8B58;&#x306E;&#x3042;&#x308B;&#x30B9;&#x30BF;&#x30C3;&#x30D5;&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x304C; <strong>&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30E9;&#x30FC;</strong>&#xFF08;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x5C02;&#x7528;&#x306E;&#x30A2;&#x30D7;&#x30EA;&#xFF09;&#x3067;&#x3059;&#x3002;</p>
-        <p>//TODO &#x62BD;&#x8C61;&#x30A4;&#x30E9;&#x30B9;&#x30C8;: &#x8A2D;&#x7F6E;&#x5DE5;&#x4E8B;&#x3092;&#x3059;&#x308B;&#x3068;&#x6D17;&#x6FEF;&#x6A5F;&#x304C;&#x4F7F;&#x3048;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B; &#x2252; &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x3068;&#x30A2;&#x30D7;&#x30EA;&#x304C;&#x4F7F;&#x3048;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;</p>
-        <p>&#x3082;&#x3061;&#x308D;&#x3093;&#x3001;&#x901A;&#x8CA9;&#x3067;&#x8CFC;&#x5165;&#x3067;&#x304D;&#x308B;&#x5546;&#x54C1;&#x306E;&#x4E2D;&#x306B;&#x306F;&#x8A2D;&#x7F6E;&#x5DE5;&#x4E8B;&#x3092;&#x305B;&#x305A;&#x306B;&#x4F7F;&#x3048;&#x308B;&#x3082;&#x306E;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x4F8B;&#x3048;&#x3070;&#x672C;&#x306F;&#x5BB6;&#x96FB;&#x3068;&#x7570;&#x306A;&#x308A;&#x3001;&#x5C4A;&#x3044;&#x305F;&#x3089;&#x305D;&#x306E;&#x307E;&#x307E;&#x8AAD;&#x3081;&#x307E;&#x3059;&#x3057;&#x3001;&#x670D;&#x3082;&#x305D;&#x306E;&#x307E;&#x307E;&#x7740;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3067;&#x3082;&#x540C;&#x69D8;&#x3067;&#x3059;&#x3002;&#x6587;&#x7AE0;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3084;&#x753B;&#x50CF;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3001;&#x52D5;&#x753B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306A;&#x3069;&#x306F;&#x30A2;&#x30D7;&#x30EA;&#x3068;&#x7570;&#x306A;&#x308A;&#x3001;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x305F;&#x3089;&#x305D;&#x306E;&#x307E;&#x307E;&#x958B;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <p>//TODO &#x62BD;&#x8C61;&#x30A4;&#x30E9;&#x30B9;&#x30C8;: &#x672C;&#x3084;&#x670D;&#x306F;&#x300C;&#x8A2D;&#x7F6E;&#x5DE5;&#x4E8B;&#x300D;&#x3092;&#x306A;&#x3057;&#x306B;&#x4F7F;&#x3048;&#x308B; &#x2252; &#x6587;&#x7AE0;&#x3084;&#x753B;&#x50CF;&#x306F;&#x300C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x300D;&#x4E0D;&#x8981;&#x3067;&#x3001;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x305F;&#x3089;&#x305D;&#x306E;&#x307E;&#x307E;&#x958B;&#x3051;&#x308B;</p>
-        <h3><a name="header-3-e4a2f31efd6d1780240c704d2e941bda"></a> &#x5B9F;&#x969B;&#x306B;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x3066;&#x307F;&#x3088;&#x3046;</h3>
-        <p>&#x4ECA;&#x56DE;&#x306F; N &#x4E88;&#x5099;&#x6821;&#x304C;&#x7528;&#x610F;&#x3057;&#x305F;&#x7DF4;&#x7FD2;&#x7528;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <p>&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x3067; Chrome &#x3092;&#x8D77;&#x52D5;&#x3057;&#x3001;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x30D0;&#x30FC;&#x306B; <strong>https://git.io/renshu</strong> &#x3068;&#x5165;&#x529B;&#x3057;&#x3066; <kbd>Enter</kbd> &#x30AD;&#x30FC;&#x3092;&#x62BC;&#x3057;&#x307E;&#x3059;&#x3002;<br> &#x3059;&#x308B;&#x3068;&#x3001;N &#x4E88;&#x5099;&#x6821;&#x304C;&#x7528;&#x610F;&#x3057;&#x305F;&#x7DF4;&#x7FD2;&#x7528;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+        <h2><a name="header-2-c82e036ed4cf77a6678d16aadcd3a335"></a> ダウンロードとは？</h2>
+        <p><strong>ダウンロード</strong>（download）とは、ネット上に存在しているファイルを、自分のパソコンにコピー・保存することを指します。<br>
+          <strong>DL</strong> などと略されることもあります。また、俗語として「（データを）落とす」などと表現されることもあります。
+        </p>
+        <h2><a name="header-2-efde9cae1f886684f5ddbb9fd9aa03b7"></a> ダウンロードとインストールの違い</h2>
+        <p>ダウンロードとインストールはよく似た場面で使われる用語ですが、意味が異なります。</p>
+        <p><strong>ダウンロード</strong> はネット上に存在しているファイルを、自分のパソコンにコピー・保存することです。<br>
+          <strong>インストール</strong> はアプリをパソコンで使えるように設定することです。
+        </p>
+        <p>家電の購入に例えてみましょう。<br> あなたは洗濯機を通販で注文したとします。洗濯機があなたの家に配達されるところまでが「<strong>ダウンロード</strong>」のようなものです。</p>
+        <img src="image/07_G003-01-01.png">
+        <p>しかし、洗濯機のような家電は届いたままの状態では使えません。コンセントや水道、排水管に接続するといった設置工事をする必要があります。これが「<strong>インストール</strong>」のようなものです。<br> インストール（設置工事）をしてくれる、専門知識のあるスタッフのようなものが <strong>インストーラー</strong>（インストール専用のアプリ）です。</p>
+        <img src="image/07_G003-02-01.png">
+        <p>もちろん、通販で購入できる商品の中には設置工事をせずに使えるものもあります。例えば本は家電と異なり、届いたらそのまま読めますし、服もそのまま着られます。<br> ダウンロードでも同様です。文章ファイルや画像ファイル、動画ファイルなどはアプリと異なり、ダウンロードしたらそのまま開くことができます。</p>
+        <img src="image/07_G003-03-01.png">
+        <h2><a name="header-2-e4a2f31efd6d1780240c704d2e941bda"></a> 実際にデータをダウンロードしてみよう</h2>
+        <p>今回は N 予備校が用意した練習用のデータをダウンロードしてみましょう。</p>
+        <p>パソコンで Chrome を起動し、アドレスバーに <strong>https://git.io/renshu</strong> と入力して <kbd>Enter</kbd> キーを押します。<br> すると、N 予備校が用意した練習用のページが表示されます。</p>
         <div class="image-with-caption">
           <img src="image/renshu-top.png">
-          <span class="imagecaption screenshot">&#x7DF4;&#x7FD2;&#x7528;&#x306E;&#x30DA;&#x30FC;&#x30B8;</span>
+          <span class="imagecaption screenshot">練習用のページ</span>
         </div>
-        <p><strong>&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x306E;&#x7DF4;&#x7FD2;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        <p><strong>ダウンロードの練習</strong> をクリックします。</p>
         <div class="image-with-caption">
           <img src="image/renshu-download.png">
-          <span class="imagecaption screenshot">&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x306E;&#x7DF4;&#x7FD2;&#x30DA;&#x30FC;&#x30B8;</span>
+          <span class="imagecaption screenshot">ダウンロードの練習ページ</span>
         </div>
-        <p><strong>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        <p><strong>ファイルをダウンロード</strong> をクリックします。</p>
         <div class="image-with-caption">
           <img src="image/renshu-downloading.png">
-          <span class="imagecaption screenshot">&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x305F;&#x753B;&#x9762;</span>
+          <span class="imagecaption screenshot">ファイルをダウンロードをクリックした画面</span>
         </div>
-        <p>Chrome &#x306E;&#x753B;&#x9762;&#x4E0B;&#x90E8;&#x306B;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x306E;&#x9032;&#x884C;&#x72B6;&#x6CC1;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br> &#x6B8B;&#x308A;&#x6642;&#x9593;&#x306E;&#x8868;&#x793A;&#x304C;&#x6D88;&#x3048;&#x305F;&#x3089;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x5B8C;&#x4E86;&#x3067;&#x3059;&#x3002;</p>
+        <p>Chrome の画面下部にダウンロードの進行状況が表示されます。<br> 残り時間の表示が消えたらダウンロード完了です。</p>
         <div class="image-with-caption">
           <img src="image/renshu-downloaded.png">
-          <span class="imagecaption screenshot">&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x304C;&#x5B8C;&#x4E86;&#x3057;&#x305F;&#x753B;&#x9762;</span>
+          <span class="imagecaption screenshot">ダウンロードが完了した画面</span>
         </div>
-        <p>&#x3053;&#x306E;&#x307E;&#x307E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x958B;&#x304F;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x308B;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x307E;&#x305A;&#x3053;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x3069;&#x3053;&#x306B;&#x4FDD;&#x5B58;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x304B;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002; &#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x540D;&#x306E;&#x53F3;&#x5074;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B; V &#x5B57;&#x306E;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3001;<strong>Finder &#x3067;&#x8868;&#x793A;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        <p>このままファイルを開くこともできるのですが、まずこのファイルがどこに保存されているかを確認しましょう。 ファイル名の右側に表示されている V 字のボタンをクリックし、<strong>Finder で表示</strong> をクリックします。</p>
         <div class="image-with-caption">
           <img src="image/renshu-open-finder.png">
-          <span class="imagecaption screenshot">Finder &#x3067;&#x8868;&#x793A;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;</span>
+          <span class="imagecaption screenshot">Finder で表示をクリック</span>
         </div>
-        <p><strong>&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;</strong> &#x3068;&#x3044;&#x3046;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x306F;&#x300C;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x300D;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306A;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x3001;Mac &#x304C;&#x7528;&#x610F;&#x3057;&#x3066;&#x3044;&#x308B;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3067;&#x3059;&#x3002;</p>
+        <p><strong>ダウンロード</strong> というフォルダが表示されます。これは「ドキュメント」フォルダなどのように、Mac が用意しているフォルダです。</p>
         <div class="image-with-caption">
           <img src="image/renshu-finder.png">
-          <span class="imagecaption screenshot">Finder &#x3067;&#x8868;&#x793A;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;</span>
+          <span class="imagecaption screenshot">Finder で表示をクリック</span>
         </div>
-        <p>&#x7DF4;&#x7FD2;&#x7528;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x898B;&#x3064;&#x3051;&#x3089;&#x308C;&#x305F;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;<br> &#x7DF4;&#x7FD2;&#x7528;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F; ZIP &#x5F62;&#x5F0F;&#x3067;&#x5727;&#x7E2E;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3001;&#x5C55;&#x958B;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x7DF4;&#x7FD2;&#x7528;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092; <strong>&#x30C0;&#x30D6;&#x30EB;&#x30AF;&#x30EA;&#x30C3;&#x30AF;</strong> &#x3057;&#x3001;<strong>&#x3059;&#x3079;&#x3066;&#x5C55;&#x958B;</strong> &#x3057;&#x307E;&#x3059;&#x3002;</p>
+        <p>練習用のファイルが見つけられたでしょうか。<br> 練習用のファイルは ZIP 形式で圧縮されているので、展開しましょう。練習用のファイルを <strong>ダブルクリック</strong> し、<strong>すべて展開</strong> します。</p>
         <div class="image-with-caption">
           <img src="image/renshu-unzipped.png">
-          <span class="imagecaption screenshot">&#x5C55;&#x958B;&#x3057;&#x305F;&#x753B;&#x9762;</span>
+          <span class="imagecaption screenshot">展開した画面</span>
         </div>
-        <p>&#x5C55;&#x958B;&#x3055;&#x308C;&#x305F;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x3001; ZIP &#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+        <p>展開されたフォルダをクリックして、 ZIP ファイルの中身を確認しましょう。</p>
         <div class="image-with-caption">
           <img src="image/renshu-folder.png">
-          <span class="imagecaption screenshot">ZIP &#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x4E2D;&#x8EAB;</span>
+          <span class="imagecaption screenshot">ZIP ファイルの中身</span>
         </div>
-        <h3><a name="header-3-8487aedf804a9820d39f3768b2749e32"></a> &#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x6574;&#x7406;&#x3059;&#x308B;</h3>
-        <p>&#x4ECA;&#x56DE;&#x306F;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3067;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x5C55;&#x958B;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;<br> &#x3057;&#x304B;&#x3057;&#x3001;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306B;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x7F6E;&#x304D;&#x3063;&#x3071;&#x306A;&#x3057;&#x306B;&#x3059;&#x308B;&#x3068;&#x3001;&#x5FC5;&#x8981;&#x306A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x898B;&#x3064;&#x3051;&#x308B;&#x306E;&#x304C;&#x5927;&#x5909;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x5C4A;&#x3044;&#x305F;&#x5B85;&#x914D;&#x4FBF;&#x304C;&#x3059;&#x3079;&#x3066;&#x7384;&#x95A2;&#x306B;&#x7A4D;&#x307F;&#x4E0A;&#x304C;&#x3063;&#x3066;&#x3044;&#x308B;&#x3088;&#x3046;&#x306A;&#x72B6;&#x614B;&#x306B;&#x306A;&#x3063;&#x3066;&#x3057;&#x307E;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <p>//TODO &#x62BD;&#x8C61;&#x30A4;&#x30E9;&#x30B9;&#x30C8;: &#x7384;&#x95A2;&#x306B;&#x5927;&#x91CF;&#x306E;&#x8377;&#x7269;&#xFF08;&#x30C0;&#x30F3;&#x30DC;&#x30FC;&#x30EB;&#xFF09;&#x3084;&#x90F5;&#x4FBF;&#x304C;&#x7A4D;&#x307F;&#x4E0A;&#x304C;&#x3063;&#x3066;&#x56F0;&#x3063;&#x3066;&#x3044;&#x308B;&#x4EBA;</p>
-        <p>&#x305D;&#x306E;&#x305F;&#x3081;&#x3001;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x64CD;&#x4F5C;&#x306E;&#x56DE;&#x3067;&#x5B66;&#x3093;&#x3060;&#x3088;&#x3046;&#x306B;&#x3001;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x3066;&#x6574;&#x7406;&#x3059;&#x308B;&#x3053;&#x3068;&#x3092;&#x304A;&#x3059;&#x3059;&#x3081;&#x3057;&#x307E;&#x3059;&#x3002;<br> &#x300C;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x300D;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306B;&#x5165;&#x3063;&#x305F;&#x30C7;&#x30FC;&#x30BF;&#x306F;&#x300C;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x300D;&#x306A;&#x3069;&#x306B;&#x79FB;&#x52D5;&#x3055;&#x305B;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x305F;&#x3068;&#x3048;&#x3070;&#x5B66;&#x751F;&#x306E;&#x65B9;&#x306F;&#x6388;&#x696D;&#x5225;&#x306E;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x3001;&#x50CD;&#x3044;&#x3066;&#x3044;&#x308B;&#x65B9;&#x306F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3084;&#x53D6;&#x5F15;&#x5148;&#x5225;&#x306A;&#x3069;&#x306E;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x6574;&#x7406;&#x3059;&#x308B;&#x3068;&#x3001;&#x3042;&#x3068;&#x304B;&#x3089;&#x5FC5;&#x8981;&#x306A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x898B;&#x3064;&#x3051;&#x3084;&#x3059;&#x304F;&#x306A;&#x308B;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <h4><a name="header-4-58e46053e57a6ed295b7b2ff2da54396"></a> Chrome &#x3067;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x6642;&#x306B;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x9078;&#x629E;&#x3059;&#x308B;</h4>
-        <p>Chrome &#x306E;&#x521D;&#x671F;&#x8A2D;&#x5B9A;&#x3067;&#x306F;&#x3001;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;&#x3059;&#x3079;&#x3066;&#x300C;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x300D;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306B;&#x4FDD;&#x5B58;&#x3055;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<br> &#x3057;&#x304B;&#x3057;&#x3001;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x5206;&#x3051;&#x3066;&#x6574;&#x7406;&#x3059;&#x308B;&#x5834;&#x5408;&#x306F;&#x6BCE;&#x56DE;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x958B;&#x3044;&#x3066;&#x79FB;&#x52D5;&#x3059;&#x308B;&#x624B;&#x9593;&#x304C;&#x751F;&#x3058;&#x3066;&#x3057;&#x307E;&#x3044;&#x3001;&#x3061;&#x3087;&#x3063;&#x3068;&#x4E0D;&#x4FBF;&#x3067;&#x3059;&#x3002;</p>
-        <p>Chrome &#x306B;&#x306F;&#x3001;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3059;&#x308B;&#x305F;&#x3073;&#x306B;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x9078;&#x3079;&#x308B;&#x6A5F;&#x80FD;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;<br> &#x3053;&#x306E;&#x624B;&#x9806;&#x306F;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x3092;&#x4F7F;&#x3046;&#x4E0A;&#x3067;&#x5FC5;&#x9808;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x304D;&#x3061;&#x3093;&#x3068;&#x6574;&#x7406;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;&#x306B;&#x306F;&#x4FBF;&#x5229;&#x6A5F;&#x80FD;&#x306A;&#x306E;&#x3067;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <p>&#x307E;&#x305A;&#x3001;Chrome &#x306E;&#x8A2D;&#x5B9A;&#x753B;&#x9762;&#x3092;&#x958B;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;Chrome &#x306E;&#x53F3;&#x4E0A;&#x306B;&#x3042;&#x308B;&#x70B9;&#x304C;3&#x3064;&#x4E26;&#x3093;&#x3060;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3001;<strong>&#x8A2D;&#x5B9A;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;<br> &#x4E00;&#x756A;&#x4E0B;&#x307E;&#x3067;&#x30B9;&#x30AF;&#x30ED;&#x30FC;&#x30EB;&#x3057; &#x3001; <strong>&#x8A73;&#x7D30;&#x8A2D;&#x5B9A;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        <h2><a name="header-2-8487aedf804a9820d39f3768b2749e32"></a> ダウンロードしたファイルを整理する</h2>
+        <p>今回はダウンロードフォルダでファイルを確認して展開しました。<br> しかし、ダウンロードフォルダにデータを置きっぱなしにすると、必要なファイルを見つけるのが大変になっていきます。</p>
+        <p>届いた宅配便がすべて玄関に積み上がっているような状態になってしまいます。</p>
+        <img src="image/07_G003-04-01.png">
+        <p>そのため、ファイル操作の回で学んだように、フォルダを作成して整理することをおすすめします。<br> 「ダウンロード」フォルダに入ったデータは「ドキュメント」などに移動できます。</p>
+        <p>たとえば学生の方は授業別のフォルダを、働いている方はプロジェクトや取引先別などのフォルダを作ってダウンロードしたファイルを整理すると、あとから必要なファイルを見つけやすくなるでしょう。</p>
+        <h3><a name="header-3-58e46053e57a6ed295b7b2ff2da54396"></a> Chrome でダウンロード時にフォルダを選択する</h3>
+        <p>Chrome の初期設定では、ダウンロードしたファイルはすべて「ダウンロード」フォルダに保存されるようになっています。<br> しかし、フォルダを分けて整理する場合は毎回ダウンロードフォルダを開いて移動する手間が生じてしまい、ちょっと不便です。</p>
+        <p>Chrome には、ダウンロードするたびに保存するフォルダを選べる機能があります。<br> この手順はパソコンを使う上で必須ではありませんが、きちんと整理したい場合には便利機能なので設定してみましょう。</p>
+        <p>まず、Chrome の設定画面を開きましょう。Chrome の右上にある点が3つ並んだボタンをクリックし、<strong>設定</strong> をクリックします。<br> 一番下までスクロールし 、 <strong>詳細設定</strong> をクリックします。</p>
         <div class="image-with-caption">
           <img src="image/chrome-setting.png">
-          <span class="imagecaption screenshot">&#x4E00;&#x756A;&#x4E0B;&#x306B;&#x3042;&#x308B;&#x8A73;&#x7D30;&#x8A2D;&#x5B9A;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;</span>
+          <span class="imagecaption screenshot">一番下にある詳細設定をクリック</span>
         </div>
-        <p>&#x3055;&#x3089;&#x306B;&#x4E0B;&#x306B;&#x30B9;&#x30AF;&#x30ED;&#x30FC;&#x30EB;&#x3057;&#x3001; <strong>&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;</strong> &#x306E;&#x9805;&#x76EE;&#x3092;&#x898B;&#x3064;&#x3051;&#x307E;&#x3059;&#x3002;</p>
+        <p>さらに下にスクロールし、 <strong>ダウンロード</strong> の項目を見つけます。</p>
         <div class="image-with-caption">
           <img src="image/chrome-toggle.png">
-          <span class="imagecaption screenshot">&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x306E;&#x9805;&#x76EE;</span>
+          <span class="imagecaption screenshot">ダウンロードの項目</span>
         </div>
-        <p>&#x901A;&#x5E38;&#x30AA;&#x30D5;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B; <strong>&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x524D;&#x306B;&#x5404;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x4FDD;&#x5B58;&#x5834;&#x6240;&#x3092;&#x78BA;&#x8A8D;&#x3059;&#x308B;</strong> &#x3092;&#x3001;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x30AA;&#x30F3;&#x306B;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        <p>通常オフになっている <strong>ダウンロード前に各ファイルの保存場所を確認する</strong> を、クリックしてオンにします。</p>
         <div class="image-with-caption">
           <img src="image/chrome-toggled.png">
-          <span class="imagecaption screenshot">&#x8A2D;&#x5B9A;&#x3057;&#x305F;&#x72B6;&#x614B;</span>
+          <span class="imagecaption screenshot">設定した状態</span>
         </div>
-        <p>&#x3053;&#x308C;&#x3067;&#x6B21;&#x56DE;&#x304B;&#x3089;&#x3001;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3059;&#x308B;&#x3068;&#x304D;&#x306B;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x753B;&#x9762;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <h3><a name="header-3-b0127195ccc8e224160723fb1142c437"></a> &#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x3068;&#x306F;&#xFF1F;</h3>
-        <p>&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#xFF08;upload&#xFF09;&#x3068;&#x306F;&#x9006;&#x306B;&#x3001;&#x81EA;&#x5206;&#x306E;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x306E;&#x4E2D;&#x306B;&#x3042;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x3001;Web &#x30B5;&#x30A4;&#x30C8;&#x306B;&#x9001;&#x4FE1;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;<br> SNS&#x306B;&#x753B;&#x50CF;&#x3092;&#x6DFB;&#x4ED8;&#x3059;&#x308B;&#x969B;&#x3001;&#x30AA;&#x30F3;&#x30E9;&#x30A4;&#x30F3;&#x6388;&#x696D;&#x306E;&#x8AB2;&#x984C;&#x3092;&#x63D0;&#x51FA;&#x3059;&#x308B;&#x969B;&#x306A;&#x3069;&#x69D8;&#x3005;&#x306A;&#x5834;&#x9762;&#x3067;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <h4><a name="header-4-c682c5017ed035ccbdcafb4c8544f5f8"></a> &#x5B9F;&#x969B;&#x306B;&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x3066;&#x307F;&#x3088;&#x3046;</h4>
-        <p>N &#x4E88;&#x5099;&#x6821;&#x3067;&#x7528;&#x610F;&#x3057;&#x305F;&#x7DF4;&#x7FD2;&#x7528;&#x306E;&#x30B5;&#x30A4;&#x30C8;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x3092;&#x4F53;&#x9A13;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <p>&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x3067; Chrome &#x3092;&#x8D77;&#x52D5;&#x3057;&#x3001;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x30D0;&#x30FC;&#x306B; <strong>https://git.io/renshu</strong> &#x3068;&#x5165;&#x529B;&#x3057;&#x3066; <kbd>Enter</kbd> &#x30AD;&#x30FC;&#x3092;&#x62BC;&#x3057;&#x307E;&#x3059;&#x3002;<br> &#x3059;&#x308B;&#x3068;&#x3001;N &#x4E88;&#x5099;&#x6821;&#x304C;&#x7528;&#x610F;&#x3057;&#x305F;&#x7DF4;&#x7FD2;&#x7528;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+        <p>これで次回から、ファイルをダウンロードするときに保存するフォルダを指定する画面が表示されるようになります。</p>
+        <div class="tip"><a name="ID"></a>
+          <span class="tip-title">Tips　右クリックでダウンロード</span>
+          <br>
+          <br>
+          <p>右クリックでファイルをダウンロードすることもできます。保存したいコンテンツの上で右クリックすると、メニュー内に <strong>リンク先を別名で保存...</strong> という項目が表示されます。</p>
+          <div class="image-with-caption">
+            <img src="image/link-save.png">
+            <span class="imagecaption screenshot">リンク先を別名で保存...</span>
+          </div>
+          <p>これをクリックすると、保存先を指定するための Finder の画面が表示されます。</p>
+          <div class="image-with-caption">
+            <img src="image/link-save2.png">
+            <span class="imagecaption screenshot">保存先を選択する</span>
+          </div>
+          <p>「保存」をクリックすると実際にダウンロードが開始します。</p>
+        </div>
+        <h2><a name="header-2-b0127195ccc8e224160723fb1142c437"></a> アップロードとは？</h2>
+        <p>アップロード（upload）とは逆に、自分のパソコンの中にあるファイルを、Web サイトに送信することです。<br> SNSに画像を添付する際、オンライン授業の課題を提出する際など様々な場面で使います。</p>
+        <img src="image/07_G003-05-01.png">
+        <h3><a name="header-3-c682c5017ed035ccbdcafb4c8544f5f8"></a> 実際にアップロードしてみよう</h3>
+        <p>N 予備校で用意した練習用のサイトを使ってアップロードを体験してみましょう。</p>
+        <p>パソコンで Chrome を起動し、アドレスバーに <strong>https://git.io/renshu</strong> と入力して <kbd>Enter</kbd> キーを押します。<br> すると、N 予備校が用意した練習用のページが表示されます。</p>
         <div class="image-with-caption">
           <img src="image/renshu-top.png">
-          <span class="imagecaption screenshot">&#x7DF4;&#x7FD2;&#x7528;&#x306E;&#x30DA;&#x30FC;&#x30B8;</span>
+          <span class="imagecaption screenshot">練習用のページ</span>
         </div>
-        <p><strong>&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x306E;&#x7DF4;&#x7FD2;</strong> &#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        <p><strong>アップロードの練習</strong> をクリックします。</p>
         <div class="image-with-caption">
           <img src="image/renshu-upload.png">
-          <span class="imagecaption screenshot">&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x306E;&#x7DF4;&#x7FD2;&#x30DA;&#x30FC;&#x30B8;</span>
+          <span class="imagecaption screenshot">アップロードの練習ページ</span>
         </div>
-        <p><strong>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x9078;&#x629E;</strong> &#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        <p><strong>ファイルの選択</strong> ボタンをクリックします。</p>
         <div class="image-with-caption">
           <img src="image/renshu-select-file.png">
-          <span class="imagecaption screenshot">&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x9078;&#x629E;&#x30DA;&#x30FC;&#x30B8;</span>
+          <span class="imagecaption screenshot">ファイルの選択ページ</span>
         </div>
-        <p>&#x30E1;&#x30E2;&#x5E33;&#x306A;&#x3069;&#x3067;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x958B;&#x304F;&#x6642;&#x3068;&#x540C;&#x3058;&#x753B;&#x9762;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br> &#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x3059;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3001;&#x300C;&#x958B;&#x304F;&#x300D;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;&#x4ECA;&#x56DE;&#x306F;&#x7DF4;&#x7FD2;&#x306A;&#x306E;&#x3067;&#x3069;&#x306E;&#x3088;&#x3046;&#x306A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3067;&#x3082;&#x3088;&#x3044;&#x3067;&#x3059;&#x304C;&#x3001;&#x5148;&#x307B;&#x3069;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x305F;&#x753B;&#x50CF;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+        <p>メモ帳などでファイルを開く時と同じ画面が表示されます。<br> アップロードするファイルをクリックし、「開く」をクリックします。今回は練習なのでどのようなファイルでもよいですが、先ほどダウンロードした画像ファイルを選択してみましょう。</p>
         <div class="image-with-caption">
           <img src="image/renshu-select-image.png">
-          <span class="imagecaption screenshot">&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x305F;&#x753B;&#x50CF;&#x3092;&#x9078;&#x629E;</span>
+          <span class="imagecaption screenshot">ダウンロードした画像を選択</span>
         </div>
-        <p>&#x305D;&#x306E;&#x5F8C;&#x3001;&#x9001;&#x4FE1;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+        <p>その後、送信ボタンをクリックします。</p>
         <div class="image-with-caption">
           <img src="image/renshu-upload-confirm.png">
-          <span class="imagecaption screenshot">&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x305F;&#x753B;&#x50CF;&#x3092;&#x9078;&#x629E;</span>
+          <span class="imagecaption screenshot">ダウンロードした画像を選択</span>
         </div>
-        <p>&#x306A;&#x304A;&#x3001;&#x4ECA;&#x56DE;&#x306E;&#x7DF4;&#x7FD2;&#x7528; Web &#x30DA;&#x30FC;&#x30B8;&#x3067;&#x306F;&#x5B9F;&#x969B;&#x306B;&#x306F;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x9001;&#x4FE1;&#x3057;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x306E;&#x3067;&#x3054;&#x5B89;&#x5FC3;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-        <h4><a name="header-4-43c15a34b29e967eb5968fdc450c1f86"></a> &#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x306E;&#x6CE8;&#x610F;&#x4E8B;&#x9805;</h4>
-        <p>&#x4E00;&#x5EA6;&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#xFF08;&#x9001;&#x4FE1;&#xFF09;&#x3057;&#x3066;&#x3057;&#x307E;&#x3063;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;&#x57FA;&#x672C;&#x7684;&#x306B;&#x306F;&#x53D6;&#x308A;&#x6D88;&#x305B;&#x306A;&#x3044;&#x305F;&#x3081;&#x3001;&#x9593;&#x9055;&#x3063;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x6CE8;&#x610F;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;<br> &#x307E;&#x305F;&#x3001;&#x4ED6;&#x4EBA;&#x306E;&#x8457;&#x4F5C;&#x6A29;&#x306A;&#x3069;&#x3092;&#x4FB5;&#x5BB3;&#x3059;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30A2;&#x30C3;&#x30D7;&#x30ED;&#x30FC;&#x30C9;&#x3059;&#x308B;&#x3068;&#x3001;&#x7F6A;&#x306B;&#x554F;&#x308F;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+        <p>なお、今回の練習用 Web ページでは実際にはデータを送信していませんのでご安心ください。</p>
+        <h3><a name="header-3-43c15a34b29e967eb5968fdc450c1f86"></a> アップロードの注意事項</h3>
+        <p>一度アップロード（送信）してしまったファイルは基本的には取り消せないため、間違ったファイルをアップロードしないように注意しましょう。<br> また、他人の著作権などを侵害するファイルをアップロードすると、罪に問われることがあります。</p>
       </section>
     </div>
   </div>

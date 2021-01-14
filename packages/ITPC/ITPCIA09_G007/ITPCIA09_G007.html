@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Google フォームでアンケートを作成しよう</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>Google フォームでアンケートを作成しよう</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-69565988a6ff2ee8a0ddf32a474066ff"></a> Google フォームでアンケートを作成しよう</h1>
+        <p>Google フォームは、簡単な操作でアンケートやクイズなどが作成できる無料のサービスです。<br> 作成したアンケートはネットに公開できるだけでなく、社内・校内限定で公開することもできます。</p>
+        <p>今回は簡易的なアンケート作成手順を学びましょう。</p>
+        <ul id="toc">
+          <li><a href="#header-2-95ab1474eb20f9e4e08d00a6a4133258" target="_blank">Google ドライブとの関係</a></li>
+          <li><a href="#header-2-70f68f2d4a95c162affaffc96698f08f" target="_blank">新しいアンケートを作成する</a></li>
+          <li><a href="#header-2-80dafcf684bca8cc2ad130bbfb98d7f3" target="_blank">フォームの説明</a></li>
+          <li><a href="#header-2-e002dd1d3a42f0cd013a668f9bf86ddc" target="_blank">選択式の質問を作ろう</a></li>
+          <li><a href="#header-2-8d88842deac0e12fa397c2a2df8dd5a2" target="_blank">質問を追加しよう</a></li>
+          <li><a href="#header-2-76bd59eeff2a9a98c0765fe3d0120b8f" target="_blank">フォームをプレビューしよう</a></li>
+          <li><a href="#header-2-bacb196d50f4a1a6458c061dd2360b8e" target="_blank">アンケートに答えてもらおう</a></li>
+          <li><a href="#header-2-ee7f3737c4638211cc2d7f96c3bff217" target="_blank">アンケート結果を見てみよう</a></li>
+        </ul>
+        <h2><a name="header-2-95ab1474eb20f9e4e08d00a6a4133258"></a> Google ドライブとの関係</h2>
+        <p>Google フォームで作成されたアンケートは基本的にすべて Google ドライブ上に保存されます。<br> アンケート結果はスプレッドシートに出力することもできます。</p>
+        <h2><a name="header-2-70f68f2d4a95c162affaffc96698f08f"></a> 新しいアンケートを作成する</h2>
+        <p>まずは <strong>Google ドライブ</strong>を開きます。<br> Google ドライブ上の好きなフォルダを開き、左上の <strong>新規</strong> ボタンから <strong>Google フォーム</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/create-form-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>新しいタブで Google フォーム が起動します。新機能の案内は「スキップ」で閉じましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/create-form-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>最初はタイトルが「無題のフォーム」という名前になっていますが、これでは分かりづらいので名前を変更しましょう。<br> 「無題のフォーム」と書かれた部分をクリックすると、タイトルを編集できます。<br> ここでは「<strong>フォームの練習</strong>」としましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/create-form-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <div class="image-with-caption">
+          <img src="image/create-form-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>ファイル名を変更すると、Google ドライブでも以下のような表示になります。</p>
+        <div class="image-with-caption">
+          <img src="image/create-form-05.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-80dafcf684bca8cc2ad130bbfb98d7f3"></a> フォームの説明</h2>
+        <p>「フォームの説明」をクリックすると、説明を入力できます。説明は回答者に表示されます。</p>
+        <div class="image-with-caption">
+          <img src="image/form-description.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-e002dd1d3a42f0cd013a668f9bf86ddc"></a> 選択式の質問を作ろう</h2>
+        <p>選択肢の中から 1 つを選ぶ質問を作ってみましょう。</p>
+        <p>初期状態で以下のような質問が表示されていると思います。</p>
+        <div class="image-with-caption">
+          <img src="image/create-radio-button-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>「<strong>無題の質問</strong>」となっている部分に質問内容を入力してみましょう。ここでは「学年」と入力してみましょう。<br> 「<strong>オプション1</strong>」あるいは「<strong>選択肢1</strong>」となっているのは選択肢の内容です。この文字を削除して「中学1年生」と入力しましょう。<br> 画面は以下のようになったでしょうか。</p>
+        <div class="image-with-caption">
+          <img src="image/create-radio-button-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>選択肢を追加していきましょう。<br>
+          <strong>選択肢を追加</strong> という欄をクリックすると新たな選択肢が登場します。「中学2年生」と入力しましょう。
+        </p>
+        <div class="image-with-caption">
+          <img src="image/create-radio-button-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>選択肢を入力し終えたときに <kbd>Enter</kbd> キーを押すことでも新しい選択肢を作成できます。<br> その調子で「中学3年生」「高校1年生」「高校2年生」「高校3年生」「高校卒業」を追加しましょう。<br> もし選択肢を作りすぎてしまったら、選択肢の右側にある × ボタンで選択肢を削除できます。</p>
+        <div class="image-with-caption">
+          <img src="image/create-radio-button-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-8d88842deac0e12fa397c2a2df8dd5a2"></a> 質問を追加しよう</h2>
+        <p>次の質問を追加しましょう。</p>
+        <p>右側のプラスマークをクリックしてください。</p>
+        <div class="image-with-caption">
+          <img src="image/add-question-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>新たな質問が作成されました。好きな質問を作ってみましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/add-question-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>ここで「ラジオボタン」と書いてある部分をクリックすると、質問の種類を変更できます。</p>
+        <h3><a name="header-3-8a9ec681590fc983d79a91a4e08dcb1d"></a> 質問の種類</h3>
+        <p>Googleフォームで使える質問の種類を見てみましょう。<br> もちろん、全部試す必要はありません。今回は自分が面白そうだと思うものを使ってみましょう。</p>
+        <h4><a name="header-4-3b0e1da0491f19356c398dd1eda2d401"></a> ラジオボタン</h4>
+        <p>選択肢の中から答えを 1 つしか選べない質問に使います。</p>
+        <div class="image-with-caption">
+          <img src="image/radio-button.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h4><a name="header-4-178be4cb402f97d84da023926688f2c2"></a> チェックボックス</h4>
+        <p>選択肢の中から答えを複数選べる質問に使います。</p>
+        <div class="image-with-caption">
+          <img src="image/check-box.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h4><a name="header-4-cfd7649e24c2845309324678bf62f188"></a> プルダウン</h4>
+        <p>選択肢の中から答えを 1 つしか選べない質問に使います。<br> ラジオボタンと異なり、クリックするまで選択肢は表示されません。また、選択肢を選ぶと、選んだもの以外は隠れます。</p>
+        <div class="image-with-caption">
+          <img src="image/pull-down-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <div class="image-with-caption">
+          <img src="image/pull-down-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>選択肢が多いときにラジオボタンでは質問欄が長くなり、見づらくなってしまいます。そういった場合はプルダウンを使うとよいでしょう。</p>
+        <h4><a name="header-4-3e7a49702343e3ec1d58e688401bf439"></a> 記述式</h4>
+        <p>1 行の短い入力欄です。</p>
+        <div class="image-with-caption">
+          <img src="image/input-short.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h4><a name="header-4-d482086f653d92fa8f1011d39738dba3"></a> 段落</h4>
+        <p>複数行を入力できる、長い入力欄です。</p>
+        <div class="image-with-caption">
+          <img src="image/input-long.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h4><a name="header-4-bd91d8fcb94c059e709ceba4f40cb882"></a> 均等目盛</h4>
+        <p>数段階の目盛で答えることのできる質問です。</p>
+        <div class="image-with-caption">
+          <img src="image/measure.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h4><a name="header-4-fd0d383269c66a16f50d01dee566c91e"></a> グリッド</h4>
+        <p>グリッド（格子状）の選択肢を作成できます。<br> 選択式（1 つしか選べない）、チェックボックス（複数選べる）があります。</p>
+        <div class="image-with-caption">
+          <img src="image/grid.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h4><a name="header-4-148065134f7f14038387082b1494f2d7"></a> 日付</h4>
+        <p>カレンダーから日付を 1 つ選ぶことができる質問です。</p>
+        <div class="image-with-caption">
+          <img src="image/calender.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h4><a name="header-4-148065134f7f14038387082b1494f2d7"></a> 日付</h4>
+        <p>時刻を入力できる質問です。</p>
+        <div class="image-with-caption">
+          <img src="image/time.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h4><a name="header-4-0bd68df664e20f24b5b26125ad45f1f0"></a> ファイルのアップロード</h4>
+        <p>回答者がファイルを添付できるフォームです。</p>
+        <div class="image-with-caption">
+          <img src="image/upload-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>なお、最初に使うときは以下のようなアクセス権限を求めるような表示が現れることがあります。</p>
+        <div class="image-with-caption">
+          <img src="image/upload-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-76bd59eeff2a9a98c0765fe3d0120b8f"></a> フォームをプレビューしよう</h2>
+        <p>フォームを作り終えたらプレビューしましょう。右上にある目のアイコンをクリックしてください。</p>
+        <div class="image-with-caption">
+          <img src="image/preview-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>新しいタブでアンケートの表示内容がプレビューされます。</p>
+        <div class="image-with-caption">
+          <img src="image/preview-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-bacb196d50f4a1a6458c061dd2360b8e"></a> アンケートに答えてもらおう</h2>
+        <p>フォームが完成したら、他の人に答えてもらいましょう。<br> 右上の「送信」ボタンをクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/send-form-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>フォームを他の人に見てもらうには 3 つの方法があります。</p>
+        <ul>
+          <li>メールで送信</li>
+          <li>URLを共有する</li>
+          <li>Web ページに埋め込む</li>
+        </ul>
+        <p>ここでは URL を共有しましょう。<br> 以下の画面が現れたら、<strong>送信方法</strong> の欄の中央にあるリンクマークをクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/send-form-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すると、URL リンクを共有する画面が現れます。<br> 「コピー」をクリックすると、フォームへの URL がコピーされます。<br> これを SNS やチャット、メールなどにペーストし、答えてもらいたい人たちに送るとよいでしょう。</p>
+        <div class="image-with-caption">
+          <img src="image/send-form-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>なお、「URLを短縮」をクリックすると、長い URL を短くすることもできます。<br> フォームの URL が長くて見づらいと感じたら使用してみましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/send-form-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-ee7f3737c4638211cc2d7f96c3bff217"></a> アンケート結果を見てみよう</h2>
+        <p>アンケートに回答が集まると、画面上部の「回答」の欄に回答件数が表示されます。ここをクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/answers-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すると、回答表示モードに切り替わります。<br> この回答表示モードはリアルタイムで反映されていきます。</p>
+        <div class="image-with-caption">
+          <img src="image/answers-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>また、右上の緑の十字のアイコンをクリックすると、スプレッドシートに書き出すことができます。<br> クリックしてみましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/answers-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>以下のような画面が現れたら、<strong>作成</strong> をクリックしてください。</p>
+        <div class="image-with-caption">
+          <img src="image/answers-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すると、このようなスプレッドシートが自動で作成されます。<br> 回答結果を集計したい場合などに便利です。</p>
+        <div class="image-with-caption">
+          <img src="image/answers-05.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

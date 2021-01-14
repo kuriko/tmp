@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>USB メモリを使ってみよう</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>USB メモリを使ってみよう</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-654f6dc4c05d58f9f368c95a8e6db8a9"></a> USB メモリを使ってみよう</h1>
+        <p>学校や職場で他の人とデータをやり取りする際、USB メモリを使うことがあります。また、コンビニなどに設置されているコピー機も USB メモリのデータを読み取れます。 今回は USB メモリの使い方をマスターし、データをスムーズに交換できるようになりましょう。</p>
+        <ul id="toc">
+          <li><a href="#header-2-1c53a4c05004a260f0ed03e848e77850" target="_blank">USB メモリとは</a></li>
+          <li><a href="#header-2-7a8c080ff07113c3b1c8fe99cc05904e" target="_blank">USB メモリの使い方</a></li>
+        </ul>
+        <h2><a name="header-2-1c53a4c05004a260f0ed03e848e77850"></a> USB メモリとは</h2>
+        <p><strong>USB</strong>（ユーエスビー）という規格を利用して接続する記録装置です。<strong>USB フラッシュドライブ</strong> などとも呼ばれます。また、USBメモリのことを「USB」と略すこともありますが、USBは通信する規格や端子自体のことなので正確な略称ではありません。</p>
+        <p>パソコンから容易に抜き差しできるため、データの交換によく用いられます。<br> ただし、記録装置の性質上、長期間の保存には向いていません（数年程度で寿命となり、保存したデータが消えてしまう恐れがあります）。そのため、重要なデータの長期バックアップ先としては不向きといえるでしょう。一時的な保管・交換用として使用するのがおすすめです。</p>
+        <h3><a name="header-3-eb6969dc37781096a8630c0805e42a78"></a> USB メモリの選び方</h3>
+        <p>家電量販店やネット通販で入手できます。また、割高にはなりますがコンビニなどでも購入できることがあります。<br> 様々なものがあるので選び方を知っておきましょう。</p>
+        <h4><a name="header-4-f78af647600e8f9b681840ff3454e4fe"></a> メーカー</h4>
+        <p>非常に多くの会社が USB メモリを製造・販売しています。データやパソコンを壊さないためにも、できるだけ信頼できるメーカーの商品を選びましょう。</p>
+        <p>もし迷った場合、大手家電量販店で販売されているものを購入すれば安全といえるでしょう。</p>
+        <h4><a name="header-4-fe7d74278aa937b2f076fcdfcf1c0e26"></a> 容量</h4>
+        <p>必要な容量は用途によって変わります。学校や会社での書類データを保存するなら、 8 GB程度あれば十分でしょう。<br> しかし、動画や画像を多く保存する場合は 16GB や 32GB など、なるべく大容量のものを買うほうが良いでしょう。</p>
+        <h4><a name="header-4-b1503a3ca10e20840dfe0e614a35e324"></a> USB の規格</h4>
+        <p>USB のバージョンによって通信速度（データの読み書きの速度）が変わります。</p>
+        <p>USB 2.0 の製品より、<strong>USB 3.0</strong>（USB 3.1、USB 3.2）に対応した製品の方が高速にデータの読み書きができます。</p>
+        <h4><a name="header-4-a6922577aac8730dea27760010ce98a2"></a> 端子</h4>
+        <img src="image/03_G011-01-01.png">
+        <p>USB には端子の種類がいくつかあります。</p>
+        <p>USB メモリでよく使われるのは長方形の端子（USB タイプA）と小型の端子（USB タイプC）です。<br> タイプA が最も基本的なタイプ（いわゆる普通の USB 端子）なので、タイプAのものは特に何も記載されていない事が多いようです。</p>
+        <p>基本的には タイプA を選ぶと良いでしょう。<br> なぜなら、ほとんどのパソコンに タイプA の端子は搭載されており、データの交換をするときに利便性が高いからです。</p>
+        <p>ただし、近年は タイプC 端子しか搭載していない薄型のノートパソコン（MacBook など）もあります。<br> こうした場合はノートパソコン側に、タイプC と タイプA を変換するアダプタを購入して挿し込むとよいでしょう。</p>
+        <h4><a name="header-4-33d6990e091d0db5b173344ae8b2ab31"></a> デザイン・形状・サイズ</h4>
+        <p>デザインや形状が性能に影響することはないので、好きなものを選びましょう。<br>ただし、小さすぎるものは紛失しやすいので適度なサイズがおすすめです。</p>
+        <p>また、名前や用途を記入したりラベルを貼ったりしたい場合、そういうスペースが十分にあるかも確認しましょう。貸し借りを頻繁にする場合は名前などを書きやすいサイズの方が便利です。</p>
+        <h2><a name="header-2-7a8c080ff07113c3b1c8fe99cc05904e"></a> USB メモリの使い方</h2>
+        <h3><a name="header-3-9c57a92898e2098c4581e0114c425074"></a> USB メモリの接続</h3>
+        <p>エクスプローラーを開きましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-explorer-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>エクスプローラーの左側から <strong>PC</strong> をクリックして開きましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-explorer-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>USB メモリをパソコンの USB 端子に差し込みましょう。<br> USB 3.0 以上（3.1, 3.2）に対応した USB メモリなら、USB 3.0 の端子を使うとより高速に通信できます（端子が青くなっていたり、USB 3.0 や SS と記載されていたりします）。</p>
+        <p>//TODO 写真</p>
+        <p>少し待つと USB メモリが「ドライブ」「USB ドライブ」といった名前で認識され、表示されます。<br> 環境や USB メモリによって、この名前は変わります。たとえば Transcend（トランセンド） というメーカーの USB メモリの場合、メーカー名の「Transcend」で表示されます。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-explorer-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-b43859cab0a1924ce2bd9bb551da0b5a"></a> パソコンから USB メモリへデータをコピー</h3>
+        <p>基本的には通常のファイル・フォルダ操作と同様です。<br> コピーしたいファイルやフォルダがある場所、たとえば <strong>ドキュメント</strong> を別のウィンドウで開きましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-copy-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>コピーしたいファイルを <strong>右クリック</strong> し、<strong>コピー</strong> をクリックしましょう。<br> 切り取りを使って移動しても良いですが、USB メモリは信頼性の高い記録装置ではないため、パソコン本体にデータを残すこと（コピー）を強くおすすめします。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-copy-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>エクスプローラーの左側から <strong>PC</strong> をクリックして開きましょう。<br> 続いて、USB メモリをダブルクリックして開きます。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-copy-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>USB メモリが開いたら、何もない部分を <strong>右クリック</strong> して <strong>貼り付け</strong> をクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-copy-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>ファイルが増えてきた場合、USB メモリの中にもフォルダを作って整理整頓するとよいでしょう。</p>
+        <h3><a name="header-3-df8eafcb32526a9035baaa24f3c2e012"></a> USB メモリからパソコンへデータをコピー</h3>
+        <p>こちらも基本的には通常のファイル・フォルダ操作と同様です。</p>
+        <p>エクスプローラーの左側から <strong>PC</strong> をクリックして開きましょう。<br> 続いて、USB メモリをダブルクリックして開きます。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-explorer-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>USB メモリが開いたら、コピーしたいファイルやフォルダを <strong>右クリック</strong> して <strong>コピー</strong> をクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-copy-05.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>続いて、ファイルやフォルダをコピーしたい先（ドキュメントなど）を開きます。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-copy-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>フォルダが開いたら、何もない部分を <strong>右クリック</strong> して <strong>貼り付け</strong> をクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-copy-06.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h3><a name="header-3-132b549f0f87b69555562c9c60522df7"></a> USB メモリの取り外し</h3>
+        <p>USB メモリをいきなり取り外すと、データが消失する恐れがあります。Windows からきちんと取り外しの操作をしましょう。</p>
+        <p>USB メモリから開いたファイルをすべて閉じます。また、USB メモリを開いているエクスプローラーのウィンドウも閉じます。</p>
+        <p>再びエクスプローラーで <strong>PC</strong> を開きます。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-explorer-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>USB メモリを右クリックし、<strong>取り出し</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-eject-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>エクスプローラー から USB メモリの表示が消えたら、パソコンから USB メモリを取り外します。</p>
+        <p>//TODO 写真</p>
+        <h4><a name="header-4-2940d894d4612afee876916b4afce24e"></a> 「使用中」表示が出た場合</h4>
+        <p>USB メモリに入っているファイルやフォルダを別のアプリが開いている状態では USB メモリを取り外しできません。<br> 以下のようなメッセージが出た場合、USBメモリ のファイルを開いているアプリを閉じてみてください。</p>
+        <div class="image-with-caption">
+          <img src="image/usb-eject-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>すべてのアプリを閉じてもこの表示が続く場合、裏側で動き続けているアプリがファイルにアクセスしている可能性があります。 原因となるアプリが特定できないなら、一旦 Windows をシャットダウンしてから USB メモリを抜きましょう。</p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

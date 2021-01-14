@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Google ドキュメントで文書を作成しよう</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>Google ドキュメントで文書を作成しよう</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-72901f68fd462c072f55481a24f77c25"></a> Google ドキュメントで文書を作成しよう</h1>
+        <p>Google ドキュメントは、ブラウザから無料で利用できる文書作成サービスです。<br> マイクロソフト社の「Office」における Word に相当する機能が使えます。</p>
+        <p>今回は簡易的な文書作成手順を学び、共有したりダウンロードしたりといった手順を確認しましょう。</p>
+        <ul id="toc">
+          <li><a href="#header-2-95ab1474eb20f9e4e08d00a6a4133258" target="_blank">Google ドライブとの関係</a></li>
+          <li><a href="#header-2-6ff7b38b23388e97c013180362a41f45" target="_blank">新しい文書を作成する</a></li>
+          <li><a href="#header-2-61af84c722b7eef66435425cc5c30fa3" target="_blank">ファイルの保存</a></li>
+          <li><a href="#header-2-22420f0c591a6366f4aef879ebc7baaa" target="_blank">文字を入力しよう</a></li>
+          <li><a href="#header-2-bfc1fa931e285b8ce71cd7e1f866d355" target="_blank">文字のスタイルを変えよう</a></li>
+          <li><a href="#header-2-f6865cc3cfb5ccbface3547d3fb2be7e" target="_blank">共有しよう</a></li>
+          <li><a href="#header-2-9cbe0c17f2448e56ec2bca201c2925ab" target="_blank">Word や PDF 形式で出力しよう</a></li>
+        </ul>
+        <h2><a name="header-2-95ab1474eb20f9e4e08d00a6a4133258"></a> Google ドライブとの関係</h2>
+        <p>Google ドキュメントで作成された文章は基本的にすべて Google ドライブ上に保存されます。<br> 必要に応じてパソコンにダウンロードすることもできます。</p>
+        <h2><a name="header-2-6ff7b38b23388e97c013180362a41f45"></a> 新しい文書を作成する</h2>
+        <p>まずは <strong>Google ドライブ</strong>を開きます。<br> Google ドライブ上の好きなフォルダを開き、左上の <strong>新規</strong> ボタンから <strong>Google ドキュメント</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/create-doc-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>新しいタブで Google ドキュメント が起動します。</p>
+        <div class="image-with-caption">
+          <img src="image/create-doc-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>最初はタイトルが「無題のドキュメント」という名前になっていますが、これでは分かりづらいので名前を変更しましょう。<br> 「無題のドキュメント」と書かれた部分をクリックすると、タイトルを編集できます。<br> ここでは「<strong>ドキュメントの練習</strong>」としましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/create-doc-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>新機能の案内が表示されることもありますが、OK を押して閉じれば大丈夫です。<br> 画面が以下のようになればタイトルが変更できています。</p>
+        <div class="image-with-caption">
+          <img src="image/create-doc-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>ファイル名を変更すると、Google ドライブでも以下のような表示になります。</p>
+        <div class="image-with-caption">
+          <img src="image/create-doc-05.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <h2><a name="header-2-61af84c722b7eef66435425cc5c30fa3"></a> ファイルの保存</h2>
+        <p>Google ドキュメントでは、ファイルを変更すると自動で保存されます。</p>
+        <h2><a name="header-2-22420f0c591a6366f4aef879ebc7baaa"></a> 文字を入力しよう</h2>
+        <h2><a name="header-2-bfc1fa931e285b8ce71cd7e1f866d355"></a> 文字のスタイルを変えよう</h2>
+        <h2><a name="header-2-f6865cc3cfb5ccbface3547d3fb2be7e"></a> 共有しよう</h2>
+        <h2><a name="header-2-9cbe0c17f2448e56ec2bca201c2925ab"></a> Word や PDF 形式で出力しよう</h2>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

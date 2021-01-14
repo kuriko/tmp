@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>オンライン会議サービス Zoom を使ってみよう（Windows）</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>オンライン会議サービス Zoom を使ってみよう（Windows）</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-7537875878007a12874fa2b7f6c63895"></a> オンライン会議サービス Zoom を使ってみよう（Windows）</h1>
+        <p>オンライン会議ツール <strong>Zoom</strong>（ズーム）の使い方を学びます。Zoom はテレワークやオンライン授業によく使われているサービスです。</p>
+        <img src="image/09_G001-01-01.png">
+        <ul id="toc">
+          <li><a href="#header-2-a906a647dd72e7fe88f435b8ac746acc" target="_blank">今回の目標</a></li>
+          <li><a href="#header-2-5658c0c0a9a4994627cf8c0024969786" target="_blank">Zoom のアカウント作成</a></li>
+          <li><a href="#header-2-8699b96f656c7143ddd1a1815a064432" target="_blank">Zoom のインストール</a></li>
+          <li><a href="#header-2-4334359875e01b22e81b1e45f7a33297" target="_blank">Zoom 会議の練習</a></li>
+          <li><a href="#header-2-01414b3ff1bdaab510ec774bc298cc5b" target="_blank">Zoom 会議への参加</a></li>
+          <li><a href="#header-2-b674f35c1d4af37d9dbf3db2161a695b" target="_blank">Zoom 会議を作成する</a></li>
+        </ul>
+        <h2><a name="header-2-a906a647dd72e7fe88f435b8ac746acc"></a> 今回の目標</h2>
+        <ul>
+          <li>Zoom のアカウント作成とインストールを行う</li>
+          <li>Zoom の基本操作を知る</li>
+          <li>会議の練習をしてみる</li>
+        </ul>
+        <h2><a name="header-2-5658c0c0a9a4994627cf8c0024969786"></a> Zoom のアカウント作成</h2>
+        <p>//TODO</p>
+        <h2><a name="header-2-8699b96f656c7143ddd1a1815a064432"></a> Zoom のインストール</h2>
+        <p>//TODO</p>
+        <h2><a name="header-2-4334359875e01b22e81b1e45f7a33297"></a> Zoom 会議の練習</h2>
+        <p>まずは練習として、参加者が自分ひとりだけの会議を立ち上げて、練習してみましょう。</p>
+        <h3><a name="header-3-0022de6ef07bbe282ef31777d8ac394b"></a> パーソナルミーティング</h3>
+        <p>パーソナルミーティングとは、アカウントに 1 つ用意されている「あなた専用の会議室」のようなものです。英語で「個人の会議」を意味する言葉です。<br> まずはこれを使い、基本的な機能を確認してみましょう。</p>
+        <p>Google Chrome で Zoom のサイトにアクセスし、右上の <strong>ミーティングを開催する</strong> にマウスをポイントします。<br> 続いて <strong>ビデオはオン</strong> をクリックしましょう。</p>
+        <p>//TODO スクショ</p>
+        <p>画面が切り替わるので「？？？」をクリックします。//TODO メッセージ確認</p>
+        <p>//TODO スクショ</p>
+        <p>Zoom アプリが起動します。</p>
+        <p>//TODO スクショ</p>
+        <p><strong>コンピューターでオーディオに参加</strong> をクリックします。<br> これをクリックすることにより、音声がオンになります。なお、これをオンにしない場合、他の人の音声を聞くこともできません。<br> 繋いだあと、自分の音声をオフにできるので可能なのでご安心ください。</p>
+        <p>//TODO スクショ</p>
+        <p>マウスを動かすと、Zoom のウィンドウの下にいろいろなボタンが表示されます。<br> ここを操作することで、マイクやカメラのオン・オフの切り替えなどができます。</p>
+        <h3><a name="header-3-a184fcd038b0cd7a8ba27322c6ea8ddf"></a> カメラのオン・オフ</h3>
+        <p>カメラはプライバシーの観点から、最も気をつけるべきものです。マウスを動かしたときに出てくるボタンの表示を覚えておきましょう。</p>
+        <img src="image/zoom-camera-switch.png">
+        <p>実際にこのボタンをクリックしてみて、カメラがオン・オフになっているかを確かめてみてください。</p>
+        <div class="tip"><a name="camera-indicator"></a>
+          <span class="tip-title">コラム: カメラのランプ</span>
+          <p>ほとんどのパソコンや Web カメラで、カメラをオンにしている時はカメラ横のランプが光るようになっています。<br> 画面での表示だけでなく、こちらの方法でもカメラが動作しているかどうかを確認できます。</p>
+        </div>
+        <h3><a name="header-3-23d08459549f637233d0441fbbc1af3d"></a> マイクのオン・オフ</h3>
+        <p>マイクもカメラと同様に、オン・オフを切り替えできます。実際に切り替わるか試してみましょう。</p>
+        <img src="image/zoom-mic-switch.png">
+        <p>マイクがオフになった状態を<strong>ミュート</strong>といいます。</p>
+        <p>ミュートになっている場合、名前欄の横に赤いマイクと斜線のアイコンが表示されます。</p>
+        <div class="image-with-caption">
+          <img src="image/zoom-muted.png">
+          <span class="imagecaption screenshot">ミュートになっている時の表示</span>
+        </div>
+        <h3><a name="header-3-7e00e2d4b61cb9e7260ce6becd2052e7"></a> 参加者の一覧</h3>
+        <p>「参加者」をクリックすると、いまミーティングに参加している人の一覧が表示されます。<br> ここで表示される「ホスト」とは、会議の主催者のことです。</p>
+        <div class="image-with-caption">
+          <img src="image/zoom-participants.png">
+          <span class="imagecaption screenshot">参加者一覧の表示</span>
+        </div>
+        <h3><a name="header-3-afc5542f9c06d89836b1e5fbb97ba3c1"></a> チャット</h3>
+        <p>「チャット」を使うと、文字でコミュニケーションができます。また、URL など、文字でないと伝えられないものを会議中に共有する際にも便利です。</p>
+        <div class="image-with-caption">
+          <img src="image/zoom-chat.png">
+          <span class="imagecaption screenshot">チャットの表示</span>
+        </div>
+        <h3><a name="header-3-a800655ebdf7778f9abe1522cea3e4e6"></a> 名前の変更</h3>
+        <p>参加者一覧やチャット欄に表示される名前を変更できます。</p>
+        <p>Zoom 画面のどこでもよいので右クリックします。すると、<strong>名前の変更</strong> というメニューが表示されるのでこれをクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/zoom-change-name.png">
+          <span class="imagecaption screenshot">右クリックで現れる名前の変更メニュー</span>
+        </div>
+        <h3><a name="header-3-d58a4042a004b8eb35ac220eb4addcf6"></a> 画面の共有</h3>
+        <p>自分のパソコンの画面を他の人に見せることができます。オンラインでプレゼン・発表をする際などに利用できます。</p>
+        <p>//TODO</p>
+        <p><strong>注意</strong></p>
+        <p>画面共有を行う際は個人情報やプライバシーに関する情報などが誤って表示されないように気をつけましょう。<br> たとえば、LINE などのメッセージングアプリなどは終了しておくと安心です。</p>
+        <h3><a name="header-3-82e8862d7af305c2645b67018c83aa53"></a> 音声トラブルが起きた場合に備えよう</h3>
+        <p>喋っているのに相手に聞こえない、または相手の声が聞こえないというときは、誤ったマイク・スピーカーが選択されている可能性があります。<br> パソコンはモニタなどの周辺機器をマイクやスピーカーとして認識する場合があり、スピーカーやマイクを 1 つしか繋いでいない場合でも自動で別の機器が選択されてしまう場合があるのです。</p>
+        <p>その場合、マイクをオンオフするボタンの右にある <code>Λ</code> をクリックし、他のマイク・スピーカーを選択してみると解決することがあります。</p>
+        <div class="image-with-caption">
+          <img src="image/zoom-audio-settings.png">
+          <span class="imagecaption screenshot">マイク・スピーカーを変更するメニュー</span>
+        </div>
+        <h2><a name="header-2-01414b3ff1bdaab510ec774bc298cc5b"></a> Zoom 会議への参加</h2>
+        <p>他の人が作成した会議に参加する手順を学びましょう。</p>
+        <p>//TODO</p>
+        <h3><a name="header-3-ab8f76a616a0020090346a4eb93054ab"></a> URL を確認する</h3>
+        <p>//TODO</p>
+        <h3><a name="header-3-904199861c2f8c760cb48d5257b1cb0d"></a> パスワードの入力・待機室</h3>
+        <p>パスワードが設定されている場合、パスワードを入力しないと参加できません。</p>
+        <p>また、「待機室」とよばれる仕組みが設定されている場合もあります。</p>
+        <h3><a name="header-3-3e69e37a5e6b2c7f0e7c3fb18e187535"></a> 複数人が参加する会議での操作</h3>
+        <p>基本的にはパーソナルミーティングと同じなのですが、</p>
+        <h2><a name="header-2-b674f35c1d4af37d9dbf3db2161a695b"></a> Zoom 会議を作成する</h2>
+        <p>自分が会議を主催する場合の手順です。</p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

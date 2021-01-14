@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang>
+<html lang="">
 
 <head>
   <meta charset="UTF-8">
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title></title>
+  <title>アプリを起動してみよう</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
   <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
@@ -36,7 +36,7 @@
     };
 
   </script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script>
     window.onload = function() {
       Gifffer({
@@ -45,7 +45,7 @@
           'height': '60px',
           'border': '3px solid #FFFFFF',
           'border-radius': '30px',
-          'background': '#0075c2',
+          'background': '#009c79',
           'position': 'absolute',
           'top': '50%',
           'left': '50%',
@@ -72,124 +72,545 @@
     <div class="book-header" role="navigation">
       <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a></a>
+        <a>アプリを起動してみよう</a>
       </h1>
     </div>
     <div class="page-wrapper" tabindex="-1" role="main">
       <section class="main-content markdown-section">
-        <h1><a name="header-1-b409d7e8f1a4e9f68facc3ec2bc44788"></a> Windows &#x306E;&#x753B;&#x9762;&#x306B;&#x3064;&#x3044;&#x3066;&#x77E5;&#x308D;&#x3046;</h1>
-        <p>Windows &#x306E;&#x753B;&#x9762;&#x306B;&#x3064;&#x3044;&#x3066;&#x77E5;&#x308D;&#x3046;</p>
+        <h1><a name="header-1-d52ed98fdc6e703ca643a6740732f053"></a> アプリを起動してみよう</h1>
+        <p>今回は macOS でアプリを起動し、終了する手順を学びましょう。<br> macOS に標準で入っているアプリを使います。</p>
         <ul id="toc">
-          <li><a href="#header-3-042cd2a58d52b61374f71ea7d2c97801">&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;</a></li>
-          <li><a href="#header-3-efdfc67d8ff03ab5a0f49baf542307f7">&#x30BF;&#x30B9;&#x30AF;&#x30D0;&#x30FC;</a></li>
-          <li><a href="#header-3-0d14d2cb53b051c3428257da2b793659">&#x30B9;&#x30BF;&#x30FC;&#x30C8;&#x30E1;&#x30CB;&#x30E5;&#x30FC;</a></li>
-          <li><a href="#header-3-b116872cef71a770f57c649c039c6ad0">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;</a></li>
-          <li><a href="#header-3-6e3c5f7213828a305cf8907393b7f955">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x64CD;&#x4F5C;</a></li>
+          <li><a href="#header-2-a906a647dd72e7fe88f435b8ac746acc" target="_blank">今回の目標</a></li>
+          <li><a href="#header-2-73410f9b50498279b6643b9f5ebcd3ab" target="_blank">計算機（電卓）を起動する</a></li>
+          <li><a href="#header-2-3ede10c06d254ced1111bd513e300ad3" target="_blank">計算機を終了する</a></li>
+          <li><a href="#header-2-158277933486301e183e221c403d071e" target="_blank">株価アプリを起動する</a></li>
+          <li><a href="#header-2-431d1112225d3edafc02fbf1ac65d28f" target="_blank">株価アプリを起動させたまま、計算機を起動する</a></li>
+          <li><a href="#header-2-073c5237c2cd50f07a6aa3458148fda4" target="_blank">アプリを切り替える</a></li>
+          <li><a href="#header-2-3ec02ddc8de3e52878c33ec143f14dbc" target="_blank">株価アプリと計算機を終了する</a></li>
+          <li><a href="#header-2-c2cccc81a4f807b423e77517bf4feb12" target="_blank">強制終了</a></li>
+          <li><a href="#header-2-c7887a92414f854a9067849a51b9bb02" target="_blank">まとめ</a></li>
         </ul>
-        <h3><a name="header-3-042cd2a58d52b61374f71ea7d2c97801"></a> &#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;</h3>
-        <p>&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x3092;&#x8D77;&#x52D5;&#x3057;&#x305F;&#x76F4;&#x5F8C;&#x306B;&#x51FA;&#x3066;&#x304F;&#x308B;&#x753B;&#x9762;&#x3092; <strong>&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;</strong> &#x3068;&#x3044;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/desktop.png">
-          <span class="imagecaption screenshot">&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;</span>
+        <h2><a name="header-2-a906a647dd72e7fe88f435b8ac746acc"></a> 今回の目標</h2>
+        <ul>
+          <li>パソコンにおけるアプリの起動と終了手順を学ぶ</li>
+          <li>複数のアプリを同時に使う方法を知る</li>
+          <li>いざという時に備えて、アプリを強制終了する方法を学ぶ</li>
+        </ul>
+        <div class="back-styled red">
+          <h2><a name="header-2-73410f9b50498279b6643b9f5ebcd3ab"></a> 計算機（電卓）を起動する</h2>
+          <div class="underline red"> ここは<b>非常に重要</b>な内容です。きちんと操作を理解しましょう！ </div>
+          <p>今回は計算機アプリを起動してみましょう。起動方法は他のアプリでも一緒ですが、ここでは皆さんの mac パソコンに必ず入っている電卓を使います。</p>
+          <p>まず、画面下部の <strong>Dock</strong>（ドック）と呼ばれるエリアにある、 <strong>Launchpad</strong>（ローンチパッド）をクリックして開きます。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/launch-calc-01.png">
+                  <span class="imagecaption screenshot">Dock から Launchpadを起動</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/launch-calc-01-cata.png">
+                  <span class="imagecaption screenshot">Dock から Launchpadを起動</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Launchpad はインストールされているアプリの一覧を表示します。1 枚の画面に表示しきれない分は左右にスクロールできます。<br> 電卓機能を持つ <strong>計算機</strong> というアプリを探し、クリックしましょう。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/launch-calc-02.png">
+                  <span class="imagecaption screenshot">Launchpad</span>
+                </div>
+                <div class="image-with-caption">
+                  <img src="image/launch-calc-03.png">
+                  <span class="imagecaption screenshot">計算機アプリのアイコン</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/launch-calc-02-cata.png">
+                  <span class="imagecaption screenshot">Launchpad</span>
+                </div>
+                <div class="image-with-caption">
+                  <img src="image/launch-calc-03-cata.png">
+                  <span class="imagecaption screenshot">計算機アプリのアイコン</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>計算機アプリが起動しました。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/launch-calc-04.png">
+                  <span class="imagecaption screenshot">計算機アプリ</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/launch-calc-04-cata.png">
+                  <span class="imagecaption screenshot">計算機アプリ</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#xFF08;desktop&#xFF09;&#x306F;&#x300C;&#x673A;&#x306E;&#x4E0A;&#x300D;&#x3092;&#x610F;&#x5473;&#x3059;&#x308B;&#x5358;&#x8A9E;&#x3067;&#x3059;&#x3002;<br> &#x3053;&#x306E;&#x673A;&#x306E;&#x4E0A;&#x306B;&#x69D8;&#x3005;&#x306A;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x8868;&#x793A;&#x3057;&#x3066;&#x4F7F;&#x3046;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x3067;&#x3059;&#x3002;</p>
-        <p>//TODO &#x62BD;&#x8C61;&#x30A4;&#x30E9;&#x30B9;&#x30C8;: &#x673A;&#x306E;&#x4E0A;&#x306B;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x8868;&#x793A;&#x3057;&#x3066;&#x4F7F;&#x3046;&#x69D8;&#x5B50;</p>
-        <div class="tip"><a name="desktop-laptop"></a>
-          <span class="tip-title">&#x30B3;&#x30E9;&#x30E0;&#x3000;&#x30CE;&#x30FC;&#x30C8;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x306B;&#x3082;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#xFF1F;</span>
-          <p>&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x306F;&#x300C;&#x30CE;&#x30FC;&#x30C8;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x300D;&#x300C;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x300D;&#x300C;&#x30BF;&#x30D6;&#x30EC;&#x30C3;&#x30C8;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x300D;&#x306E;3&#x7A2E;&#x985E;&#x306B;&#x5206;&#x3051;&#x3089;&#x308C;&#x308B;&#x3068;&#x5B66;&#x3073;&#x307E;&#x3057;&#x305F;&#x3002;<br> &#x7A2E;&#x985E;&#x3068;&#x3057;&#x3066;&#x306E;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x306F;&#x3001;&#x5B9F;&#x969B;&#x306E;&#x673A;&#x306E;&#x4E0A;&#x306B;&#x7F6E;&#x3044;&#x3066;&#x4F7F;&#x3046;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x3067;&#x3059;&#x3002;&#x753B;&#x9762;&#x3068;&#x3057;&#x3066;&#x306E;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x306F;&#x300C;&#x673A;&#x306E;&#x4E0A;&#x3092;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x3057;&#x305F;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x4E0A;&#x306E;&#x6982;&#x5FF5;&#x300D;&#x3067;&#x3059;&#x3002;<br><br></p>
-          <p>&#x7D1B;&#x3089;&#x308F;&#x3057;&#x3044;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x30CE;&#x30FC;&#x30C8;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x306B;&#x3082;&#x753B;&#x9762;&#x3068;&#x3057;&#x3066;&#x306E;&#x300C;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x300D;&#x306F;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;<br> &#x4E21;&#x8005;&#x3092;&#x533A;&#x5225;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x300C;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#xFF08;&#x578B;&#xFF09;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x300D;&#x300C;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x753B;&#x9762;&#x300D;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+        <div class="back-styled red">
+          <h2><a name="header-2-3ede10c06d254ced1111bd513e300ad3"></a> 計算機を終了する</h2>
+          <div class="underline red"> ここは<b>非常に重要</b>な内容です。きちんと操作を理解しましょう！ </div>
+          <p>電卓アプリを終了するには、画面上部にある<strong>メニューバー</strong> の <strong>計算機</strong> をクリックし、<strong>計算機を終了</strong> をクリックします。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/quit-calc-01.png">
+                  <span class="imagecaption screenshot">計算機アプリの終了</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/quit-calc-01-cata.png">
+                  <span class="imagecaption screenshot">計算機アプリの終了</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>もし、メニューバーが <strong>計算機</strong> となっていない場合、他のアプリを操作する状態になっています。<br> そのときは Dock で「計算機」アプリのアイコンをクリックしましょう。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption data-gifffer">
+                  <img src="image/click.gif"><br>
+                  <span class="imagecaption animation">アイコンをクリックして状態を切り替えている様子</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption data-gifffer">
+                  <img src="image/click-cata.gif"><br>
+                  <span class="imagecaption animation">アイコンをクリックして状態を切り替えている様子</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tip"><a name="close-window-in-mac"></a>
+            <span class="tip-title">コラム:　Windows との違い</span>
+            <p>Windows を使ったことがある人は、ウィンドウを閉じる ＝ アプリの終了 と覚えていると思います。<br> しかし、macOS ではウィンドウを閉じるだけではアプリは終了しません。いわゆる「常駐」のような、待機中の状態に入ります。<br> Mac では一旦閉じてまたすぐに使い始める時は「ウィンドウを閉じる」、明確に終了する場合は「終了」というように使い分けるとよいでしょう。</p>
+          </div>
         </div>
-        <h3><a name="header-3-efdfc67d8ff03ab5a0f49baf542307f7"></a> &#x30BF;&#x30B9;&#x30AF;&#x30D0;&#x30FC;</h3>
-        <p>&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x306E;&#x4E00;&#x756A;&#x4E0B;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30D0;&#x30FC;&#x3092; <strong>&#x30BF;&#x30B9;&#x30AF;&#x30D0;&#x30FC;</strong> &#x3068;&#x547C;&#x3073;&#x307E;&#x3059;&#x3002;&#x3053;&#x3053;&#x3067;&#x306F;&#x3001;&#x304A;&#x6C17;&#x306B;&#x5165;&#x308A;&#x306E;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x3059;&#x3050;&#x8D77;&#x52D5;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x4E26;&#x3079;&#x305F;&#x308A;&#x3001;&#x73FE;&#x5728;&#x306E;&#x6642;&#x523B;&#x3084;&#x30D0;&#x30C3;&#x30C6;&#x30EA;&#x30FC;&#x306E;&#x72B6;&#x614B;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x305F;&#x308A;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/taskbar.png">
-          <span class="imagecaption screenshot">&#x30BF;&#x30B9;&#x30AF;&#x30D0;&#x30FC;</span>
+        <div class="back-styled red">
+          <h2><a name="header-2-158277933486301e183e221c403d071e"></a> 株価アプリを起動する</h2>
+          <div class="underline red"> ここは<b>非常に重要</b>な内容です。きちんと操作を理解しましょう！ </div>
+          <p>続いて、株価アプリを起動してみましょう。</p>
+          <p>画面下部の <strong>Dock</strong>（ドック）と呼ばれるエリアにある、 <strong>Launchpad</strong>（ローンチパッド）をクリックして開きます。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/launch-calc-01.png">
+                  <span class="imagecaption screenshot">Dock から Launchpadを起動</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/launch-calc-01-cata.png">
+                  <span class="imagecaption screenshot">Dock から Launchpadを起動</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><strong>株価</strong> をクリックします。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/launch-stock-price-01.png">
+                  <span class="imagecaption screenshot">株価アプリのアイコン</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/launch-stock-price-01-cata.png">
+                  <span class="imagecaption screenshot">株価アプリのアイコン</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>株価アプリが起動しました。株価は変動するため、画面の内容は以下のスクリーンショットと異なると思います。<br> なお、今回は株価アプリの内容自体を操作するわけではないので、内容を気にする必要はありません。株価アプリが起動すれば大丈夫です。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/launch-stock-price-02.png">
+                  <span class="imagecaption screenshot">株価アプリ</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/launch-stock-price-02-cata.png">
+                  <span class="imagecaption screenshot">株価アプリ</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3><a name="header-3-0d14d2cb53b051c3428257da2b793659"></a> &#x30B9;&#x30BF;&#x30FC;&#x30C8;&#x30E1;&#x30CB;&#x30E5;&#x30FC;</h3>
-        <p><strong>&#x30B9;&#x30BF;&#x30FC;&#x30C8;&#x30E1;&#x30CB;&#x30E5;&#x30FC;</strong> &#x306F;&#x3001;&#x30BF;&#x30B9;&#x30AF;&#x30D0;&#x30FC;&#x306E;&#x5DE6;&#x7AEF;&#x306E; Windows &#x306E;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x958B;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x3088;&#x304F;&#x4F7F;&#x3046;&#x30A2;&#x30D7;&#x30EA;&#x3084;&#x300C;&#x8A2D;&#x5B9A;&#x300D;&#x306E;&#x8D77;&#x52D5;&#x3001;PC &#x306E;&#x30B7;&#x30E3;&#x30C3;&#x30C8;&#x30C0;&#x30A6;&#x30F3;&#x306A;&#x3069;&#x3001;&#x5E45;&#x5E83;&#x3044;&#x7528;&#x9014;&#x3067;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/startmenu.png">
-          <span class="imagecaption screenshot">&#x30B9;&#x30BF;&#x30FC;&#x30C8;&#x30E1;&#x30CB;&#x30E5;&#x30FC;</span>
+        <div class="back-styled red">
+          <h2><a name="header-2-431d1112225d3edafc02fbf1ac65d28f"></a> 株価アプリを起動させたまま、計算機を起動する</h2>
+          <div class="underline red"> ここは<b>非常に重要</b>な内容です。きちんと操作を理解しましょう！ </div>
+          <p>パソコンでは、複数のアプリを同時に起動して並べて使うことができます。</p>
+          <p>先程と同じ手順で、Launchpad から<strong>計算機</strong>を起動してみましょう。<br> 株価アプリと計算機が並んだのではないでしょうか。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/calc-and-stock-01.png">
+                  <span class="imagecaption screenshot">株価アプリと計算機アプリが両方並んだ</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/calc-and-stock-01-cata.png">
+                  <span class="imagecaption screenshot">株価アプリと計算機アプリが両方並んだ</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3><a name="header-3-b116872cef71a770f57c649c039c6ad0"></a> &#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;</h3>
-        <p>&#x30B9;&#x30DE;&#x30FC;&#x30C8;&#x30D5;&#x30A9;&#x30F3;&#x3067;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x8D77;&#x52D5;&#x3059;&#x308B;&#x3068;&#x3001;&#x30A2;&#x30D7;&#x30EA;&#x306F;&#x753B;&#x9762;&#x3044;&#x3063;&#x3071;&#x3044;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br> &#x4E00;&#x65B9;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x3067;&#x306F;&#x3001;&#x591A;&#x304F;&#x306E;&#x30A2;&#x30D7;&#x30EA;&#x306F;&#x300C;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x300D;&#x3068;&#x3044;&#x3046;&#x5C0F;&#x7A93;&#x3068;&#x3057;&#x3066;&#x8D77;&#x52D5;&#x3057;&#x307E;&#x3059;&#xFF08;&#x307E;&#x305F;&#x3001;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x3067;&#x753B;&#x9762;&#x3044;&#x3063;&#x3071;&#x3044;&#x306B;&#x30A2;&#x30D7;&#x30EA;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x3082;&#x306E;&#x306F;&#x30D5;&#x30EB;&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30F3;&#x8868;&#x793A;&#x3068;&#x3044;&#x3044;&#x307E;&#x3059;&#xFF09;&#x3002;</p>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x5404;&#x90E8;&#x306E;&#x540D;&#x79F0;&#x3092;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/titlebar.png">
-          <span class="imagecaption screenshot">&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x30D0;&#x30FC;&#x30FB;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;</span>
+        <div class="back-styled red">
+          <h2><a name="header-2-073c5237c2cd50f07a6aa3458148fda4"></a> アプリを切り替える</h2>
+          <div class="underline red"> ここは<b>非常に重要</b>な内容です。きちんと操作を理解しましょう！ </div>
+          <p>起動したアプリのアイコンが画面の<strong>右下</strong>に並んでいると思います。 先程も出てきましたが、この部分を<strong>Dock</strong>（ドック）といいます。<br> Dock では、起動中のアプリのアイコンの下に黒い丸（●）が表示されています。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/switch-app-01.png">
+                  <span class="imagecaption screenshot">株価アプリと計算機アプリのアイコンが並んでいる</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/switch-app-01-cata.png">
+                  <span class="imagecaption screenshot">株価アプリと計算機アプリのアイコンが並んでいる</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Dock で株価と計算機のアイコンをそれぞれクリックしてみてください。<br> 操作する対象となるアプリが切り替わるのではないかと思います。</p>
+          <p>このように、Dockのアイコンをクリックすることで、アプリを切り替えられます。</p>
+          <p>また、両方のアプリが並んで表示されているときは、アプリのウィンドウをクリックすることで切り替えることもできます。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption data-gifffer">
+                  <img src="image/switch.gif"><br>
+                  <span class="imagecaption animation">ウィンドウのクリックで切り替えている様子</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption data-gifffer">
+                  <img src="image/switch-cata.gif"><br>
+                  <span class="imagecaption animation">ウィンドウのクリックで切り替えている様子</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <h4><a name="header-4-f92f410c90e9b8dbaa50847280b61170"></a> &#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x30D0;&#x30FC;</h4>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x540D;&#x306A;&#x3069;&#x3082;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br> &#x53F3;&#x7AEF;&#x306B;&#x306F;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x64CD;&#x4F5C;&#x3059;&#x308B;&#x30DC;&#x30BF;&#x30F3;&#x304C;&#x914D;&#x7F6E;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <p>&#x307E;&#x305F;&#x3001;&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x30D0;&#x30FC;&#x3092;&#x53F3;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x64CD;&#x4F5C;&#x3059;&#x308B;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-        <h4><a name="header-4-565944c637be7434b822095f5b749bae"></a> &#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;&#x30FB;&#x30EA;&#x30DC;&#x30F3;</h4>
-        <p>&#x30A2;&#x30D7;&#x30EA;&#x306E;&#x6A5F;&#x80FD;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3067;&#x304D;&#x308B;&#x90E8;&#x5206;&#x3067;&#x3059;&#x3001;&#x30A2;&#x30D7;&#x30EA;&#x306B;&#x3088;&#x3063;&#x3066;&#x306F;&#x7121;&#x3044;&#x3082;&#x306E;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;<br> &#x307E;&#x305F;&#x3001;&#x30A2;&#x30D7;&#x30EA;&#x306B;&#x3088;&#x3063;&#x3066;&#x306F;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30D0;&#x30FC;&#x306E;&#x4EE3;&#x308F;&#x308A;&#x306B;&#x300C;&#x30EA;&#x30DC;&#x30F3;&#x300D;&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x3001;&#x5927;&#x304D;&#x306A;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x304C;&#x914D;&#x7F6E;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3082;&#x306E;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/ribbonUI.png">
-          <span class="imagecaption screenshot">&#x30EA;&#x30DC;&#x30F3;</span>
+        <div class="back-styled red">
+          <h2><a name="header-2-3ec02ddc8de3e52878c33ec143f14dbc"></a> 株価アプリと計算機を終了する</h2>
+          <div class="underline red"> ここは<b>非常に重要</b>な内容です。きちんと操作を理解しましょう！ </div>
+          <p>計算機は先程と同じように、画面上部にある<strong>メニューバー</strong> の <strong>計算機</strong> をクリックし、<strong>計算機を終了</strong> をクリックしましょう。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/quit-calc-01.png">
+                  <span class="imagecaption screenshot">計算機アプリの終了</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/quit-calc-01-cata.png">
+                  <span class="imagecaption screenshot">計算機アプリの終了</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>株価アプリも同じ方法で終了できますが、今回は別の方法で終了してみましょう。<br> Dockにある株価アプリのアイコンを右クリックしてください。続いて、<strong>終了</strong> をクリックしましょう。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/quit-stock-price-from-dock-01.png">
+                  <span class="imagecaption screenshot">株価アプリを Dock から終了させる</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/quit-stock-price-from-dock-01-cata.png">
+                  <span class="imagecaption screenshot">株価アプリを Dock から終了させる</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>このように、Dock からもアプリを終了できます。</p>
         </div>
-        <h4><a name="header-4-290686020964323d8b401be2e4fc21df"></a> &#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;&#x30D0;&#x30FC;</h4>
-        <p>&#x30A2;&#x30D7;&#x30EA;&#x306E;&#x72B6;&#x614B;&#x306A;&#x3069;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;&#xFF08;status&#xFF09;&#x306F;&#x300C;&#x72B6;&#x614B;&#x300D;&#x3068;&#x3044;&#x3046;&#x610F;&#x5473;&#x3067;&#x3059;&#x3002;<br> &#x30A2;&#x30D7;&#x30EA;&#x306B;&#x3088;&#x3063;&#x3066;&#x306F;&#x7121;&#x3044;&#x3082;&#x306E;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-        <h3><a name="header-3-6e3c5f7213828a305cf8907393b7f955"></a> &#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x64CD;&#x4F5C;</h3>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306F;&#x4F7F;&#x3044;&#x3084;&#x3059;&#x3044;&#x3088;&#x3046;&#x306B;&#x8ABF;&#x6574;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x3069;&#x3046;&#x3044;&#x3063;&#x305F;&#x30A2;&#x30D7;&#x30EA;&#x3067;&#x3082;&#x69CB;&#x3044;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x3053;&#x3053;&#x3067;&#x306F;&#x30A8;&#x30AF;&#x30B9;&#x30D7;&#x30ED;&#x30FC;&#x30E9;&#x30FC;&#x3092;&#x8D77;&#x52D5;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/explorer.png">
-          <span class="imagecaption screenshot">&#x30A8;&#x30AF;&#x30B9;&#x30D7;&#x30ED;&#x30FC;&#x30E9;&#x30FC;</span>
+        <h3><a name="header-3-7a1a22191f7a111524f62d53172d5c7a"></a> アプリを起動する別の方法</h3>
+        <p>今回は Launchpad から起動しましたが、他の起動方法も知っておきましょう。</p>
+        <h3><a name="header-3-9c79b12c9bc5e4668e9f2698f933c27f"></a> Dock から起動する</h3>
+        <p>画面の下部にある<strong>Dock</strong>には、起動していないアプリも並んでいるはずです。<br> 実は、よく使うアプリをここに登録することもできます。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/launch-from-dock-01.png">
+                <span class="imagecaption screenshot">Dock</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/launch-from-dock-01-cata.png">
+                <span class="imagecaption screenshot">Dock</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <h4><a name="header-4-2cd3598e1ef70cf34ac313a9117d60f8"></a> &#x79FB;&#x52D5;</h4>
-        <p>&#x30BF;&#x30A4;&#x30C8;&#x30EB;&#x30D0;&#x30FC;&#x3092;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x79FB;&#x52D5;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/explorer1.gif">
-          <span class="imagecaption screenshot">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x79FB;&#x52D5;</span>
+        <h4><a name="header-4-8dced32d13d37d57a2a178554aa7cea9"></a> Dock にアプリを登録する</h4>
+        <p>アプリを起動した状態でアイコンを右クリックし、<strong>オプション</strong> をクリックします。続いて <strong>Dock に追加</strong> をクリックする（チェックを入れる）と自分でアプリを登録できます。<br> なお、起動しているアプリはアイコンの下に黒い丸が表示されます。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/launch-from-dock-02.png">
+                <span class="imagecaption screenshot">Dock に追加する</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/launch-from-dock-02-cata.png">
+                <span class="imagecaption screenshot">Dock に追加する</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <h4><a name="header-4-ca200465d0875d4fefbf362168faba29"></a> &#x30B5;&#x30A4;&#x30BA;&#x5909;&#x66F4;</h4>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x53F3;&#x7AEF;&#x307E;&#x305F;&#x306F;&#x5DE6;&#x7AEF;&#x306B;&#x30DE;&#x30A6;&#x30B9;&#x3092;&#x79FB;&#x52D5;&#x3055;&#x305B;&#x308B;&#x3068;&#x30DD;&#x30A4;&#x30F3;&#x30BF;&#x306E;&#x5F62;&#x304C;&#x5909;&#x308F;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x72B6;&#x614B;&#x3067;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&#x3059;&#x308B;&#x3068;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x3092;&#x5DE6;&#x53F3;&#x306B;&#x62E1;&#x5927;&#x30FB;&#x7E2E;&#x5C0F;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/explorer2.gif">
-          <span class="imagecaption screenshot">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x5DE6;&#x53F3;&#x65B9;&#x5411;&#x306E;&#x62E1;&#x5927;&#x30FB;&#x7E2E;&#x5C0F;</span>
+        <h4><a name="header-4-23b033cd922f217c8812b2b7f7693f5e"></a> Dock からアプリを解除する</h4>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <p>もし必要なくなったら、同様にアイコンを右クリックして <strong>オプション</strong> をクリックし、続いて <strong>Dock に追加</strong> をクリックする（チェックを外す）ことで解除できます。<br> この操作をしてもアプリ自体が消えるわけではないのでご安心ください。</p>
+              <div class="image-with-caption">
+                <img src="image/launch-from-dock-03.png">
+                <span class="imagecaption screenshot">Dock から消す</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <p>もし必要なくなったら、同様にアイコンを右クリックして <strong>オプション</strong> をクリックし、続いて <strong>Dock から削除</strong> をクリックすることで解除できます。<br> この操作をしてもアプリ自体が消えるわけではないのでご安心ください。</p>
+              <div class="image-with-caption">
+                <img src="image/launch-from-dock-03-cata.png">
+                <span class="imagecaption screenshot">Dock から消す</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x4E0A;&#x7AEF;&#x307E;&#x305F;&#x306F;&#x4E0B;&#x7AEF;&#x306B;&#x30DE;&#x30A6;&#x30B9;&#x3092;&#x79FB;&#x52D5;&#x3055;&#x305B;&#x308B;&#x3068;&#x30DD;&#x30A4;&#x30F3;&#x30BF;&#x306E;&#x5F62;&#x304C;&#x5909;&#x308F;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x72B6;&#x614B;&#x3067;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&#x3059;&#x308B;&#x3068;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x3092;&#x4E0A;&#x4E0B;&#x306B;&#x62E1;&#x5927;&#x30FB;&#x7E2E;&#x5C0F;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/explorer3.gif">
-          <span class="imagecaption screenshot">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x4E0A;&#x4E0B;&#x65B9;&#x5411;&#x306E;&#x62E1;&#x5927;&#x30FB;&#x7E2E;&#x5C0F;</span>
+        <div class="back-styled gray">
+          <h3><a name="header-3-d6c8a109d1f7f40fab289a3732449b84"></a> Spotlight 検索を使う</h3>
+          <div class="underline gray"> ここは<b>応用的な内容</b>です。余裕のある人は操作してみましょう。 </div>
+          <p>先程は Launchpad にあるアプリを探しましたが、アプリが増えてくると探すのが大変になります。<br> そういうときは検索機能を使うことができます。</p>
+          <p>画面右上にある<strong>虫眼鏡マーク</strong>をクリックすると、Spotlight（スポットライト）検索が表示されます。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/spotlight-01.png">
+                  <span class="imagecaption screenshot">Spotlight</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/spotlight-01-cata.png">
+                  <span class="imagecaption screenshot">Spotlight</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>起動した Spotlight 検索に「計算機」のようにアプリの名前を入力し、候補からダブルクリックすることでアプリを起動できます。<br> なお、キーボードの操作についてはこのあと学んでいくので、現時点でよくわからなくても心配ありません。</p>
+          <div class="tab">
+            <div class="tablinks">
+              <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+              <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+            </div>
+            <div class="tabcontents" data-active="win">
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/spotlight-02.png">
+                  <span class="imagecaption screenshot">Spotlight 検索</span>
+                </div>
+                <div class="image-with-caption">
+                  <img src="image/spotlight-03.png">
+                  <span class="imagecaption screenshot">Spotlight 検索での検索結果</span>
+                </div>
+              </div>
+              <div class="tabcontent">
+                <div class="image-with-caption">
+                  <img src="image/spotlight-02-cata.png">
+                  <span class="imagecaption screenshot">Spotlight 検索</span>
+                </div>
+                <div class="image-with-caption">
+                  <img src="image/spotlight-03-cata.png">
+                  <span class="imagecaption screenshot">Spotlight 検索での検索結果</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x56DB;&#x9685;&#x306B;&#x30DE;&#x30A6;&#x30B9;&#x3092;&#x79FB;&#x52D5;&#x3055;&#x305B;&#x308B;&#x3068;&#x30DD;&#x30A4;&#x30F3;&#x30BF;&#x306E;&#x5F62;&#x304C;&#x5909;&#x308F;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x72B6;&#x614B;&#x3067;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&#x3059;&#x308B;&#x3068;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x3092;&#x4E0A;&#x4E0B;&#x5DE6;&#x53F3;&#x306B;&#x62E1;&#x5927;&#x30FB;&#x7E2E;&#x5C0F;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/explorer4.gif">
-          <span class="imagecaption screenshot">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x4E0A;&#x4E0B;&#x5DE6;&#x53F3;&#x65B9;&#x5411;&#x306E;&#x62E1;&#x5927;&#x30FB;&#x7E2E;&#x5C0F;</span>
+        <h2><a name="header-2-c2cccc81a4f807b423e77517bf4feb12"></a> 強制終了</h2>
+        <p>ごくまれに、アプリの動作がおかしくなり、終了しようとしても操作を受け付けなくなる場合があります。<br> そういう時は macOS が備えている強制終了機能を使いましょう。</p>
+        <p>なお、強制終了を使うとアプリの保存していないデータが破棄されることがあるので、本当に必要なときだけ使うようにしましょう（ただし、強制終了によってアプリやパソコンが壊れるようなことはほぼ無いので、それほど不安になる必要はありません）。<br> 今回は「計算機」アプリを強制終了してみます。このアプリは特にファイルを保存することがないので、強制終了の練習に使って大丈夫です。</p>
+        <p>まず、Launchpad から <strong>計算機アプリ</strong> を起動します。</p>
+        <p>実際にはきちんと動いていますが、計算機アプリが動かなくなってしまった……と仮定します。<br> 画面左上にあるリンゴマークをクリックし、<strong>強制終了</strong>をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/termination-01.png">
+                <span class="imagecaption screenshot">アプリの強制終了メニュー</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/termination-01-cata.png">
+                <span class="imagecaption screenshot">アプリの強制終了メニュー</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <h4><a name="header-4-35cea71694d96595e0f03eca73970e10"></a> &#x6700;&#x5927;&#x5316;&#x30FB;&#x5143;&#x306B;&#x623B;&#x3059;</h4>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x53F3;&#x4E0A;&#x306B;&#x3042;&#x308B;&#x56DB;&#x89D2;&#x306E;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x753B;&#x9762;&#x3044;&#x3063;&#x3071;&#x3044;&#x306B;&#x5E83;&#x3052;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x3053;&#x308C;&#x3092; <strong>&#x6700;&#x5927;&#x5316;</strong> &#x3068;&#x3044;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/maximize1.png">
-          <span class="imagecaption screenshot">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x6700;&#x5927;&#x5316;&#x3059;&#x308B;&#x30DC;&#x30BF;&#x30F3;</span>
+        <p><strong>アプリケーションの強制終了</strong> というウィンドウが出てきたら、<strong>計算機</strong>をクリックします。 続いて、<strong>強制終了</strong>をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/termination-02.png">
+                <span class="imagecaption screenshot">計算機を強制終了する</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/termination-02-cata.png">
+                <span class="imagecaption screenshot">計算機を強制終了する</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>&#x6700;&#x5927;&#x5316;&#x3057;&#x305F;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x5143;&#x306B;&#x623B;&#x3059;&#x3068;&#x304D;&#x306F;&#x3001;&#x540C;&#x3058;&#x4F4D;&#x7F6E;&#x306B;&#x3042;&#x308B; <strong>&#x5143;&#x306B;&#x623B;&#x3059;</strong> &#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/maximize2.png">
-          <span class="imagecaption screenshot">&#x6700;&#x5927;&#x5316;&#x3057;&#x305F;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x5143;&#x306B;&#x623B;&#x3059;</span>
+        <p>「"計算機"を強制終了してもよろしいですか？」との表示が出るので、<strong>強制終了</strong>をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/termination-03.png">
+                <span class="imagecaption screenshot">確認画面</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/termination-03-cata.png">
+                <span class="imagecaption screenshot">確認画面</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x6700;&#x5927;&#x5316;&#x3057;&#x305F;&#x72B6;&#x614B;&#x3067;&#x3082;&#x3001;&#x30BF;&#x30B9;&#x30AF;&#x30D0;&#x30FC;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x5225;&#x306E;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x8868;&#x793A;&#x3055;&#x305B;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/zengamen.gif">
-          <span class="imagecaption screenshot">&#x6700;&#x5927;&#x5316;&#x3057;&#x305F;&#x72B6;&#x614B;&#x3067;&#x306E;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x5207;&#x308A;&#x66FF;&#x3048;</span>
-        </div>
-        <h4><a name="header-4-a7d84685ef63079d4f628b36e9446dc7"></a> &#x6700;&#x5C0F;&#x5316;</h4>
-        <p>&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x53F3;&#x4E0A;&#x306B;&#x3042;&#x308B;&#x56DB;&#x89D2;&#x306E;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x30BF;&#x30B9;&#x30AF;&#x30D0;&#x30FC;&#x306B;&#x53CE;&#x7D0D;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x3053;&#x308C;&#x3092; <strong>&#x6700;&#x5C0F;&#x5316;</strong> &#x3068;&#x3044;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/minimize1.png">
-          <span class="imagecaption screenshot">&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x6700;&#x5C0F;&#x5316;&#x3059;&#x308B;&#x30DC;&#x30BF;&#x30F3;</span>
-        </div>
-        <p>&#x6700;&#x5C0F;&#x5316;&#x3057;&#x305F;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x5143;&#x306B;&#x623B;&#x3059;&#x3068;&#x304D;&#x306F;&#x3001;&#x30BF;&#x30B9;&#x30AF;&#x30D0;&#x30FC;&#x3067;&#x30A2;&#x30D7;&#x30EA;&#x306E;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/minimize2.png">
-          <span class="imagecaption screenshot">&#x6700;&#x5C0F;&#x5316;&#x3057;&#x305F;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x5143;&#x306B;&#x623B;&#x3059;</span>
-        </div>
-        <h4><a name="header-4-b6873dfefb38a90c48a3d3c243ab04fa"></a> &#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x5207;&#x308A;&#x66FF;&#x3048;</h4>
-        <p>&#x8907;&#x6570;&#x306E;&#x30A2;&#x30D7;&#x30EA;&#x3092;&#x958B;&#x3044;&#x3066;&#x3044;&#x308B;&#x3068;&#x3001;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x5207;&#x308A;&#x66FF;&#x3048;&#x304C;&#x5927;&#x5909;&#x306B;&#x306A;&#x308B;&#x5834;&#x5408;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;<br> &#x3082;&#x3061;&#x308D;&#x3093;&#x30BF;&#x30B9;&#x30AF;&#x30D0;&#x30FC;&#x304B;&#x3089;&#x5207;&#x308A;&#x66FF;&#x3048;&#x3066;&#x3082;&#x3088;&#x3044;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;<kbd>Windows</kbd> &#x30AD;&#x30FC; &#x3068; <kbd>Tab</kbd> &#x30AD;&#x30FC;&#x3092;&#x540C;&#x6642;&#x306B;&#x62BC;&#x3059;&#x3068;&#x73FE;&#x308C;&#x308B;&#x300C;&#x30BF;&#x30B9;&#x30AF;&#x30D3;&#x30E5;&#x30FC;&#x300D;&#x753B;&#x9762;&#x3092;&#x6D3B;&#x7528;&#x3057;&#x3066;&#x307F;&#x308B;&#x306E;&#x3082;&#x4E00;&#x3064;&#x306E;&#x624B;&#x3067;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/taskview.png">
-          <span class="imagecaption screenshot">&#x300C;&#x30BF;&#x30B9;&#x30AF;&#x30D3;&#x30E5;&#x30FC;&#x300D;&#x753B;&#x9762;</span>
-        </div>
+        <p>これで強制終了できました。普段から使う機能ではありませんが、万が一に備えて手順を覚えておくとよいでしょう。</p>
+        <h2><a name="header-2-c7887a92414f854a9067849a51b9bb02"></a> まとめ</h2>
+        <ul>
+          <li>Launchpad（ローンチパッド）からアプリを起動できる。</li>
+          <li>画面の上にあるメニューバーからアプリの名前をクリックし、「終了」をクリックすると、アプリを終了できる。</li>
+          <li>アプリは同時に複数起動でき、並べて表示できる。</li>
+          <li>同時に起動しているアプリは、画面の下にある Dock（ドック） から切り替えできる。</li>
+          <li>アプリが動かなくなったときは、画面の上にあるリンゴマークのメニューから強制終了できる。</li>
+        </ul>
       </section>
     </div>
   </div>

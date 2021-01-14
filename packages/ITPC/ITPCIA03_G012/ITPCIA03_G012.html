@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>コピー・アンド・ペーストをしよう</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>コピー・アンド・ペーストをしよう</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-d2a04b46ec7c170613af6756c09757ec"></a> コピー・アンド・ペーストをしよう</h1>
+        <p>文字や画像などをコピーして、別の場所に貼り付けることを <strong>コピー・アンド・ペースト</strong> と呼びます。略して「コピペ」と言われます。<br> コピーは「複製」、ペーストは「貼り付け」という意味です。</p>
+        <ul id="toc">
+          <li><a href="#header-2-2b54f83145674789895d61f00b076ed6" target="_blank">文章のコピー・アンド・ペースト</a></li>
+          <li><a href="#header-2-5b0a28fae0547d4580c082451672d5b9" target="_blank">「すべて選択」と「カット」</a></li>
+          <li><a href="#header-2-02967796569192c95c785602ff198ab1" target="_blank">ショートカットキー</a></li>
+          <li><a href="#header-2-49342454efb13df4b64a8055242d6b50" target="_blank">様々なコピペ</a></li>
+          <li><a href="#header-2-1c2bde522882eb0e87e803b817679cc4" target="_blank">著作権には要注意</a></li>
+        </ul>
+        <h2><a name="header-2-2b54f83145674789895d61f00b076ed6"></a> 文章のコピー・アンド・ペースト</h2>
+        <p>テキストエディットを起動しましょう。<br> 「コピペの練習」と入力してください。</p>
+        <div class="image-with-caption">
+          <img src="image/initial-text.png"><br>
+          <span class="imagecaption screenshot">入力した状態</span>
+        </div>
+        <p>マウスやトラックパッドで「コピペ」の部分だけドラッグします。これで「コピペ」という文字が選択された状態になります。</p>
+        <div class="image-with-caption data-gifffer">
+          <img src="image/select-text.gif"><br>
+          <span class="imagecaption animation">文字を選択する様子</span>
+        </div>
+        <p>選択された部分を右クリックして <strong>コピー</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/select-copy.png"><br>
+          <span class="imagecaption screenshot">右クリックしてコピーを選択</span>
+        </div>
+        <p>これで <strong>コピー</strong> されました。続いて、別の場所に <strong>ペースト</strong> しましょう。<br> 「コピペの練習」という文の後に、「をします。」と入力しましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/append-text.png"><br>
+          <span class="imagecaption screenshot">テキストを追加した</span>
+        </div>
+        <p>「をします。」と入力し終えたら、メモ帳の画面内を <strong>右クリック</strong> して <strong>ペースト</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/select-paste.png"><br>
+          <span class="imagecaption screenshot">右クリックしてペーストを選択</span>
+        </div>
+        <p>すると、カーソルがある場所に貼り付けされます。</p>
+        <div class="image-with-caption">
+          <img src="image/pasted-window.png"><br>
+          <span class="imagecaption screenshot">ペーストできた</span>
+        </div>
+        <p>これでコピペの基本操作が出来ました。</p>
+        <p>なお、一度コピーをした後に再びコピーを行うと、前にコピーした内容は消えてしまいます。コピーした内容を保持している場所は <strong>クリップボード</strong> とも呼ばれます。</p>
+        <h2><a name="header-2-5b0a28fae0547d4580c082451672d5b9"></a> 「すべて選択」と「カット」</h2>
+        <p>応用編として「すべて選択」と「切り取り（カット）」もやってみましょう。</p>
+        <p>「コピペの練習をします。コピペ」となっているはずですが、この文を全部選択してみましょう。<br> 短い文章であればドラッグ操作でも可能ですが、画面幅を超えるような文章では難しくなってくるので、「すべて選択」を覚えておくととても楽になります。</p>
+        <p>メモ帳の画面を選択した状態で、メニューバー から <strong>編集</strong> にカーソルを合わせた後、 <strong>すべてを選択</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/select-all.png"><br>
+          <span class="imagecaption screenshot">メニューバーから編集 &gt; 全てを選択をクリック</span>
+        </div>
+        <p>メモ帳画面内の文字がすべて選択されました。<br> この状態で再び <strong>右クリック</strong> し、 <strong>カット</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/select-cut.png"><br>
+          <span class="imagecaption screenshot">右クリックしてカットを選択</span>
+        </div>
+        <p>すると、文が消えるはずです。<br> ここで「切り取りのテスト。」と入力しましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/select-cut.png"><br>
+          <span class="imagecaption screenshot">入力した</span>
+        </div>
+        <p>入力したら、 <strong>右クリック</strong> して <strong>ペースト</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/select-paste2.png"><br>
+          <span class="imagecaption screenshot">右クリックしてペーストを選択</span>
+        </div>
+        <p>先ほど切り取りした文が貼り付けられたと思います。</p>
+        <div class="image-with-caption">
+          <img src="image/finished-window.png"><br>
+          <span class="imagecaption screenshot">ペーストできた</span>
+        </div>
+        <p>「コピー」はもともとあった文を削除せずに「ペースト」できるようにします。<br> 一方、「切り取り」はもともとあった文を削除して「ペースト」できるようにします。<br> 状況によって使い分けましょう。</p>
+        <h2><a name="header-2-02967796569192c95c785602ff198ab1"></a> ショートカットキー</h2>
+        <p>コピー・アンド・ペーストでは、ショートカットキーを使えます。</p>
+        <p>ショートカットキーとは、マウス操作と同じ機能をキーボードの操作で行うものです。<br> 必ず覚える必要はありませんが、活用できると便利です。</p>
+        <h3><a name="header-3-9e646d1a8aa7402293f9e35b619dbf93"></a> コピー</h3>
+        <p>コピーをするときは <kbd>command</kbd> キーを押しつつ <kbd>C</kbd> キーを追加で押します。<br> （以後、このような同時押しを <kbd>command</kbd> + <kbd>C</kbd> のように表記します）</p>
+        <p>実際にやってみましょう。</p>
+        <p>先ほどと同様に、メモ帳で文を選択します。</p>
+        <div class="image-with-caption">
+          <img src="image/select-text2.png"><br>
+          <span class="imagecaption screenshot">文を選択する</span>
+        </div>
+        <p>この状態で右クリックをせず、<kbd>command</kbd> + <kbd>C</kbd> を押します。</p>
+        <p>//TODO 説明イラスト</p>
+        <h3><a name="header-3-5ca5082d60fc738037cc6efdeed11819"></a> 貼り付け（ペースト）</h3>
+        <p>貼り付けのショートカットキーは <kbd>command</kbd> + <kbd>V</kbd> です。</p>
+        <p>これもコピーと同様に、実際に試してみましょう。</p>
+        <h3><a name="header-3-ab0e66f073d4d8aff7c49ff0bf2437a6"></a> すべて選択</h3>
+        <p><kbd>command</kbd> + <kbd>A</kbd></p>
+        <h3><a name="header-3-b92202b00ce9e8c8bd5de2638deb2f2c"></a> 切り取り</h3>
+        <p><kbd>command</kbd> + <kbd>X</kbd></p>
+        <h2><a name="header-2-49342454efb13df4b64a8055242d6b50"></a> 様々なコピペ</h2>
+        <p>今回はメモ帳で文字のコピー・アンド・ペーストを使いましたが、様々なアプリでこの機能は搭載されています。<br> 他のアプリにデータをコピー・アンド・ペーストできるものもあるので、いろいろ試してみるとよいでしょう。</p>
+        <div class="image-with-caption data-gifffer">
+          <img src="image/premiere-copy-paste.gif"><br>
+          <span class="imagecaption animation">動画編集アプリでコピー・アンド・ペースト操作をしている様子</span>
+        </div>
+        <h2><a name="header-2-1c2bde522882eb0e87e803b817679cc4"></a> 著作権には要注意</h2>
+        <p>他の人によって作られた文章や画像、ファイルなどには <strong>著作権</strong> があります。これを侵害した場合、著作者から訴えられ、罪に問われてしまうことがあります。<br> また、学校のレポートなどで他の人の文章をコピペした場合、基本的には <strong>不正行為</strong> としてみなされます。</p>
+        <p>パソコンの機能でコピー・アンド・ペーストできるからといって、文章や画像などを自由に使って良いわけではないことに気をつけましょう。</p>
+        <p>参考：著作権についての詳細は <strong><a href="http://kids.cric.or.jp/" target="_blank" rel="noopener noreferrer">みんなの著作権教室</a></strong> といったサイトをご覧ください。</p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

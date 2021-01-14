@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>ファイル・フォルダ操作に慣れよう（基本編）</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>ファイル・フォルダ操作に慣れよう（基本編）</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-2fdc0eea1f7dc4a7b0fc90dda0ed60f7"></a> ファイル・フォルダ操作に慣れよう（基本編）</h1>
+        <p>ファイルやフォルダの操作に慣れることが「パソコンに強くなる」第一歩だと言っても過言ではないでしょう。</p>
+        <img src="image/03_G006-01-01.png">
+        <ul id="toc">
+          <li><a href="#header-2-9cf9c56d76bd2b9241b13d80b7d12646" target="_blank">ファイルとは？</a></li>
+          <li><a href="#header-2-afde2bdbd6f2a0ef8988cf4f95892cfc" target="_blank">フォルダとは？</a></li>
+          <li><a href="#header-2-da0f47c311c6e8cbfa1d0ecefc6a8470" target="_blank">ファイルやフォルダを削除する</a></li>
+          <li><a href="#header-2-ff6e913d61d497a1648b9d4313ccd72b" target="_blank">ドライブ</a></li>
+        </ul>
+        <h2><a name="header-2-9cf9c56d76bd2b9241b13d80b7d12646"></a> ファイルとは？</h2>
+        <p>アプリで作成・保存した書類や画像、動画などのデータはすべて <strong>ファイル</strong> という、ひとまとまりのデータになって保存されます。</p>
+        <img src="image/03_G006-02-01.png">
+        <p>また、アプリ自体も複数のファイルで構成されています。</p>
+        <img src="image/03_G006-03-01.png">
+        <h3><a name="header-3-9e244081fdf507476f7ad798b63a8ae0"></a> ファイルを作成してみよう</h3>
+        <p>実際にファイルを作成してみましょう。<br> ここではちょっとした文章をファイルとして記録してみます。</p>
+        <p>スタートメニューから「メモ帳」を開いてください。</p>
+        <div class="image-with-caption">
+          <img src="image/memo01.png">
+          <span class="imagecaption screenshot">「メモ帳」を開く</span>
+        </div>
+        <p>メモ帳に好きな文を書いてみましょう。なお、パソコンで文章を書くことを「入力」といいます。<br> 特に文が思いつかない場合、「ファイル操作の練習をします」などと入力してみてください。</p>
+        <div class="image-with-caption">
+          <img src="image/memo02.png">
+          <span class="imagecaption screenshot">「メモ帳」に文章を書く</span>
+        </div>
+        <p><strong>ファイル</strong> メニューをクリックし、<strong>名前を付けて保存</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/memo03.png">
+          <span class="imagecaption screenshot">「名前を付けて保存」を選択する</span>
+        </div>
+        <p>すると、いま「メモ帳」で作成したデータの保存先を選ぶ画面が表示されます。<br> 保存先が表示されない場合は「フォルダーの参照」をクリックしてください。</p>
+        <div class="image-with-caption">
+          <img src="image/memo04.png">
+          <span class="imagecaption screenshot">データの保存先を選ぶ</span>
+        </div>
+        <p>左側の欄で <strong>ドキュメント</strong> をクリックしてください。<br> ドキュメントとは「書類」という意味です。</p>
+        <div class="image-with-caption">
+          <img src="image/memo05.png">
+          <span class="imagecaption screenshot">データの保存先として「ドキュメント」を選択</span>
+        </div>
+        <p>保存先が <strong>ドキュメント</strong> に切り替わったら、<strong>ファイル名</strong> の欄に「ファイルの練習」と入力して <strong>保存</strong> ボタンをクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/memo06.png">
+          <span class="imagecaption screenshot">ファイル名を「ファイルの練習」とする</span>
+        </div>
+        <p>保存ウィンドウが閉じられ、メモ帳アプリのタイトルバーが「ファイルの練習」となりました。</p>
+        <div class="image-with-caption">
+          <img src="image/memo07.png">
+          <span class="imagecaption screenshot">タイトルバーが「ファイルの練習」になった</span>
+        </div>
+        <p>では、もう少しこのファイルの内容を変更してみましょう。<br> なにか好きな文章を書き加えてください。思いつかない場合、「保存をしてみました。」などと入力してみてください。</p>
+        <div class="image-with-caption">
+          <img src="image/memo08.png">
+          <span class="imagecaption screenshot">ファイルの内容を変更する</span>
+        </div>
+        <p>変更した内容を保存しましょう。 <strong>ファイル</strong> から <strong>上書き保存</strong> をクリックしてください。</p>
+        <div class="image-with-caption">
+          <img src="image/memo09.png">
+          <span class="imagecaption screenshot">「上書き保存」を選択する</span>
+        </div>
+        <p>すると、先程保存したファイルに編集した内容が書き加えられます。</p>
+        <div class="tip"><a name="ID"></a>
+          <span class="tip-title">Tips　「上書き保存」と「名前を付けて保存」の違い</span>
+          <p>「上書き保存」では、今開いているファイルに書き込んだ内容を加えて保存します。したがって、新しくファイルは作成されません。<br> 「名前を付けて保存」では、書き込んだ内容を別の新しいファイルとして保存します。したがって、新しくファイルが作成されます。</p>
+        </div>
+        <p>上書き保存をしたら、メモ帳を終了しましょう。<br> メモ帳ウィンドウ右上の <strong>閉じる</strong> ボタンをクリックしてください。</p>
+        <p>なお、保存せずにアプリを閉じたり、パソコンの電源を切るとデータが消えてしまいます。<br> きちんと保存してから閉じるようにしましょう。</p>
+        <h3><a name="header-3-cf2be5859e12f6df6d4f7c63d73f2ef3"></a> ファイルを開こう</h3>
+        <p>保存したファイルは開くことができます。<br> これにより、一度作業を終了したファイルを後日編集できます。また、他の人から送られてきたデータを開くこともできます。</p>
+        <h4><a name="header-4-bedae5a1b7b6d92fcbb483c50c76684f"></a> メモ帳から開く</h4>
+        <p>メモ帳を起動しましょう。<br>
+          <strong>ファイル</strong>から<strong>開く</strong>をクリックしましょう。
+        </p>
+        <div class="image-with-caption">
+          <img src="image/memo10.png">
+          <span class="imagecaption screenshot">「開く」を選択する</span>
+        </div>
+        <p><strong>ドキュメント</strong>をクリックしてください。<br> 先ほど保存した「ファイルの練習」をクリックし、<strong>開く</strong>をクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/memo11.png">
+          <span class="imagecaption screenshot">「ファイルの練習」を選択</span>
+        </div>
+        <p>すると、先ほど作成した文章がメモ帳で開かれます。</p>
+        <div class="image-with-caption">
+          <img src="image/memo12.png">
+          <span class="imagecaption screenshot">「ファイルの練習」が開いた</span>
+        </div>
+        <p>確認できたらメモ帳を閉じましょう。</p>
+        <h4><a name="header-4-788cdaf80716b0abaa7e19f8e9a4fa0a"></a> 保存された場所から開く</h4>
+        <p>ファイルを保存された場所から開くこともできます。</p>
+        <p>先ほどのファイルは「ドキュメント」という場所に保存したはずです。<br> では、「ドキュメント」という保存場所を開きましょう。「エクスプローラー」というアプリを開きます。</p>
+        <p>タスクバーにある以下のアイコンを探してクリックしてください。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer01.png">
+          <span class="imagecaption screenshot">「エクスプローラー」のアイコンをクリック</span>
+        </div>
+        <p>「よく使用するフォルダ」などが表示されたアプリが立ち上がります。「エクスプローラー」はファイルを管理するためのアプリです。<br>
+          <strong>ドキュメント</strong>をダブルクリックしましょう。
+        </p>
+        <div class="image-with-caption">
+          <img src="image/explorer02.png">
+          <span class="imagecaption screenshot">「ドキュメント」を開く</span>
+        </div>
+        <p>先ほど保存した「ファイルの練習」というファイルがあるはずです。これをダブルクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer03.png">
+          <span class="imagecaption screenshot">「ファイルの練習」をダブルクリック</span>
+        </div>
+        <p>無事にメモ帳で開けたはずです。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer04.png">
+          <span class="imagecaption screenshot">「ファイルの練習」が開いた</span>
+        </div>
+        <h2><a name="header-2-afde2bdbd6f2a0ef8988cf4f95892cfc"></a> フォルダとは？</h2>
+        <img src="image/03_G006-04-01.png">
+        <p>ファイルが増えてくると管理が大変になるので、種類や目的などによって分類することをおすすめします。<br> たとえば、学生の方なら数学や英語といった科目別のフォルダを作ると管理しやすくなるでしょう。</p>
+        <p>//TODO 学生を想定した実際のフォルダ構成例を示してみる</p>
+        <p>実は、ここまでで使用してきた「ドキュメント」もフォルダの一種です。<br> Windows には最初から以下のようなフォルダが作られています。</p>
+        <ul>
+          <li>ドキュメント（書類用）</li>
+          <li>ダウンロード（ネットからダウンロードしたファイル用）</li>
+          <li>ビデオ</li>
+          <li>ピクチャ（画像用）</li>
+          <li>ミュージック</li>
+        </ul>
+        <h3><a name="header-3-4fe13e3071f01662bd032d3c32599e4e"></a> フォルダを作成してみよう</h3>
+        <p>では、フォルダを作成しましょう。</p>
+        <p>ここでは、<strong>ドキュメント</strong>の中に新しく自分でフォルダを作ります。<br> エクスプローラーからドキュメントを開きましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer05.png">
+          <span class="imagecaption screenshot">「ドキュメント」を開く</span>
+        </div>
+        <p>ドキュメントで何もない部分を<strong>右クリック</strong>し、<strong>新規作成</strong>の<strong>フォルダー</strong>をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer06.png">
+          <span class="imagecaption screenshot">「新規作成」&gt;「フォルダー」</span>
+        </div>
+        <p><strong>新しいフォルダ</strong>という名前でフォルダが作成されます。ここで「勉強」と入力し、<kbd>Enter</kbd>キーを押しましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer07.png">
+          <span class="imagecaption screenshot">「勉強」と入力</span>
+        </div>
+        <p>もし入力を終える前に別のところをクリックすると、フォルダ名が「新しいフォルダー」のまま確定されてしまいます。<br> そのときは「新しいフォルダー」を<strong>右クリック</strong>して、<strong>名前の変更</strong>をクリックすることで、再びフォルダー名を入力する画面にできます。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer08.png">
+          <span class="imagecaption screenshot">フォルダ名は後から変更できる</span>
+        </div>
+        <h3><a name="header-3-ddcac760d1ebbfd32b0caed50a2b0a40"></a> フォルダの中にフォルダを作成する</h3>
+        <p>//TODO 説明イラスト: フォルダが入れ子になっており、その中にファイルが入っている様子</p>
+        <p>フォルダの中にフォルダを作り、更にフォルダを整理することもできます。</p>
+        <p>先ほどの「勉強」フォルダを開きましょう。「勉強」フォルダをダブルクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer09.gif">
+          <span class="imagecaption screenshot">ダブルクリックで「勉強」フォルダを開く</span>
+        </div>
+        <p>「ドキュメント」の中に「勉強」フォルダを作ったときと同じように、何もない部分を<strong>右クリック</strong>し、<strong>新規作成</strong>の<strong>フォルダ</strong>をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer10.png">
+          <span class="imagecaption screenshot">「新規作成」&gt;「フォルダー」</span>
+        </div>
+        <p><strong>新しいフォルダ</strong>という名前でフォルダが作成されます。ここで「パソコン」と入力し、<kbd>Enter</kbd>キーを押しましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer11.png">
+          <span class="imagecaption screenshot">「パソコン」と入力</span>
+        </div>
+        <p>新しく作成した「パソコン」フォルダをダブルクリックし、「パソコン」フォルダを開きます。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer12.png">
+          <span class="imagecaption screenshot">「パソコン」と入力</span>
+        </div>
+        <h3><a name="header-3-de69c85d533856d635d42fd185754515"></a> 別のフォルダを開く</h3>
+        <p>ここまで手順通りに進めてきた場合、「ドキュメント」の中にある「勉強」の中にある「パソコン」フォルダを開いているはずです。<br> ちょっとややこしくなってきましたね。</p>
+        <p>フォルダの中で迷子にならないために、エクスプローラーの機能を使ってどこを開いているのか確認しましょう。<br> エクスプローラーの上部に <strong>PC &gt; ドキュメント &gt; 勉強 &gt; パソコン</strong> という表示がありますが、これが現在表示しているフォルダです。この表示部分を<strong>アドレスバー</strong>といいます。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer13.png">
+          <span class="imagecaption screenshot">アドレスバー</span>
+        </div>
+        <p>PC &gt; ドキュメント は「PC の中に ドキュメント というフォルダがある」という意味です。同様に ドキュメント &gt; 勉強 は「ドキュメントの中に 勉強 というフォルダがある」という意味です。</p>
+        <p>ここに表示されているフォルダ名クリックすることで、上の階層にあるフォルダに移動できます。<br> では <strong>勉強</strong>をクリックしてみましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer14.png">
+          <span class="imagecaption screenshot">「勉強」フォルダの中身が表示されている</span>
+        </div>
+        <p>「パソコン」フォルダを抜けて 「<strong>勉強</strong>」フォルダが表示されます。続いて、<strong>ドキュメント</strong> をクリックしてみましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer15.png">
+          <span class="imagecaption screenshot">「ドキュメント」フォルダの中身が表示されている</span>
+        </div>
+        <p>「<strong>ドキュメント</strong>」フォルダが表示されたはずです。</p>
+        <h3><a name="header-3-0027a0364e29c0e069769e3e2a5fa146"></a> ファイルをフォルダに入れる</h3>
+        <p>先ほど作ったフォルダを活用していきましょう。</p>
+        <h4><a name="header-4-adc387496a234bd4ef70c43c7845f006"></a> すでにあるファイルを移動する</h4>
+        <p>ドキュメントフォルダにある「ファイルの練習」を、「パソコン」フォルダに移動します。</p>
+        <p>「ファイルの練習」を<strong>右クリック</strong>して <strong>切り取り</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer16.png">
+          <span class="imagecaption screenshot">「切り取り」を選択</span>
+        </div>
+        <p>「勉強」フォルダをダブルクリックして開きます。続いて、「パソコン」フォルダをダブルクリックして開きます。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer17.png">
+          <span class="imagecaption screenshot">「パソコン」フォルダが表示された</span>
+        </div>
+        <p>「パソコン」フォルダを開いたら、何もない部分で<strong>右クリック</strong>して <strong>貼り付け</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer18.png">
+          <span class="imagecaption screenshot">「貼り付け」を選択</span>
+        </div>
+        <p>これでファイルが移動できました。</p>
+        <p>なお、ファイルだけではなく、フォルダも<strong>切り取り</strong>を使うことで移動できます。フォルダを移動する場合は中に入っているファイルも一緒に移動します。</p>
+        <h4><a name="header-4-41fc65c1997728a4ea98b33ad65dcd8e"></a> 保存する段階でフォルダを指定する</h4>
+        <p>ファイルを保存する段階でフォルダを指定することもできます。</p>
+        <p>メモ帳を起動し、適当な文章を入力しましょう。思いつかない場合は「保存の練習」などと入力してください。</p>
+        <div class="image-with-caption">
+          <img src="image/memo13.png">
+          <span class="imagecaption screenshot">メモ帳を開き、適当な文章を入力</span>
+        </div>
+        <p><strong>ファイル</strong> から <strong>名前を付けて保存</strong> をクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/memo14.png">
+          <span class="imagecaption screenshot">「名前を付けて保存」を選択</span>
+        </div>
+        <p>左側の <strong>ドキュメント</strong> をクリックし、<strong>勉強</strong> フォルダをダブルクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/memo15.png">
+          <span class="imagecaption screenshot">「勉強」フォルダを開く</span>
+        </div>
+        <p><strong>パソコン</strong> フォルダをダブルクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/memo16.png">
+          <span class="imagecaption screenshot">「パソコン」フォルダを開く</span>
+        </div>
+        <p>ファイル名の欄に「保存の練習」と入力し、<strong>保存</strong>をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/memo17.png">
+          <span class="imagecaption screenshot">ファイルを保存する</span>
+        </div>
+        <p>これで「パソコン」フォルダにファイルが保存されました。<br> メモ帳は閉じて構いません。</p>
+        <h2><a name="header-2-da0f47c311c6e8cbfa1d0ecefc6a8470"></a> ファイルやフォルダを削除する</h2>
+        <p>不要になったファイルは削除できます。</p>
+        <p>エクスプローラーで「パソコン」フォルダを表示させましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer19.png">
+          <span class="imagecaption screenshot">「パソコン」フォルダを表示</span>
+        </div>
+        <p>先ほど作成した「保存の練習」ファイルを削除してみましょう。<br> 「保存の練習」ファイルを<strong>右クリック</strong>し、<strong>削除</strong>をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/explorer20.png">
+          <span class="imagecaption screenshot">「削除」を選択</span>
+        </div>
+        <p>削除され、フォルダから「保存の練習」ファイルが消えました。<br> ただし、この状態は完全に削除されたわけではなく、「<strong>ごみ箱</strong>」という特殊なフォルダに移動された状態です。</p>
+        <p>デスクトップに戻り、<strong>ごみ箱</strong>をダブルクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/gomi01.png">
+          <span class="imagecaption screenshot">デスクトップから「ごみ箱」をクリック</span>
+        </div>
+        <p>ごみ箱が表示されたら、画面上部にある <strong>ごみ箱ツール</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/gomi02.png">
+          <span class="imagecaption screenshot">「ごみ箱ツール」をクリック</span>
+        </div>
+        <p>ここで <strong>ごみ箱を空にする</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/gomi03.png">
+          <span class="imagecaption screenshot">「ごみ箱を空にする」をクリック</span>
+        </div>
+        <p>完全に削除してよいか尋ねる画面が表示されたら、「はい」をクリックします。これで、ごみ箱に入っているファイルが完全に消去されます。</p>
+        <div class="image-with-caption">
+          <img src="image/gomi04.png">
+          <span class="imagecaption screenshot">ごみ箱が空になった</span>
+        </div>
+        <div class="tip"><a name="about-recycle-bin"></a>
+          <span class="tip-title">コラム: ごみ箱の性質</span>
+          <p>ごみ箱に移動しただけの状態では、ファイルが削除されたと言えません。簡単に復元（元の場所に戻すこと）ができてしまいます。<br> ごみ箱に入れるだけではなく、完全に削除することを忘れないようにしましょう。</p>
+        </div>
+        <h2><a name="header-2-ff6e913d61d497a1648b9d4313ccd72b"></a> ドライブ</h2>
+        <p>ファイルやフォルダは <strong>ストレージ</strong>（ハードディスク や SSD） に保存されています。<br> Windows 上でストレージは <strong>ドライブ</strong> として扱われます。</p>
+        <p>//TODO 説明イラスト</p>
+        <p><strong>エクスプローラー</strong>を開き、画面の左側にある「PC」をクリックしましょう。</p>
+        <div class="image-with-caption">
+          <img src="image/drive01.png">
+          <span class="imagecaption screenshot">ドライブで「PC」をクリック</span>
+        </div>
+        <p>//TODO ここが一括置換で「パソコン」になっていたら変なので要チェック</p>
+        <p><strong>デバイスとドライブ</strong> という欄に <strong>Windows(C:)</strong> というアイコンが確認できます。これが <strong>ドライブ</strong> です。<br> 原則として 1 つのストレージが 1 つのドライブとして扱われ、ファイルやフォルダは、このドライブの中に保存されています。</p>
+        <div class="image-with-caption">
+          <img src="image/drive02.png">
+          <span class="imagecaption screenshot">デバイスとドライブ</span>
+        </div>
+        <p><strong>C:</strong> というのはドライブに割り当てられた文字（ドライブレター）です。標準的な Windows の場合は <strong>C</strong> ドライブにアプリやファイルが保存されています。<br> パソコンによっては D: や E: といったドライブが存在していることもあります。</p>
+        <p>Windows(C:) をダブルクリックすると、英語で書かれたフォルダが並んでいることがわかります。実は「ドキュメント」もこの中に保存されています。<br> ただし、慣れないうちに C ドライブを直接操作するのはトラブルの元になるので、慣れるまでは「ドキュメント」や「ピクチャ」などといったフォルダだけを操作することを強くおすすめします。</p>
+        <p>//TODO 説明イラスト: ツリー構造（Cドライブの中にドキュメントやピクチャ、システムファイルなどが入っている）</p>
+        <div class="tip"><a name="about-c-drive"></a>
+          <span class="tip-title">コラム: なぜ C ドライブなの？</span>
+          <p>Windows パソコンのドライブレターは「C ドライブ」から始まります。2つ以上のドライブがある場合は D, E, F...となり、 Aドライブ や B ドライブは使われません。<br> これは現在の Windows パソコンの先祖のような古いパソコンが <strong>フロッピーディスクドライブ</strong> という、当時使われていた記録装置を A ドライブ と B ドライブ として認識していたためです。これらと重複しないように C ドライブから始まるようになり、フロッピーディスクドライブが使われなくなった今でも C ドライブから始まるようになっています。</p>
+        </div>
+        <h3><a name="header-3-02d6a781cba5e9ddfc461cd79049bd77"></a> ドライブの使い分け</h3>
+        <p>パソコンによっては「Windows のシステム自体を C ドライブに、データ保存を D ドライブに」のように、複数のストレージを搭載していることがあります。ドライブが 2 つ以上あるパソコンをお使いの場合は D などのドライブを使い分けるのも良いでしょう。</p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

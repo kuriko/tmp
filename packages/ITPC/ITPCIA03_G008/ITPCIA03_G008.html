@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang>
+<html lang="">
 
 <head>
   <meta charset="UTF-8">
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title></title>
+  <title>ファイル・フォルダ操作に慣れよう（基本編）</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
   <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
@@ -36,7 +36,7 @@
     };
 
   </script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script>
     window.onload = function() {
       Gifffer({
@@ -45,7 +45,7 @@
           'height': '60px',
           'border': '3px solid #FFFFFF',
           'border-radius': '30px',
-          'background': '#0075c2',
+          'background': '#009c79',
           'position': 'absolute',
           'top': '50%',
           'left': '50%',
@@ -72,45 +72,964 @@
     <div class="book-header" role="navigation">
       <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a></a>
+        <a>ファイル・フォルダ操作に慣れよう（基本編）</a>
       </h1>
     </div>
     <div class="page-wrapper" tabindex="-1" role="main">
       <section class="main-content markdown-section">
-        <h1><a name="header-1-cabf705d69f62351e5554c0a6aee9f6c"></a> &#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30F3;&#x30B7;&#x30E7;&#x30C3;&#x30C8;&#x3092;&#x64AE;&#x3063;&#x3066;&#x307F;&#x3088;&#x3046;</h1>
-        <p>&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30F3;&#x30B7;&#x30E7;&#x30C3;&#x30C8;&#x3068;&#x306F;&#x753B;&#x9762;&#x306E;&#x69D8;&#x5B50;&#x3092;&#x8A18;&#x9332;&#x3057;&#x305F;&#x753B;&#x50CF;&#x306E;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;&#x30B9;&#x30AF;&#x30B7;&#x30E7;&#x3068;&#x7565;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;<br> &#x30B9;&#x30DE;&#x30FC;&#x30C8;&#x30D5;&#x30A9;&#x30F3;&#x3067;&#x3082;&#x304A;&#x99B4;&#x67D3;&#x307F;&#x306E;&#x6A5F;&#x80FD;&#x3067;&#x3059;&#x3002;</p>
-        <p>PC &#x306B;&#x3064;&#x3044;&#x3066;&#x8CEA;&#x554F;&#x3059;&#x308B;&#x969B;&#x306F;&#x3001;&#x30C8;&#x30E9;&#x30D6;&#x30EB;&#x306B;&#x906D;&#x9047;&#x3057;&#x305F;&#x3068;&#x304D;&#x306E;&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30F3;&#x30B7;&#x30E7;&#x30C3;&#x30C8;&#x3092;&#x6DFB;&#x4ED8;&#x3057;&#x3066;&#x8CEA;&#x554F;&#x3059;&#x308B;&#x3068;&#x3001;&#x7B54;&#x3048;&#x3066;&#x3082;&#x3089;&#x3044;&#x3084;&#x3059;&#x304F;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;<br> &#x305F;&#x3068;&#x3048;&#x3070;&#x300C;&#x30A8;&#x30E9;&#x30FC;&#x304C;&#x51FA;&#x307E;&#x3057;&#x305F;&#x300D;&#x3068;&#x66F8;&#x304B;&#x308C;&#x3066;&#x3044;&#x308B;&#x3060;&#x3051;&#x306E;&#x8CEA;&#x554F;&#x3088;&#x308A;&#x3082;&#x3001;&#x300C;&#x3053;&#x3046;&#x3044;&#x3046;&#x30A8;&#x30E9;&#x30FC;&#x304C;&#x51FA;&#x307E;&#x3057;&#x305F;&#x300D;&#x3068;&#x3044;&#x3046;&#x60C5;&#x5831;&#x304C;&#x3042;&#x308B;&#x8CEA;&#x554F;&#x306E;&#x65B9;&#x304C;&#x89E3;&#x6C7A;&#x3057;&#x3084;&#x3059;&#x304F;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+        <h1><a name="header-1-2fdc0eea1f7dc4a7b0fc90dda0ed60f7"></a> ファイル・フォルダ操作に慣れよう（基本編）</h1>
+        <p>ファイルやフォルダの操作に慣れることが「パソコンに強くなる」第一歩だと言っても過言ではないでしょう。</p>
+        <img src="image/03_G006-01-01.png">
         <ul id="toc">
-          <li><a href="#header-3-a3ec9f4538e2a6383609763efeddbbd6">Windows &#x3067;&#x306E;&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30F3;&#x30B7;&#x30E7;&#x30C3;&#x30C8;&#x64AE;&#x5F71;&#x65B9;&#x6CD5;</a></li>
-          <li><a href="#header-3-4bb611cada8cd71bec8e1299bfc90db4">&#x6CE8;&#x610F;&#x4E8B;&#x9805;</a></li>
-          <li><a href="#header-3-02e915b7b24f12938773a12ba5fc2fbb">&#x305D;&#x306E;&#x4ED6;</a></li>
+          <li><a href="#header-2-9cf9c56d76bd2b9241b13d80b7d12646" target="_blank">ファイルとは？</a></li>
+          <li><a href="#header-2-afde2bdbd6f2a0ef8988cf4f95892cfc" target="_blank">フォルダとは？</a></li>
+          <li><a href="#header-2-da0f47c311c6e8cbfa1d0ecefc6a8470" target="_blank">ファイルやフォルダを削除する</a></li>
         </ul>
-        <h3><a name="header-3-a3ec9f4538e2a6383609763efeddbbd6"></a> Windows &#x3067;&#x306E;&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30F3;&#x30B7;&#x30E7;&#x30C3;&#x30C8;&#x64AE;&#x5F71;&#x65B9;&#x6CD5;</h3>
-        <p>&#x753B;&#x9762;&#x306E;&#x4E00;&#x90E8;&#x306E;&#x7BC4;&#x56F2;&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x753B;&#x50CF;&#x3068;&#x3057;&#x3066;&#x4FDD;&#x5B58;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <p><kbd>Windows</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> &#x30AD;&#x30FC;&#x3092;&#x540C;&#x6642;&#x306B;&#x62BC;&#x3057;&#x307E;&#x3059;&#x3002;<br> &#xFF08;<kbd>Windows</kbd> &#x30AD;&#x30FC;&#x306F; Windows &#x306E;&#x30ED;&#x30B4;&#x30DE;&#x30FC;&#x30AF;&#x304C;&#x63CF;&#x304B;&#x308C;&#x305F;&#x30AD;&#x30FC;&#x3067;&#x3001;&#x5DE6;&#x4E0B;&#x306E; <kbd>Ctrl</kbd> &#x30AD;&#x30FC;&#x3068; <kbd>Alt</kbd> &#x30AD;&#x30FC;&#x306E;&#x9593;&#x306B;&#x3042;&#x308A;&#x307E;&#x3059;&#xFF09;</p>
-        <p>&#x3059;&#x308B;&#x3068;&#x753B;&#x9762;&#x304C;&#x4E00;&#x65E6;&#x6697;&#x304F;&#x306A;&#x308A;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x8868;&#x793A;&#x304C;&#x73FE;&#x308C;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x72B6;&#x614B;&#x3067;&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30F3;&#x30B7;&#x30E7;&#x30C3;&#x30C8;&#x3092;&#x64AE;&#x308A;&#x305F;&#x3044;&#x90E8;&#x5206;&#x3092;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&amp;&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x3067;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/windows-ss-01.png">
-          <span class="imagecaption screenshot">&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30F3;&#x30B7;&#x30E7;&#x30C3;&#x30C8;&#x3092;&#x64AE;&#x5F71;&#x3059;&#x308B;&#x753B;&#x9762;</span>
+        <h2><a name="header-2-9cf9c56d76bd2b9241b13d80b7d12646"></a> ファイルとは？</h2>
+        <p>アプリで作成・保存した書類や画像、動画などのデータはすべて <strong>ファイル</strong> という、ひとまとまりのデータになって保存されます。</p>
+        <img src="image/03_G006-02-01.png">
+        <p>また、アプリ自体も複数のファイルで構成されています。</p>
+        <img src="image/03_G006-03-01.png">
+        <h3><a name="header-3-9e244081fdf507476f7ad798b63a8ae0"></a> ファイルを作成してみよう</h3>
+        <p>実際にファイルを作成してみましょう。<br> ここではちょっとした文章をファイルとして記録してみます。</p>
+        <h3><a name="header-3-9e244081fdf507476f7ad798b63a8ae0"></a> ファイルを作成してみよう</h3>
+        <p>実際にファイルを作成してみましょう。<br> ここではちょっとした文章をファイルとして記録してみます。</p>
+        <p>LaunchPad から「テキストエディット」を起動してください。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/1-bigsur.png">
+                <span class="imagecaption screenshot">LaunchPad</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/1.png">
+                <span class="imagecaption screenshot">LaunchPad</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>&#x753B;&#x9762;&#x3092;&#x9078;&#x629E;&#x3059;&#x308B;&#x3068;&#x3001;&#x753B;&#x9762;&#x53F3;&#x4E0B;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x901A;&#x77E5;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;&#x3053;&#x308C;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;<br> &#x3057;&#x3070;&#x3089;&#x304F;&#x3059;&#x308B;&#x3068;&#x901A;&#x77E5;&#x306F;&#x6D88;&#x3048;&#x3066;&#x3057;&#x307E;&#x3046;&#x306E;&#x3067;&#x3001;&#x305D;&#x306E;&#x5834;&#x5408;&#x306F;&#x3082;&#x3046;&#x4E00;&#x5EA6;&#x64AE;&#x308A;&#x306A;&#x304A;&#x3057;&#x3066;&#x3082;&#x5927;&#x4E08;&#x592B;&#x3067;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/windows-ss-02.png">
-          <span class="imagecaption screenshot">&#x901A;&#x77E5;&#x753B;&#x9762;</span>
+        <p>既にテキストエディットを起動していた場合は、メニューバーの「ファイル」から「新規」をクリックし、新しくファイルを作成するようにしてください。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/textedit-new-bigsur.png">
+                <span class="imagecaption screenshot">新規ファイルの作成</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/textedit-new.png">
+                <span class="imagecaption screenshot">新規ファイルの作成</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>&#x300C;&#x5207;&#x308A;&#x53D6;&#x308A; &amp; &#x30B9;&#x30B1;&#x30C3;&#x30C1;&#x300D;&#x3068;&#x3044;&#x3046;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x304C;&#x8D77;&#x52D5;&#x3057;&#x3001;&#x5148;&#x307B;&#x3069;&#x64AE;&#x5F71;&#x3057;&#x305F;&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30F3;&#x30B7;&#x30E7;&#x30C3;&#x30C8;&#x3092;&#x7DE8;&#x96C6;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br> &#x540D;&#x524D;&#x306A;&#x3069;&#x3001;&#x500B;&#x4EBA;&#x60C5;&#x5831;&#x304C;&#x5199;&#x308A;&#x8FBC;&#x3093;&#x3067;&#x3044;&#x308B;&#x5834;&#x5408;&#x306F;&#x3053;&#x3053;&#x3067;&#x6D88;&#x3059;&#x3068;&#x3088;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;&#x7DE8;&#x96C6;&#x3092;&#x7D42;&#x3048;&#x305F;&#x3089;&#xFF08;&#x3042;&#x308B;&#x3044;&#x306F;&#x7DE8;&#x96C6;&#x3057;&#x306A;&#x304F;&#x3066;&#x826F;&#x3044;&#x5834;&#x5408;&#x306F;&#xFF09;&#x53F3;&#x4E0A;&#x306E;&#x4FDD;&#x5B58;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x4FDD;&#x5B58;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-        <div class="image-with-caption">
-          <img src="image/windows-ss-03.png">
-          <span class="imagecaption screenshot">&#x5207;&#x308A;&#x53D6;&#x308A; &amp; &#x30B9;&#x30B1;&#x30C3;&#x30C1;</span>
+        <p>テキストエディットに好きな文を書いてみましょう。なお、パソコンで文章を書くことを「入力」といいます。<br> 特に文が思いつかない場合、「ファイル操作の練習をします」などと入力してみてください。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/2-bigsur.png">
+                <span class="imagecaption screenshot">テキストエディットに入力をしている様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/2.png">
+                <span class="imagecaption screenshot">テキストエディットに入力をしている様子</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3><a name="header-3-4bb611cada8cd71bec8e1299bfc90db4"></a> &#x6CE8;&#x610F;&#x4E8B;&#x9805;</h3>
-        <p>&#x64AE;&#x5F71;&#x3057;&#x305F;&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30F3;&#x30B7;&#x30E7;&#x30C3;&#x30C8;&#x3092;&#x30CD;&#x30C3;&#x30C8;&#x306B;&#x6295;&#x7A3F;&#x3059;&#x308B;&#x5834;&#x5408;&#x3001;&#x753B;&#x9762;&#x5185;&#x306B;&#x500B;&#x4EBA;&#x60C5;&#x5831;&#x306A;&#x3069;&#x304C;&#x5199;&#x308A;&#x8FBC;&#x3093;&#x3067;&#x3044;&#x306A;&#x3044;&#x304B;&#x6CE8;&#x610F;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;<br> &#x7279;&#x306B;&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3084;&#x6C0F;&#x540D;&#x306A;&#x3069;&#x3001;&#x4EBA;&#x306B;&#x898B;&#x305B;&#x305F;&#x304F;&#x306A;&#x3044;&#x60C5;&#x5831;&#x3092;&#x8868;&#x793A;&#x3055;&#x305B;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x306F;&#x8981;&#x6CE8;&#x610F;&#x3067;&#x3059;&#x3002;</p>
-        <h3><a name="header-3-02e915b7b24f12938773a12ba5fc2fbb"></a> &#x305D;&#x306E;&#x4ED6;</h3>
-        <p>&#x3053;&#x3053;&#x3067;&#x306F;&#x8A73;&#x7D30;&#x3092;&#x8AAC;&#x660E;&#x3057;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x753B;&#x9762;&#x4E0A;&#x306E;&#x52D5;&#x304D;&#x3092;&#x52D5;&#x753B;&#x3067;&#x8A18;&#x9332;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3092;&#x300C;&#x52D5;&#x753B;&#x30AD;&#x30E3;&#x30D7;&#x30C1;&#x30E3;&#x30FC;&#x300D;&#x3068;&#x3044;&#x3044;&#x307E;&#x3059;&#x3002;<br> &#x8208;&#x5473;&#x304C;&#x3042;&#x308B;&#x4EBA;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x30B5;&#x30A4;&#x30C8;&#x3092;&#x53C2;&#x8003;&#x306B;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-        <ul>
-          <li>Windows 10&#x306E;&#x5834;&#x5408;: <a href="https://dekiru.net/article/14135/">&#x3010;&#x65B0;&#x6A5F;&#x80FD;&#x3011;Windows10&#x306E;&#x30B2;&#x30FC;&#x30E0;&#x30D0;&#x30FC;&#x3067;PC&#x753B;&#x9762;&#x306E;&#x52D5;&#x753B;&#x30AD;&#x30E3;&#x30D7;&#x30C1;&#x30E3;&#x30FC;&#x3092;&#x8A18;&#x9332;&#x3059;&#x308B;&#x65B9;&#x6CD5;&#xFF08;&#x3067;&#x304D;&#x308B;net&#xFF09;</a></li>
-          <li>Mac&#x306E;&#x5834;&#x5408;: <a href="https://support.apple.com/ja-jp/HT208721">Mac &#x3067;&#x753B;&#x9762;&#x3092;&#x53CE;&#x9332;&#x3059;&#x308B;&#x65B9;&#x6CD5;&#xFF08;Apple &#x516C;&#x5F0F;&#x30D8;&#x30EB;&#x30D7;&#xFF09;</a></li>
-        </ul>
+        <p><strong>ファイル</strong> メニューをクリックし、<strong>保存</strong> をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/3-bigsur.png">
+                <span class="imagecaption screenshot">保存を選択している様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/3.png">
+                <span class="imagecaption screenshot">保存を選択している様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>すると、いま「テキストエディット」で作成したデータの保存先を選ぶ画面が表示されます。<br> 「場所」の右側にある V のような形のボタンをクリックして、フォルダを詳細に選択する画面を表示しましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/4-bigsur.png">
+                <span class="imagecaption screenshot">保存先を選んでいる様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/4.png">
+                <span class="imagecaption screenshot">保存先を選んでいる様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>画面中央より少し上の部分に表示されているのが、いま表示しているフォルダの名前です。<br> すでに「書類」というフォルダが表示されているはずですが、表示されていない場合は左側の欄で <strong>書類</strong> をクリックしてください。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/5-bigsur.png">
+                <span class="imagecaption screenshot">詳しく保存先を選んでいる様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/5.png">
+                <span class="imagecaption screenshot">詳しく保存先を選んでいる様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p><strong>名前</strong> の欄に「ファイルの練習」と入力して <strong>保存</strong> ボタンをクリックしましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/6-bigsur.png">
+                <span class="imagecaption screenshot">ファイル名を入力している様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/6.png">
+                <span class="imagecaption screenshot">ファイル名を入力している様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>保存ウィンドウが閉じられ、テキストエディットのタイトルバーが「ファイルの練習」となりました。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/7-bigsur.png">
+                <span class="imagecaption screenshot">ファイル名が変わった様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/7.png">
+                <span class="imagecaption screenshot">ファイル名が変わった様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>では、もう少しこのファイルの内容を変更してみましょう。<br> なにか好きな文章を書き加えてください。思いつかない場合、「保存をしてみました。」などと入力してみてください。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/11-bigsur.png">
+                <span class="imagecaption screenshot">文章を書き加えている様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/11.png">
+                <span class="imagecaption screenshot">文章を書き加えている様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>変更した内容を保存しましょう。 <strong>ファイル</strong> から <strong>保存</strong> をクリックしてください。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/8-bigsur.png">
+                <span class="imagecaption screenshot">保存を選択している様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/8.png">
+                <span class="imagecaption screenshot">保存を選択している様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>すると、先程保存したファイルに編集した内容が書き加えられます。<br> 一度保存したファイルは、2回目以降の保存をすると同じファイルに内容が書き加えられます。これを「上書き」といいます。</p>
+        <p>保存をしたら、テキストエディットを終了しましょう。<br> 「テキストエディット」メニューから<strong>終了</strong> をクリックしてください。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/9-bigsur.png">
+                <span class="imagecaption screenshot">終了している様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/9.png">
+                <span class="imagecaption screenshot">終了している様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>なお、保存せずにアプリを閉じたり、パソコンの電源を切るとデータが消えてしまいます。<br> きちんと保存してから閉じるようにしましょう。</p>
+        <h3><a name="header-3-cf2be5859e12f6df6d4f7c63d73f2ef3"></a> ファイルを開こう</h3>
+        <p>保存したファイルは開くことができます。<br> これにより、いちど作業を終了したファイルを後日編集できます。また、他の人から送られてきたデータを開くこともできます。</p>
+        <h4><a name="header-4-d230ee61f74b9a5880ac9ea877d7b1b8"></a> テキストエディットから開く</h4>
+        <p>テキストエディットを起動しましょう。<br>
+          <strong>ファイル</strong>から<strong>開く</strong>をクリックしましょう。
+        </p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/9_2-bigsur.png">
+                <span class="imagecaption screenshot">ファイルを開こうとしている様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/9_2.png">
+                <span class="imagecaption screenshot">ファイルを開こうとしている様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>//TODO BigSurより前は多分起動時にダイアログが出る</p>
+        <p>左側の <strong>書類</strong> をクリックしてください。<br> 先ほど保存した「ファイルの練習」をクリックし、<strong>開く</strong>をクリックしましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/10-bigsur.png">
+                <span class="imagecaption screenshot">ファイルを選んでいる様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/10.png">
+                <span class="imagecaption screenshot">ファイルを選んでいる様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>すると、先ほど作成した文章がテキストエディットで開かれます。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/11-bigsur.png">
+                <span class="imagecaption screenshot">ファイルが開かれた様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/11.png">
+                <span class="imagecaption screenshot">ファイルが開かれた様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>確認できたらテキストエディットを終了しましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/9-bigsur.png">
+                <span class="imagecaption screenshot">終了している様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/9.png">
+                <span class="imagecaption screenshot">終了している様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4><a name="header-4-788cdaf80716b0abaa7e19f8e9a4fa0a"></a> 保存された場所から開く</h4>
+        <p>ファイルを保存された場所から開くこともできます。</p>
+        <p>先ほどのファイルは「書類」という場所に保存したはずです。<br> では、「書類」という保存場所を開きましょう。<strong>Finder</strong> （ファインダー）というアプリを開きます。</p>
+        <p>画面下部の Dock にある以下のアイコンを探してクリックしてください。初期状態では左端にあるはずです。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/9_3-bigsur.png">
+                <span class="imagecaption screenshot">DockにおけるFinderの位置</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/9_3.png">
+                <span class="imagecaption screenshot">DockにおけるFinderの位置</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p><strong>Finder はファイルを管理するためのアプリ</strong>です。<br> 左側にある <strong>書類</strong> をクリックしましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/12-bigsur.png">
+                <span class="imagecaption screenshot">「書類」を選択する様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/12.png">
+                <span class="imagecaption screenshot">「書類」を選択する様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>先ほど保存した「ファイルの練習」というファイルがあるはずです。これをダブルクリックしましょう。</p>
+        <p>無事にテキストエディットで開けたはずです。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/11_2-bigsur.png">
+                <span class="imagecaption screenshot">ファイルを開く様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/11.png">
+                <span class="imagecaption screenshot">ファイルを開く様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>確認できたらテキストエディットを終了しましょう。</p>
+        <h2><a name="header-2-afde2bdbd6f2a0ef8988cf4f95892cfc"></a> フォルダとは？</h2>
+        <img src="image/03_G006-04-01.png">
+        <p>ファイルが増えてくると管理が大変になるので、種類や目的などによって分類することをおすすめします。<br> たとえば、学生の方なら数学や英語といった科目別のフォルダを作ると管理しやすくなるでしょう。</p>
+        <p>//TODO 学生を想定した実際のフォルダ構成例を示してみる</p>
+        <p>実は、ここまでで使用してきた「書類」もフォルダの一種です。<br> macOS には最初からいくつかのフォルダが作られています。</p>
+        <p>//TODO 初期からあるフォルダを列挙</p>
+        <h3><a name="header-3-4fe13e3071f01662bd032d3c32599e4e"></a> フォルダを作成してみよう</h3>
+        <p>では、フォルダを作成しましょう。</p>
+        <p>ここでは、<strong>書類</strong> の中に新しく自分でフォルダを作ります。<br> Finder で「書類」フォルダを開きましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/12-bigsur.png">
+                <span class="imagecaption screenshot">「書類」フォルダを開く様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/12.png">
+                <span class="imagecaption screenshot">「書類」フォルダを開く様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>「書類」で何もない部分を<strong>右クリック</strong>し、<strong>新規フォルダ</strong>をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/14-bigsur.png">
+                <span class="imagecaption screenshot">何もない部分で右クリックする様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/14.png">
+                <span class="imagecaption screenshot">何もない部分で右クリックする様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p><strong>名称未設定フォルダ</strong>という名前でフォルダが作成されます。ここで「勉強」と入力し、<kbd>Enter</kbd>キーを押しましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/22-bigsur.png">
+                <span class="imagecaption screenshot">「勉強」フォルダを作成した様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/22.png">
+                <span class="imagecaption screenshot">「勉強」フォルダを作成した様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>もし入力を終える前に別のところをクリックすると、フォルダ名が「名称未設定フォルダ」のまま確定されてしまいます。<br> そのときは「名称未設定フォルダ」を<strong>右クリック</strong>して、<strong>名前を変更</strong>をクリックすることで、再びフォルダ名を入力する画面にできます。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/15-bigsur.png">
+                <span class="imagecaption screenshot">フォルダ名を入力する様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/15.png">
+                <span class="imagecaption screenshot">フォルダ名を入力する様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3><a name="header-3-ddcac760d1ebbfd32b0caed50a2b0a40"></a> フォルダの中にフォルダを作成する</h3>
+        <p>//TODO 説明イラスト: フォルダが入れ子になっており、その中にファイルが入っている様子</p>
+        <p>フォルダの中にフォルダを作り、更にフォルダを整理することもできます。</p>
+        <p>先ほどの「勉強」フォルダを開きましょう。「勉強」フォルダをダブルクリックします。</p>
+        <p>「書類」の中に「勉強」フォルダを作ったときと同じように、何もない部分を<strong>右クリック</strong>し、<strong>新規フォルダ</strong>をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/16-bigsur.png">
+                <span class="imagecaption screenshot">新規フォルダを作成している様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/16.png">
+                <span class="imagecaption screenshot">新規フォルダを作成している様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p><strong>名称未設定フォルダ</strong>という名前でフォルダが作成されます。ここで「パソコン」と入力し、<kbd>Enter</kbd>キーを押しましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/18-bigsur.png">
+                <span class="imagecaption screenshot">フォルダ名を入力する様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/18.png">
+                <span class="imagecaption screenshot">フォルダ名を入力する様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>新しく作成した「パソコン」フォルダをダブルクリックし、「パソコン」フォルダを開きます。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/17-bigsur.png">
+                <span class="imagecaption screenshot">「パソコン」フォルダを開いた様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/17.png">
+                <span class="imagecaption screenshot">「パソコン」フォルダを開いた様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3><a name="header-3-de69c85d533856d635d42fd185754515"></a> 別のフォルダを開く</h3>
+        <p>ここまで手順通りに進めてきた場合、「ドキュメント」の中にある「勉強」の中にある「パソコン」フォルダを開いているはずです。<br> ちょっとややこしくなってきましたね。</p>
+        <p>フォルダの中で迷子にならないために、Finder の機能を使ってどこを開いているのか確認しましょう。<br> Finder のメニューバーにある <strong>表示</strong> をクリックし、<strong>パスバーを表示</strong> をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/19-bigsur.png">
+                <span class="imagecaption screenshot">「パスバーを表示」を選ぶ様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/19.png">
+                <span class="imagecaption screenshot">「パスバーを表示」を選ぶ様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>すると、 Finder の下部に <strong>Machintosh HD &gt; ユーザ &gt; あなたのユーザ名 &gt; 書類 &gt; 勉強 &gt; パソコン</strong> というふうに、フォルダの構成が表示されるはずです。<br> これが現在表示しているフォルダの場所です。この表示部分を<strong>パスバー</strong>といいます。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/20-bigsur.png">
+                <span class="imagecaption screenshot">パスバー</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/20.png">
+                <span class="imagecaption screenshot">パスバー</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>書類 &gt; 勉強 は「書類 の中に 勉強 というフォルダがある」という意味です。</p>
+        <p>ここに表示されているフォルダ名をダブルクリックすると、上の階層にあるフォルダに移動できます。<br> では <strong>勉強</strong>をダブルクリックしてみましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/21-bigsur.png">
+                <span class="imagecaption screenshot">上の階層に移動した様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/21.png">
+                <span class="imagecaption screenshot">上の階層に移動した様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>「パソコン」フォルダを抜けて 「<strong>勉強</strong>」フォルダが表示されます。続いて、<strong>書類</strong> をダブルクリックしてみましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/22-bigsur.png">
+                <span class="imagecaption screenshot">さらに上の階層に移動した様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/22.png">
+                <span class="imagecaption screenshot">さらに上の階層に移動した様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>「<strong>書類</strong>」フォルダが表示されたはずです。</p>
+        <h3><a name="header-3-0027a0364e29c0e069769e3e2a5fa146"></a> ファイルをフォルダに入れる</h3>
+        <p>先ほど作ったフォルダを活用していきましょう。</p>
+        <h4><a name="header-4-adc387496a234bd4ef70c43c7845f006"></a> すでにあるファイルを移動する</h4>
+        <p>書類フォルダにある「ファイルの練習」を、「パソコン」フォルダに移動します。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <p>「ファイルの練習」を右クリックし、<strong>コピー</strong> をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="image/23-bigsur.png">
+                <span class="imagecaption screenshot">コピー</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <p>「ファイルの練習」を右クリックし、<strong>"ファイルの練習"をコピー</strong> をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="image/23.png">
+                <span class="imagecaption screenshot">"ファイルの練習"をコピー</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>「勉強」フォルダをダブルクリックして開きます。続いて、「パソコン」フォルダをダブルクリックして開きます。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/24-bigsur.png">
+                <span class="imagecaption screenshot">フォルダを開いた様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/24.png">
+                <span class="imagecaption screenshot">フォルダを開いた様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>「パソコン」フォルダを開いたら、何もない部分で<strong>右クリック</strong>し、キーボードの左下にある <kbd>option</kbd> キーを押します。<br> メニューでは <kbd>option</kbd> キーを押している間は表示内容（機能）が変わります。<kbd>option</kbd> を押したまま、<strong>ここに項目を移動</strong> をクリックしてください。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption data-gifffer">
+                <img src="image/mv-bigsur.gif"><br>
+                <span class="imagecaption animation">右クリックとoptionキーで項目を移動</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption data-gifffer">
+                <img src="image/mv.gif"><br>
+                <span class="imagecaption animation">右クリックとoptionキーで項目を移動</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>これでファイルが移動できました。</p>
+        <p>なお、ファイルだけではなく、フォルダもこの機能を使うことで移動できます。フォルダを移動する場合は中に入っているファイルも一緒に移動します。</p>
+        <h4><a name="header-4-41fc65c1997728a4ea98b33ad65dcd8e"></a> 保存する段階でフォルダを指定する</h4>
+        <p>ファイルを保存する段階でフォルダを指定することもできます。</p>
+        <p>テキストエディットを起動し、適当な文章を入力しましょう。思いつかない場合は「保存の練習」などと入力してください。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/25-bigsur.png">
+                <span class="imagecaption screenshot">文章を入力する様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/25.png">
+                <span class="imagecaption screenshot">文章を入力する様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p><strong>ファイル</strong> から <strong>保存</strong> をクリックしましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/26-bigsur.png">
+                <span class="imagecaption screenshot">保存しようとする様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/26.png">
+                <span class="imagecaption screenshot">保存しようとする様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>左側の <strong>書類</strong> をクリックし、<strong>勉強</strong> フォルダをダブルクリックしましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/27-bigsur.png">
+                <span class="imagecaption screenshot">保存先を選ぶ様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/27.png">
+                <span class="imagecaption screenshot">保存先を選ぶ様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p><strong>パソコン</strong> フォルダをダブルクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/28-bigsur.png">
+                <span class="imagecaption screenshot">詳しく保存先を選ぶ様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/28.png">
+                <span class="imagecaption screenshot">詳しく保存先を選ぶ様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>名前の欄に「保存の練習」と入力し、<strong>保存</strong>をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/29-bigsur.png">
+                <span class="imagecaption screenshot">保存する様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/29.png">
+                <span class="imagecaption screenshot">保存する様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>これで「パソコン」フォルダにファイルが保存されました。<br> テキストエディットは閉じて構いません。</p>
+        <h2><a name="header-2-da0f47c311c6e8cbfa1d0ecefc6a8470"></a> ファイルやフォルダを削除する</h2>
+        <p>不要になったファイルは削除できます。</p>
+        <p>Finder で「パソコン」フォルダを表示させましょう。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/30-bigsur.png">
+                <span class="imagecaption screenshot">「パソコン」フォルダを開いた様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/30.png">
+                <span class="imagecaption screenshot">「パソコン」フォルダを開いた様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>先ほど作成した「保存の練習」ファイルを削除してみましょう。<br> 「保存の練習」ファイルを<strong>右クリック</strong>し、<strong>ゴミ箱に入れる</strong>をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/31-bigsur.png">
+                <span class="imagecaption screenshot">ファイルをゴミ箱に入れる様子</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/31.png">
+                <span class="imagecaption screenshot">ファイルをゴミ箱に入れる様子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>削除され、フォルダから「保存の練習」ファイルが消えました。<br> ただし、この状態は完全に削除されたわけではなく、「<strong>ゴミ箱</strong>」という特殊なフォルダに移動された状態です。</p>
+        <p>画面下部の Dock 右端にある、<strong>ゴミ箱</strong>をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/32-bigsur.png">
+                <span class="imagecaption screenshot">「ゴミ箱」の位置</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/32.png">
+                <span class="imagecaption screenshot">「ゴミ箱」の位置</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>ゴミ箱が表示されたら、画面右上にある <strong>空にする</strong> をクリックします。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/34-bigsur.png">
+                <span class="imagecaption screenshot">「空にする」を選択</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/34.png">
+                <span class="imagecaption screenshot">「空にする」を選択</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>確認メッセージが表示されるので <strong>ゴミ箱を空にする</strong> をクリックします。これで、ごみ箱に入っているファイルが完全に消去されます。</p>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/35-bigsur.png">
+                <span class="imagecaption screenshot">確認メッセージ</span>
+              </div>
+              <div class="image-with-caption">
+                <img src="image/36-bigsur.png">
+                <span class="imagecaption screenshot">ゴミ箱が空になった表示</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <div class="image-with-caption">
+                <img src="image/35.png">
+                <span class="imagecaption screenshot">確認メッセージ</span>
+              </div>
+              <div class="image-with-caption">
+                <img src="image/36.png">
+                <span class="imagecaption screenshot">ゴミ箱が空になった表示</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tip"><a name="about-recycle-bin"></a>
+          <span class="tip-title">コラム: ゴミ箱の性質</span>
+          <p>ゴミ箱に移動しただけの状態では、ファイルが削除されたと言えません。簡単に復元（元の場所に戻すこと）ができてしまいます。<br> ゴミ箱に入れるだけではなく、完全に削除することを忘れないようにしましょう。</p>
+        </div>
       </section>
     </div>
   </div>

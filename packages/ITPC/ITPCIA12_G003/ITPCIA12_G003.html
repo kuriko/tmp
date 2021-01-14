@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>社内ネットワークと VPN</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/font.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/highlight/default.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/normalize.css">
+  <link rel="stylesheet" href="../../../share/progedu/computer-basics/styles/style.css">
+  <script type="text/javascript" src="../../../share/progedu/computer-basics/scripts/gifffer.min.js"></script>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>
+    function selectTab(name) {
+      Array.prototype.forEach.call(document.querySelectorAll('.tablink'), el => el.className = el.className.replace(" active", ""));
+      Array.prototype.forEach.call(document.querySelectorAll(`[data-tablink-name="${name}"]`), el => el.className += " active");
+      Array.prototype.forEach.call(document.querySelectorAll('.tabcontents'), el => el.dataset.active = name);
+    };
+
+    function toggleAnswer() {
+      const e = window.event;
+      const self = e.target || e.srcElement;
+      const nextElem = self.id == 'show-answer-button' ? document.querySelector('.answer') : self.parentNode.nextElementSibling;
+      if (!nextElem.attributes.active) {
+        self.innerHTML = "答えを隠す";
+        nextElem.setAttribute("active", "");
+      } else {
+        self.innerHTML = "解いてみたので、答えを表示する";
+        nextElem.removeAttribute("active");
+      }
+    };
+
+  </script>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script>
+    window.onload = function() {
+      Gifffer({
+        playButtonStyles: {
+          'width': '60px',
+          'height': '60px',
+          'border': '3px solid #FFFFFF',
+          'border-radius': '30px',
+          'background': '#009c79',
+          'position': 'absolute',
+          'top': '50%',
+          'left': '50%',
+          'margin': '-30px 0 0 -30px'
+        },
+        playButtonIconStyles: {
+          'width': '0',
+          'height': '0',
+          'border-top': '14px solid transparent',
+          'border-bottom': '14px solid transparent',
+          'border-left': '14px solid #FFFFFF',
+          'position': 'absolute',
+          'left': '23px',
+          'top': '13px'
+        }
+      });
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="book">
+    <div class="book-header" role="navigation">
+      <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a>社内ネットワークと VPN</a>
+      </h1>
+    </div>
+    <div class="page-wrapper" tabindex="-1" role="main">
+      <section class="main-content markdown-section">
+        <h1><a name="header-1-202b8d6e32f64225cd4de098deb1701a"></a> 社内ネットワークと VPN</h1>
+        <p>会社でパソコンを使うときやテレワークに必要な、社内ネットワークと VPN について学びましょう。</p>
+        <ul id="toc">
+          <li><a href="#header-2-8f3669f31c900b00eb24cc6854686c6a" target="_blank">社内ネットワークとは？</a></li>
+          <li><a href="#header-2-eaef8590a83770745b6591921835bf08" target="_blank">VPN</a></li>
+          <li><a href="#header-2-231531b48247500616e1f58af37df89c" target="_blank">VPN への接続方法</a></li>
+        </ul>
+        <h2><a name="header-2-8f3669f31c900b00eb24cc6854686c6a"></a> 社内ネットワークとは？</h2>
+        <p>一般的に、会社には数多くの機密情報があります。契約情報、従業員情報、お客さんの情報など、様々なファイルが機密として挙げられるでしょう。<br> さらに、仕事としてこれらは従業員同士で交換する必要があります。その際、インターネットを使うのではなく、社内に閉じた環境として「社内ネットワーク（社内 LAN）」を利用する場合があります。</p>
+        <p>社内ネットワークの構成は会社によって違いますが、</p>
+        <ul>
+          <li>ファイルを共有するための <strong>ファイルサーバー</strong> がある</li>
+          <li><strong>プリンター・スキャナ</strong> がネットワークに接続されており、共用できる</li>
+          <li>勤怠管理システムなど、<strong>社内専用システム</strong> がある</li>
+          <li>インターネットへの接続は集約されており、<strong>通信状況などが監視可能</strong> である</li>
+        </ul>
+        <p>といった特徴が挙げられます。</p>
+        <p>//TODO イラスト</p>
+        <p>また、支社・支店など、複数の拠点を持つ会社もあります。こういった物理的に離れた拠点と、インターネットとは異なる「専用線」とよばれるもので接続され、一つのネットワークを形成しているケースもあります。</p>
+        <p>//TODO イラスト</p>
+        <p>専用線は通信が安定している上に、盗聴などによる情報流出を防ぐために高い効果を発揮しますが、工事や高額な維持費が必要というデメリットがあります。</p>
+        <h2><a name="header-2-eaef8590a83770745b6591921835bf08"></a> VPN</h2>
+        <p><strong>VPN</strong>（ブイ・ピー・エヌ）とは、インターネットを利用して、仮想的な専用線を構築する仕組みです。<br> Virtual Private Network（バーチャル・プライベート・ネットワーク）の略で、<strong>仮想専用線</strong> などと訳されます。</p>
+        <p>「トンネリング」と呼ばれる方法で、暗号化の仕組みを使ってインターネットの中に仮想的な「専用トンネル」を作ります。専用線と同じようなセキュリティ効果があります。<br> 専用線と異なり、速度や安定性はインターネットに左右されてしまいますが、専用線をコスト的・物理的に引けない場合などに活用されます。</p>
+        <p>//TODO イラスト</p>
+        <p>また、テレワークをする場合にも効果的です。<br> テレワークをする場合、全ての従業員の家に専用線を引くことは無理ですが、VPN なら従業員の家にネット環境さえあればどこでも利用できます。</p>
+        <p>//TODO イラスト</p>
+        <h2><a name="header-2-231531b48247500616e1f58af37df89c"></a> VPN への接続方法</h2>
+        <p>VPN の設定・接続方法は会社が利用しているシステムによって異なります。<br> 会社の IT 部門・情報システム部門が出している案内を読んでみるとよいでしょう。</p>
+        <div class="tip"><a name="about-lan"></a>
+          <span class="tip-title">コラム：LAN とは</span>
+          <p>無線 LAN や社内 LAN など、ネットワークに関する場面で登場する用語に <strong>LAN</strong>（ラン） があります。<br> LAN とは、Local Area Network（ローカル・エリア・ネットワーク）の略で、家庭内や企業内などで利用されるネットワークを意味します。<br> ローカル（local）というと「ローカル線」などの言葉を連想するかもしれませんが、この場合は「局地的な」といった意味で利用されています。<br><br> 対義語は WAN（ワイド・エリア・ネットワーク、Wide Area Network）です。WAN は一般的にインターネットのことを指します。<br> たとえば、有線接続のルーターを見てみると、インターネット側の端子に WAN、パソコン側の端子に LAN と書かれています。</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
