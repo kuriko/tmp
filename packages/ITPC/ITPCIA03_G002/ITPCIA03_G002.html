@@ -194,15 +194,52 @@
         <p>自分がどちらの Mac を使っているかを知っておくことが重要です。</p>
         <h2><a name="header-2-9da265603b48a9fee8e56a03302791ad"></a> バッテリー残量の確認</h2>
         <p>ノートパソコンの場合、バッテリーの残量を確認しましょう。もしバッテリー残量が低下してきたら、0% になってしまう前に早めに充電をしましょう。<br> Mac では画面右上のメニューバーに表示されます。</p>
-        <p>初期設定ではバッテリー残量の数字（％）は表示されません。表示させるためには、メニューバーの電池マークのアイコンをクリックし、「割合（%）を表示」を選択します。</p>
-        <div class="image-with-caption">
-          <img src="image/battery.png">
-          <span class="imagecaption screenshot">「割合（%）を表示」をクリック</span>
-        </div>
-        <p>これで、メニューバーに数字（％）が表示されるようになりました。</p>
-        <div class="image-with-caption">
-          <img src="image/battery2.png">
-          <span class="imagecaption screenshot">パーセンテージが表示されるようになった</span>
+        <div class="tab">
+          <div class="tablinks">
+            <div class="tablink active" onclick="selectTab('win')" data-tablink-name="win">Big Sur</div>
+            <div class="tablink" onclick="selectTab('mac')" data-tablink-name="mac">Catalina 以前</div>
+          </div>
+          <div class="tabcontents" data-active="win">
+            <div class="tabcontent">
+              <p>初期設定ではバッテリー残量の数字（％）は表示されません。</p>
+              <div class="image-with-caption">
+                <img src="image/battery-bigsur.png">
+                <span class="imagecaption screenshot">バッテリー残量の数字が表示されていない</span>
+              </div>
+              <p>表示させるためには、まず、メニューバーの左上のりんごマークから <strong>システム環境設定</strong> をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="image/battery-bigsur2.png">
+                <span class="imagecaption screenshot">システム環境設定 を開く</span>
+              </div>
+              <p><strong>Dockとメニューバー</strong> をクリックします。</p>
+              <div class="image-with-caption">
+                <img src="image/battery-bigsur3.png">
+                <span class="imagecaption screenshot">Dockとメニューバー を選択</span>
+              </div>
+              <p>左側のメニュー一覧を下にスクロールし、<strong>バッテリー</strong> をクリックします。そして、画面に表示される <strong>割合（％）を表示</strong> にチェックを入れます。</p>
+              <div class="image-with-caption">
+                <img src="image/battery-bigsur4.png">
+                <span class="imagecaption screenshot">割合（％）を表示 にチェックを入れる</span>
+              </div>
+              <p>これで、メニューバーに数字（％）が表示されるようになりました。</p>
+              <div class="image-with-caption">
+                <img src="image/battery-bigsur5.png">
+                <span class="imagecaption screenshot">バッテリー残量の数字が表示された</span>
+              </div>
+            </div>
+            <div class="tabcontent">
+              <p>初期設定ではバッテリー残量の数字（％）は表示されません。表示させるためには、メニューバーの電池マークのアイコンをクリックし、「割合（%）を表示」を選択します。</p>
+              <div class="image-with-caption">
+                <img src="image/battery.png">
+                <span class="imagecaption screenshot">「割合（%）を表示」をクリック</span>
+              </div>
+              <p>これで、メニューバーに数字（％）が表示されるようになりました。</p>
+              <div class="image-with-caption">
+                <img src="image/battery2.png">
+                <span class="imagecaption screenshot">パーセンテージが表示されるようになった</span>
+              </div>
+            </div>
+          </div>
         </div>
         <h2><a name="header-2-bf5c370eaf8fb6d62723bffe52d68d8f"></a> パソコンの終了（スマホとの違い）</h2>
         <p>スマホでは電源ボタンを押してスリープさせたり、電源オフにしたりしますが、パソコンでは画面上で操作して電源を切ります。<br> 画面左上にリンゴマークが描かれているアップルメニューをクリックします。</p>

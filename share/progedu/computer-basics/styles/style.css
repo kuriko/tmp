@@ -16,7 +16,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.2px;
@@ -129,10 +129,10 @@ img {
   margin: 0px;
 }
 .screenshot::before {
-  content: '\30b9\30af\30ea\30fc\30f3\30b7\30e7\30c3\30c8\ff1a';
+  content: "\30b9\30af\30ea\30fc\30f3\30b7\30e7\30c3\30c8\ff1a";
 }
 .animation::before {
-  content: '\30a2\30cb\30e1\30fc\30b7\30e7\30f3\ff1a';
+  content: "\30a2\30cb\30e1\30fc\30b7\30e7\30f3\ff1a";
 }
 .data-gifffer *:first-child {
   margin: auto;
@@ -250,10 +250,10 @@ table tr:nth-child(2n) {
   border: 2px solid #009c79;
   border-radius: 0 6px 6px 6px;
 }
-.tabcontents[data-active='win'] {
+.tabcontents[data-active="win"] {
   transform: translateX(0);
 }
-.tabcontents[data-active='mac'] {
+.tabcontents[data-active="mac"] {
   transform: translateX(-50%);
 }
 
@@ -274,14 +274,13 @@ pre {
   background: #f7f7f7;
 }
 code {
-  font-family: 'Source Code Pro', Consolas, 'Liberation Mono', Menlo, Courier,
-    monospace;
+  font-family: "Source Code Pro", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   direction: ltr;
   font-size: 1em;
   background-color: #f7f7f7;
 }
-:not(pre) > code[class*='language-'],
-pre[class*='language-'] {
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
   background-color: #f7f7f7;
   padding: 10px 6px;
 }
@@ -321,7 +320,7 @@ code.big-code {
   line-height: 1.2;
 }
 .input-code code {
-  font-family: Menlo, 'Lucida Console', monospace;
+  font-family: Menlo, "Lucida Console", monospace;
   color: #eeeeee;
   background-color: transparent;
 }
@@ -339,7 +338,7 @@ code.big-code {
   line-height: 0.9;
 }
 .input-code-mac code {
-  font-family: Menlo, 'Lucida Console', monospace;
+  font-family: Menlo, "Lucida Console", monospace;
   color: #1a1a1a;
   font-weight: bold;
   background-color: transparent;
@@ -358,7 +357,7 @@ code.big-code {
   line-height: 0.9;
 }
 .input-code-win code {
-  font-family: Menlo, 'Lucida Console', monospace;
+  font-family: Menlo, "Lucida Console", monospace;
   color: #efffff;
   font-weight: bold;
   background-color: transparent;
@@ -377,7 +376,7 @@ code.big-code {
   line-height: 0.9;
 }
 .input-code-ubuntu code {
-  font-family: Menlo, 'Lucida Console', monospace;
+  font-family: Menlo, "Lucida Console", monospace;
   color: #ffffff;
   font-weight: bold;
   background-color: transparent;
@@ -408,7 +407,7 @@ kbd {
   text-align: center;
   background-color: #222;
   box-shadow: inset 0 -2px #587796;
-  font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+  font-family: "Menlo", "Monaco", "Consolas", monospace;
   color: #fff;
 }
 
@@ -426,6 +425,64 @@ kbd {
   display: inline-block;
   width: 100%;
   text-align: center;
+}
+
+/* 各節冒頭の「今回の目標」 */
+
+.target {
+  /*background: #e7f8f5;*/
+  border: 2px dotted #26cfab;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 50px;
+}
+
+.target h2 {
+  font-size: 24px;
+  margin-top: 0;
+  padding-left: 10px;
+  border: none;
+  border-bottom: 2px solid #26cfab;
+}
+
+.target h2:before {
+  content: "🔔";
+}
+
+.target ul {
+  list-style: none;
+}
+
+.target li {
+  padding-left: 0.5rem;
+  text-indent: -1rem;
+}
+
+.target li:before {
+  content: "💡";
+}
+
+/* 各節末尾の「まとめ」 */
+
+.summary {
+  /*background: #e7f8f5;*/
+  border: 2px dotted #26cfab;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.summary h2 {
+  font-size: 30px;
+  margin-top: 0;
+  padding-left: 10px;
+  border: none;
+  border-bottom: 2px solid #26cfab;
+}
+
+.summary h2:before {
+  content: "📝";
 }
 
 /* ================================= */
@@ -486,7 +543,7 @@ kbd {
 }
 
 .practice-h2:before {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -560,7 +617,7 @@ kbd {
 
 /* 用語の重要度 */
 
-span.important-word {  
+span.important-word {
   font-size: 0.95em;
   font-weight: bold;
   color: #dc143c;
@@ -675,7 +732,7 @@ ul#toc li {
   list-style-type: none !important;
 }
 ul#toc li::before {
-  content: '';
+  content: "";
   border-color: transparent #669966;
   border-style: solid;
   border-width: 0.35em 0 0.35em 0.6em;
