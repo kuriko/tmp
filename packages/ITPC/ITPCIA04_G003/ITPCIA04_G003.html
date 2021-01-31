@@ -162,32 +162,55 @@
         <p>この手順を知っておくと、家電量販店でパソコンを選ぶときや、会社や学校のパソコンの性能を確認するときにも役立ちます。</p>
         <h3><a name="header-3-b38bc47847490ec1321a98cba8f93e80"></a> Windows の場合</h3>
         <p>まずは Windows での手順を確認してみましょう。</p>
-        <p>画面の一番下に表示されている <strong>タスクバー</strong> から、<strong>スタートボタン</strong>をクリックします。</p>
-        <p>//TODO スクショ</p>
-        <p>スタートメニュー内で何もクリックせず、キーボードを使って <strong>dxdiag</strong> と半角アルファベットで入力します。</p>
-        <p>//TODO スクショ</p>
-        <p>青い丸の中に黄色いバツ印が描かれたアイコンが表示されたら、これをクリックします。</p>
-        <p>//TODO スクショ</p>
-        <p>少し時間がかかるかもしれませんが、しばらくすると <strong>DirectX 診断ツール</strong> という画面が表示されます。</p>
-        <p>//TODO スクショ（マルチディスプレイ環境だと表示が変わるので、シングルディスプレイにして撮る）</p>
+        <p>画面の一番下に表示されている <strong>タスクバー</strong> から、左端の <strong>スタートボタン</strong>をクリックします。<br> スタートメニューが開いたら <strong>何もクリックせず</strong>、キーボードを使って 「<strong>dxdiag</strong>」 と半角アルファベットで入力します。</p>
+        <div class="image-with-caption">
+          <img src="image/dxdiag-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>青い丸の中に黄色いバツ印が描かれたアイコンが表示されたら、<strong>開く</strong> をクリックします。</p>
+        <div class="image-with-caption">
+          <img src="image/dxdiag-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>少し時間がかかるかもしれませんが、しばらくすると <strong><ruby>DirectX<rt>ダイレクト・エックス</rt></ruby> 診断ツール</strong> という画面が表示されます。</p>
+        <div class="image-with-caption">
+          <img src="image/dxdiag-03.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
         <p>たくさん表示されている内容があってビックリするかもしれませんが、今回見るべき場所は</p>
         <ul>
+          <li>システム モデル</li>
           <li>プロセッサ</li>
           <li>メモリ</li>
         </ul>
-        <p>だけです。<strong>プロセッサ</strong> は CPU のことです。<strong>メモリ</strong> は MB（メガバイト）という単位で表示されているので、電卓を使って 1024 で割ると、GB（ギガバイト）という単位での数値になります。</p>
+        <p>だけです。</p>
+        <p><strong>システムモデル</strong> は パソコンの製品名です。<br>
+          <strong>プロセッサ</strong> は CPU のことです。<br>
+          <strong>メモリ</strong> は MB（メガバイト）という単位で表示されているので、電卓を使って 1024 で割ると、GB（ギガバイト）という単位での数値になります。
+        </p>
         <p>続いて、GPU も見てみましょう。<br> DirectX 診断ツールの画面の上部にある <strong>ディスプレイ</strong> をクリックします。</p>
-        <p>//TODO スクショ</p>
-        <p>ここで <strong>デバイス</strong> の欄の <strong>名前</strong> のところに表示されているのが GPU の製品名です。</p>
+        <div class="image-with-caption">
+          <img src="image/dxdiag-04.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p>ここで、左上の <strong>デバイス</strong> の欄の、 <strong>名前</strong> のところに表示されているのが GPU の製品名です。</p>
+        <div class="image-with-caption">
+          <img src="image/dxdiag-05.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
         <p>確認が終わったら DirectX 診断ツールを終了させましょう。</p>
         <h3><a name="header-3-14d337159d3c221a88f483b34af119a3"></a> Mac の場合</h3>
         <p>続いて、Mac での手順を確認してみましょう。</p>
         <p>画面左上の <strong>リンゴマーク</strong> をクリックし、<strong>このMacについて</strong> をクリックします。</p>
-        <p>//TODO スクショ（他の場所から流用可能かも）</p>
-        <p><strong>プロセッサ</strong>（あるいは<strong>チップ</strong>） と <strong>メモリ</strong> の欄に、部品名と容量が確認できます。</p>
-        <p>//TODO スクショ（他の場所から流用可能かも）</p>
-        <p>また、<strong>ディスプレイ</strong> をクリックすると、<strong>GPU</strong> が確認できます。</p>
-        <p>//TODO スクショ</p>
+        <div class="image-with-caption">
+          <img src="image/mac-spec-01.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
+        <p><strong>プロセッサ</strong> と <strong>メモリ</strong>、<strong>グラフィックス</strong>（GPU） の欄に、部品名と容量が確認できます。なお、M1 の場合は CPU と GPU が統合されているため、まとめて <strong>チップ</strong> として表示されます。<br> （また、M1 以外でグラフィックスが表示されない場合、<strong>ディスプレイ</strong> をクリックすると確認できます。）</p>
+        <div class="image-with-caption">
+          <img src="image/mac-spec-02.png">
+          <span class="imagecaption screenshot"></span>
+        </div>
         <h2><a name="header-2-6939f877056b6dffcdf44f1e36fed6f1"></a> 部品の交換・増設</h2>
         <p>メモリやストレージは、規格が同じものであれば交換・増設することによってパソコンの性能を上げられます。</p>
         <p>しかし、最近のノートパソコンの多くは、中に入っている部品の交換・増設ができないようになっています。<br> そういったパソコンの場合、「部品を交換して性能を上げる」ということができず、性能を上げたい時はパソコン自体を買い換える必要があります。</p>
