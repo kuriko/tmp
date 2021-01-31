@@ -746,3 +746,14 @@ ul#toc li::before {
 ul#toc li a {
   color: black;
 }
+
+/* blockquote */
+
+blockquote {
+  border: 2px dotted #26cfab;
+  background-color: #ebfffb;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
